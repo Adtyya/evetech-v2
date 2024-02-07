@@ -18,10 +18,13 @@ module.exports = {
           black: "#09101D",
           blue: "#3A85FF",
           gray: "#858C94",
+          "light-blue": "#88BEFF",
+          "low-gray": "#F4F6F933",
         },
         btn: {
           primary: "#2B3A4B",
           white: "#EBEEF2",
+          blue: "#3A85FF",
         },
         border: {
           gray: "#DADEE3",

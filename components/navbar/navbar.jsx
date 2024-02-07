@@ -45,7 +45,7 @@ export default function NavbarEvetech() {
   }, []);
 
   return (
-    <nav className="w-full fixed top-0 z-10">
+    <nav className="w-full fixed top-0 z-20">
       <div className="bg-eve-black">
         <div className="flex items-center justify-center py-1.5">
           <p className="text-white">
