@@ -1,7 +1,9 @@
+import Hero from "@/components/view/home/hero";
+
 export default function Home() {
   return (
     <main>
-      <div className="h-screen"></div>
+      <Hero></Hero>
       <div className="h-screen"></div>
     </main>
   );

@@ -55,7 +55,11 @@ export default function NavbarEvetech() {
         </div>
       </div>
 
-      <header className="bg-white">
+      <header
+        className={`${
+          isScrolled ? "bg-eve-white" : "bg-transparent"
+        } duration-300`}
+      >
         <div className="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
           <nav
             aria-label="main navigation"
@@ -101,7 +105,7 @@ export default function NavbarEvetech() {
             <ul
               role="menubar"
               aria-label="Select page"
-              className={`absolute top-0 left-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden  overflow-y-auto overscroll-contain bg-white/90 px-8 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0  lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0  lg:pt-0 lg:opacity-100 ${
+              className={`absolute top-0 left-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden  overflow-y-auto overscroll-contain px-8 bg-eve-white/50 backdrop-blur-sm lg:backdrop-blur-none pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0  lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0  lg:pt-0 lg:opacity-100 ${
                 isToggleOpen
                   ? "visible opacity-100 backdrop-blur-sm"
                   : "invisible opacity-0"
@@ -113,7 +117,9 @@ export default function NavbarEvetech() {
                     <a
                       role="menuitem"
                       aria-haspopup="false"
-                      className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8 cursor-pointer"
+                      className={`flex items-center gap-2 py-4 transition-colors duration-300 focus:outline-none focus-visible:outline-none lg:px-8 cursor-pointer ${
+                        isScrolled ? "text-eve-gray" : "text-white"
+                      } duration-300`}
                     >
                       <span>{item.name}</span>
                     </a>
