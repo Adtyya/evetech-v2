@@ -60,7 +60,7 @@ export default function NavbarEvetech() {
           isScrolled ? "bg-eve-white" : "bg-transparent"
         } duration-300`}
       >
-        <div className="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
+        <div className="relative mx-auto w-full max-w-7xl">
           <nav
             aria-label="main navigation"
             className="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700"

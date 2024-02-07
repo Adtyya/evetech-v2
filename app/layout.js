@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "aos/dist/aos.css";
 import NavbarEvetech from "@/components/navbar/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
