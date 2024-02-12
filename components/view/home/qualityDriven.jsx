@@ -29,6 +29,7 @@ export default function QualityDriven() {
                 title={item.title}
                 content={item.content}
                 isEven={item.id % 2 !== 0}
+                icon={item.path}
               ></CardQualityDriven>
             );
           })}
@@ -38,15 +39,20 @@ export default function QualityDriven() {
   );
 }
 
-function CardQualityDriven({ title, content, isEven }) {
+function CardQualityDriven({ title, content, icon, isEven }) {
   return (
     <div
       className={`grid grid-cols-12 gap-3 ${
         isEven ? "bg-eve-white" : "bg-btn-white"
       } py-5 pr-5 rounded-2xl lg:sticky lg:top-[12rem] w-full h-max`}
     >
-      <div className="col-span-2 flex justify-center">
-        <div className="w-8 h-8 rounded-full bg-white"></div>
+      <div className="col-span-2 flex justify-center items-start">
+        <object
+          data={icon}
+          type="image/svg+xml"
+          height={40}
+          width={40}
+        ></object>
       </div>
       <div className="col-span-10">
         <h3 className="text-btn-primary font-semibold text-xl lg:text-2xl">

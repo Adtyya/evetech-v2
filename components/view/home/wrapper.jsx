@@ -20,7 +20,6 @@ export default function WrapWithAOS() {
       <ProvideService></ProvideService>
       <TimeToMakeChange></TimeToMakeChange>
       <QualityDriven></QualityDriven>
-      {/* <div className="h-screen"></div> */}
     </>
   );
 }
