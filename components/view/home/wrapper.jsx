@@ -9,7 +9,9 @@ import QualityDriven from "./qualityDriven";
 
 export default function WrapWithAOS() {
   useEffect(() => {
-    Aos.init();
+    Aos.init({
+      once: true,
+    });
   }, []);
 
   return (
