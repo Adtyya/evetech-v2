@@ -42,3 +42,54 @@ export const QualityDrivenContent = [
     path: "/images/home/quality-driven/6.svg",
   },
 ];
+
+export const ProductList = [
+  {
+    name: "Custom ERP",
+    description:
+      "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
+    image: "/images/home/products/lists/dashboard.png",
+  },
+  {
+    name: "E-Commerce",
+    description:
+      "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
+    image: "/images/home/products/lists/ecomerce.png",
+  },
+  {
+    name: "Web Company Profile",
+    description:
+      "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
+    image: "/images/home/products/lists/companyp.png",
+  },
+  {
+    name: "Web Game Education",
+    description:
+      "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
+    image: "/images/home/products/lists/webgameedu.png",
+  },
+  {
+    name: "News Website",
+    description:
+      "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
+    image: "/images/home/products/lists/news.png",
+  },
+  {
+    name: "POS Restaurant",
+    description:
+      "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
+    image: "/images/home/products/lists/pos.png",
+  },
+  {
+    name: "Educational Tech",
+    description:
+      "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
+    image: "/images/home/products/lists/edutech.png",
+  },
+  {
+    name: "Wordpress Website",
+    description:
+      "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
+    image: "/images/home/products/lists/wordpress.png",
+  },
+];
