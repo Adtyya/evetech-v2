@@ -23,16 +23,16 @@ export default function SoftwareDevelopmentIndustry() {
               key={index}
               className={`w-full ${
                 item.heigh === "full" ? "md:h-masonryFull" : "md:h-96"
-              } relative rounded-2xl h-96 overflow-hidden mb-5`}
+              } relative rounded-2xl h-96 overflow-hidden mb-5 group`}
             >
               <Image
                 src={item.image}
                 alt={item.name}
                 fill
-                className="object-cover"
+                className="object-cover group-hover:scale-105 duration-300"
               />
               <div className="absolute top-1/2 z-10 flex items-end pb-4 justify-center w-full h-1/2">
-                <div className="bg-eve-key-features-bg backdrop-blur-sm mx-5 p-5 rounded-2xl w-full">
+                <div className="bg-eve-black/30 group-hover:bg-eve-black duration-300 backdrop-blur-sm mx-5 p-5 rounded-2xl w-full">
                   <Heading
                     variant="h4"
                     className="text-eve-white font-semibold"
