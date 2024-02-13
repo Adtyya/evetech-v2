@@ -20,6 +20,7 @@ module.exports = {
           gray: "#858C94",
           "light-blue": "#88BEFF",
           "low-gray": "#F4F6F933",
+          "key-features": "#444C58",
         },
         btn: {
           primary: "#2B3A4B",

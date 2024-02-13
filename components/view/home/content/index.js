@@ -93,3 +93,59 @@ export const ProductList = [
     image: "/images/home/products/lists/wordpress.png",
   },
 ];
+
+export const KeyFeatures = [
+  {
+    name: "Web Application & Web Design",
+    description:
+      "Ability to load within seconds even when you have more than 20k products.",
+    image: "/images/home/key-features/1.png",
+  },
+  {
+    name: "Mobile Applications",
+    description:
+      "Designed with a pixel perfect designer who has good understanding of User Interface and User Experience.",
+    image: "/images/home/key-features/2.png",
+  },
+  {
+    name: "Software Development",
+    description:
+      "Your inventory and warehouse data will be integrated and can be easily transfered through different cities or countries.",
+    image: "/images/home/key-features/3.png",
+  },
+  {
+    name: "Cloud Storage Database",
+    description:
+      "All data will be safely stored in a secure Cloud Storage Database.",
+    image: "/images/home/key-features/4.png",
+  },
+  {
+    name: "E-Commerce & SASS applications",
+    description:
+      "Your web application will look pretty whether being opened from mobile phones, tablets, laptops or PC computers.",
+    image: "/images/home/key-features/5.png",
+  },
+  {
+    name: "Reporting & Data Analysis",
+    description:
+      "Support points collection and redemption to reward and retain your customers for a long haul.",
+    image: "/images/home/key-features/6.png",
+  },
+  {
+    name: "Barcode Scanner",
+    description:
+      "Enhance customer’s offline shopping experience by scanning your in-store products for O2O.",
+    image: "/images/home/key-features/7.png",
+  },
+  {
+    name: "Customized",
+    description:
+      "With 3 choices of Customized Layout, quickly and easily create an app look that captures your brand image.",
+    image: "/images/home/key-features/8.png",
+  },
+  {
+    name: "SEO",
+    description: "Get instant support when you have any error or troubles.",
+    image: "/images/home/key-features/9.png",
+  },
+];

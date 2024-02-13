@@ -7,6 +7,7 @@ import Aos from "aos";
 import TimeToMakeChange from "./timeToMakeChange";
 import QualityDriven from "./qualityDriven";
 import OurProducts from "./ourProducts";
+import KeyFeatures from "./keyFeatures";
 
 export default function WrapWithAOS() {
   useEffect(() => {
@@ -22,6 +23,7 @@ export default function WrapWithAOS() {
       <TimeToMakeChange></TimeToMakeChange>
       <QualityDriven></QualityDriven>
       <OurProducts></OurProducts>
+      <KeyFeatures></KeyFeatures>
     </>
   );
 }
