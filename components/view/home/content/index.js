@@ -200,29 +200,36 @@ export const TehcnologyStack = [
   {
     name: "React",
     image: "/images/home/technology-stack/react.png",
+    category: ["popular", "front-end"],
   },
   {
     name: "Next.js",
     image: "/images/home/technology-stack/next.png",
+    category: ["popular", "front-end"],
   },
   {
     name: "Flutter",
     image: "/images/home/technology-stack/flutter.png",
+    category: ["popular", "mobile", "android"],
   },
   {
     name: "Android",
     image: "/images/home/technology-stack/android.png",
+    category: ["popular", "mobile", "android"],
   },
   {
     name: "iOS",
     image: "/images/home/technology-stack/ios.png",
+    category: ["popular", "mobile", "android"],
   },
   {
     name: "Express.js",
     image: "/images/home/technology-stack/javascript.png",
+    category: ["popular", "backend"],
   },
   {
     name: "MongoDB",
     image: "/images/home/technology-stack/mongo.png",
+    category: ["popular", "database"],
   },
 ];

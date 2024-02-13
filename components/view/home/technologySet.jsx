@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import { ButtonPrimary, ButtonWhite } from "@/components/button/button";
@@ -16,6 +16,12 @@ export default function TechnologySet() {
   function handleChangeCategories(name) {
     setSelectedCategories(name);
   }
+
+  const filteredStack = useMemo(() => {
+    return TehcnologyStack.filter((item) =>
+      item.category.includes(selectedCategories)
+    );
+  }, [selectedCategories]);
 
   return (
     <div className="py-16">
@@ -64,7 +70,7 @@ export default function TechnologySet() {
               },
             }}
           >
-            {TehcnologyStack.map((item, idx) => {
+            {filteredStack.map((item, idx) => {
               return (
                 <SwiperSlide key={idx}>
                   <div className="bg-white h-full w-full p-7 rounded-2xl flex items-center justify-center flex-col">
