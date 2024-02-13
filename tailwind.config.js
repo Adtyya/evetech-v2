@@ -21,6 +21,7 @@ module.exports = {
           "light-blue": "#88BEFF",
           "low-gray": "#F4F6F933",
           "key-features": "#444C58",
+          "key-features-bg": "#09101D4D",
         },
         btn: {
           primary: "#2B3A4B",
@@ -30,6 +31,9 @@ module.exports = {
         border: {
           gray: "#DADEE3",
         },
+      },
+      height: {
+        masonryFull: "35rem",
       },
     },
   },

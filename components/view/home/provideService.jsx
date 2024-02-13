@@ -78,6 +78,7 @@ export default function ProvideService() {
                         end={item.number}
                         suffix="+"
                         enableScrollSpy
+                        scrollSpyOnce
                       ></CountUp>
                     </Heading>
                     <p className="font-light text-eve-gray">{item.sub}</p>

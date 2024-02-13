@@ -6,10 +6,13 @@ import Image from "next/image";
 export default function KeyFeatures() {
   return (
     <Container>
-      <Heading variant="h3" className="text-btn-primary font-bold">
+      <Heading
+        variant="h3"
+        className="text-btn-primary font-bold text-center md:text-start"
+      >
         <span className="text-btn-blue">Key features</span> of Evetech Solutions
       </Heading>
-      <p className="mt-2.5 text-eve-gray">
+      <p className="mt-2.5 text-eve-gray text-center md:text-start">
         Our client send us bunch of smilies with our services and we love them
       </p>
       <div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -17,7 +20,7 @@ export default function KeyFeatures() {
           return (
             <div key={index} className="grid grid-cols-4">
               <div id="logo" className="col-span-1 flex justify-center">
-                <div className="h-16 w-16 rounded-full relative">
+                <div className="h-14 lg:h-16 w-14 lg:w-16 rounded-full relative">
                   <Image
                     alt={item.name}
                     src={item.image}

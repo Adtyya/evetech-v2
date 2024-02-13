@@ -149,3 +149,49 @@ export const KeyFeatures = [
     image: "/images/home/key-features/9.png",
   },
 ];
+
+export const SoftwareDev = [
+  {
+    name: "Logistics",
+    description:
+      "You can’t brainstorm, much less build, a great solution without first investing in discovery and analysis.",
+    image: "/images/home/software-dev-industry/1.jfif",
+    heigh: "full",
+  },
+  {
+    name: "Healthcare",
+    description:
+      "You can’t brainstorm, much less build, a great solution without first investing in discovery and analysis.",
+    image: "/images/home/software-dev-industry/4.png",
+    heigh: "a",
+  },
+
+  {
+    name: "E-Commerce & Shopping",
+    description:
+      "You can’t brainstorm, much less build, a great solution without first investing in discovery and analysis.",
+    image: "/images/home/software-dev-industry/2.png",
+    heigh: "a",
+  },
+  {
+    name: "Saas",
+    description:
+      "You can’t brainstorm, much less build, a great solution without first investing in discovery and analysis.",
+    image: "/images/home/software-dev-industry/3.png",
+    heigh: "full",
+  },
+  {
+    name: "Education Tech",
+    description:
+      "You can’t brainstorm, much less build, a great solution without first investing in discovery and analysis.",
+    image: "/images/home/software-dev-industry/5.png",
+    heigh: "full",
+  },
+  {
+    name: "Travel & Hospitality",
+    description:
+      "You can’t brainstorm, much less build, a great solution without first investing in discovery and analysis.",
+    image: "/images/home/software-dev-industry/6.png",
+    heigh: "a",
+  },
+];
