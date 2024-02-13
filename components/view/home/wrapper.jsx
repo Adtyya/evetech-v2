@@ -9,6 +9,7 @@ import QualityDriven from "./qualityDriven";
 import OurProducts from "./ourProducts";
 import KeyFeatures from "./keyFeatures";
 import SoftwareDevelopmentIndustry from "./softwareDevelopmentIndustry";
+import OurClient from "./ourClient";
 
 export default function WrapWithAOS() {
   useEffect(() => {
@@ -26,6 +27,7 @@ export default function WrapWithAOS() {
       <OurProducts></OurProducts>
       <KeyFeatures></KeyFeatures>
       <SoftwareDevelopmentIndustry></SoftwareDevelopmentIndustry>
+      <OurClient></OurClient>
     </>
   );
 }

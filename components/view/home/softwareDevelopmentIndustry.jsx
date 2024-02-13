@@ -23,7 +23,7 @@ export default function SoftwareDevelopmentIndustry() {
               key={index}
               className={`w-full ${
                 item.heigh === "full" ? "md:h-masonryFull" : "md:h-96"
-              } relative rounded-2xl h-96 overflow-hidden mb-5 group`}
+              } relative rounded-2xl h-96 overflow-hidden mb-5 group break-inside-avoid`}
             >
               <Image
                 src={item.image}

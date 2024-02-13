@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function KeyFeatures() {
   return (
-    <Container>
+    <Container className="py-12">
       <Heading
         variant="h3"
         className="text-btn-primary font-bold text-center md:text-start"
