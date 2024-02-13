@@ -6,7 +6,7 @@ export default function OurClient() {
   return (
     <div className="bg-eve-white py-12">
       <div className="flex items-center justify-center mb-5">
-        <Heading variant={"h3"} className="text-btn-primary font-semibold">
+        <Heading variant={"h4"} className="text-btn-primary font-semibold">
           Our Client
         </Heading>
       </div>

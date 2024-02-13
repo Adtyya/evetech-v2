@@ -18,7 +18,7 @@ export default function Heading({
       defaultClassname = "text-3xl lg:text-4xl";
       break;
     case "h4":
-      defaultClassname = "text-xl lg:text-2xl";
+      defaultClassname = "text-2xl lg:text-3xl";
       break;
     case "h5":
       defaultClassname = "text-5xl lg:text-7xl";

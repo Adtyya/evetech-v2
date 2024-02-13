@@ -10,6 +10,7 @@ import OurProducts from "./ourProducts";
 import KeyFeatures from "./keyFeatures";
 import SoftwareDevelopmentIndustry from "./softwareDevelopmentIndustry";
 import OurClient from "./ourClient";
+import TechnologySet from "./technologySet";
 
 export default function WrapWithAOS() {
   useEffect(() => {
@@ -28,6 +29,7 @@ export default function WrapWithAOS() {
       <KeyFeatures></KeyFeatures>
       <SoftwareDevelopmentIndustry></SoftwareDevelopmentIndustry>
       <OurClient></OurClient>
+      <TechnologySet></TechnologySet>
     </>
   );
 }

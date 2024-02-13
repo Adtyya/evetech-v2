@@ -1,4 +1,4 @@
-function ButtonPrimary({ children, className, ...props }) {
+function ButtonPrimary({ children, className = "", ...props }) {
   return (
     <button
       className={`${className} bg-btn-primary text-eve-white font-semibold px-4 py-1.5 rounded-full`}
@@ -9,7 +9,7 @@ function ButtonPrimary({ children, className, ...props }) {
   );
 }
 
-function ButtonWhite({ children, className, ...props }) {
+function ButtonWhite({ children, className = "", ...props }) {
   return (
     <button
       className={`bg-btn-white text-btn-primary font-semibold border border-border-gray px-4 py-1.5 rounded-full ${className}`}
@@ -20,7 +20,7 @@ function ButtonWhite({ children, className, ...props }) {
   );
 }
 
-function ButtonLightBlue({ children, className, ...props }) {
+function ButtonLightBlue({ children, className = "", ...props }) {
   return (
     <button
       className={`bg-btn-blue text-eve-white font-semibold px-4 py-1.5 rounded-full ${className}`}

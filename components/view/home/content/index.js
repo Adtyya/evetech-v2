@@ -195,3 +195,34 @@ export const SoftwareDev = [
     heigh: "a",
   },
 ];
+
+export const TehcnologyStack = [
+  {
+    name: "React",
+    image: "/images/home/technology-stack/react.png",
+  },
+  {
+    name: "Next.js",
+    image: "/images/home/technology-stack/next.png",
+  },
+  {
+    name: "Flutter",
+    image: "/images/home/technology-stack/flutter.png",
+  },
+  {
+    name: "Android",
+    image: "/images/home/technology-stack/android.png",
+  },
+  {
+    name: "iOS",
+    image: "/images/home/technology-stack/ios.png",
+  },
+  {
+    name: "Express.js",
+    image: "/images/home/technology-stack/javascript.png",
+  },
+  {
+    name: "MongoDB",
+    image: "/images/home/technology-stack/mongo.png",
+  },
+];
