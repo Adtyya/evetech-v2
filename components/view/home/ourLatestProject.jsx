@@ -49,6 +49,9 @@ export default function OurLatestProjects() {
             // modules={[EffectCoverflow]}
             slidesPerView={1}
             spaceBetween={10}
+            onSlideChange={(event) => {
+              setActive(event.activeIndex);
+            }}
             onSwiper={(val) => (sliderRef.current = val)}
           >
             {OurLatestProject.map((_, id) => {
