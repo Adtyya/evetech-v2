@@ -233,3 +233,36 @@ export const TehcnologyStack = [
     category: ["popular", "database"],
   },
 ];
+
+export const OurLatestProject = [
+  {
+    id: 1,
+    name: "Portofolio 1",
+    description:
+      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+  },
+  {
+    id: 2,
+    name: "Portofolio 2",
+    description:
+      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+  },
+  {
+    id: 3,
+    name: "Portofolio 3",
+    description:
+      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+  },
+  {
+    id: 4,
+    name: "Portofolio 4",
+    description:
+      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+  },
+  {
+    id: 5,
+    name: "Portofolio 5",
+    description:
+      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+  },
+];

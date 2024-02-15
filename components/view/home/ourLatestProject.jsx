@@ -1,14 +1,18 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect, forwardRef } from "react";
 import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow } from "swiper/modules";
+// import { EffectCoverflow } from "swiper/modules";
 import Image from "next/image";
+import { OurLatestProject } from "./content";
+import autoAnimate from "@formkit/auto-animate";
+import { ButtonPrimary } from "@/components/button/button";
 
 export default function OurLatestProjects() {
   const sliderRef = useRef(null);
+  const [active, setActive] = useState(0);
 
   return (
     <Container>
@@ -25,31 +29,33 @@ export default function OurLatestProjects() {
       <div className="grid grid-cols-1 lg:grid-cols-12 mt-10 mb-7 gap-8">
         <div className="w-full relative col-auto lg:col-span-8">
           <Swiper
-            centeredSlides
-            loop
-            effect="coverflow"
-            coverflowEffect={{
-              rotate: 1,
-              stretch: 50,
-              depth: 100,
-              modifier: 1.5,
-            }}
-            breakpoints={{
-              0: {
-                slidesPerView: 1,
-              },
-              768: {
-                slidesPerView: 2,
-              },
-            }}
-            modules={[EffectCoverflow]}
+            // centeredSlides
+            // loop
+            // effect="coverflow"
+            // coverflowEffect={{
+            //   rotate: 1,
+            //   stretch: 50,
+            //   depth: 100,
+            //   modifier: 1.5,
+            // }}
+            // breakpoints={{
+            //   0: {
+            //     slidesPerView: 1,
+            //   },
+            //   768: {
+            //     slidesPerView: 1,
+            //   },
+            // }}
+            // modules={[EffectCoverflow]}
+            slidesPerView={1}
+            spaceBetween={10}
             onSwiper={(val) => (sliderRef.current = val)}
           >
-            {Array.from({ length: 5 }).map((_, id) => {
+            {OurLatestProject.map((_, id) => {
               return (
                 <SwiperSlide key={id}>
                   <div
-                    className={`w-full h-72 relative bg-eve-white duration-300 rounded-2xl`}
+                    className={`w-full h-64 lg:h-96 relative bg-eve-white duration-300 rounded-2xl`}
                   >
                     <Image
                       src="/images/home/latest-project/preview.png"
@@ -63,8 +69,59 @@ export default function OurLatestProjects() {
             })}
           </Swiper>
         </div>
-        <div className="w-full col-auto lg:col-span-4">aa</div>
+        <div className="w-full col-auto lg:col-span-4">
+          {OurLatestProject.map((item, idx) => {
+            return (
+              <Card
+                title={item.name}
+                description={item.description}
+                onClick={() => {
+                  setActive(idx);
+                  sliderRef.current?.slideTo(idx);
+                }}
+                key={idx}
+                active={idx === active}
+              ></Card>
+            );
+          })}
+        </div>
+      </div>
+      <div className="flex items-center justify-center">
+        <ButtonPrimary>View More</ButtonPrimary>
       </div>
     </Container>
+  );
+}
+
+function Card({ title, description, onClick, active }) {
+  const content = useRef(null);
+
+  useEffect(() => {
+    active && autoAnimate(content.current);
+  }, [active]);
+
+  return (
+    <div
+      id="parent"
+      ref={content}
+      className={`p-5 ${
+        active ? "bg-eve-white rounded-2xl" : "bg-transparent"
+      } duration-300 cursor-pointer`}
+      onClick={() => onClick()}
+    >
+      <Heading
+        variant="h4"
+        className={`font-bold ${
+          active ? "text-btn-blue" : "text-btn-primary"
+        } duration-300`}
+      >
+        {title}
+      </Heading>
+      {active && (
+        <p className={`mt-1.5 text-eve-p-latest-project text-sm`}>
+          {description}
+        </p>
+      )}
+    </div>
   );
 }

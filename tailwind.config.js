@@ -22,6 +22,7 @@ module.exports = {
           "low-gray": "#F4F6F933",
           "key-features": "#444C58",
           "key-features-bg": "#09101D4D",
+          "p-latest-project": "#6D7580",
         },
         btn: {
           primary: "#2B3A4B",
