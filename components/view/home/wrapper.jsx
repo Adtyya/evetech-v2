@@ -12,6 +12,7 @@ import SoftwareDevelopmentIndustry from "./softwareDevelopmentIndustry";
 import OurClient from "./ourClient";
 import TechnologySet from "./technologySet";
 import OurLatestProjects from "./ourLatestProject";
+import Blog from "./blog";
 
 export default function WrapWithAOS() {
   useEffect(() => {
@@ -32,6 +33,7 @@ export default function WrapWithAOS() {
       <OurClient></OurClient>
       <TechnologySet></TechnologySet>
       <OurLatestProjects></OurLatestProjects>
+      <Blog></Blog>
     </>
   );
 }

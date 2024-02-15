@@ -103,7 +103,7 @@ export default function OurLatestProjects() {
         </div>
       </div>
       <div className="flex items-center justify-center">
-        <ButtonPrimary>View More</ButtonPrimary>
+        <ButtonPrimary className="px-8">View More</ButtonPrimary>
       </div>
     </Container>
   );
