@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-3d .swiper-slide-shadow-left{
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0,0, 0, 0.1)) !important;
+    /* background-color: #DADEE3 !important; */
+}
+
+.swiper-3d .swiper-slide-shadow-right{
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0,0, 0, 0.1)) !important;
+    /* background-color: #DADEE3 !important; */
+}
