@@ -15,7 +15,7 @@ export default function OurLatestProjects() {
   const [active, setActive] = useState(0);
 
   return (
-    <Container>
+    <Container className="py-5">
       <div className="flex-col lg:flex lg:flex-row items-center lg:justify-between">
         <Heading variant="h3" className="text-btn-primary font-bold capitalize">
           Check out our <br />{" "}
@@ -68,6 +68,22 @@ export default function OurLatestProjects() {
               );
             })}
           </Swiper>
+          <div className="flex items-center justify-center mt-5 space-x-3.5">
+            {Array.from({ length: OurLatestProject.length }).map((_, idx) => {
+              return (
+                <button
+                  key={idx}
+                  className={`${
+                    idx === active ? "bg-eve-dot" : "bg-border-gray"
+                  } duration-300 w-2 h-2 rounded-full`}
+                  onClick={() => {
+                    sliderRef.current?.slideTo(idx);
+                    setActive(idx);
+                  }}
+                ></button>
+              );
+            })}
+          </div>
         </div>
         <div className="w-full col-auto lg:col-span-4">
           {OurLatestProject.map((item, idx) => {
