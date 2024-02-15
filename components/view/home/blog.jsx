@@ -36,8 +36,8 @@ export default function Blog() {
               <button className="text-btn-blue">Read More ...</button>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-grid-cols-2 gap-5">
-            <div className="grid grid-cols-12">
+          <div className="grid grid-cols-1 lg:grid-grid-cols-2 gap-5 items-start">
+            <div className="grid grid-cols-12 items-center">
               <div className="h-40 col-span-4 w-full relative">
                 <Image
                   src={"/images/home/blog/blog.jfif"}
@@ -45,6 +45,17 @@ export default function Blog() {
                   alt="sample"
                   className="object-cover group-hover:-rotate-3 rounded-2xl duration-300 ease-out"
                 />
+              </div>
+              <div className="col-span-8">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Optio minima explicabo quisquam, fugiat unde error voluptates
+                  dolorum mollitia, molestias laboriosam, consequatur ea quaerat
+                  suscipit harum exercitationem enim rerum a necessitatibus
+                  animi vero repellat incidunt. Rerum ipsa, ratione reiciendis
+                  qui id soluta deleniti eum reprehenderit dolor, nobis non,
+                  iste quam veniam.
+                </p>
               </div>
             </div>
           </div>
