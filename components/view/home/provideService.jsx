@@ -34,6 +34,7 @@ export default function ProvideService() {
             src={ProvideBG}
             alt="provide"
             fill
+            sizes="(max-width: 768px) 100vw, 700px"
             className="object-cover"
             quality={100}
             fetchPriority="low"

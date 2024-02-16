@@ -60,6 +60,8 @@ function BlogCardHighlighted({ image, title, description, date }) {
           src={image}
           fill
           alt="sample"
+          fetchPriority="high"
+          quality={100}
           className="object-cover group-hover:-rotate-3 rounded-2xl duration-300 ease-out"
         />
       </div>
@@ -78,6 +80,8 @@ function BlogCardHighlighted({ image, title, description, date }) {
             src={image}
             fill
             alt="sample"
+            quality={100}
+            fetchPriority="low"
             className="object-cover group-hover:-rotate-3 rounded-2xl duration-300 ease-out"
           />
         </div>
@@ -105,6 +109,8 @@ function BlogCardList({ image, title, description, date }) {
           src={image}
           fill
           alt="sample"
+          quality={100}
+          fetchPriority="low"
           className="object-cover group-hover:-rotate-3 rounded-2xl duration-300 ease-out"
         />
       </div>

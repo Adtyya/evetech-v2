@@ -84,6 +84,7 @@ function CardProduct({ title, image }) {
             className="object-contain px-3 -mt-12"
             src={image}
             alt={title}
+            loading="lazy"
           />
         </div>
       </div>
