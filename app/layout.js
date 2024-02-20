@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import NavbarEvetech from "@/components/navbar/navbar";
+import Footer from "@/components/footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <NavbarEvetech></NavbarEvetech>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );

@@ -24,6 +24,8 @@ module.exports = {
           "key-features-bg": "#09101D4D",
           "p-latest-project": "#6D7580",
           dot: "#394452",
+          green: "#35C435",
+          "footer-btn": "#3C3C3C",
         },
         btn: {
           primary: "#2B3A4B",
