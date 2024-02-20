@@ -20,6 +20,51 @@ const socialIcon = [
   },
 ];
 
+const menu = [
+  {
+    name: "Quick Links",
+    path: [
+      {
+        name: "About us",
+        path: "/",
+      },
+      {
+        name: "Contact",
+        path: "/",
+      },
+      {
+        name: "News & blogs",
+        path: "/",
+      },
+      {
+        name: "Careers",
+        path: "/",
+      },
+    ],
+  },
+  {
+    name: "Services",
+    path: [
+      {
+        name: "web app development",
+        path: "/",
+      },
+      {
+        name: "mobile app development",
+        path: "/",
+      },
+      {
+        name: "web development",
+        path: "/",
+      },
+      {
+        name: "Careers",
+        path: "/",
+      },
+    ],
+  },
+];
+
 export default function Footer() {
   return (
     <div>
@@ -53,15 +98,16 @@ export default function Footer() {
           </div>
         </Container>
       </div>
-      <div className="w-full h-full relative">
+      <footer className="w-full h-full relative">
+        <div className="bg-gradient-footer absolute z-10 w-full h-full"></div>
         <Image
           src="/images/footer/footer.jfif"
           fill
-          className="object-cover brightness-50"
+          className="object-cover"
           alt="footer-bg"
         />
-        <Container className="w-full h-full relative z-10 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12">
+        <Container className="w-full h-full relative z-20 py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-7">
             <div className="col-auto md:col-span-4">
               <div className="w-28 h-28 relative">
                 <Image
@@ -98,10 +144,29 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="col-auto md:col-span-8">Right side</div>
+            <div className="col-auto md:col-span-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                {menu.map((item, indx) => {
+                  return (
+                    <div key={indx} className="space-y-1.5">
+                      <p className="font-semibold text-eve-p-latest-project">
+                        {item.name}
+                      </p>
+                      {item.path.map((a, b) => {
+                        return (
+                          <p key={b} className="font-medium text-white">
+                            {a.name}
+                          </p>
+                        );
+                      })}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </Container>
-      </div>
+      </footer>
     </div>
   );
 }

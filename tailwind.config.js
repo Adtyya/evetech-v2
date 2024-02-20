@@ -11,6 +11,8 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-footer":
+          "linear-gradient(263.6deg, #151515 10.15%, rgba(31, 31, 31, 0.8) 102%)",
       },
       colors: {
         eve: {
