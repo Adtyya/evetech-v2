@@ -1,15 +1,8 @@
 import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import Marquee from "react-fast-marquee";
-import { ProductList } from "./content";
+import { ProductList, PorfotolioList } from "./content";
 import Image from "next/image";
-
-const imagePath = [
-  "/images/home/products/1.svg",
-  "/images/home/products/2.svg",
-  "/images/home/products/3.svg",
-  "/images/home/products/4.svg",
-];
 
 export default function Portofolio() {
   return (
@@ -25,24 +18,26 @@ export default function Portofolio() {
         </p>
       </Container>
       <Marquee direction="right" speed={50}>
-        {ProductList.slice(0, 4).map((item, index) => {
+        {PorfotolioList.slice(0, 5).map((item, index) => {
           return (
             <CardProduct
               key={index}
-              title={item.name}
+              title={item.title}
               image={item.image}
+              category={item.category}
             ></CardProduct>
           );
         })}
       </Marquee>
       <div className="py-10"></div>
       <Marquee direction="left" speed={50}>
-        {ProductList.slice(4).map((item, index) => {
+        {PorfotolioList.slice(6).map((item, index) => {
           return (
             <CardProduct
               key={index}
-              title={item.name}
+              title={item.title}
               image={item.image}
+              category={item.category}
             ></CardProduct>
           );
         })}
@@ -51,26 +46,19 @@ export default function Portofolio() {
   );
 }
 
-function CardProduct({ title, image }) {
+function CardProduct({ title, image, category }) {
   return (
-    <div className="bg-eve-white rounded-3xl w-full max-w-96 mx-8 overflow-hidden">
-      <div className="space-y-4 p-5">
-        <Heading variant="h4" className="font-bold text-btn-primary">
+    <div className="bg-eve-white rounded-3xl w-96 mx-8 overflow-hidden">
+      <div className="p-5 w-full">
+        <Heading
+          variant="h4"
+          className="font-bold text-btn-primary text-center"
+        >
           {title}
         </Heading>
-        <p className="text-eve-gray line-clamp-2">
-          Developing mobile applications that are easy to use aids various
-          start-ups and businesses in reshaping the mobile user experience
-        </p>
-        <div className="flex space-x-3.5">
-          {imagePath.map((i, idx) => {
-            return (
-              <Image src={i} width={28} height={28} alt="icon" key={idx} />
-            );
-          })}
-        </div>
+        <p className="text-eve-gray text-center">{category}</p>
       </div>
-      <div className="h-40">
+      <div className="h-80">
         <div className="h-96 w-full px-3 relative">
           <Image
             fill

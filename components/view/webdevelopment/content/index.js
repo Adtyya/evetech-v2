@@ -78,31 +78,31 @@ export const PorfotolioList = [
   {
     title: "Downtown Dinner",
     category: "Website & Mobile Responsive",
-    image: "/images/webdevelopment/portofolio/top/Downtown.png",
+    image: "/images/webdevelopment/portofolio/bottom/Downtown.png",
   },
   {
     title: "SQM Studio",
     category: "Website",
-    image: "/images/webdevelopment/portofolio/top/SQM.png",
+    image: "/images/webdevelopment/portofolio/bottom/SQM.png",
   },
   {
     title: "Educare",
     category: "Mobile Apps",
-    image: "/images/webdevelopment/portofolio/top/Edu.png",
+    image: "/images/webdevelopment/portofolio/bottom/Edu.png",
   },
   {
     title: "Everest",
     category: "POS System & Mobile Apps",
-    image: "/images/webdevelopment/portofolio/top/Everest.png",
+    image: "/images/webdevelopment/portofolio/bottom/Everest.png",
   },
   {
     title: "Homeez",
     category: "Website",
-    image: "/images/webdevelopment/portofolio/top/Homeez.png",
+    image: "/images/webdevelopment/portofolio/bottom/Homez.png",
   },
   {
     title: "Kanzee",
     category: "Website",
-    image: "/images/webdevelopment/portofolio/top/Kanzee.png",
+    image: "/images/webdevelopment/portofolio/bottom/Kanzee.png",
   },
 ];
