@@ -164,12 +164,12 @@ export default function Footer() {
                         key={idx}
                         className="w-9 h-9 rounded-full bg-eve-footer-btn outline outline-1 outline-white flex items-center justify-center"
                       >
-                        <object
-                          data={item.path}
-                          type="image/svg+xml"
+                        <Image
+                          src={item.path}
                           width={22}
                           height={22}
-                        ></object>
+                          alt="social-icon"
+                        />
                       </button>
                     );
                   })}

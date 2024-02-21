@@ -11,17 +11,17 @@ const imagePath = [
   "/images/home/products/4.svg",
 ];
 
-export default function OurProducts() {
+export default function Portofolio() {
   return (
     <div className="py-16">
       <Container className="flex items-center justify-center flex-col mb-10">
         <Heading variant="h3" className="text-btn-primary font-bold capitalize">
-          Our Digital agency <span className="text-btn-blue">Product</span>
+          Proyek Pengembangan Website Aplikasi
         </Heading>
-        <p className="mt-2.5 text-center text-eve-gray">
-          We provide a variety of digital solutions that include <br />{" "}
-          responsive website design, app development, digital <br /> marketing
-          strategist, and more.
+        <p className="mt-2.5 text-center text-eve-gray w-full max-w-lg">
+          We provide a variety of digital solutions that include responsive
+          website design, app development, digital marketing strategist, and
+          more.
         </p>
       </Container>
       <Marquee direction="right" speed={50}>
@@ -81,8 +81,6 @@ function CardProduct({ title, image }) {
           />
         </div>
       </div>
-      {/* <div className="absolute bottom-0 w-full h-full">
-      </div> */}
     </div>
   );
 }
