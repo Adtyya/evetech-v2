@@ -26,7 +26,7 @@ export default function Hero() {
         src={HeroImage}
         alt="hero"
         fill
-        sizes="(max-width: 768px) 100vw, 1000px"
+        // sizes="(max-width: 768px) 100vw, 1000px"
         priority
         className="object-cover brightness-50"
       />

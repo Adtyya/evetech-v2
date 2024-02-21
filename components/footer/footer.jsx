@@ -37,7 +37,7 @@ const menu = [
         path: "/",
       },
       {
-        name: "Careers",
+        name: "Career",
         path: "/",
       },
     ],
@@ -57,9 +57,41 @@ const menu = [
         name: "web development",
         path: "/",
       },
+    ],
+  },
+];
+
+const officeLocation = [
+  {
+    country: "Indonesia",
+    location: [
       {
-        name: "Careers",
-        path: "/",
+        city: "Solo City",
+        address:
+          "Royal Regency, Dusun 1, Gedangan, Solo Baru, Kota Surakarta, Jawa Tengah 57552",
+      },
+      {
+        city: "Jakarta",
+        address: "(soon)",
+      },
+    ],
+  },
+  {
+    country: "Malaysia",
+    location: [
+      {
+        city: "Kula Lumpur City",
+        address:
+          "BO1-A-9, Menara 2, KL Eco City, 3, Jln Bangsar, 59200 Kuala Lumpur WP",
+      },
+    ],
+  },
+  {
+    country: "France",
+    location: [
+      {
+        city: "Paris",
+        address: "32-34 Avenue Kleber, Paris, 75116, FRA",
       },
     ],
   },
@@ -106,9 +138,9 @@ export default function Footer() {
           className="object-cover"
           alt="footer-bg"
         />
-        <Container className="w-full h-full relative z-20 py-8">
+        <Container className="w-full h-full relative z-20 py-7 lg:py-14">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-7">
-            <div className="col-auto md:col-span-4">
+            <div className="col-auto md:col-span-3">
               <div className="w-28 h-28 relative">
                 <Image
                   alt="eve-footer"
@@ -130,13 +162,13 @@ export default function Footer() {
                     return (
                       <button
                         key={idx}
-                        className="w-10 h-10 rounded-full bg-eve-footer-btn outline outline-1 outline-white flex items-center justify-center"
+                        className="w-9 h-9 rounded-full bg-eve-footer-btn outline outline-1 outline-white flex items-center justify-center"
                       >
                         <object
                           data={item.path}
                           type="image/svg+xml"
-                          width={24}
-                          height={24}
+                          width={22}
+                          height={22}
                         ></object>
                       </button>
                     );
@@ -144,11 +176,11 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="col-auto md:col-span-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div className="col-auto md:col-span-9">
+              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-5 lg:gap-y-0">
                 {menu.map((item, indx) => {
                   return (
-                    <div key={indx} className="space-y-1.5">
+                    <div key={indx} className="space-y-2.5">
                       <p className="font-semibold text-eve-p-latest-project">
                         {item.name}
                       </p>
@@ -162,7 +194,85 @@ export default function Footer() {
                     </div>
                   );
                 })}
+                <div className="space-y-2.5 col-span-2 lg:col-auto">
+                  <p className="font-semibold text-eve-p-latest-project">
+                    Reach Us
+                  </p>
+                  <a
+                    className="flex items-center space-x-2.5 text-white"
+                    href="mailto:Marketing@evetechsolution.com"
+                  >
+                    <object
+                      data="/images/footer/social/gmail.svg"
+                      type="image/svg+xml"
+                      height={22}
+                      width={22}
+                    ></object>
+                    <p>Marketing@evetechsolution.com</p>
+                  </a>
+                  <a
+                    className="flex items-center space-x-2.5 text-white"
+                    href="https://api.whatsapp.com/send/?phone=628995226188"
+                    target="_blank"
+                  >
+                    <object
+                      data="/images/footer/social/whatsapp.svg"
+                      type="image/svg+xml"
+                      height={22}
+                      width={22}
+                    ></object>
+                    <p>+62 8995-226-188</p>
+                  </a>
+                  <p className="font-semibold text-eve-p-latest-project pt-2.5 md:pt-0">
+                    Office
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    {officeLocation.map((item, idx) => {
+                      return (
+                        <div key={idx}>
+                          <p className="text-lg font-medium text-white">
+                            {item.country}
+                          </p>
+                          {item.location.map((location, id) => {
+                            return (
+                              <div
+                                key={id}
+                                className="w-full grid grid-cols-12 item-start"
+                              >
+                                <div className="col-span-1 lg:col-span-2 mt-2">
+                                  <object
+                                    data="/images/footer/location.svg"
+                                    type="image/svg+xml"
+                                    height={18}
+                                    width={18}
+                                  ></object>
+                                </div>
+                                <div className="col-span-11 lg:col-span-10">
+                                  <p className="text-white my-1.5 font-medium">
+                                    {location.city}
+                                  </p>
+                                  <p className="text-white font-light">
+                                    {location.address}
+                                  </p>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
+            </div>
+          </div>
+          <div className="w-full h-[1px] bg-btn-primary mt-7 mb-4"></div>
+          <div className="flex flex-col md:flex-row items-center justify-between text-white">
+            <p>&copy; 2023 Evetech Solution. All right reserved</p>
+            <div className="flex flex-wrap items-center justify-center mt-3 md:mt-0">
+              <button className="mr-5">Term of Service</button>
+              <button className="mr-5">Policy Service</button>
+              <button className="mr-5">cookie Police</button>
             </div>
           </div>
         </Container>
