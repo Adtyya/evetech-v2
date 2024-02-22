@@ -1,3 +1,4 @@
+import FAQ from "@/components/view/global/FAQ";
 import SoftwareDevelopmentIndustry from "@/components/view/home/softwareDevelopmentIndustry";
 import Hero from "@/components/view/webdevelopment/hero";
 import Portofolio from "@/components/view/webdevelopment/portofolio";
@@ -10,6 +11,7 @@ export default function WebDevelopment() {
       <Portofolio></Portofolio>
       <SoftwareDevelopmentIndustry></SoftwareDevelopmentIndustry>
       <ReadyToMeet></ReadyToMeet>
+      <FAQ></FAQ>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import { QualityDrivenContent } from "./content";
+import Image from "next/image";
 
 export default function QualityDriven() {
   return (
@@ -47,12 +48,13 @@ function CardQualityDriven({ title, content, icon, isEven }) {
       } py-5 pr-5 rounded-2xl lg:sticky lg:top-[12rem] w-full h-max`}
     >
       <div className="col-span-2 flex justify-center items-start">
-        <object
+        {/* <object
           data={icon}
           type="image/svg+xml"
           height={40}
           width={40}
-        ></object>
+        ></object> */}
+        <Image src={icon} alt={title} width={40} height={40} />
       </div>
       <div className="col-span-10">
         <h3 className="text-btn-primary font-semibold text-xl lg:text-2xl">
