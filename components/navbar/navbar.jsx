@@ -144,7 +144,7 @@ export default function NavbarEvetech() {
                   </li>
                 ) : (
                   <li key={id} role="none" className="flex items-stretch">
-                    <a
+                    <div
                       role="menuitem"
                       aria-haspopup="false"
                       className={`flex lg:items-center gap-2 py-4 transition-colors duration-300 focus:outline-none focus-visible:outline-none lg:px-8 cursor-pointer ${
@@ -174,7 +174,7 @@ export default function NavbarEvetech() {
                           );
                         })}
                       </div>
-                    </a>
+                    </div>
                   </li>
                 );
               })}
