@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from "react";
 import Logo from "./logo";
+import Link from "next/link";
 import { ButtonPrimary, ButtonWhite } from "../button/button";
 
 const navList = [
@@ -16,7 +17,21 @@ const navList = [
   },
   {
     name: "Services",
-    path: "/",
+    path: "#",
+    subPath: [
+      {
+        name: "Web App Development",
+        path: "/service/web-app-development",
+      },
+      {
+        name: "Web Development",
+        path: "/service/web-development",
+      },
+      {
+        name: "Mobile App Development",
+        path: "/service/mobile-app-development",
+      },
+    ],
   },
   {
     name: "Portofolio",
@@ -105,23 +120,60 @@ export default function NavbarEvetech() {
             <ul
               role="menubar"
               aria-label="Select page"
-              className={`absolute top-0 left-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden  overflow-y-auto overscroll-contain px-8 bg-eve-white/50 backdrop-blur-sm lg:backdrop-blur-none pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0  lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0  lg:pt-0 lg:opacity-100 ${
+              className={`absolute top-0 left-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden  overflow-y-auto overscroll-contain px-8 ${
+                isScrolled ? "bg-eve-white/90" : "bg-eve-gray/90"
+              } backdrop-blur-sm lg:backdrop-blur-none pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0  lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0  lg:pt-0 lg:opacity-100 ${
                 isToggleOpen
                   ? "visible opacity-100 backdrop-blur-sm"
                   : "invisible opacity-0"
               }`}
             >
               {navList.map((item, id) => {
-                return (
+                return item.name !== "Services" ? (
                   <li key={id} role="none" className="flex items-stretch">
-                    <a
+                    <Link
                       role="menuitem"
                       aria-haspopup="false"
                       className={`flex items-center gap-2 py-4 transition-colors duration-300 focus:outline-none focus-visible:outline-none lg:px-8 cursor-pointer ${
                         isScrolled ? "text-eve-gray" : "text-white"
                       } duration-300`}
+                      href={item.path}
                     >
                       <span>{item.name}</span>
+                    </Link>
+                  </li>
+                ) : (
+                  <li key={id} role="none" className="flex items-stretch">
+                    <a
+                      role="menuitem"
+                      aria-haspopup="false"
+                      className={`flex lg:items-center gap-2 py-4 transition-colors duration-300 focus:outline-none focus-visible:outline-none lg:px-8 cursor-pointer ${
+                        isScrolled ? "text-eve-gray" : "text-white"
+                      } duration-300 group relative flex-col lg:flex-row items-start`}
+                    >
+                      <span>{item.name}</span>
+                      <div className="pl-2 grid lg:hidden grid-cols-1 gap-y-2.5">
+                        {item.subPath.map((a, b) => {
+                          return (
+                            <Link href={a.path} key={b}>
+                              {a.name}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                      <div
+                        className={`w-max hidden lg:grid grid-cols-1 gap-y-3 invisible opacity-0 group-hover:visible group-hover:opacity-100 duration-200 absolute top-full h-max  bg-eve-white border border-border-gray ${
+                          isScrolled ? "rounded-b-lg" : "rounded-lg"
+                        } text-eve-gray p-3`}
+                      >
+                        {item.subPath.map((a, b) => {
+                          return (
+                            <Link href={a.path} key={b}>
+                              {a.name}
+                            </Link>
+                          );
+                        })}
+                      </div>
                     </a>
                   </li>
                 );
