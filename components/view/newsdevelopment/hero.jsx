@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Container from "@/components/box/container";
 import Image from "next/image";
-import HeroImage from "@/public/images/home/hero-home.jpg";
 import Heading from "@/components/text/heading";
 import { ButtonLightBlue } from "@/components/button/button";
 
@@ -9,7 +8,7 @@ export default function Hero() {
   return (
     <div className="h-screen w-full relative">
       <Image
-        src={HeroImage}
+        src="/images/newsdevelopment/hero-news.jfif"
         alt="hero"
         fill
         // sizes="(max-width: 768px) 100vw, 1000px"
