@@ -63,13 +63,13 @@ export default function Hero() {
           <div
             data-aos="fade-up"
             data-aos-delay="150"
-            className="hidden lg:mt-20 mx-auto lg:mx-0 bg-eve-low-gray rounded-full backdrop-blur-sm w-max px-7 py-3 lg:grid grid-cols-2"
+            className="hidden lg:mt-20 mx-auto lg:mx-0 bg-eve-low-gray rounded-full backdrop-blur-sm w-max px-4 py-1.5 lg:grid grid-cols-2"
           >
             <div>
               <img src="/images/home/testimony.png" alt="testimony" />
             </div>
-            <div className="text-white">
-              <p>100+ Positive</p>
+            <div className="text-white bg-cyan flex flex-col justify-center">
+              <p>50+ Positive</p>
               <p>Review from Them</p>
             </div>
           </div>
