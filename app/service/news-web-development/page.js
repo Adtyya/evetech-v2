@@ -1,3 +1,5 @@
+import FAQ from "@/components/view/global/FAQ";
+import OurClient from "@/components/view/home/ourClient";
 import CMSFeatures from "@/components/view/newsdevelopment/featuresCMS";
 import FeaturesWeOffer from "@/components/view/newsdevelopment/featuresWeOffer";
 import Hero from "@/components/view/newsdevelopment/hero";
@@ -12,6 +14,8 @@ export default function NewsPage() {
       <OurLatestProjects></OurLatestProjects>
       <FeaturesWeOffer></FeaturesWeOffer>
       <CMSFeatures></CMSFeatures>
+      <OurClient></OurClient>
+      <FAQ></FAQ>
     </>
   );
 }
