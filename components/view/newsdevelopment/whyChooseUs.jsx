@@ -17,7 +17,7 @@ export default function WhyChooseUs() {
         />
       </div>
       <div
-        className="grid grid-cols-1 lg:grid-cols-2 mt-7"
+        className="grid grid-cols-1 lg:grid-cols-2 mt-7 gap-5 items-center"
         id="why choose our service"
       >
         <div>

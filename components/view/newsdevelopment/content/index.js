@@ -36,3 +36,75 @@ export const WhyChooseUs = [
     image: "/images/newsdevelopment/whyChoose/card-icon/credibility.svg",
   },
 ];
+
+export const OurLatestProject = [
+  {
+    id: 1,
+    name: "Portofolio 1",
+    description:
+      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+  },
+  {
+    id: 2,
+    name: "Portofolio 2",
+    description:
+      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+  },
+  {
+    id: 3,
+    name: "Portofolio 3",
+    description:
+      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+  },
+  {
+    id: 4,
+    name: "Portofolio 4",
+    description:
+      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+  },
+  {
+    id: 5,
+    name: "Portofolio 5",
+    description:
+      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+  },
+];
+
+export const CMSFeatures = [
+  {
+    title: "Halaman Login",
+    image: "/images/newsdevelopment/cmsfeatures/login.jpg",
+  },
+  {
+    title: "Media Library",
+    image: "/images/newsdevelopment/cmsfeatures/library.jpg",
+  },
+  {
+    title: "Banner",
+    image: "/images/newsdevelopment/cmsfeatures/banner.jpg",
+  },
+  {
+    title: "Manajemen Pengguna",
+    image: "/images/newsdevelopment/cmsfeatures/user.jpg",
+  },
+  {
+    title: "Kategori Berita",
+    image: "/images/newsdevelopment/cmsfeatures/newscategory.jpg",
+  },
+  {
+    title: "Mobile Friendly",
+    image: "/images/newsdevelopment/cmsfeatures/mobilefriendly.jpg",
+  },
+  {
+    title: "Dashboard Utama",
+    image: "/images/newsdevelopment/cmsfeatures/maindashboard.jpg",
+  },
+  {
+    title: "Manajemen Berita",
+    image: "/images/newsdevelopment/cmsfeatures/newsmanagement.jpg",
+  },
+  {
+    title: "Galery / Advertorial",
+    image: "/images/newsdevelopment/cmsfeatures/gallery.jpg",
+  },
+];
