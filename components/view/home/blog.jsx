@@ -1,4 +1,5 @@
 import Container from "@/components/box/container";
+import { ButtonPrimary } from "@/components/button/button";
 import Heading from "@/components/text/heading";
 import Image from "next/image";
 
@@ -45,6 +46,9 @@ export default function Blog() {
               image="/images/home/blog/blog.jfif"
             ></BlogCardList>
           </div>
+        </div>
+        <div className="w-full flex justify-center items-center mt-2.5">
+          <ButtonPrimary className="px-7">Read More</ButtonPrimary>
         </div>
       </Container>
     </div>

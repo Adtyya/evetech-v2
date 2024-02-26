@@ -72,7 +72,8 @@ const officeLocation = [
       },
       {
         city: "Jakarta",
-        address: "(soon)",
+        address:
+          "Jalan Agung Utara III, Sunter Agung, Tanjung Priok, Jakarta Utara, DKI Jakarta 14350",
       },
     ],
   },

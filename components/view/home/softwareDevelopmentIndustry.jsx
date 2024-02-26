@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function SoftwareDevelopmentIndustry() {
   return (
     <Container>
-      <Heading variant="h3" className="text-btn-primary font-bold">
+      <Heading variant="h3" className="text-btn-primary font-bold capitalize">
         Software <br />
         <span className="text-btn-blue">Development industry</span>
       </Heading>

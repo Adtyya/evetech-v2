@@ -6,6 +6,7 @@ import Heading from "@/components/text/heading";
 import { ButtonPrimary, ButtonWhite } from "@/components/button/button";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import { TehcnologyStack } from "./content";
 
 const categories = ["popular", "mobile", "front-end", "backend", "database"];
@@ -69,6 +70,11 @@ export default function TechnologySet() {
                 spaceBetween: 50,
               },
             }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: true,
+            }}
+            modules={[Autoplay]}
           >
             {filteredStack.map((item, idx) => {
               return (

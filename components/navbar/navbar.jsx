@@ -41,6 +41,10 @@ const navList = [
     name: "Blog",
     path: "/",
   },
+  {
+    name: "Career",
+    path: "/",
+  },
 ];
 
 export default function NavbarEvetech() {

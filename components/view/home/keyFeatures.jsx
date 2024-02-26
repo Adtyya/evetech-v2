@@ -10,7 +10,7 @@ export default function KeyFeatures() {
         variant="h3"
         className="text-btn-primary font-bold text-center md:text-start"
       >
-        <span className="text-btn-blue">Key features</span> of Evetech Solutions
+        <span className="text-btn-blue">Key Features</span> of Evetech Solutions
       </Heading>
       <p className="mt-2.5 text-eve-gray text-center md:text-start">
         Our client send us bunch of smilies with our services and we love them

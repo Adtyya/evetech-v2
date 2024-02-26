@@ -70,7 +70,7 @@ function CardProduct({ title, image }) {
           })}
         </div>
       </div>
-      <div className="h-40">
+      <div className="h-48">
         <div className="h-96 w-full px-3 relative">
           <Image
             fill
