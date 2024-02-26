@@ -25,22 +25,37 @@ export default function OurAgile() {
             enim metus.
           </p>
         </div>
+        <div className="columns-1 md:columns-2 lg:hidden pt-5">
+          {content.map((a, i) => {
+            return (
+              <Card
+                key={i}
+                title={a.name}
+                description={a.description}
+                image={a.image}
+                isEven={i % 2 === 0}
+                indexNumber={i + 1}
+              ></Card>
+            );
+          })}
+        </div>
       </Container>
-      {/* Scroll ke kanan/horizontal sampai habis/akhir section lalu scroll akan kembali menjadi vertical */}
-      <HorizontalScroll>
-        {content.map((a, i) => {
-          return (
-            <Card
-              key={i}
-              title={a.name}
-              description={a.description}
-              image={a.image}
-              isEven={i % 2 === 0}
-              indexNumber={i + 1}
-            ></Card>
-          );
-        })}
-      </HorizontalScroll>
+      <div className="w-full h-full hidden lg:block">
+        <HorizontalScroll>
+          {content.map((a, i) => {
+            return (
+              <Card
+                key={i}
+                title={a.name}
+                description={a.description}
+                image={a.image}
+                isEven={i % 2 === 0}
+                indexNumber={i + 1}
+              ></Card>
+            );
+          })}
+        </HorizontalScroll>
+      </div>
     </div>
   );
 }
@@ -48,7 +63,7 @@ export default function OurAgile() {
 function Card({ title, image, description, isEven, indexNumber }) {
   return (
     <div
-      className={`h-4/5 w-80 ${
+      className={`h-max lg:h-4/5 my-4 lg:my-0 w-full lg:w-80 ${
         isEven ? "bg-eve-white" : "bg-btn-white"
       } rounded-2xl flex-shrink-0`}
     >
