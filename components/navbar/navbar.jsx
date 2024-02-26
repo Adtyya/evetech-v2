@@ -31,6 +31,10 @@ const navList = [
         name: "Mobile App Development",
         path: "/service/mobile-app-development",
       },
+      {
+        name: "News Website Development",
+        path: "/service/news-web-development",
+      },
     ],
   },
   {
@@ -142,6 +146,7 @@ export default function NavbarEvetech() {
                         isScrolled ? "text-eve-gray" : "text-white"
                       } duration-300`}
                       href={item.path}
+                      onClick={() => setIsToggleOpen(false)}
                     >
                       <span>{item.name}</span>
                     </Link>
@@ -156,10 +161,14 @@ export default function NavbarEvetech() {
                       } duration-300 group relative flex-col lg:flex-row items-start`}
                     >
                       <span>{item.name}</span>
-                      <div className="pl-2 grid lg:hidden grid-cols-1 gap-y-2.5">
+                      <div className="pl-2 grid lg:hidden grid-cols-1 gap-y-4">
                         {item.subPath.map((a, b) => {
                           return (
-                            <Link href={a.path} key={b}>
+                            <Link
+                              href={a.path}
+                              key={b}
+                              onClick={() => setIsToggleOpen(false)}
+                            >
                               {a.name}
                             </Link>
                           );

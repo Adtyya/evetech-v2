@@ -25,11 +25,13 @@ export default function Hero() {
               variant="h1"
               className="font-bold text-white max-w-2xl w-full !leading-snug"
             >
-              Pengembangan Website Aplikasi
+              Jasa pembuatan <br />{" "}
+              <span className="text-btn-blue">Website Berita</span>
             </Heading>
             <p className="text-lg text-white mt-8">
-              Gunakan Web application sebagai sarana inovatif untuk <br />
-              mengembangkan bisnismu.
+              Jasa Pembuatan Website Berita Profesional dan Terpercaya <br />
+              Membuat Website Berita Menarik, Fitur Lengkap, dan Harga <br />{" "}
+              Terjangkau
             </p>
             <div className="mt-8 flex space-x-5">
               <ButtonLightBlue>Konsultasi Gratis Sekarang</ButtonLightBlue>
