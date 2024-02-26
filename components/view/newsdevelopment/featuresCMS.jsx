@@ -32,14 +32,15 @@ export default function CMSFeatures() {
                 {item.title}
               </Heading>
               <div className="absolute w-full h-full invisible group-hover:visible opacity-0 group-hover:opacity-100 duration-300">
-                <div className="w-full h-full relative bg-eve-white">
+                <div className="w-full h-full relative bg-white z-10">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
+                    quality={100}
                     className={`object-contain ${
                       n % 2 === 0 ? "rotate-3" : "-rotate-3"
-                    } scale-100 group-hover:scale-105 duration-500`}
+                    } scale-100 group-hover:scale-125 duration-500`}
                   />
                 </div>
               </div>
