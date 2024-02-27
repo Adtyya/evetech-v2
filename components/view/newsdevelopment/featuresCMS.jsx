@@ -47,22 +47,6 @@ export default function CMSFeatures() {
             </div>
           );
         })}
-
-        {/* <div className="w-full h-52 bg-red-500 relative overflow-hidden group">
-          Halo
-          <div className="absolute bottom-0 right-0 translate-x-full group-hover:translate-x-0 duration-300 w-full h-full bg-cyan-500">
-            a
-          </div>
-        </div>
-        <div className="w-full h-52 bg-red-500 relative overflow-hidden group">
-          Halo
-          <div className="absolute bottom-0 right-0 -translate-y-full group-hover:translate-y-0 duration-300 w-full h-full bg-cyan-500">
-            a
-          </div>
-        </div>
-        <div className="w-full h-52 bg-red-500">Halo</div>
-        <div className="w-full h-52 bg-red-500">Halo</div>
-        <div className="w-full h-52 bg-red-500">Halo</div> */}
       </div>
     </Container>
   );

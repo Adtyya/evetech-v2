@@ -1,9 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import Logo from "./logo";
 import Link from "next/link";
+import { FiX } from "react-icons/fi";
 import { ButtonPrimary, ButtonWhite } from "../button/button";
 
 const navList = [
@@ -54,6 +56,7 @@ const navList = [
 export default function NavbarEvetech() {
   const [isToggleOpen, setIsToggleOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showed, setShowed] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,12 +72,16 @@ export default function NavbarEvetech() {
 
   return (
     <nav className="w-full fixed top-0 z-50">
-      <div className="bg-eve-black">
-        <div className="flex items-center justify-center py-1.5">
+      <div className={`bg-eve-black relative ${showed ? "block" : "hidden"}  `}>
+        <div className="flex items-center justify-between py-1.5 px-5">
+          <button className="text-white" onClick={() => setShowed(false)}>
+            <FiX />
+          </button>
           <p className="text-white">
             Get your special discount{" "}
             <span className="text-eve-blue font-semibold">Here!</span>
           </p>
+          <div></div>
         </div>
       </div>
 
@@ -86,7 +93,7 @@ export default function NavbarEvetech() {
         <div className="relative mx-auto w-full max-w-7xl px-5">
           <nav
             aria-label="main navigation"
-            className="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700"
+            className="flex h-[4.3rem] items-stretch justify-between font-medium text-slate-700"
             role="navigation"
           >
             {/*      <!-- Brand logo --> */}
@@ -94,7 +101,14 @@ export default function NavbarEvetech() {
               id="WindUI"
               className="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none lg:flex-1"
             >
-              <Logo />
+              {/* <Logo /> */}
+              <Image
+                src="/images/navbar/logo.png"
+                alt="logo"
+                fetchPriority="high"
+                width={60}
+                height={50}
+              />
             </a>
             {/*      <!-- Mobile trigger --> */}
             <button
