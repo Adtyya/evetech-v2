@@ -7,6 +7,7 @@ import Logo from "./logo";
 import Link from "next/link";
 import { FiX } from "react-icons/fi";
 import { ButtonPrimary, ButtonWhite } from "../button/button";
+import { usePathname } from "next/navigation";
 
 const navList = [
   {
@@ -57,10 +58,12 @@ export default function NavbarEvetech() {
   const [isToggleOpen, setIsToggleOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showed, setShowed] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
+    pathname === "/contact-us" ? setIsScrolled(true) : setIsScrolled(false);
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 120);
+      pathname !== "/contact-us" && setIsScrolled(window.scrollY > 120);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -68,7 +71,7 @@ export default function NavbarEvetech() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [pathname]);
 
   return (
     <nav className="w-full fixed top-0 z-50">

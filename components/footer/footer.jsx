@@ -66,7 +66,7 @@ const menu = [
   },
 ];
 
-const officeLocation = [
+export const officeLocation = [
   {
     country: "Indonesia",
     location: [
@@ -255,12 +255,12 @@ export default function Footer() {
                                 className="w-full grid grid-cols-12 item-start"
                               >
                                 <div className="col-span-1 lg:col-span-2 mt-2">
-                                  <object
-                                    data="/images/footer/location.svg"
-                                    type="image/svg+xml"
+                                  <Image
+                                    alt="location"
+                                    src="/images/footer/location.svg"
                                     height={18}
                                     width={18}
-                                  ></object>
+                                  />
                                 </div>
                                 <div className="col-span-11 lg:col-span-10">
                                   <p className="text-white my-1.5 font-medium">
