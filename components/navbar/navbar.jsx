@@ -159,7 +159,7 @@ export default function NavbarEvetech() {
                     <Link
                       role="menuitem"
                       aria-haspopup="false"
-                      className={`flex items-center gap-2 py-4 transition-colors duration-300 focus:outline-none focus-visible:outline-none lg:px-8 cursor-pointer ${
+                      className={`flex items-center gap-2 py-2 lg:py-4 transition-colors duration-300 focus:outline-none focus-visible:outline-none lg:px-8 cursor-pointer ${
                         isScrolled ? "text-eve-gray" : "text-white"
                       } duration-300`}
                       href={item.path}

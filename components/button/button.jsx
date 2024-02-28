@@ -1,3 +1,5 @@
+import { FaWhatsapp } from "react-icons/fa";
+
 function ButtonPrimary({ children, className = "", ...props }) {
   return (
     <button
@@ -31,4 +33,18 @@ function ButtonLightBlue({ children, className = "", ...props }) {
   );
 }
 
-export { ButtonPrimary, ButtonWhite, ButtonLightBlue };
+function ButtonWhatsApp({ ...props }) {
+  return (
+    <a
+      href="https://api.whatsapp.com/send/?phone=628995226188"
+      target="_blank"
+      className="font-semibold capitalize bg-eve-wa rounded-full w-max px-5 text-white py-1.5 flex items-center space-x-2.5"
+      {...props}
+    >
+      <FaWhatsapp className="font-bold text-xl" />
+      <span>Hubungi kami</span>
+    </a>
+  );
+}
+
+export { ButtonPrimary, ButtonWhite, ButtonLightBlue, ButtonWhatsApp };

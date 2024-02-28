@@ -31,6 +31,7 @@ module.exports = {
           qa: "#F0F2F5",
           qadesc: "#444C58BF",
           check: "#2FF3E0",
+          wa: "#25D366",
         },
         btn: {
           primary: "#2B3A4B",
