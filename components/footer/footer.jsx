@@ -4,6 +4,7 @@ import Input from "../form/input";
 import Heading from "../text/heading";
 import { CiCircleCheck } from "react-icons/ci";
 import Image from "next/image";
+import Link from "next/link";
 
 const socialIcon = [
   {
@@ -47,15 +48,19 @@ const menu = [
     path: [
       {
         name: "web app development",
-        path: "/",
+        path: "/service/web-app-development",
       },
       {
         name: "mobile app development",
-        path: "/",
+        path: "/service/mobile-app-development",
       },
       {
         name: "web development",
-        path: "/",
+        path: "/service/web-development",
+      },
+      {
+        name: "news web development",
+        path: "/service/news-web-development",
       },
     ],
   },
@@ -158,44 +163,7 @@ export default function Footer() {
                   You have ideas, we have software solution, time to join
                   forces.
                 </p>
-                <div className="flex space-x-4 pt-4">
-                  {socialIcon.map((item, idx) => {
-                    return (
-                      <button
-                        key={idx}
-                        className="w-9 h-9 rounded-full bg-eve-footer-btn outline outline-1 outline-white flex items-center justify-center"
-                      >
-                        <Image
-                          src={item.path}
-                          width={22}
-                          height={22}
-                          alt="social-icon"
-                        />
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-            <div className="col-auto md:col-span-9">
-              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-5 lg:gap-y-0">
-                {menu.map((item, indx) => {
-                  return (
-                    <div key={indx} className="space-y-2.5">
-                      <p className="font-semibold text-eve-p-latest-project">
-                        {item.name}
-                      </p>
-                      {item.path.map((a, b) => {
-                        return (
-                          <p key={b} className="font-medium text-white">
-                            {a.name}
-                          </p>
-                        );
-                      })}
-                    </div>
-                  );
-                })}
-                <div className="space-y-2.5 col-span-2 lg:col-auto">
+                <div className="space-y-1.5 py-4">
                   <p className="font-semibold text-eve-p-latest-project">
                     Reach Us
                   </p>
@@ -224,10 +192,56 @@ export default function Footer() {
                     ></object>
                     <p>+62 8995-226-188</p>
                   </a>
-                  <p className="font-semibold text-eve-p-latest-project pt-2.5 md:pt-0">
-                    Office
+                </div>
+                <div className="flex space-x-4 pt-4">
+                  {socialIcon.map((item, idx) => {
+                    return (
+                      <button
+                        key={idx}
+                        className="w-9 h-9 rounded-full bg-eve-footer-btn outline outline-1 outline-white flex items-center justify-center"
+                      >
+                        <Image
+                          src={item.path}
+                          width={22}
+                          height={22}
+                          alt="social-icon"
+                        />
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+            <div className="col-auto md:col-span-9">
+              <div className="grid grid-cols-2 lg:grid-cols-12 gap-y-5 lg:gap-y-0">
+                <div className="col-span-2 lg:col-span-3 grid grid-cols-2 lg:grid-cols-1">
+                  {menu.map((item, indx) => {
+                    return (
+                      <div
+                        key={indx}
+                        className="space-y-2.5 col-auto lg:col-span-3 mb-3.5"
+                      >
+                        <p className="font-semibold text-eve-p-latest-project">
+                          {item.name}
+                        </p>
+                        {item.path.map((a, b) => {
+                          return (
+                            <Link key={b} href={a.path}>
+                              <p className="font-medium text-white capitalize my-2">
+                                {a.name}
+                              </p>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="space-y-2.5 col-span-2 lg:col-span-9">
+                  <p className="font-semibold text-eve-p-latest-project">
+                    Our Office
                   </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {officeLocation.map((item, idx) => {
                       return (
                         <div key={idx}>
