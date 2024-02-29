@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.1.0",
     "@formkit/auto-animate": "^0.8.1",
     "@next/bundle-analyzer": "^14.1.0",
     "aos": "^2.3.4",

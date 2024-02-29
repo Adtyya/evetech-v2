@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 function ButtonPrimary({ children, className = "", ...props }) {
   return (
     <button
-      className={`${className} bg-btn-primary text-eve-white font-semibold px-4 py-1.5 rounded-full`}
+      className={`${className} bg-btn-primary text-eve-white font-semibold px-4 py-1.5 rounded-full disabled:cursor-not-allowed`}
       {...props}
     >
       {children}
@@ -14,7 +14,7 @@ function ButtonPrimary({ children, className = "", ...props }) {
 function ButtonWhite({ children, className = "", ...props }) {
   return (
     <button
-      className={`bg-btn-white text-btn-primary font-semibold border border-border-gray px-4 py-1.5 rounded-full ${className}`}
+      className={`bg-btn-white text-btn-primary font-semibold border border-border-gray px-4 py-1.5 rounded-full disabled:cursor-not-allowed ${className}`}
       {...props}
     >
       {children}
@@ -25,7 +25,7 @@ function ButtonWhite({ children, className = "", ...props }) {
 function ButtonLightBlue({ children, className = "", ...props }) {
   return (
     <button
-      className={`bg-btn-blue text-eve-white font-semibold px-4 py-1.5 rounded-full ${className}`}
+      className={`bg-btn-blue disabled:cursor-not-allowed text-eve-white font-semibold px-4 py-1.5 rounded-full ${className}`}
       {...props}
     >
       {children}

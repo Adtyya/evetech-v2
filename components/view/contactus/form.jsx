@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useRef } from "react";
 import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import {
@@ -10,8 +11,35 @@ import {
 import { ButtonLightBlue, ButtonWhatsApp } from "@/components/button/button";
 import { officeLocation } from "@/components/footer/footer";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
 
 export default function ContactUsForm() {
+  const emailRef = useRef(null);
+
+  const [countryCode, setCountryCode] = useState("62");
+  const [userNumber, setUserNumber] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .sendForm("service_xxf1b9a", "template_aij7504", emailRef.current, {
+        publicKey: "3kSW9aA1DfoKULfx_",
+      })
+      .then(
+        () => {
+          alert("Form sent. We will contact you soon!");
+          setLoading(false);
+        },
+        (err) => {
+          console.warn("Error", err);
+          alert("An error occured");
+        }
+      );
+  };
+
   return (
     <>
       <div className="h-32"></div>
@@ -32,7 +60,11 @@ export default function ContactUsForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 my-14 gap-5">
           <FormLeftSide></FormLeftSide>
           <div className="order-first lg:order-last">
-            <form className="bg-btn-white rounded-2xl p-3 lg:p-7 space-y-4">
+            <form
+              ref={emailRef}
+              onSubmit={handleSubmit}
+              className="bg-btn-white rounded-2xl p-3 lg:p-7 space-y-4"
+            >
               <div className="py-5 text-center">
                 <Heading variant="h3" className="text-btn-primary font-bold">
                   Let Us Know You First
@@ -40,7 +72,7 @@ export default function ContactUsForm() {
                 <p className="mt-1.5 text-eve-gray">{`Fill out the form and we’ll be in touch shortly.`}</p>
               </div>
               <InputWithLabel
-                name="fullname"
+                name="name"
                 required={true}
                 placeholder="Your fullname"
                 label="Fullname"
@@ -55,24 +87,31 @@ export default function ContactUsForm() {
               ></InputWithLabel>
               <div className="flex space-x-5">
                 <div className="w-1/4">
-                  <InputSelect label="Nomor telpon" required={false}>
-                    <option value="id">+62</option>
-                    <option value="id">+62</option>
-                    <option value="id">+62</option>
+                  <InputSelect
+                    label="Nomor telpon"
+                    onChange={(even) => setCountryCode(even.target.value)}
+                    required={false}
+                  >
+                    <option value="62">+62</option>
+                    <option value="60">+60</option>
+                    <option value="65">+65</option>
                   </InputSelect>
                 </div>
                 <div className="w-3/4">
-                  <InputInvisibleLabel placeholder="xxxxxxxx"></InputInvisibleLabel>
+                  <InputInvisibleLabel
+                    placeholder="xxxxxxxx"
+                    onChange={(event) => setUserNumber(event.target.value)}
+                  ></InputInvisibleLabel>
                 </div>
               </div>
               <InputWithLabel
-                name="companyname"
+                name="bussiness_name"
                 required={true}
                 placeholder="Your company name"
                 label="nama perusahaan"
                 type="text"
               ></InputWithLabel>
-              <InputSelect label="Anggaran Proyek">
+              <InputSelect label="Anggaran Proyek" name="plan_budget">
                 <option value="" defaultValue>
                   Select Your Budget
                 </option>
@@ -82,8 +121,17 @@ export default function ContactUsForm() {
                 <option value="$ 12000 - $ 20000">{`$ 12000 - $ 20000`}</option>
                 <option value="> $ 20000">{`> $ 20000`}</option>
               </InputSelect>
+              <div className="absolute -z-10">
+                <InputInvisibleLabel
+                  type="hidden"
+                  name="phone_number"
+                  value={`${countryCode.concat(userNumber)}`}
+                />
+              </div>
               <div className="flex items-center justify-center w-full pt-3">
-                <ButtonLightBlue type="submit">Submit</ButtonLightBlue>
+                <ButtonLightBlue type="submit" disabled={loading}>
+                  {loading ? "Please wait..." : "Submit"}
+                </ButtonLightBlue>
               </div>
             </form>
           </div>

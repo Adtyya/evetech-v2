@@ -82,7 +82,9 @@ export default function NavbarEvetech() {
           </button>
           <p className="text-white">
             Get your special discount{" "}
-            <span className="text-eve-blue font-semibold">Here!</span>
+            <Link href="/contact-us" className="text-eve-blue font-semibold">
+              Here!
+            </Link>
           </p>
           <div></div>
         </div>

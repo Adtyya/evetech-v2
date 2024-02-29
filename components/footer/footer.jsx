@@ -1,3 +1,5 @@
+"use client";
+
 import Container from "../box/container";
 import { ButtonPrimary } from "../button/button";
 import Input from "../form/input";
@@ -5,6 +7,8 @@ import Heading from "../text/heading";
 import { CiCircleCheck } from "react-icons/ci";
 import Image from "next/image";
 import Link from "next/link";
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
 
 const socialIcon = [
   {
@@ -27,11 +31,11 @@ const menu = [
     path: [
       {
         name: "About us",
-        path: "/",
+        path: "/about-us",
       },
       {
         name: "Contact",
-        path: "/",
+        path: "/contact-us",
       },
       {
         name: "News & blogs",
@@ -104,6 +108,30 @@ export const officeLocation = [
 ];
 
 export default function Footer() {
+  const emailRef = useRef(null);
+  const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .sendForm("service_xxf1b9a", "template_50w7zkl", emailRef.current, {
+        publicKey: "3kSW9aA1DfoKULfx_",
+      })
+      .then(
+        () => {
+          setSuccess(true);
+          setLoading(false);
+        },
+        (err) => {
+          console.warn("Error", err);
+          alert("An error occured");
+        }
+      );
+  };
+
   return (
     <div>
       <div className="w-full h-full bg-btn-white py-8">
@@ -117,21 +145,39 @@ export default function Footer() {
               Evetech <br /> Solution turn your ideas intro visual captivating
               realities that drive results.
             </p>
-            <form>
-              <div className="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 items-center space-x-4">
+            <form ref={emailRef} onSubmit={handleSubmit}>
+              <div className="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 items-center space-x-4 relative">
                 <Input
                   type="email"
+                  name="email"
                   placeholder="Enter your email to signup for get special offer"
                 />
 
-                <ButtonPrimary className="whitespace-nowrap px-5 py-2">
-                  Get Special Offer
+                <div className="absolute -z-0">
+                  <Input
+                    type="hidden"
+                    value="New potential customer !"
+                    name="title"
+                  />
+                  <Input
+                    type="hidden"
+                    value="Someone need special offer"
+                    name="subject"
+                  />
+                </div>
+                <ButtonPrimary
+                  className="whitespace-nowrap px-5 py-2"
+                  disabled={loading}
+                >
+                  {loading ? "Please Wait..." : "Get Special Offer"}
                 </ButtonPrimary>
               </div>
-              <p className="text-eve-green flex space-x-1 items-center justify-center md:justify-normal mt-1.5">
-                <CiCircleCheck />
-                <span>The form was sent successfully</span>
-              </p>
+              {success ? (
+                <p className="text-eve-green flex space-x-1 items-center justify-center md:justify-normal mt-1.5">
+                  <CiCircleCheck />
+                  <span>The form was sent successfully</span>
+                </p>
+              ) : null}
             </form>
           </div>
         </Container>
