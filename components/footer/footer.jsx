@@ -150,6 +150,7 @@ export default function Footer() {
                 <Input
                   type="email"
                   name="email"
+                  required
                   placeholder="Enter your email to signup for get special offer"
                 />
 
