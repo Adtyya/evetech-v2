@@ -43,7 +43,7 @@ export default function ProvideService() {
         <div className="flex w-full flex-col items-center justify-center">
           <div data-aos="fade-up" data-aos-delay="200">
             <Heading variant="h2" className="font-bold text-btn-primary">
-              We Are Ready To Prove the{" "}
+              We Are Ready To Provide the{" "}
               <span className="text-btn-blue">Best Service</span>
             </Heading>
           </div>

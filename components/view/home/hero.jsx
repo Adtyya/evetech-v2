@@ -83,7 +83,7 @@ export default function Hero() {
                 <img src="/images/home/testimony.png" alt="testimony" />
               </div>
               <div className="text-white">
-                <p>100+ Positive</p>
+                <p>50+ Positive</p>
                 <p>Review from Them</p>
               </div>
             </div>
