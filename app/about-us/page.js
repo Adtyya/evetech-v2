@@ -1,3 +1,4 @@
+import BePartOfSomethingBig from "@/components/view/aboutus/bepartofsomething";
 import FounderStory from "@/components/view/aboutus/founderstory";
 import Hero from "@/components/view/aboutus/hero";
 import OurTeam from "@/components/view/aboutus/ourteam";
@@ -12,6 +13,7 @@ export default function AboutUsPage() {
       <FounderStory></FounderStory>
       <OurTeam></OurTeam>
       <OurClient></OurClient>
+      <BePartOfSomethingBig></BePartOfSomethingBig>
     </>
   );
 }

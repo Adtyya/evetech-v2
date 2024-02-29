@@ -287,7 +287,7 @@ export default function Footer() {
             <div className="flex flex-wrap items-center justify-center mt-3 md:mt-0">
               <button className="mr-5">Term of Service</button>
               <button className="mr-5">Policy Service</button>
-              <button className="mr-5">cookie Police</button>
+              <button className="mr-5">Cookie Police</button>
             </div>
           </div>
         </Container>
