@@ -41,7 +41,7 @@ export default function Hero() {
               <span>
                 Custom{" "}
                 <TextTransition
-                  className="text-eve-light-blue"
+                  className="text-btn-blue"
                   inline
                   springConfig={presets.wobbly}
                 >

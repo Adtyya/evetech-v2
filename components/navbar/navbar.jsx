@@ -16,7 +16,7 @@ const navList = [
   },
   {
     name: "About Us",
-    path: "/",
+    path: "/about-us",
   },
   {
     name: "Services",
@@ -211,15 +211,17 @@ export default function NavbarEvetech() {
             </ul>
             {/*      <!-- Actions --> */}
             <div className="ml-auto flex items-center justify-end px-6 lg:ml-0 lg:flex-1 lg:p-0 space-x-3">
-              <ButtonWhite className="flex items-center space-x-3">
+              {/* <ButtonWhite className="flex items-center space-x-3">
                 <img
                   src="/images/navbar/indonesia.png"
                   alt="flag"
                   loading="lazy"
                 />
                 <span>ID</span>
-              </ButtonWhite>
-              <ButtonPrimary>Get Started!</ButtonPrimary>
+              </ButtonWhite> */}
+              <Link href="/contact-us">
+                <ButtonPrimary>Get Started!</ButtonPrimary>
+              </Link>
             </div>
           </nav>
         </div>
