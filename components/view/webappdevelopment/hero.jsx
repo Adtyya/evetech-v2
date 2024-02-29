@@ -3,6 +3,7 @@ import Container from "@/components/box/container";
 import Image from "next/image";
 import Heading from "@/components/text/heading";
 import { ButtonLightBlue } from "@/components/button/button";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -34,7 +35,9 @@ export default function Hero() {
               dengan keahlian teknologi untuk transformasi digital yang unggul
             </p>
             <div className="mt-8 flex space-x-5">
-              <ButtonLightBlue>Konsultasi Gratis Sekarang</ButtonLightBlue>
+              <Link href="/contact-us">
+                <ButtonLightBlue>Konsultasi Gratis Sekarang</ButtonLightBlue>
+              </Link>
             </div>
           </div>
         </div>
