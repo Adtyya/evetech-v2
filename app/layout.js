@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import NavbarEvetech from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <NextTopLoader color="#3A85FF" zIndex={2000} />
         <NavbarEvetech></NavbarEvetech>
         {children}
         <Footer></Footer>
