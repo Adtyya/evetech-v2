@@ -240,29 +240,41 @@ export const OurLatestProject = [
     name: "Portofolio 1",
     description:
       "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+    video: "/videos/projects/SQM.webm",
   },
   {
     id: 2,
     name: "Portofolio 2",
     description:
       "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+    video: "/videos/projects/Downton.webm",
   },
   {
     id: 3,
     name: "Portofolio 3",
     description:
       "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+    video: "/videos/projects/Homeez.webm",
   },
   {
     id: 4,
     name: "Portofolio 4",
     description:
       "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+    video: "/videos/projects/Juragan.webm",
   },
   {
     id: 5,
     name: "Portofolio 5",
     description:
       "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+    video: "/videos/projects/Pelangi.webm",
+  },
+  {
+    id: 5,
+    name: "Portofolio 6",
+    description:
+      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+    video: "/videos/projects/Sanwoo.webm",
   },
 ];

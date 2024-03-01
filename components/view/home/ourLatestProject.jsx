@@ -29,24 +29,6 @@ export default function OurLatestProjects() {
       <div className="grid grid-cols-1 lg:grid-cols-12 mt-10 mb-7 gap-8">
         <div className="w-full relative col-auto lg:col-span-8">
           <Swiper
-            // centeredSlides
-            // loop
-            // effect="coverflow"
-            // coverflowEffect={{
-            //   rotate: 1,
-            //   stretch: 50,
-            //   depth: 100,
-            //   modifier: 1.5,
-            // }}
-            // breakpoints={{
-            //   0: {
-            //     slidesPerView: 1,
-            //   },
-            //   768: {
-            //     slidesPerView: 1,
-            //   },
-            // }}
-            // modules={[EffectCoverflow]}
             slidesPerView={1}
             spaceBetween={10}
             onSlideChange={(event) => {
@@ -54,18 +36,23 @@ export default function OurLatestProjects() {
             }}
             onSwiper={(val) => (sliderRef.current = val)}
           >
-            {OurLatestProject.map((_, id) => {
+            {OurLatestProject.map((item, id) => {
               return (
                 <SwiperSlide key={id}>
                   <div
-                    className={`w-full h-64 lg:h-96 relative bg-eve-white duration-300 rounded-2xl`}
+                    className={`w-full h-64 lg:h-96 relative bg-eve-white duration-300 rounded-2xl overflow-hidden`}
                   >
-                    <Image
-                      src="/images/home/latest-project/preview.png"
-                      fill
-                      className="object-contain p-5"
-                      alt="test"
-                    />
+                    <video
+                      className="w-full h-full"
+                      controls={false}
+                      preload="meta"
+                      autoPlay
+                      muted
+                      loop
+                      controlsList="nofullscreen nodownload noremoteplayback"
+                    >
+                      <source src={item.video} type="video/webm"></source>
+                    </video>
                   </div>
                 </SwiperSlide>
               );
