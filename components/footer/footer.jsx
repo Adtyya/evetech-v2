@@ -90,7 +90,7 @@ export const officeLocation = [
     country: "Malaysia",
     location: [
       {
-        city: "Kula Lumpur City",
+        city: "Kuala Lumpur City",
         address:
           "BO1-A-9, Menara 2, KL Eco City, 3, Jln Bangsar, 59200 Kuala Lumpur WP",
       },
