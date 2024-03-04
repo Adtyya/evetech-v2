@@ -36,6 +36,12 @@ module.exports = {
           wa: "#25D366",
           glass: "#2C323E4D",
           input: "#A5ABB3",
+          internshipText: "#BE9E00",
+          internship: "#FFF39B",
+          partTimeText: "#35C435",
+          partTime: "#C3F9B0",
+          fullTimeText: "#FF3E30",
+          fullTime: "#FFC6AC",
         },
         btn: {
           primary: "#2B3A4B",
