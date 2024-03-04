@@ -50,4 +50,16 @@ function InputInvisibleLabel({ ...props }) {
   );
 }
 
-export { InputWithLabel, InputInvisibleLabel, InputSelect };
+function InputWithIcon({ icon, ...props }) {
+  return (
+    <div className="flex bg-white py-2 px-4 space-x-3 items-center rounded-2xl focus-within:border focus-within:border-border-gray border border-transparent">
+      <span className="text-eve-input">{icon}</span>
+      <input
+        className="w-full text-btn-primary placeholder:capitalize placeholder:text-eve-input focus:outline-none"
+        {...props}
+      />
+    </div>
+  );
+}
+
+export { InputWithLabel, InputInvisibleLabel, InputSelect, InputWithIcon };

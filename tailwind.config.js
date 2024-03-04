@@ -13,6 +13,8 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "gradient-footer":
           "linear-gradient(263.6deg, #151515 10.15%, rgba(31, 31, 31, 0.8) 102%)",
+        "gradient-border":
+          " linear-gradient(91.43deg, rgba(255, 255, 255, 0.3) -1.05%, rgba(255, 255, 255, 0) 63.51%, rgba(255, 255, 255, 0.3) 120.48%)",
       },
       colors: {
         eve: {
@@ -32,6 +34,8 @@ module.exports = {
           qadesc: "#444C58BF",
           check: "#2FF3E0",
           wa: "#25D366",
+          glass: "#2C323E4D",
+          input: "#A5ABB3",
         },
         btn: {
           primary: "#2B3A4B",
