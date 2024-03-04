@@ -237,44 +237,37 @@ export const TehcnologyStack = [
 export const OurLatestProject = [
   {
     id: 1,
-    name: "Portofolio 1",
+    name: "SQM",
     description:
-      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+      "sqmstudio.com is a tropical architecture & interior design online studio landing page website. SQM Studio specializes in residential & commercial projects.",
     video: "/videos/projects/SQM.webm",
   },
   {
     id: 2,
-    name: "Portofolio 2",
+    name: "Downtown Dinner",
     description:
       "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
     video: "/videos/projects/Downton.webm",
   },
   {
-    id: 3,
-    name: "Portofolio 3",
-    description:
-      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
-    video: "/videos/projects/Homeez.webm",
-  },
-  {
     id: 4,
-    name: "Portofolio 4",
+    name: "Juragan Material",
     description:
-      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+      "Juragan Material website is used to integrate all company resources, such as customer data, sales order data, purchase order management, and business monitoring through a dashboard.",
     video: "/videos/projects/Juragan.webm",
   },
   {
     id: 5,
-    name: "Portofolio 5",
+    name: "Pelangi Laundry",
     description:
-      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+      "Pelangi Laundry provides online laundry services, where customers do not need to come to the laundry outlet in person. Customers only need to access the Pelangi Laundry website to use laundry services, which later Pelangi Laundry employees will go to the customer's location according to the location data that has been input by the customer before.",
     video: "/videos/projects/Pelangi.webm",
   },
   {
     id: 5,
-    name: "Portofolio 6",
+    name: "Sanwoo Electronics",
     description:
-      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+      "sanwooelectronics.com displays cooler and freezer products along with details that will make it easier for Sanwoo Electronics to reach its customers. This website also contains contact details for Sanwoo Electronics which can make it easier for customers.",
     video: "/videos/projects/Sanwoo.webm",
   },
 ];
