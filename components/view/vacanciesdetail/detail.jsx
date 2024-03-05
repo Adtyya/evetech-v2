@@ -1,11 +1,137 @@
 "use client";
 
+import { useState } from "react";
 import Container from "@/components/box/container";
 import CardDetailVacancies from "./component/card";
 import Heading from "@/components/text/heading";
-import { ButtonPrimary } from "@/components/button/button";
+import { ButtonLightBlue, ButtonPrimary } from "@/components/button/button";
 import Link from "next/link";
 import Image from "next/image";
+import ModalBase from "@/components/modal";
+import { FiX } from "react-icons/fi";
+import { InputRounded } from "@/components/form/inputv2";
+import { useDropzone } from "react-dropzone";
+
+function SideCardInfo({ title, subtitle }) {
+  return (
+    <div className="bg-eve-white rounded-2xl p-3">
+      <small className="text-btn-primary/60 capitalize">{title}</small>
+      <p className="text-btn-primary font-bold capitalize">{subtitle}</p>
+    </div>
+  );
+}
+
+function SocialButton({ path, alt }) {
+  return (
+    <button className="h-9 w-9 bg-eve-social rounded-full relative flex items-center justify-center">
+      <Image src={path} alt={alt} width={24} height={24} />
+    </button>
+  );
+}
+
+function ApplyPosition() {
+  const {
+    acceptedFiles: resume,
+    getRootProps: rootResume,
+    getInputProps: resumeProps,
+  } = useDropzone({ multiple: false, accept: ".pdf, .doc, .docx" });
+
+  return (
+    <ModalBase isOpen={true} closeModal={() => {}}>
+      <div className="flex items-center justify-between">
+        <Heading variant="h4" className="font-bold text-btn-primary">
+          Upload Resume
+        </Heading>
+        <button className="text-xl focus:outline-btn-primary">
+          <FiX />
+        </button>
+      </div>
+      <div className="w-full h-0.5 bg-eve-strip my-4"></div>
+      <form className="space-y-3">
+        <InputRounded
+          label="Fullname"
+          type="text"
+          placeholder="Your Fullname"
+          required
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <InputRounded
+            label="Phone"
+            type="text"
+            placeholder="+62xxxxxx"
+            required
+          />
+          <InputRounded
+            label="Phone"
+            type="email"
+            placeholder="johndoe@mail.com"
+            required
+          />
+        </div>
+        <div>
+          <p className="text-btn-primary capitalize mb-2">
+            Resume <span className="text-red-500">*</span>
+          </p>
+          <div
+            {...rootResume({
+              className:
+                "w-full py-14 rounded-2xl border-2 border-btn-primary border-dashed flex item-center justify-center",
+            })}
+          >
+            <input
+              className="absolute invisible"
+              accept=".pdf,.doc,.docx"
+              {...resumeProps()}
+            />
+            {resume.length > 0 ? (
+              <p>Uploaded - {resume[0]?.name}</p>
+            ) : (
+              <p className="font-semibold text-center text-btn-primary">
+                Drag & Drop or{" "}
+                <span className="text-btn-blue cursor-pointer">
+                  Choose File
+                </span>{" "}
+                to upload <br /> .pdf
+              </p>
+            )}
+          </div>
+        </div>
+        <div>
+          <p className="text-btn-primary capitalize mb-2">{`Portfolio (optional)`}</p>
+          <div
+            {...rootResume({
+              className:
+                "w-full py-14 rounded-2xl border-2 border-btn-primary border-dashed flex item-center justify-center",
+            })}
+          >
+            <input
+              className="absolute invisible"
+              accept=".pdf,.doc,.docx"
+              {...resumeProps()}
+            />
+            {resume.length > 0 ? (
+              <p>Uploaded - {resume[0]?.name}</p>
+            ) : (
+              <>
+                <p className="font-semibold text-center text-btn-primary">
+                  Drag & Drop or{" "}
+                  <span className="text-btn-blue cursor-pointer">
+                    Choose File
+                  </span>{" "}
+                  to upload
+                  <br /> .pdf
+                </p>
+              </>
+            )}
+          </div>
+        </div>
+        <div className="flex items-center justify-center pt-3">
+          <ButtonLightBlue>Apply Now</ButtonLightBlue>
+        </div>
+      </form>
+    </ModalBase>
+  );
+}
 
 export default function DetailVacanciesTop() {
   return (
@@ -88,23 +214,7 @@ export default function DetailVacanciesTop() {
           </div>
         </div>
       </div>
+      <ApplyPosition></ApplyPosition>
     </Container>
-  );
-}
-
-function SideCardInfo({ title, subtitle }) {
-  return (
-    <div className="bg-eve-white rounded-2xl p-3">
-      <small className="text-btn-primary/60 capitalize">{title}</small>
-      <p className="text-btn-primary font-bold capitalize">{subtitle}</p>
-    </div>
-  );
-}
-
-function SocialButton({ path, alt }) {
-  return (
-    <button className="h-9 w-9 bg-eve-social rounded-full relative flex items-center justify-center">
-      <Image src={path} alt={alt} width={24} height={24} />
-    </button>
   );
 }

@@ -62,4 +62,26 @@ function InputWithIcon({ icon, ...props }) {
   );
 }
 
-export { InputWithLabel, InputInvisibleLabel, InputSelect, InputWithIcon };
+function InputRounded({ label, required, ...props }) {
+  return (
+    <div className="flex flex-col space-y-2.5">
+      <label className="text-btn-primary capitalize">
+        {label}
+        {required ? <span className="text-red-500">*</span> : null}
+      </label>
+      <input
+        className="focus:outline-none py-2.5 px-3 rounded-full border-2 focus:border-btn-primary/40 border-border-gray"
+        required={required}
+        {...props}
+      ></input>
+    </div>
+  );
+}
+
+export {
+  InputWithLabel,
+  InputInvisibleLabel,
+  InputSelect,
+  InputWithIcon,
+  InputRounded,
+};
