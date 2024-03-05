@@ -1,6 +1,7 @@
 import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import { LuMapPin, LuClock, LuBook } from "react-icons/lu";
+import Link from "next/link";
 
 export default function RecentPositions() {
   return (
@@ -52,35 +53,40 @@ export function CardPosition({
   };
 
   return (
-    <div className="bg-eve-white rounded-2xl p-5 md:p-7 drop-shadow-md">
-      <div id="head" className="flex items-center justify-between">
-        <Heading variant="h4" className="font-bold text-btn-primary capitalize">
-          {title}
-        </Heading>
-        <div>
-          <GetBadgeEmployementType />
+    <Link href="/">
+      <div className="bg-eve-white rounded-2xl p-5 md:p-7 drop-shadow-md">
+        <div id="head" className="flex items-center justify-between">
+          <Heading
+            variant="h4"
+            className="font-bold text-btn-primary capitalize"
+          >
+            {title}
+          </Heading>
+          <div>
+            <GetBadgeEmployementType />
+          </div>
+        </div>
+        <div className="w-full lg:w-2/4 flex flex-col md:flex-row space-x-0 md:space-x-5 space-y-1.5 md:space-y-0 my-2.5">
+          <div className="flex space-x-2 items-center text-eve-gray">
+            <LuMapPin></LuMapPin>
+            <p className="capitalize">
+              {placementType} - {placementLocation}
+            </p>
+          </div>
+          <div className="flex space-x-2 items-center text-eve-gray">
+            <LuBook></LuBook>
+            <p>Department</p>
+          </div>
+          <div className="flex space-x-2 items-center text-eve-gray">
+            <LuClock></LuClock>
+            <p className="capitalize">{experienceNeeded}</p>
+          </div>
+        </div>
+        <div className="flex space-x-5">
+          <small className="text-eve-gray">Posted 1 day ago</small>
+          <small className="text-eve-gray">Deadline: 24 Desember 2023</small>
         </div>
       </div>
-      <div className="w-full lg:w-2/4 flex flex-col md:flex-row space-x-0 md:space-x-5 space-y-1.5 md:space-y-0 my-2.5">
-        <div className="flex space-x-2 items-center text-eve-gray">
-          <LuMapPin></LuMapPin>
-          <p className="capitalize">
-            {placementType} - {placementLocation}
-          </p>
-        </div>
-        <div className="flex space-x-2 items-center text-eve-gray">
-          <LuBook></LuBook>
-          <p>Department</p>
-        </div>
-        <div className="flex space-x-2 items-center text-eve-gray">
-          <LuClock></LuClock>
-          <p className="capitalize">{experienceNeeded}</p>
-        </div>
-      </div>
-      <div className="flex space-x-5">
-        <small className="text-eve-gray">Posted 1 day ago</small>
-        <small className="text-eve-gray">Deadline: 24 Desember 2023</small>
-      </div>
-    </div>
+    </Link>
   );
 }
