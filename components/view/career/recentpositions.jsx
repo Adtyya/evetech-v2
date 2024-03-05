@@ -14,7 +14,7 @@ export default function RecentPositions() {
           Find out how you could contribute
         </p>
       </div>
-      <div className="mt-8">
+      <div className="mt-8 space-y-5">
         <CardPosition
           title="UI Designer"
           employementType="full time"
