@@ -29,20 +29,26 @@ function SocialButton({ path, alt }) {
   );
 }
 
-function ApplyPosition() {
+function ApplyPosition({ open, close }) {
   const {
     acceptedFiles: resume,
     getRootProps: rootResume,
     getInputProps: resumeProps,
   } = useDropzone({ multiple: false, accept: ".pdf, .doc, .docx" });
 
+  const {
+    acceptedFiles: portofolio,
+    getRootProps: rootPortofolio,
+    getInputProps: portofolioProps,
+  } = useDropzone({ multiple: false, accept: ".pdf, .doc, .docx" });
+
   return (
-    <ModalBase isOpen={true} closeModal={() => {}}>
+    <ModalBase isOpen={open} closeModal={close}>
       <div className="flex items-center justify-between">
         <Heading variant="h4" className="font-bold text-btn-primary">
           Upload Resume
         </Heading>
-        <button className="text-xl focus:outline-btn-primary">
+        <button className="text-xl focus:outline-btn-primary" onClick={close}>
           <FiX />
         </button>
       </div>
@@ -75,7 +81,7 @@ function ApplyPosition() {
           <div
             {...rootResume({
               className:
-                "w-full py-14 rounded-2xl border-2 border-btn-primary border-dashed flex item-center justify-center",
+                "w-full py-14 rounded-2xl border-2 border-border-gray border-dashed flex item-center justify-center",
             })}
           >
             <input
@@ -99,15 +105,15 @@ function ApplyPosition() {
         <div>
           <p className="text-btn-primary capitalize mb-2">{`Portfolio (optional)`}</p>
           <div
-            {...rootResume({
+            {...rootPortofolio({
               className:
-                "w-full py-14 rounded-2xl border-2 border-btn-primary border-dashed flex item-center justify-center",
+                "w-full py-14 rounded-2xl border-2 border-border-gray border-dashed flex item-center justify-center",
             })}
           >
             <input
               className="absolute invisible"
               accept=".pdf,.doc,.docx"
-              {...resumeProps()}
+              {...portofolioProps()}
             />
             {resume.length > 0 ? (
               <p>Uploaded - {resume[0]?.name}</p>
@@ -134,6 +140,8 @@ function ApplyPosition() {
 }
 
 export default function DetailVacanciesTop() {
+  const [open, setOpen] = useState(false);
+
   return (
     <Container className="py-12">
       <CardDetailVacancies
@@ -143,6 +151,7 @@ export default function DetailVacanciesTop() {
         placementType={"onsite"}
         placementLocation={"surakarta"}
         experienceNeeded={"1+ years experience"}
+        action={() => setOpen(true)}
       />
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-5">
         <div className="col-auto md:col-span-8">
@@ -214,7 +223,7 @@ export default function DetailVacanciesTop() {
           </div>
         </div>
       </div>
-      <ApplyPosition></ApplyPosition>
+      <ApplyPosition open={open} close={() => setOpen(false)}></ApplyPosition>
     </Container>
   );
 }

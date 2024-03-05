@@ -11,6 +11,7 @@ export default function CardDetailVacancies({
   placementType,
   placementLocation,
   experienceNeeded,
+  action,
 }) {
   return (
     <div className="w-full h-max bg-eve-white rounded-2xl overflow-hidden">
@@ -61,7 +62,7 @@ export default function CardDetailVacancies({
               </small>
             </div>
             <div className="mt-5 flex justify-center lg:justify-end">
-              <ButtonLightBlue>Apply This job</ButtonLightBlue>
+              <ButtonLightBlue onClick={action}>Apply This job</ButtonLightBlue>
             </div>
           </div>
         </div>
