@@ -32,7 +32,7 @@ export default function Hero() {
         className="object-cover brightness-50"
       />
       <div className="h-12"></div>
-      <Container className="w-full h-full relative z-10">
+      <Container className="w-full h-full relative z-10 py-12">
         <div className="flex flex-col items-start justify-center h-full w-full relative overflow-hidden">
           <div data-aos="fade-up">
             <Heading variant="h1" className="invisible fixed">
