@@ -11,7 +11,7 @@ export default function AboutUsPage() {
       <Hero></Hero>
       <ProvideService></ProvideService>
       <FounderStory></FounderStory>
-      <OurTeam></OurTeam>
+      {/* <OurTeam></OurTeam> */}
       <OurClient></OurClient>
       <BePartOfSomethingBig></BePartOfSomethingBig>
     </>

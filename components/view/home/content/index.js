@@ -69,6 +69,12 @@ export const ProductList = [
     image: "/images/home/products/lists/webgameedu.png",
   },
   {
+    name: "E-Commerce",
+    description:
+      "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
+    image: "/images/home/products/lists/ecomerce.png",
+  },
+  {
     name: "News Website",
     description:
       "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
@@ -91,6 +97,12 @@ export const ProductList = [
     description:
       "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
     image: "/images/home/products/lists/wordpress.png",
+  },
+  {
+    name: "E-Commerce",
+    description:
+      "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
+    image: "/images/home/products/lists/ecomerce.png",
   },
 ];
 

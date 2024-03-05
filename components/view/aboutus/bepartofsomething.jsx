@@ -24,7 +24,7 @@ export default function BePartOfSomethingBig() {
               Anda punya ide, Kami punya solusi perangkat lunak. Wujudkan
               mimpimu menjadi nyata!
             </p>
-            <Link href="/about-us">
+            <Link href="/contact-us">
               <ButtonPrimary className="mt-3.5 px-7">{`Let's talk`}</ButtonPrimary>
             </Link>
           </div>

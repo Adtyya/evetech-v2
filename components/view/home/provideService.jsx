@@ -6,6 +6,7 @@ import ProvideBG from "@/public/images/home/provide-bg.jpg";
 import Heading from "@/components/text/heading";
 import { ButtonPrimary } from "@/components/button/button";
 import CountUp from "react-countup";
+import Link from "next/link";
 
 const stat = [
   {
@@ -60,7 +61,9 @@ export default function ProvideService() {
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            <ButtonPrimary>{`Let's talk`}</ButtonPrimary>
+            <Link href="/contact-us">
+              <ButtonPrimary>{`Let's talk`}</ButtonPrimary>
+            </Link>
           </div>
           <div
             className="flex items-center justify-start w-full mt-8"

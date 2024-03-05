@@ -10,6 +10,7 @@ import {
   HiCheckCircle,
 } from "react-icons/hi";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import Link from "next/link";
 
 const faqContent = [
   {
@@ -55,9 +56,11 @@ export default function FAQ() {
               <span className="text-btn-blue">Frequently Asked Questions</span>
             </Heading>
             <p className="text-eve-gray">{`Couldn't find what you were looking for?`}</p>
-            <ButtonLightBlue className="capitalize">
-              Tanyakan sekarang
-            </ButtonLightBlue>
+            <Link href="/contact-us">
+              <ButtonLightBlue className="capitalize">
+                Tanyakan sekarang
+              </ButtonLightBlue>
+            </Link>
           </div>
         </div>
         <div className="space-y-5">

@@ -15,7 +15,7 @@ export default function OurLatestProjects() {
   const [active, setActive] = useState(0);
 
   return (
-    <Container className="py-5">
+    <Container id="latest-projects" className="py-5">
       <div className="flex-col lg:flex lg:flex-row items-center lg:justify-between">
         <Heading variant="h3" className="text-btn-primary font-bold capitalize">
           Check out our <br />{" "}
@@ -92,9 +92,9 @@ export default function OurLatestProjects() {
           })}
         </div>
       </div>
-      <div className="flex items-center justify-center">
+      {/* <div className="flex items-center justify-center">
         <ButtonPrimary className="px-8">View More</ButtonPrimary>
-      </div>
+      </div> */}
     </Container>
   );
 }

@@ -25,7 +25,7 @@ export default function OurProducts() {
         </p>
       </Container>
       <Marquee direction="right" speed={50}>
-        {ProductList.slice(0, 4).map((item, index) => {
+        {ProductList.slice(0, 5).map((item, index) => {
           return (
             <CardProduct
               key={index}
@@ -37,7 +37,7 @@ export default function OurProducts() {
       </Marquee>
       <div className="py-10"></div>
       <Marquee direction="left" speed={50}>
-        {ProductList.slice(4).map((item, index) => {
+        {ProductList.slice(5).map((item, index) => {
           return (
             <CardProduct
               key={index}

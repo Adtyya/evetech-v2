@@ -42,15 +42,15 @@ const navList = [
   },
   {
     name: "Portofolio",
-    path: "/",
+    path: "#",
   },
   {
     name: "Blog",
-    path: "/",
+    path: "#",
   },
   {
     name: "Career",
-    path: "/career",
+    path: "#",
   },
 ];
 

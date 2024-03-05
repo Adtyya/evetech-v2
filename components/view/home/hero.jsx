@@ -9,6 +9,7 @@ import Heading from "@/components/text/heading";
 import TextTransition, { presets } from "react-text-transition";
 import { ButtonLightBlue, ButtonWhite } from "@/components/button/button";
 import { HiOutlineChevronDown } from "react-icons/hi";
+import Link from "next/link";
 
 const TEXTS = ["Software", "Web App", "Mobile App"];
 
@@ -56,8 +57,12 @@ export default function Hero() {
               engage the Global Market
             </p>
             <div className="mt-8 flex space-x-5">
-              <ButtonLightBlue>{`Let's talk`}</ButtonLightBlue>
-              <ButtonWhite>View Portofolio</ButtonWhite>
+              <Link href="/contact-us">
+                <ButtonLightBlue>{`Let's talk`}</ButtonLightBlue>
+              </Link>
+              <Link href="#latest-projects">
+                <ButtonWhite>View Portofolio</ButtonWhite>
+              </Link>
             </div>
           </div>
           <div

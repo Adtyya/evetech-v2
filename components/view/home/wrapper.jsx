@@ -33,7 +33,7 @@ export default function WrapWithAOS() {
       <OurClient></OurClient>
       <TechnologySet></TechnologySet>
       <OurLatestProjects></OurLatestProjects>
-      <Blog></Blog>
+      {/* <Blog></Blog> */}
     </>
   );
 }
