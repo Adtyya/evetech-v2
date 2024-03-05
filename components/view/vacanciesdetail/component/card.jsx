@@ -31,12 +31,9 @@ export default function CardDetailVacancies({
         <div className="flex flex-col lg:flex-row justify-between">
           <div className="w-full lg:w-3/4">
             <div className="flex space-x-3 items-center justify-start">
-              <Heading
-                variant="h4"
-                className="font-bold text-btn-primary capitalize"
-              >
+              <h1 className="font-bold text-btn-primary capitalize text-2xl lg:text-3xl">
                 {jobTitle}
-              </Heading>
+              </h1>
               <GetBadgeEmployementType type={employementType} />
             </div>
             <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-5 space-y-1.5 md:space-y-0 my-2.5">

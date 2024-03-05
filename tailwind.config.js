@@ -42,6 +42,7 @@ module.exports = {
           partTime: "#C3F9B0",
           fullTimeText: "#FF3E30",
           fullTime: "#FFC6AC",
+          strip: "#EEF0F2",
         },
         btn: {
           primary: "#2B3A4B",

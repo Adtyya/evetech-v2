@@ -2,6 +2,9 @@
 
 import Container from "@/components/box/container";
 import CardDetailVacancies from "./component/card";
+import Heading from "@/components/text/heading";
+import { ButtonPrimary } from "@/components/button/button";
+import Link from "next/link";
 
 export default function DetailVacanciesTop() {
   return (
@@ -43,6 +46,32 @@ export default function DetailVacanciesTop() {
             <SideCardInfo title="Job-Type" subtitle="Full-Time" />
             <SideCardInfo title="Work Model" subtitle="Work Model" />
             <SideCardInfo title="Experience" subtitle="1+ Experience" />
+          </div>
+          <div className="mt-8 space-y-2.5">
+            <h2 className="font-bold text-btn-primary capitalize text-xl lg:text-2xl">
+              About Evetech Solution
+            </h2>
+            <p className="text-btn-primary line-clamp-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus blanditiis consequuntur ipsam tempora, exercitationem
+              facere saepe sit quos quam laborum laboriosam explicabo a dolor
+              corrupti ad eum provident qui iure!
+            </p>
+            <div>
+              <Link href="/about-us">
+                <ButtonPrimary className="px-5">Detail</ButtonPrimary>
+              </Link>
+            </div>
+          </div>
+          <div className="my-5">
+            <div className="h-0.5 w-full bg-eve-strip"></div>
+            <div className="flex mt-2.5 items-center space-x-5">
+              <p className="text-btn-primary">Share this job : </p>
+              <div>Icon 1</div>
+              <div>Icon 1</div>
+              <div>Icon 1</div>
+              <div>Icon 1</div>
+            </div>
           </div>
         </div>
       </div>
