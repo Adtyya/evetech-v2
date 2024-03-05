@@ -5,6 +5,7 @@ import CardDetailVacancies from "./component/card";
 import Heading from "@/components/text/heading";
 import { ButtonPrimary } from "@/components/button/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function DetailVacanciesTop() {
   return (
@@ -67,10 +68,22 @@ export default function DetailVacanciesTop() {
             <div className="h-0.5 w-full bg-eve-strip"></div>
             <div className="flex mt-2.5 items-center space-x-5">
               <p className="text-btn-primary">Share this job : </p>
-              <div>Icon 1</div>
-              <div>Icon 1</div>
-              <div>Icon 1</div>
-              <div>Icon 1</div>
+              <SocialButton
+                path="/images/career/social/Instagram.svg"
+                alt="instagram"
+              />
+              <SocialButton
+                path="/images/career/social/Facebook.svg"
+                alt="Facebook"
+              />
+              <SocialButton
+                path="/images/career/social/Twitter.svg"
+                alt="Twitter"
+              />
+              <SocialButton
+                path="/images/career/social/Github.svg"
+                alt="Github"
+              />
             </div>
           </div>
         </div>
@@ -85,5 +98,13 @@ function SideCardInfo({ title, subtitle }) {
       <small className="text-btn-primary/60 capitalize">{title}</small>
       <p className="text-btn-primary font-bold capitalize">{subtitle}</p>
     </div>
+  );
+}
+
+function SocialButton({ path, alt }) {
+  return (
+    <button className="h-9 w-9 bg-eve-social rounded-full relative flex items-center justify-center">
+      <Image src={path} alt={alt} width={24} height={24} />
+    </button>
   );
 }
