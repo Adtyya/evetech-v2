@@ -61,9 +61,13 @@ export default function NavbarEvetech() {
   const pathname = usePathname();
 
   useEffect(() => {
-    pathname === "/contact-us" ? setIsScrolled(true) : setIsScrolled(false);
+    pathname.includes("/contact-us") || pathname.includes("/career/vacancies")
+      ? setIsScrolled(true)
+      : setIsScrolled(false);
     const handleScroll = () => {
-      pathname !== "/contact-us" && setIsScrolled(window.scrollY > 120);
+      !pathname.includes("/contact-us") ||
+        (!pathname.includes("/career/vacancies") &&
+          setIsScrolled(window.scrollY > 120));
     };
 
     window.addEventListener("scroll", handleScroll);

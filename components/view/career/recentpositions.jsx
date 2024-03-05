@@ -27,6 +27,24 @@ export default function RecentPositions() {
   );
 }
 
+export const GetBadgeEmployementType = ({ type }) => {
+  return (
+    <div
+      className={`${
+        type === "internship"
+          ? "bg-eve-internship text-eve-internshipText"
+          : type === "part time"
+          ? "bg-eve-partTime text-eve-partTimeText"
+          : type === "full time"
+          ? "bg-eve-fullTime text-eve-fullTimeText"
+          : null
+      } capitalize px-4 py-1.5 rounded-full`}
+    >
+      {type}
+    </div>
+  );
+};
+
 export function CardPosition({
   title,
   employementType,
@@ -34,24 +52,6 @@ export function CardPosition({
   placementLocation,
   experienceNeeded,
 }) {
-  const GetBadgeEmployementType = () => {
-    return (
-      <div
-        className={`${
-          employementType === "internship"
-            ? "bg-eve-internship text-eve-internshipText"
-            : employementType === "part time"
-            ? "bg-eve-partTime text-eve-partTimeText"
-            : employementType === "full time"
-            ? "bg-eve-fullTime text-eve-fullTimeText"
-            : null
-        } capitalize px-4 py-1.5 rounded-full`}
-      >
-        {employementType}
-      </div>
-    );
-  };
-
   return (
     <Link href="/">
       <div className="bg-eve-white rounded-2xl p-5 md:p-7 drop-shadow-md">
@@ -63,7 +63,7 @@ export function CardPosition({
             {title}
           </Heading>
           <div>
-            <GetBadgeEmployementType />
+            <GetBadgeEmployementType type={employementType} />
           </div>
         </div>
         <div className="w-full lg:w-2/4 flex flex-col md:flex-row space-x-0 md:space-x-5 space-y-1.5 md:space-y-0 my-2.5">
