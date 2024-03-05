@@ -57,7 +57,7 @@ export default function FAQ() {
             </Heading>
             <p className="text-eve-gray">{`Couldn't find what you were looking for?`}</p>
             <Link href="/contact-us">
-              <ButtonLightBlue className="capitalize">
+              <ButtonLightBlue className="capitalize mt-2.5">
                 Tanyakan sekarang
               </ButtonLightBlue>
             </Link>
