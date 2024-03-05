@@ -10,7 +10,7 @@ import NextTopLoader from "nextjs-toploader";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Evetech Solution",
+  title: "Evetech: Software House Semarang & Jakarta",
   description:
     "Evetech Software House Semarang & Jakarta provides Custom Software & ERP Development, Web Development, Mobile App Development & Web Design in Indonesia and Malaysia.",
   icons: {
