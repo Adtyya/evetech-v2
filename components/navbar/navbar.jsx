@@ -65,9 +65,14 @@ export default function NavbarEvetech() {
       ? setIsScrolled(true)
       : setIsScrolled(false);
     const handleScroll = () => {
-      !pathname.includes("/contact-us") ||
-        (!pathname.includes("/career/vacancies") &&
-          setIsScrolled(window.scrollY > 120));
+      if (
+        pathname.includes("/contact-us") ||
+        pathname.includes("/career/vacancies")
+      ) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(window.scrollY > 120);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
