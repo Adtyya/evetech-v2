@@ -2,12 +2,14 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Logo from "./logo";
 import Link from "next/link";
 import { FiX } from "react-icons/fi";
 import { ButtonPrimary, ButtonWhite } from "../button/button";
-import { usePathname } from "next/navigation";
+import { useTranslations, useLocale } from "next-intl";
+import { usePathname, useParams, useRouter } from "next/navigation";
+import { useTransition } from "react";
 
 const navList = [
   {
@@ -15,7 +17,7 @@ const navList = [
     path: "/",
   },
   {
-    name: "About Us",
+    name: "AboutUs",
     path: "/about-us",
   },
   {
@@ -23,25 +25,25 @@ const navList = [
     path: "#",
     subPath: [
       {
-        name: "Web App Development",
+        name: "WebAppDev",
         path: "/service/web-app-development",
       },
       {
-        name: "Web Development",
+        name: "WebDev",
         path: "/service/web-development",
       },
       {
-        name: "Mobile App Development",
+        name: "MobileAppDev",
         path: "/service/mobile-app-development",
       },
       {
-        name: "News Website Development",
+        name: "NewsDev",
         path: "/service/news-web-development",
       },
     ],
   },
   {
-    name: "Portofolio",
+    name: "Portfolio",
     path: "#",
   },
   {
@@ -54,11 +56,39 @@ const navList = [
   },
 ];
 
+const listLang = [
+  {
+    name: "ID",
+    flag: "/images/navbar/indonesia.png",
+    locale: "id",
+  },
+  {
+    name: "EN",
+    flag: "/images/navbar/uk.svg",
+    locale: "en",
+  },
+];
+
 export default function NavbarEvetech() {
+  const t = useTranslations("Navbar");
+  const locale = useLocale();
+  const router = useRouter();
+
+  const [isPending, startTransition] = useTransition();
+
+  const flagPath = useMemo(() => {
+    const path =
+      locale === "en"
+        ? "/images/navbar/uk.svg"
+        : "/images/navbar/indonesia.png";
+    return path;
+  }, [locale]);
+
   const [isToggleOpen, setIsToggleOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showed, setShowed] = useState(true);
   const pathname = usePathname();
+  const params = useParams();
 
   useEffect(() => {
     pathname.includes("/contact-us") || pathname.includes("/career/vacancies")
@@ -81,6 +111,12 @@ export default function NavbarEvetech() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [pathname]);
+
+  function changeLocale(locale) {
+    startTransition(() => {
+      router.replace(`/${locale}`);
+    });
+  }
 
   return (
     <nav className="w-full fixed top-0 z-50">
@@ -173,10 +209,10 @@ export default function NavbarEvetech() {
                       className={`flex items-center gap-2 py-2 lg:py-4 transition-colors duration-300 focus:outline-none focus-visible:outline-none lg:px-8 cursor-pointer ${
                         isScrolled ? "text-eve-gray" : "text-white"
                       } duration-300`}
-                      href={item.path}
+                      href={`${item.path}`}
                       onClick={() => setIsToggleOpen(false)}
                     >
-                      <span>{item.name}</span>
+                      <span className="capitalize">{t(item.name)}</span>
                     </Link>
                   </li>
                 ) : (
@@ -188,7 +224,7 @@ export default function NavbarEvetech() {
                         isScrolled ? "text-eve-gray" : "text-white"
                       } duration-300 group relative flex-col lg:flex-row items-start`}
                     >
-                      <span>{item.name}</span>
+                      <span>{t(item.name)}</span>
                       <div className="pl-2 grid lg:hidden grid-cols-1 gap-y-4">
                         {item.subPath.map((a, b) => {
                           return (
@@ -197,7 +233,7 @@ export default function NavbarEvetech() {
                               key={b}
                               onClick={() => setIsToggleOpen(false)}
                             >
-                              {a.name}
+                              {t(a.name)}
                             </Link>
                           );
                         })}
@@ -210,7 +246,7 @@ export default function NavbarEvetech() {
                         {item.subPath.map((a, b) => {
                           return (
                             <Link href={a.path} key={b}>
-                              {a.name}
+                              {t(a.name)}
                             </Link>
                           );
                         })}
@@ -222,14 +258,34 @@ export default function NavbarEvetech() {
             </ul>
             {/*      <!-- Actions --> */}
             <div className="ml-auto flex items-center justify-end px-6 lg:ml-0 lg:flex-1 lg:p-0 space-x-3">
-              {/* <ButtonWhite className="flex items-center space-x-3">
-                <img
-                  src="/images/navbar/indonesia.png"
-                  alt="flag"
-                  loading="lazy"
-                />
-                <span>ID</span>
-              </ButtonWhite> */}
+              <div className="w-max relative group">
+                <ButtonWhite className="flex items-center space-x-3">
+                  <img src={flagPath} alt="flag" loading="lazy" />
+                  <span className="uppercase text-sm font-bold">{locale}</span>
+                </ButtonWhite>
+                <div
+                  id="list"
+                  className="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 w-full mt-2 duration-300 origin-bottom"
+                >
+                  <div className="w-full p-1.5 bg-btn-white rounded-2xl border border-border-gray">
+                    {listLang.map((item, idx) => {
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => changeLocale(item.locale)}
+                          className="text-btn-primary flex items-center space-x-2.5 my-1 hover:underline"
+                        >
+                          <img src={item.flag} alt="flag" loading="lazy" />
+                          <span className="text-sm font-semibold">
+                            {item.name}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+
               <Link href="/contact-us">
                 <ButtonPrimary>Get Started!</ButtonPrimary>
               </Link>

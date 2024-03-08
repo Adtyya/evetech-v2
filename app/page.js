@@ -1,10 +1,5 @@
-import WrapWithAOS from "@/components/view/home/wrapper";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <main>
-      {/* Dibuat menjadi satu komponen karna perlu init AOS menggunakan use client */}
-      <WrapWithAOS></WrapWithAOS>
-    </main>
-  );
+export default function RootPage() {
+  redirect("/en");
 }

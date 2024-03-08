@@ -1,0 +1,17 @@
+{
+  "Index": {
+    "title": "Hello world!"
+  },
+  "Navbar": {
+    "Home": "Home",
+    "AboutUs": "About Us",
+    "Services": "Services",
+    "WebDev": "Web Development",
+    "WebAppDev": "Web App Development",
+    "MobileAppDev": "Mobile App Development",
+    "NewsDev": "News Development",
+    "Blog": "Blog",
+    "Portfolio": "portfolio",
+    "Career": "Career"
+  }
+}
