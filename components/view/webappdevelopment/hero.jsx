@@ -4,8 +4,11 @@ import Image from "next/image";
 import Heading from "@/components/text/heading";
 import { ButtonLightBlue } from "@/components/button/button";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("WebAppDev.section1");
+
   return (
     <div className="h-screen w-full relative">
       <Image
@@ -25,18 +28,19 @@ export default function Hero() {
               variant="h1"
               className="font-bold text-white max-w-2xl w-full !leading-snug"
             >
-              <span className="text-btn-blue">Web Application</span> <br />{" "}
-              Development
+              {t.rich("title", {
+                br: () => <br />,
+                span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+              })}
             </Heading>
             <p className="text-lg text-white mt-8">
-              Gunakan Web application sebagai sarana inovatif untuk
-              mengembangkan <br /> bisnismu. Transformasi digital melalui
-              pengembangan website aplikasi. <br /> Menghadirkan solusi terkini
-              dengan keahlian teknologi untuk transformasi digital yang unggul
+              {t.rich("subtitle", {
+                br: () => <br />,
+              })}
             </p>
             <div className="mt-8 flex space-x-5">
               <Link href="/contact-us">
-                <ButtonLightBlue>Konsultasi Gratis Sekarang</ButtonLightBlue>
+                <ButtonLightBlue>{t("consultation")}</ButtonLightBlue>
               </Link>
             </div>
           </div>

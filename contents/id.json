@@ -249,5 +249,12 @@
         "subtitle": "Kami akan mengirimkan hasil software kebutuhan Anda. Kami dapat juga membantu anda melakukan pemeliharaan software ataupun mengupdatenya tanpa kehilangan data yang sudah dimasukkan di kemudian hari."
       }
     }
+  },
+  "WebAppDev": {
+    "section1": {
+      "title": "Pengembangan <br></br> <span>Website Aplikasi</span>",
+      "subtitle": "Tingkatkan inovasi bisnis Anda dengan pengembangan web aplikasi kami.<br></br>  Solusi digital terdepan untuk transformasi bisnis Anda.",
+      "consultation": "Dapatkan konsultasi gratis"
+    }
   }
 }

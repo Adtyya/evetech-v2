@@ -249,5 +249,12 @@
         "subtitle": "We will deliver the software you need. We can also help you maintain the software or update it without losing the data that has been entered in the future."
       }
     }
+  },
+  "WebAppDev": {
+    "section1": {
+      "title": "<span>Web Application</span> <br></br> Development",
+      "subtitle": "Boost your business innovation with our web application development. <br></br>  Leading digital solutions for your business transformation.",
+      "consultation": "Get Free consultation"
+    }
   }
 }
