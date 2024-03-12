@@ -1,13 +1,16 @@
 import Heading from "@/components/text/heading";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function OurClient() {
+  const t = useTranslations("OurClient");
+
   return (
     <div className="bg-eve-white py-12">
       <div className="flex items-center justify-center mb-5">
         <Heading variant={"h3"} className="text-btn-primary font-semibold">
-          Our Client
+          {t("title")}
         </Heading>
       </div>
       <Marquee direction="left">

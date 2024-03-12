@@ -14,6 +14,9 @@
     "Portfolio": "portofolio",
     "Career": "Karir"
   },
+  "OurClient": {
+    "title": "Klien Kami"
+  },
   "HomePage": {
     "section1": {
       "custom": "Pengembangan Perangkat Lunak",
@@ -148,6 +151,34 @@
       "9": {
         "title": "SEO",
         "subtitle": "Memiliki trouble atau masalah dalam website atau blog anda? Evetech dapat membantu anda menyelesaikannya."
+      }
+    },
+    "section7": {
+      "title": "<span>Sektor Industri</span> <br></br> yang Kami Layani",
+      "subtitle": "Kami adalah yang terbaik dalam membuat perangkat lunak yang sesuai dengan apa yang Anda butuhkan, apakah Anda memiliki bisnis kecil yang baru dimulai, bisnis menengah yang ingin tumbuh, atau perusahaan besar yang sedang berusaha berkembang, kami siap membantu Anda.",
+      "1": {
+        "title": "Logistik",
+        "subtitle": "Anda dapat meningkatkan efisiensi dan visibilitas rantai pasokan dengan solusi logistik canggih kami."
+      },
+      "2": {
+        "title": "Kesehatan",
+        "subtitle": "Anda dapat meningkatkan kualitas layanan dan keselamatan pasien dengan solusi digital untuk industri kesehatan."
+      },
+      "3": {
+        "title": "E-Commerce & Belanja",
+        "subtitle": "Anda dapat meningkatkan penjualan dan konversi dengan platform e-commerce yang mudah digunakan dan dioptimalkan untuk konversi."
+      },
+      "4": {
+        "title": "Saas",
+        "subtitle": "Anda dapat meningkatkan efisiensi dan keamanan dengan solusi infrastruktur cloud yang aman dan terukur."
+      },
+      "5": {
+        "title": "Teknologi Pendidikan",
+        "subtitle": "Anda dapat meningkatkan akses ke pendidikan berkualitas dengan platform pembelajaran online yang menarik dan interaktif."
+      },
+      "6": {
+        "title": "Perjalanan & Perhotelan",
+        "subtitle": "Anda dapat meningkatkan efisiensi operasional dan pemesanan dengan solusi digital untuk industri perjalanan & perhotelan."
       }
     }
   }

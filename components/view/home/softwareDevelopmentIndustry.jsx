@@ -2,20 +2,20 @@ import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import { SoftwareDev } from "./content";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function SoftwareDevelopmentIndustry() {
+  const t = useTranslations("HomePage.section7");
+
   return (
     <Container>
       <Heading variant="h3" className="text-btn-primary font-bold capitalize">
-        Software <br />
-        <span className="text-btn-blue">Development industry</span>
+        {t.rich("title", {
+          br: () => <br />,
+          span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+        })}
       </Heading>
-      <p className="mt-2.5 text-eve-gray">
-        We outshine at delivering the best software development services as per
-        the customers’ requirements, be it small size companies in their
-        beginning phase or mid-size businesses looking for growth or large
-        organizations actively making efforts to expand.
-      </p>
+      <p className="mt-2.5 text-eve-gray">{t("subtitle")}</p>
       <div className="columns-1 md:columns-3 my-10">
         {SoftwareDev.map((item, index) => {
           return (
@@ -37,10 +37,10 @@ export default function SoftwareDevelopmentIndustry() {
                     variant="h4"
                     className="text-eve-white font-semibold"
                   >
-                    {item.name}
+                    {t(`${index + 1}.title`)}
                   </Heading>
                   <p className="mt-1.5 text-btn-white font-extralight">
-                    {item.description}
+                    {t(`${index + 1}.subtitle`)}
                   </p>
                 </div>
               </div>

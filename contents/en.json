@@ -14,6 +14,9 @@
     "Portfolio": "portfolio",
     "Career": "Career"
   },
+  "OurClient": {
+    "title": "Our Client"
+  },
   "HomePage": {
     "section1": {
       "custom": "Custom",
@@ -148,6 +151,34 @@
       "9": {
         "title": "SEO",
         "subtitle": "Get instant support when you have any error or troubles."
+      }
+    },
+    "section7": {
+      "title": "Software <br></br> <span>Development Industry</span>",
+      "subtitle": "We outshine at delivering the best software development services as per the customers requirements, be it small size companies in their beginning phase or mid-size businesses looking for growth or large organizations actively making efforts to expand.mid-size businesses looking for growth or large organizations actively making efforts to expand.",
+      "1": {
+        "title": "Logistics",
+        "subtitle": "You can improve supply chain efficiency and visibility with our advanced logistics solutions."
+      },
+      "2": {
+        "title": "Healthcare",
+        "subtitle": "You can improve service quality and patient safety with digital solutions for the healthcare industry."
+      },
+      "3": {
+        "title": "E-Commerce & Shopping",
+        "subtitle": "You can increase sales and conversions with an easy-to-use, conversion-optimized e-commerce platform."
+      },
+      "4": {
+        "title": "Saas",
+        "subtitle": "You can improve efficiency and security with secure and scalable cloud infrastructure solutions."
+      },
+      "5": {
+        "title": "Education Tech",
+        "subtitle": "You can improve access to quality education with engaging and interactive online learning platforms."
+      },
+      "6": {
+        "title": "Travel & Hospitality",
+        "subtitle": "You can improve operations and booking efficiency with digital solutions for the travel & hospitality industry."
       }
     }
   }
