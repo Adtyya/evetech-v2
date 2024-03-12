@@ -8,7 +8,7 @@ import Link from "next/link";
 import { FiX } from "react-icons/fi";
 import { ButtonPrimary, ButtonWhite } from "../button/button";
 import { useTranslations, useLocale } from "next-intl";
-import { usePathname, useParams, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useTransition } from "react";
 
 const navList = [
@@ -88,7 +88,6 @@ export default function NavbarEvetech() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showed, setShowed] = useState(true);
   const pathname = usePathname();
-  const params = useParams();
 
   useEffect(() => {
     pathname.includes("/contact-us") || pathname.includes("/career/vacancies")
@@ -113,8 +112,15 @@ export default function NavbarEvetech() {
   }, [pathname]);
 
   function changeLocale(locale) {
+    const path =
+      pathname === "/id" || pathname === "/en"
+        ? `/${locale}`
+        : `/${locale}/${pathname
+            .replace("/id", "")
+            .replace("/en", "")
+            .replace("/", "")}`;
     startTransition(() => {
-      router.replace(`/${locale}`);
+      router.replace(path);
     });
   }
 
@@ -147,8 +153,9 @@ export default function NavbarEvetech() {
             role="navigation"
           >
             {/*      <!-- Brand logo --> */}
-            <a
+            <Link
               id="WindUI"
+              href="/"
               className="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none lg:flex-1"
             >
               {/* <Logo /> */}
@@ -159,7 +166,7 @@ export default function NavbarEvetech() {
                 width={60}
                 height={50}
               />
-            </a>
+            </Link>
             {/*      <!-- Mobile trigger --> */}
             <button
               className={`relative order-10 block h-10 w-10 self-center lg:hidden
