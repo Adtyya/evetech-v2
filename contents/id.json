@@ -13,5 +13,59 @@
     "Blog": "Blog",
     "Portfolio": "portofolio",
     "Career": "Karir"
+  },
+  "HomePage": {
+    "section1": {
+      "custom": "Pengembangan Perangkat Lunak",
+      "software": "Kustom",
+      "webapp": "Aplikasi Web",
+      "mobileapp": "Aplikasi Mobile",
+      "development": "",
+      "description": "Kembangkan Bisnis Anda dengan Solusi IT Kami <br></br>Kami Akan Wujudkan Mimpi Anda Menjadi Kenyataan.",
+      "talk": "Konsultasikan sekarang",
+      "portfolio": "Lihat Portofolio",
+      "countreview": "20+ Positif",
+      "fromthem": "Ulasan dari Mereka"
+    },
+    "section2": {
+      "provide": "Kami Siap Memberikan <span>Layanan Terbaik</span>",
+      "description": "Komitmen kami terhadap keunggulan dan kualitas terbaik mendorong kami untuk memberikan yang terbaik dan memastikan setiap interaksi dengan klien kami akan membawa kepada hasil yang maksimal.",
+      "talk": "Mari kita diskusikan",
+      "clients": "Klien",
+      "reviews": "Ulasan",
+      "exp": "Pengalaman bertahun-tahun"
+    },
+    "section3": {
+      "title": "Saatnya Membuat <br></br> <span>Perubahan</span> untuk Bisnis Anda!",
+      "subtitle": "Tingkatkan daya saing dan lampaui ekspektasi pelanggan dengan solusi inovatif dan adaptif dari kami."
+    },
+    "section4": {
+      "title": "<span>Pengembangan Perangkat Lunak</span> Khusus Berbasis Kualitas",
+      "subtitle": "WKami memiliki pendekatan yang berfokus pada kualitas dan dibuat khusus untuk membantu Anda mencapai tujuan bisnis Anda.",
+      "1": {
+        "title": "Analisis Kebutuhan",
+        "subtitle": "Analisis Kebutuhan adalah proses untuk memahami apa yang Anda butuhkan secara lebih mendalam sebelum memulai brainstorming atau membangun solusi hebat."
+      },
+      "2": {
+        "title": "Desain UI/UX",
+        "subtitle": "Desain UI/UX adalah cara kita membuat tampilan dan pengalaman pengguna pada produk atau layanan agar terlihat bagus, mudah dipahami, dan nyaman digunakan. Kami telah berhasil menghasilkan berbagai desain yang elegan dan intuitif untuk klien kami. Dengan pengalaman kami, kami bisa membantu Anda menciptakan solusi yang tidak hanya keren secara visual, tapi juga membantu mencapai tujuan bisnis Anda."
+      },
+      "3": {
+        "title": "Pengembangan Sistem",
+        "subtitle": "Kami memastikan bahwa setiap proyek yang kami lakukan memperhatikan tiga faktor penting: kecepatan, stabilitas, dan kemampuan untuk berkembang seiring waktu. Kami selalu menggunakan teknologi terbaru yang dapat diandalkan untuk memastikan keberhasilan proyek Anda."
+      },
+      "4": {
+        "title": "Pengujian Sistem",
+        "subtitle": "Ketika kami meluncurkan produk yang telah kami buat, kami memastikan bahwa produk tersebut dapat berjalan dengan baik di dalam sistem dan proses yang Anda gunakan. Kami juga siap untuk terus memperbaikinya dan memberikan dukungan setelahnya."
+      },
+      "5": {
+        "title": "Peluncuran",
+        "subtitle": "Peluncuran perangkat tidak sekejap mata, hal ini merupakan proses. Kami memastikan peluncuran dapat terintegrasi dengan sistem yang anda buat ataupun miliki."
+      },
+      "6": {
+        "title": "Maintenance",
+        "subtitle": "Tahapan ini adalah untuk membuat suatu produk atau layanan menjadi lebih baik dari sebelumnya. Evetech Solution tidak hanya fokus pada mengerjakan pekerjaan dan beranjak pergi. Kami berkomitmen untuk terus meningkatkan produk atau layanan kami dengan terus melakukan perbaikan dan peningkatan berkelanjutan."
+      }
+    }
   }
 }

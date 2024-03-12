@@ -2,24 +2,22 @@ import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import { QualityDrivenContent } from "./content";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function QualityDriven() {
+  const t = useTranslations("HomePage.section4");
+
   return (
     <div className="w-full h-full bg-white py-16">
       <Container className="grid grid-cols-1 lg:grid-cols-2 w-full h-full gap-10">
         <div>
           <div className="lg:sticky lg:top-[12rem]">
             <Heading variant="h2" className="font-bold text-btn-primary">
-              Quality-driven{" "}
-              <span className="text-btn-blue capitalize">
-                custom software development
-              </span>
+              {t.rich("title", {
+                span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+              })}
             </Heading>
-            <p className="text-eve-gray mt-1.5">
-              We provide a variety of digital solutions that include responsive
-              website design, app development, digital marketing strategist, and
-              more.
-            </p>
+            <p className="text-eve-gray mt-1.5">{t("subtitle")}</p>
           </div>
         </div>
         <div className="space-y-5">
@@ -27,8 +25,8 @@ export default function QualityDriven() {
             return (
               <CardQualityDriven
                 key={idx}
-                title={item.title}
-                content={item.content}
+                title={t(`${idx + 1}.title`)}
+                content={t(`${idx + 1}.subtitle`)}
                 isEven={item.id % 2 !== 0}
                 icon={item.path}
               ></CardQualityDriven>

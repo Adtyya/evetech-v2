@@ -1,7 +1,10 @@
 import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
+import { useTranslations } from "next-intl";
 
 export default function TimeToMakeChange() {
+  const t = useTranslations("HomePage.section3");
+
   return (
     <div className="bg-eve-black">
       <Container className="py-14">
@@ -12,9 +15,10 @@ export default function TimeToMakeChange() {
               variant="h2"
               className="font-bold text-white"
             >
-              {`It's time to make a`}
-              <br></br>
-              <span className="text-btn-blue">change</span> for your business!
+              {t.rich("title", {
+                span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+                br: () => <br></br>,
+              })}
             </Heading>
           </div>
           <div className="flex justify-normal lg:justify-end">

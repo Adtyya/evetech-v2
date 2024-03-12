@@ -10,11 +10,13 @@ import TextTransition, { presets } from "react-text-transition";
 import { ButtonLightBlue, ButtonWhite } from "@/components/button/button";
 import { HiOutlineChevronDown } from "react-icons/hi";
 import Link from "next/link";
-
-const TEXTS = ["Software", "Web App", "Mobile App"];
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
+  const t = useTranslations("HomePage.section1");
+
+  const TEXTS = [t("software"), t("webapp"), t("mobileapp")];
 
   useEffect(() => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 3000);
@@ -40,7 +42,7 @@ export default function Hero() {
             </Heading>
             <Heading variant="h5" className="font-bold text-white">
               <span>
-                Custom{" "}
+                {t("custom")}{" "}
                 <TextTransition
                   className="text-btn-blue"
                   inline
@@ -49,19 +51,19 @@ export default function Hero() {
                   {TEXTS[index % TEXTS.length]}
                 </TextTransition>{" "}
               </span>
-              <br /> Development
+              <br /> {t("development")}
             </Heading>
             <p className="text-lg text-white mt-8">
-              Professional WebApps Development <br /> Services to expand your
-              Business to <br />
-              engage the Global Market
+              {t.rich("description", {
+                br: () => <br></br>,
+              })}
             </p>
             <div className="mt-8 flex space-x-5">
               <Link href="/contact-us">
-                <ButtonLightBlue>{`Let's talk`}</ButtonLightBlue>
+                <ButtonLightBlue>{t("talk")}</ButtonLightBlue>
               </Link>
               <Link href="#latest-projects">
-                <ButtonWhite>View Portofolio</ButtonWhite>
+                <ButtonWhite>{t("portfolio")}</ButtonWhite>
               </Link>
             </div>
           </div>
@@ -74,8 +76,8 @@ export default function Hero() {
               <img src="/images/home/testimony.png" alt="testimony" />
             </div>
             <div className="text-white bg-cyan flex flex-col justify-center">
-              <p>50+ Positive</p>
-              <p>Review from Them</p>
+              <p>{t("countreview")}</p>
+              <p>{t("fromthem")}</p>
             </div>
           </div>
           <div className="absolute bottom-20 w-full h-max block mx-auto lg:hidden">
@@ -88,8 +90,8 @@ export default function Hero() {
                 <img src="/images/home/testimony.png" alt="testimony" />
               </div>
               <div className="text-white">
-                <p>50+ Positive</p>
-                <p>Review from Them</p>
+                <p>{t("countreview")}</p>
+                <p>{t("fromthem")}</p>
               </div>
             </div>
           </div>

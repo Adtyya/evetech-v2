@@ -13,5 +13,59 @@
     "Blog": "Blog",
     "Portfolio": "portfolio",
     "Career": "Career"
+  },
+  "HomePage": {
+    "section1": {
+      "custom": "Custom",
+      "software": "Software",
+      "webapp": "Web App",
+      "mobileapp": "Mobile App",
+      "development": "Development",
+      "description": "Grow Your Business with Our IT Solutions <br></br>We Make Your Dream Become Reality.",
+      "talk": "Let’s Talk",
+      "portfolio": "View Portfolio",
+      "countreview": "20+ Positive",
+      "fromthem": "Review from Them"
+    },
+    "section2": {
+      "provide": "We Are Ready To Provide the Best <span>Service</span>",
+      "description": "Our commitment to excellence drives us to go above and beyond, ensuring every interaction with us is a seamless journey.",
+      "talk": "Let’s Talk",
+      "clients": "Clients",
+      "reviews": "Reviews",
+      "exp": "Years of experience"
+    },
+    "section3": {
+      "title": "It’s Time to Make a <br></br> <span>Change</span> for Your Business!",
+      "subtitle": "People are migrating towards mobile phones and computers. It's time to beat your competitors with our high technology online IT solutions."
+    },
+    "section4": {
+      "title": "Quality-Driven <span>Custom Software Development</span>",
+      "subtitle": "We have a quality-focused, tailor-made approach to help you achieve your business goals.",
+      "1": {
+        "title": "Discovery & Analysis",
+        "subtitle": "You can’t brainstorm, much less build, a great solution without first investing in discovery and analysis. Our team burrows into your existing infrastructure to uncover strengths and weaknesses so time isn’t wasted during the design and build phases."
+      },
+      "2": {
+        "title": "UI/UX Design",
+        "subtitle": "At its core, UX and UI design should be elegant, intuitive, and frictionless. With a diverse portfolio of successful design projects to our name, we know how to build solutions that are stylish and aesthetically pleasing — and that help you meet your business goals."
+      },
+      "3": {
+        "title": "Development",
+        "subtitle": "Speed + stability + scale. All three factors are at play with every development project we take on; we always incorporate the most appropriate and reliable technology."
+      },
+      "4": {
+        "title": "Feedback and Testing",
+        "subtitle": "At Evetech Solution, the feedback and testing process is transparent. With regular status meetings and routine check-ins by video, email, and chat, we take your ongoing feedback into account every step of the way."
+      },
+      "5": {
+        "title": "Release",
+        "subtitle": "Software release isn’t a single moment; it’s a process. As you roll out what we’ve built, we make sure that the solution works in sync with your existing systems and processes."
+      },
+      "6": {
+        "title": "Refinement",
+        "subtitle": "Many custom software developers take the “love ‘em and leave ‘em” approach to their work: They land the contract, do the work, and then move on. But with Evetech Solution, the developers who build your software stay on active standby after its release to optimize and iterate, so the solution grows with you."
+      }
+    }
   }
 }
