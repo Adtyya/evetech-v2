@@ -109,6 +109,46 @@
         "title": "E-Commerce",
         "subtitle": "An online platform to sell your products and services to customers."
       }
+    },
+    "section6": {
+      "title": "<span>Key Features</span> of Evetech Solutions",
+      "subtitle": "Our client send us bunch of smiles with our services and we love them",
+      "1": {
+        "title": "Web Application & Web Design",
+        "subtitle": "Ability to load within seconds even when you have more than 20k products."
+      },
+      "2": {
+        "title": "Mobile Applications",
+        "subtitle": "Designed with a pixel perfect designer who has good understanding of User Interface and User Experience."
+      },
+      "3": {
+        "title": "Software Development",
+        "subtitle": "Your inventory and warehouse data will be integrated and can be easily transfered through different cities or countries."
+      },
+      "4": {
+        "title": "Cloud Storage Database",
+        "subtitle": "All data will be safely stored in a secure Cloud Storage Database."
+      },
+      "5": {
+        "title": "E-Commerce & SASS applications",
+        "subtitle": "Your web application will look pretty whether being opened from mobile phones, tablets, laptops or PC computers."
+      },
+      "6": {
+        "title": "Reporting & Data Analysis",
+        "subtitle": "Support points collection and redemption to reward and retain your customers for a long haul."
+      },
+      "7": {
+        "title": "Barcode Scanner",
+        "subtitle": "Enhance customer’s offline shopping experience by scanning your in-store products for O2O."
+      },
+      "8": {
+        "title": "Customized",
+        "subtitle": "With 3 choices of Customized Layout, quickly and easily create an app look that captures your brand image."
+      },
+      "9": {
+        "title": "SEO",
+        "subtitle": "Get instant support when you have any error or troubles."
+      }
     }
   }
 }

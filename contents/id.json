@@ -109,6 +109,46 @@
         "title": "E-Commerce",
         "subtitle": "Platform online untuk menjual produk dan layanan Anda kepada pelanggan."
       }
+    },
+    "section6": {
+      "title": "<span>Fitur-fitur Utama</span> dari Solusi Evetech",
+      "subtitle": "Klien kami mengirimkan banyak senyuman kepada kami dengan layanan kami dan kami menyukainya",
+      "1": {
+        "title": "Aplikasi Web & Desain Web",
+        "subtitle": "Web aplikasi atau web development yang kami kembangkan mampu memuat dalam hitungan detik meskipun produk anda lebih dari 20 ribu produk."
+      },
+      "2": {
+        "title": "Aplikasi Mobile",
+        "subtitle": "Aplikasi seluler dirancang desainer UI/UX yang berpengalaman. Sehingga, tampilan layar serta pengalaman penggunaannya sangat baik."
+      },
+      "3": {
+        "title": "Pengembangan Perangkat Lunak",
+        "subtitle": "Data inventaris dan gudang Anda akan terintegrasi dan dapat dengan mudah ditransfer melalui kota atau negara yang berbeda."
+      },
+      "4": {
+        "title": "Database Cloud Storage",
+        "subtitle": "Tidak perlu khawatir kehilangan data, kami dapat membuat penyimpanan berbasis Cloud dan database anda akan aman serta lebih mudah dicari."
+      },
+      "5": {
+        "title": "Aplikasi E-Commerce & SASS",
+        "subtitle": "Ingin memiliki aplikasi menarik terkait E-commerce dan SaaS? Kami akan membantu anda dan membuatnya menarik baik dari ponsel, tablet, laptop, bahkan PC."
+      },
+      "6": {
+        "title": "Pelaporan & Analisis Data",
+        "subtitle": "Tidak sebatas laporan dan analisis data biasa. Kami dapat membuat sistem pengumpulan poin serta achievement yang membuat pelanggan setia anda terus berkunjung."
+      },
+      "7": {
+        "title": "Barcode Scanner",
+        "subtitle": "Ingin meningkatkan pengalaman belanja di toko anda? Kami dapat melakukannya dengan pemindaian produk dengan scan barcode sehingga pengunjung lebih kaya experience saat berkunjung."
+      },
+      "8": {
+        "title": "Kustomisasi",
+        "subtitle": "Membuat tampilan aplikasi akan sesuai dengan citra brand anda. Kami akan mendesain 3 tata letak terkostumisasi dan anda bisa memilihnya."
+      },
+      "9": {
+        "title": "SEO",
+        "subtitle": "Memiliki trouble atau masalah dalam website atau blog anda? Evetech dapat membantu anda menyelesaikannya."
+      }
     }
   }
 }

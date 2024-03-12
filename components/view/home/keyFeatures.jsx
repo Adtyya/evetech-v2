@@ -2,18 +2,23 @@ import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import { KeyFeatures as Content } from "./content";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function KeyFeatures() {
+  const t = useTranslations("HomePage.section6");
+
   return (
     <Container className="py-12">
       <Heading
         variant="h3"
         className="text-btn-primary font-bold text-center md:text-start"
       >
-        <span className="text-btn-blue">Key Features</span> of Evetech Solutions
+        {t.rich("title", {
+          span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+        })}
       </Heading>
       <p className="mt-2.5 text-eve-gray text-center md:text-start">
-        Our client send us bunch of smilies with our services and we love them
+        {t("subtitle")}
       </p>
       <div className="my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {Content.map((item, index) => {
@@ -36,10 +41,10 @@ export default function KeyFeatures() {
                   variant="h4"
                   className="text-eve-key-features font-bold"
                 >
-                  {item.name}
+                  {t(`${index + 1}.title`)}
                 </Heading>
                 <p className="mt-1.5 text-eve-key-features">
-                  {item.description}
+                  {t(`${index + 1}.subtitle`)}
                 </p>
               </div>
             </div>
