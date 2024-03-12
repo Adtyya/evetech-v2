@@ -22,10 +22,8 @@ export default function TimeToMakeChange() {
             </Heading>
           </div>
           <div className="flex justify-normal lg:justify-end">
-            <p data-aos="fade-up" className="text-white">
-              People are migrating towards mobile phones <br /> and computers.
-              Its time to beat your <br /> competitors with our high technology
-              online <br /> IT solutions.
+            <p data-aos="fade-up" className="text-white max-w-xs">
+              {t("subtitle")}
             </p>
           </div>
         </div>

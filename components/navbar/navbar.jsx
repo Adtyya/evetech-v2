@@ -294,7 +294,9 @@ export default function NavbarEvetech() {
               </div>
 
               <Link href="/contact-us">
-                <ButtonPrimary>Get Started!</ButtonPrimary>
+                <ButtonPrimary className="whitespace-nowrap">
+                  Get Started!
+                </ButtonPrimary>
               </Link>
             </div>
           </nav>
