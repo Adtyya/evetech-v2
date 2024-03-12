@@ -1,20 +1,21 @@
 import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import Marquee from "react-fast-marquee";
-import { ProductList, PorfotolioList } from "./content";
+import { PorfotolioList } from "./content";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Portofolio() {
+  const t = useTranslations("WebAppDev.section2");
+
   return (
     <div className="py-16">
       <Container className="flex items-center justify-center flex-col mb-10">
         <Heading variant="h3" className="text-btn-primary font-bold capitalize">
-          Proyek Pengembangan Website Aplikasi
+          {t("title")}
         </Heading>
         <p className="mt-2.5 text-center text-eve-gray w-full max-w-lg">
-          We provide a variety of digital solutions that include responsive
-          website design, app development, digital marketing strategist, and
-          more.
+          {t("subtitle")}
         </p>
       </Container>
       <Marquee direction="right" speed={50}>

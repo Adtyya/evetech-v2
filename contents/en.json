@@ -21,6 +21,37 @@
     "title": "Let's Create Together!",
     "subtitle": "Ready to boost your digital presence? Contact us to discuss how <br></br> Evetech Solution turns your ideas into captivating visual realities that drive results."
   },
+  "Faq": {
+    "title": "Answers to our most <span>Frequently Asked Questions</span>",
+    "subtitle": "Can't find what you're looking for?",
+    "button": "Ask Now",
+    "webapp": {
+      "1": {
+        "q": "I want to keep my mobile app idea confidential. Will you sign an NDA with me?",
+        "a": "Yes, we sign an NDA (Non-Disclosure Agreement) when a client needs us to, right after our legal team reviews the agreement."
+      },
+      "2": {
+        "q": "Do I have full ownership of my completed product?",
+        "a": "Yes, you are the owner of your Intellectual Property rights at all times, including the source codes."
+      },
+      "3": {
+        "q": "How long will it take to complete my product?",
+        "a": "That very much depends on the complexity of the project. Small projects would take 2-3 months while large scale projects could take up to 6 months."
+      },
+      "4": {
+        "q": "Will you assist me to publish my app on Google PlayStore, Apple App Store and Huawei App Gallery?",
+        "a": "Yes, this would be part of our app development process. We will provide you guidance on the store's setup such as marketing materials and other configurations."
+      },
+      "5": {
+        "q": "Will there be maintenance after development has been completed?",
+        "a": "Yes. Once we've completed all developments and UAT, we support you in the process of deployment such as server deployment and publishing your app to iOS App Store / Google Playstore. Then, we offer you app maintenance services."
+      },
+      "6": {
+        "q": "Do you offer app development consulting services?",
+        "a": "Yes, we do offer FREE consultation sessions. We are also aware that clients who approached us are mostly non-technical individuals. Hence, we do our best to keep the consultation session as layman as possible."
+      }
+    }
+  },
   "HomePage": {
     "section1": {
       "custom": "Custom",
@@ -255,6 +286,10 @@
       "title": "<span>Web Application</span> <br></br> Development",
       "subtitle": "Boost your business innovation with our web application development. <br></br>  Leading digital solutions for your business transformation.",
       "consultation": "Get Free consultation"
+    },
+    "section2": {
+      "title": "Web Application Development Projects",
+      "subtitle": "Our App Website Development projects feature the latest designs and innovative solutions that make them stand out from the crowd."
     }
   }
 }

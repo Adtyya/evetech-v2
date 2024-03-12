@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import Container from "@/components/box/container";
 import { ButtonLightBlue } from "@/components/button/button";
 import Heading from "@/components/text/heading";
@@ -11,6 +12,8 @@ import {
 } from "react-icons/hi";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 const faqContent = [
   {
@@ -45,6 +48,21 @@ const faqContent = [
 
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const pathname = usePathname();
+
+  const questionAnswer = useMemo(() => {
+    return pathname.includes("/web-app-development")
+      ? Array.from({ length: 6 })
+      : Array.from({ length: 6 });
+  }, [pathname]);
+
+  const webapp = useTranslations("Faq.webapp");
+  const x = useTranslations("Faq");
+
+  const t = useMemo(() => {
+    return pathname.includes("/web-app-development") ? webapp : webapp;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   return (
     <Container className="py-12">
@@ -52,23 +70,24 @@ export default function FAQ() {
         <div>
           <div className="space-y-3.5 lg:sticky lg:top-[12rem]">
             <Heading variant="h2" className="font-bold text-btn-primary">
-              Answers to our most{" "}
-              <span className="text-btn-blue">Frequently Asked Questions</span>
+              {x.rich("title", {
+                span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+              })}
             </Heading>
-            <p className="text-eve-gray">{`Couldn't find what you were looking for?`}</p>
+            <p className="text-eve-gray">{x("subtitle")}</p>
             <Link href="/contact-us">
               <ButtonLightBlue className="capitalize mt-2.5">
-                Tanyakan sekarang
+                {x("button")}
               </ButtonLightBlue>
             </Link>
           </div>
         </div>
         <div className="space-y-5">
-          {faqContent.map((item, idx) => {
+          {questionAnswer.map((item, idx) => {
             return (
               <QACard
-                question={item.q}
-                answer={item.a}
+                question={t(`${idx + 1}.q`)}
+                answer={t(`${idx + 1}.a`)}
                 key={idx}
                 active={idx === activeIndex}
                 onClick={() => setActiveIndex(idx)}
@@ -91,7 +110,7 @@ function QACard({ question = "", answer = "", active = false, ...props }) {
       ref={parent}
     >
       <div className="w-full relative">
-        <p className="text-btn-primary font-semibold w-full max-w-xl pr-3 lg:pr-0">
+        <p className="text-btn-primary font-semibold w-full max-w-lg pr-3 lg:pr-0">
           {question}
         </p>
         <button className="absolute top-1.5 right-0.5">
