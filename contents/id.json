@@ -66,6 +66,49 @@
         "title": "Maintenance",
         "subtitle": "Tahapan ini adalah untuk membuat suatu produk atau layanan menjadi lebih baik dari sebelumnya. Evetech Solution tidak hanya fokus pada mengerjakan pekerjaan dan beranjak pergi. Kami berkomitmen untuk terus meningkatkan produk atau layanan kami dengan terus melakukan perbaikan dan peningkatan berkelanjutan."
       }
+    },
+    "section5": {
+      "title": "<span>Produk</span> Kami",
+      "1": {
+        "title": "Kustom ERP",
+        "subtitle": "Sistem Enterprise Resource Planning (ERP) yang disesuaikan untuk memenuhi kebutuhan unik bisnis Anda."
+      },
+      "2": {
+        "title": "E-Commerce",
+        "subtitle": "Platform online untuk menjual produk dan layanan Anda kepada pelanggan."
+      },
+      "3": {
+        "title": "Website Profil Perusahaan",
+        "subtitle": "Situs web yang menampilkan profil perusahaan Anda, termasuk informasi tentang produk, layanan, dan tim Anda."
+      },
+      "4": {
+        "title": "Website Game Edukasi",
+        "subtitle": "Game edukasi yang membantu siswa belajar dengan cara yang menyenangkan dan interaktif."
+      },
+      "5": {
+        "title": "E-Commerce",
+        "subtitle": "Platform online untuk menjual produk dan layanan Anda kepada pelanggan."
+      },
+      "6": {
+        "title": "Website Berita",
+        "subtitle": "Situs web yang menyajikan berita dan informasi terbaru tentang topik tertentu."
+      },
+      "7": {
+        "title": "POS Restoran",
+        "subtitle": "Perangkat lunak Point of Sale (POS) yang membantu Anda mengelola operasional restoran."
+      },
+      "8": {
+        "title": "Teknologi Pendidikan",
+        "subtitle": "Teknologi pendidikan yang membantu siswa belajar dengan cara yang lebih efektif dan efisien."
+      },
+      "9": {
+        "title": "Website  Wordpress",
+        "subtitle": "Situs web yang dibangun menggunakan platform WordPress."
+      },
+      "10": {
+        "title": "E-Commerce",
+        "subtitle": "Platform online untuk menjual produk dan layanan Anda kepada pelanggan."
+      }
     }
   }
 }

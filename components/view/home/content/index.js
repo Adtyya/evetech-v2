@@ -45,60 +45,70 @@ export const QualityDrivenContent = [
 
 export const ProductList = [
   {
+    id: 1,
     name: "Custom ERP",
     description:
       "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
     image: "/images/home/products/lists/dashboard.png",
   },
   {
+    id: 2,
     name: "E-Commerce",
     description:
       "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
     image: "/images/home/products/lists/ecomerce.png",
   },
   {
+    id: 3,
     name: "Web Company Profile",
     description:
       "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
     image: "/images/home/products/lists/companyp.png",
   },
   {
+    id: 4,
     name: "Web Game Education",
     description:
       "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
     image: "/images/home/products/lists/webgameedu.png",
   },
   {
+    id: 5,
     name: "E-Commerce",
     description:
       "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
     image: "/images/home/products/lists/ecomerce.png",
   },
   {
+    id: 6,
     name: "News Website",
     description:
       "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
     image: "/images/home/products/lists/news.png",
   },
   {
+    id: 7,
     name: "POS Restaurant",
     description:
       "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
     image: "/images/home/products/lists/pos.png",
   },
   {
+    id: 8,
     name: "Educational Tech",
     description:
       "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
     image: "/images/home/products/lists/edutech.png",
   },
   {
+    id: 9,
     name: "Wordpress Website",
     description:
       "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",
     image: "/images/home/products/lists/wordpress.png",
   },
   {
+    id: 10,
     name: "E-Commerce",
     description:
       "Developing mobile applications that are easy to use aids various start-ups and businesses in reshaping the mobile user experience",

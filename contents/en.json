@@ -66,6 +66,49 @@
         "title": "Refinement",
         "subtitle": "Many custom software developers take the “love ‘em and leave ‘em” approach to their work: They land the contract, do the work, and then move on. But with Evetech Solution, the developers who build your software stay on active standby after its release to optimize and iterate, so the solution grows with you."
       }
+    },
+    "section5": {
+      "title": "Our <span>Product</span>",
+      "1": {
+        "title": "Custom ERP",
+        "subtitle": "Enterprise Resource Planning (ERP) system that is tailored to meet the unique needs of your business."
+      },
+      "2": {
+        "title": "E-Commerce",
+        "subtitle": "An online platform to sell your products and services to customers."
+      },
+      "3": {
+        "title": "Web Company Profile",
+        "subtitle": "A website that showcases your company's profile, including information about your products, services, and team."
+      },
+      "4": {
+        "title": "Web Game Education",
+        "subtitle": "Educational games that help students learn in a fun and interactive way."
+      },
+      "5": {
+        "title": "E-Commerce",
+        "subtitle": "An online platform to sell your products and services to customers."
+      },
+      "6": {
+        "title": "News Website",
+        "subtitle": "A website that presents news and latest information about a specific topic."
+      },
+      "7": {
+        "title": "POS Restaurant",
+        "subtitle": "Point of Sale (POS) software that helps you manage your restaurant operations."
+      },
+      "8": {
+        "title": "Educational Tech",
+        "subtitle": "Educational technology that helps students learn in a more effective and efficient way."
+      },
+      "9": {
+        "title": "Wordpress Website",
+        "subtitle": "A website built using the WordPress platform."
+      },
+      "10": {
+        "title": "E-Commerce",
+        "subtitle": "An online platform to sell your products and services to customers."
+      }
     }
   }
 }

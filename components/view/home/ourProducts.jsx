@@ -3,6 +3,7 @@ import Heading from "@/components/text/heading";
 import Marquee from "react-fast-marquee";
 import { ProductList } from "./content";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const imagePath = [
   "/images/home/products/1.svg",
@@ -12,24 +13,29 @@ const imagePath = [
 ];
 
 export default function OurProducts() {
+  const t = useTranslations("HomePage.section5");
+
   return (
     <div className="py-16">
       <Container className="flex items-center justify-center flex-col mb-10">
         <Heading variant="h3" className="text-btn-primary font-bold capitalize">
-          Our Digital agency <span className="text-btn-blue">Product</span>
+          {t.rich("title", {
+            span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+          })}
         </Heading>
-        <p className="mt-2.5 text-center text-eve-gray">
+        {/* <p className="mt-2.5 text-center text-eve-gray">
           We provide a variety of digital solutions that include <br />{" "}
           responsive website design, app development, digital <br /> marketing
           strategist, and more.
-        </p>
+        </p> */}
       </Container>
       <Marquee direction="right" speed={50}>
         {ProductList.slice(0, 5).map((item, index) => {
           return (
             <CardProduct
               key={index}
-              title={item.name}
+              title={t(`${item.id}.title`)}
+              subtitle={t(`${item.id}.subtitle`)}
               image={item.image}
             ></CardProduct>
           );
@@ -41,7 +47,8 @@ export default function OurProducts() {
           return (
             <CardProduct
               key={index}
-              title={item.name}
+              title={t(`${item.id}.title`)}
+              subtitle={t(`${item.id}.subtitle`)}
               image={item.image}
             ></CardProduct>
           );
@@ -51,17 +58,14 @@ export default function OurProducts() {
   );
 }
 
-function CardProduct({ title, image }) {
+function CardProduct({ title, subtitle, image }) {
   return (
     <div className="bg-eve-white rounded-3xl w-full max-w-96 mx-8 overflow-hidden">
       <div className="space-y-4 p-5">
         <Heading variant="h4" className="font-bold text-btn-primary">
           {title}
         </Heading>
-        <p className="text-eve-gray line-clamp-2">
-          Developing mobile applications that are easy to use aids various
-          start-ups and businesses in reshaping the mobile user experience
-        </p>
+        <p className="text-eve-gray line-clamp-2">{subtitle}</p>
         <div className="flex space-x-3.5">
           {imagePath.map((i, idx) => {
             return (
