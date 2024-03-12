@@ -52,6 +52,23 @@
       }
     }
   },
+  "Form": {
+    "title": "Siap bertemu dan <br></br> diskusikan <span>kebutuhanmu?</span>",
+    "input": {
+      "name": "Nama Lengkap",
+      "email": "Alamat Email",
+      "phone": "No. Telpon",
+      "company": "Nama perusahaan",
+      "projectbudget": "Anggaran projek",
+      "nominal": {
+        "<3": "< $3000",
+        "3-7": "$3000 - $7000",
+        "7-12": "$7000 - $12000",
+        "12-20": "$12000 - $20000",
+        ">20": "> $20000"
+      }
+    }
+  },
   "HomePage": {
     "section1": {
       "custom": "Pengembangan Perangkat Lunak",

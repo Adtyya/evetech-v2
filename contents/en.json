@@ -52,6 +52,23 @@
       }
     }
   },
+  "Form": {
+    "title": "Ready to meet and <br></br> discuss <span>your needs?</span>",
+    "input": {
+      "name": "Fullname",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company Name",
+      "projectbudget": "Your Budget",
+      "nominal": {
+        "<3": "< $3000",
+        "3-7": "$3000 - $7000",
+        "7-12": "$7000 - $12000",
+        "12-20": "$12000 - $20000",
+        ">20": "> $20000"
+      }
+    }
+  },
   "HomePage": {
     "section1": {
       "custom": "Custom",

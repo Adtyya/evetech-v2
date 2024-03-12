@@ -10,8 +10,10 @@ import {
 import Heading from "@/components/text/heading";
 import { ButtonLightBlue } from "@/components/button/button";
 import emailjs from "@emailjs/browser";
+import { useTranslations } from "next-intl";
 
 export default function ReadyToMeet() {
+  const t = useTranslations("Form");
   const emailRef = useRef(null);
 
   const [countryCode, setCountryCode] = useState("62");
@@ -45,10 +47,12 @@ export default function ReadyToMeet() {
             variant="h2"
             className="font-bold text-btn-primary w-full max-w-sm"
           >
-            Siap bertemu dan diskusikan{" "}
-            <span className="text-eve-blue">kebutuhanmu?</span>
+            {t.rich("title", {
+              span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+              br: () => <br />,
+            })}
           </Heading>
-          <p className="mt-2.5 text-eve-gray">{`Couldn't find what you were looking for?`}</p>
+          {/* <p className="mt-2.5 text-eve-gray">{`Couldn't find what you were looking for?`}</p> */}
         </div>
         <div>
           <form
@@ -60,20 +64,20 @@ export default function ReadyToMeet() {
               name="name"
               required={true}
               placeholder="Your fullname"
-              label="Fullname"
+              label={t("input.name")}
               type="text"
             ></InputWithLabel>
             <InputWithLabel
               name="email"
               required={true}
               placeholder="Email address"
-              label="email address"
+              label={t("input.email")}
               type="email"
             ></InputWithLabel>
             <div className="flex space-x-5">
               <div className="w-1/4">
                 <InputSelect
-                  label="Nomor telpon"
+                  label={t("input.phone")}
                   onChange={(even) => setCountryCode(even.target.value)}
                   required={false}
                 >
@@ -93,18 +97,28 @@ export default function ReadyToMeet() {
               name="bussiness_name"
               required={true}
               placeholder="Your company name"
-              label="nama perusahaan"
+              label={t("input.company")}
               type="text"
             ></InputWithLabel>
-            <InputSelect label="Anggaran Proyek" name="plan_budget">
+            <InputSelect label={t("input.projectbudget")} name="plan_budget">
               <option value="" defaultValue>
                 Select Your Budget
               </option>
-              <option value="< $ 3000">{`< $ 3000`}</option>
-              <option value="$ 3000 - $ 7000">{`$ 3000 - $ 7000`}</option>
-              <option value="$ 7000 - $ 12000">{`$ 7000 - $ 12000`}</option>
-              <option value="$ 12000 - $ 20000">{`$ 12000 - $ 20000`}</option>
-              <option value="> $ 20000">{`> $ 20000`}</option>
+              <option value={t("input.nominal.<3")}>
+                {t("input.nominal.<3")}
+              </option>
+              <option value={t("input.nominal.3-7")}>
+                {t("input.nominal.3-7")}
+              </option>
+              <option value={t("input.nominal.7-12")}>
+                {t("input.nominal.7-12")}
+              </option>
+              <option value={t("input.nominal.12-20")}>
+                {t("input.nominal.12-20")}
+              </option>
+              <option value={t("input.nominal.>20")}>
+                {t("input.nominal.>20")}
+              </option>
             </InputSelect>
             <div className="absolute -z-10">
               <InputInvisibleLabel
