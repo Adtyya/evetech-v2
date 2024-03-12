@@ -8,10 +8,12 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { TehcnologyStack } from "./content";
+import { useTranslations } from "next-intl";
 
 const categories = ["popular", "mobile", "front-end", "backend", "database"];
 
 export default function TechnologySet() {
+  const t = useTranslations("HomePage.section8");
   const [selectedCategories, setSelectedCategories] = useState(categories[0]);
 
   function handleChangeCategories(name) {
@@ -28,15 +30,11 @@ export default function TechnologySet() {
     <div className="py-16">
       <Container className="bg-eve-white px-8 py-7 rounded-2xl">
         <Heading variant="h3" className="text-btn-primary font-bold">
-          Evetech Set of <span className="text-btn-blue">Technologies</span> for
-          Software Development
+          {t.rich("title", {
+            span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+          })}
         </Heading>
-        <p className="mt-1.5 text-eve-gray">
-          Utilize highly experienced specialists in desktop, web, and mobile
-          development. Our developers employ the latest technologies,
-          frameworks, and components to create solutions that combine a strong
-          technical back-end with easy to use modern design.
-        </p>
+        <p className="mt-1.5 text-eve-gray">{t("subtitle")}</p>
         <div className="flex space-x-5 overflow-x-auto mt-7">
           {categories.map((item, idx) => {
             return item === selectedCategories ? (
