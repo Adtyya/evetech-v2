@@ -4,8 +4,11 @@ import Image from "next/image";
 import { ButtonPrimary } from "@/components/button/button";
 import Link from "next/link";
 import { content } from "./content";
+import { useTranslations } from "next-intl";
 
 export default function BePartOfSomethingBig() {
+  const t = useTranslations("AboutUs.section4");
+
   return (
     <div className="w-full h-full bg-white py-16">
       <Container className="grid grid-cols-1 lg:grid-cols-2 w-full h-full gap-10">
@@ -15,17 +18,17 @@ export default function BePartOfSomethingBig() {
               variant="h3"
               className="font-bold text-btn-primary capitalize"
             >
-              Jadilah bagian dari{" "}
-              <span className="text-btn-blue capitalize">
-                sesuatu yang BESAR
-              </span>
+              {t.rich("title", {
+                span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+              })}
             </Heading>
             <p className="text-eve-gray mt-3.5">
-              Anda punya ide, Kami punya solusi perangkat lunak. Wujudkan
-              mimpimu menjadi nyata!
+              {t.rich("subtitle", {
+                br: () => <br />,
+              })}
             </p>
             <Link href="/contact-us">
-              <ButtonPrimary className="mt-3.5 px-7">{`Let's talk`}</ButtonPrimary>
+              <ButtonPrimary className="mt-3.5 px-7">{t("talk")}</ButtonPrimary>
             </Link>
           </div>
         </div>
@@ -34,8 +37,8 @@ export default function BePartOfSomethingBig() {
             return (
               <CardQualityDriven
                 key={idx}
-                title={item.title}
-                content={item.subtitle}
+                title={t(`${idx + 1}.title`)}
+                content={t(`${idx + 1}.subtitle`)}
                 isEven={item.id % 2 !== 0}
                 icon={item.icon}
               ></CardQualityDriven>

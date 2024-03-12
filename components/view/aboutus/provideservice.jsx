@@ -7,6 +7,7 @@ import Heading from "@/components/text/heading";
 import { ButtonPrimary } from "@/components/button/button";
 import CountUp from "react-countup";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const stat = [
   {
@@ -19,11 +20,13 @@ const stat = [
   },
   {
     number: "2",
-    sub: "Years of experience",
+    sub: "exp",
   },
 ];
 
 export default function ProvideService() {
+  const t = useTranslations("AboutUs.section2");
+
   return (
     <Container className="my-14">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
@@ -46,8 +49,9 @@ export default function ProvideService() {
           //   data-aos="fade-up" data-aos-delay="200"
           >
             <Heading variant="h2" className="font-bold text-btn-primary">
-              We Are Ready To Provide the{" "}
-              <span className="text-btn-blue">Best Service</span>
+              {t.rich("title", {
+                span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+              })}
             </Heading>
           </div>
           <p
@@ -55,8 +59,7 @@ export default function ProvideService() {
             // data-aos="fade-up"
             // data-aos-delay="250"
           >
-            Our commitment to exelence drive us to go above and beyond, ensuring
-            every interaction with us is a seamless jurney.
+            {t("subtitle")}
           </p>
           <div
             className="flex items-center justify-start w-full mt-5"
@@ -64,7 +67,7 @@ export default function ProvideService() {
             // data-aos-delay="300"
           >
             <Link href="/contact-us">
-              <ButtonPrimary>{`Let's talk`}</ButtonPrimary>
+              <ButtonPrimary>{t("talk")}</ButtonPrimary>
             </Link>
           </div>
           <div
@@ -87,7 +90,7 @@ export default function ProvideService() {
                         scrollSpyOnce
                       ></CountUp>
                     </Heading>
-                    <p className="font-light text-eve-gray">{item.sub}</p>
+                    <p className="font-light text-eve-gray">{t(item.sub)}</p>
                   </div>
                 );
               })}

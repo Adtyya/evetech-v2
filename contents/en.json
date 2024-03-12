@@ -213,5 +213,41 @@
         "subtitle": "sanwooelectronics.com displays cooler and freezer products along with details that will make it easier for Sanwoo Electronics to reach its customers. This website also contains contact details for Sanwoo Electronics which can make it easier for customers."
       }
     }
+  },
+  "AboutUs": {
+    "section1": {
+      "title": "Fuelling Growth <br></br> Through <span>Seamless Technology</span>",
+      "subtitle": "We are committed to providing excellent customer service <br></br> as we focus on innovative and effective information technology solutions.",
+      "countreview": "20+ Positive",
+      "fromthem": "Review from Them"
+    },
+    "section2": {
+      "title": "We Are Ready To Provide the <span>Best Service</span>",
+      "subtitle": "Our commitment to excellence drives us to go above and beyond, ensuring every interaction with us is a seamless journey.",
+      "talk": "Let's talk",
+      "clients": "Clients",
+      "reviews": "Reviews",
+      "exp": "Years of experience"
+    },
+    "section3": {
+      "content": "Evetech Solution? Let's go back to 2020 when Steven Sophian Putra (Founder and Director of Evetech Solution) started Evetech Solution to help many clients and companies in achieving their business success. E-Commerce, ERP, Health Applications, Finance / Insurance Applications, Company Profile Websites are some of the products that have been successfully developed to meet client needs. <br></br> <br></br> Steven realizes that his ability to solve problems by presenting innovative solutions can help many people who want to realize their dreams. He also always emphasizes that Innovation, quality, and client satisfaction are the pillars of Evetech Solution's success so that the quality of software products developed by the Evetech Solution team must be the best."
+    },
+    "section4": {
+      "title": "Be A Part Of <span>Something Big</span>",
+      "subtitle": "You have the idea, we have the software solution. <br></br> Make your dreams come true!",
+      "talk": "Let’s Talk",
+      "1": {
+        "title": "Setup Requirements Meeting",
+        "subtitle": "Jointly arrange a time between the business owner and our team to formulate the problem. After that, we will provide a solution including the software."
+      },
+      "2": {
+        "title": "Create Plan Together",
+        "subtitle": "If you agree or have a topic to discuss. We can discuss it together. After finding common ground, we can make a cooperation agreement."
+      },
+      "3": {
+        "title": "Get Result",
+        "subtitle": "We will deliver the software you need. We can also help you maintain the software or update it without losing the data that has been entered in the future."
+      }
+    }
   }
 }

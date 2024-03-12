@@ -2,8 +2,11 @@ import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import Image from "next/image";
 import ImageContent from "@/public/images/aboutus/steven.png";
+import { useTranslations } from "next-intl";
 
 export default function FounderStory() {
+  const t = useTranslations("AboutUs.section3");
+
   return (
     <Container className="pt-24 md:pt-32 pb-12 md:py-12">
       <div className="flex flex-col-reverse lg:flex-row w-full">
@@ -12,24 +15,9 @@ export default function FounderStory() {
             Our Founder <span className="text-btn-blue">Story</span>
           </Heading>
           <p className="text-eve-gray">
-            Evetech Solution bangga memiliki Steven Sophian Putra sebagai
-            Pendiri dan CEO. Seorang pemimpin berdedikasi dan berpengalaman di
-            bidang Teknologi Informasi, Steven, lulusan IT dan programmer ulung,
-            mengintegrasikan pengetahuannya dengan teknologi modern. Keahliannya
-            membuatnya selalu up to date dan inovatif, menyajikan solusi
-            mutakhir untuk klien. Keunikan Steven bukan hanya pada keahliannya
-            sebagai programmer, tetapi juga pada kemampuan luar biasa dalam
-            memecahkan masalah.
-          </p>
-          <p className="text-eve-gray">
-            Dengan kecerdasan dan analisis tajam, ia membimbing perusahaan
-            memberikan solusi efektif dan efisien. Dengan visi jelas tentang
-            masa depan teknologi, Steven menjadi pionir membawa perusahaan ke
-            tingkat keunggulan yang lebih tinggi. Dedikasinya pada inovasi,
-            kualitas, dan kepuasan klien menjadi pilar kesuksesan perusahaan di
-            bawah kepemimpinannya. Steven adalah sosok yang menginspirasi,
-            memimpin perusahaan menuju masa depan cerah, dan kontribusinya
-            menjadi kunci keberhasilan perusahaan.
+            {t.rich("content", {
+              br: () => <br />,
+            })}
           </p>
         </div>
         <div className="w-full lg:w-1/4 relative flex justify-center lg:justify-start items-center">

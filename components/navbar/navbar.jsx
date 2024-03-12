@@ -127,7 +127,7 @@ export default function NavbarEvetech() {
   return (
     <nav className="w-full fixed top-0 z-50">
       <div className={`bg-eve-black relative ${showed ? "block" : "hidden"}  `}>
-        <div className="flex items-center justify-between py-1.5 px-5">
+        <div className="flex items-center justify-between py-1.5 px-3.5">
           <button className="text-white" onClick={() => setShowed(false)}>
             <FiX />
           </button>
@@ -146,7 +146,7 @@ export default function NavbarEvetech() {
           isScrolled ? "bg-eve-white" : "bg-transparent"
         } duration-300`}
       >
-        <div className="relative mx-auto w-full max-w-7xl px-5">
+        <div className="relative mx-auto w-full max-w-7xl px-3.5">
           <nav
             aria-label="main navigation"
             className="flex h-[4.3rem] items-stretch justify-between font-medium text-slate-700"

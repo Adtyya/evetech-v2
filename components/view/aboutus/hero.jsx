@@ -1,25 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useState, useEffect } from "react";
 import Container from "@/components/box/container";
 import Image from "next/image";
-// import HeroImage from "@/public/images/home/hero-home.jpg";
 import HeroImage from "@/public/images/aboutus/hero-about-us.png";
 import Heading from "@/components/text/heading";
-import TextTransition, { presets } from "react-text-transition";
-import { ButtonLightBlue, ButtonWhite } from "@/components/button/button";
 import { HiOutlineChevronDown } from "react-icons/hi";
-
-const TEXTS = ["Software", "Web App", "Mobile App"];
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => setIndex((index) => index + 1), 3000);
-    return () => clearTimeout(intervalId);
-  }, []);
+  const t = useTranslations("AboutUs.section1");
 
   return (
     <div className="h-screen w-full relative">
@@ -38,13 +28,15 @@ export default function Hero() {
           //   data-aos="fade-up"
           >
             <Heading variant="h5" className="font-bold text-white">
-              Membantu Klien Mewujudkan{" "}
-              <span className="text-btn-blue">Inovasi Menjadi Nyata</span>
+              {t.rich("title", {
+                br: () => <br />,
+                span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+              })}
             </Heading>
             <p className="text-lg text-white mt-8">
-              Kami berkomitmen untuk memberikan layanan pelanggan yang <br />{" "}
-              terbaik karena kami berfokus pada solusi teknologi informasi{" "}
-              <br /> yang inovatif dan efektif
+              {t.rich("subtitle", {
+                br: () => <br />,
+              })}
             </p>
           </div>
           <div
@@ -56,8 +48,8 @@ export default function Hero() {
               <img src="/images/home/testimony.png" alt="testimony" />
             </div>
             <div className="text-white bg-cyan flex flex-col justify-center">
-              <p>50+ Positive</p>
-              <p>Review from Them</p>
+              <p>{t("countreview")}</p>
+              <p>{t("fromthem")}</p>
             </div>
           </div>
           <div className="absolute bottom-20 w-full h-max block mx-auto lg:hidden">
@@ -70,8 +62,8 @@ export default function Hero() {
                 <img src="/images/home/testimony.png" alt="testimony" />
               </div>
               <div className="text-white">
-                <p>50+ Positive</p>
-                <p>Review from Them</p>
+                <p>{t("countreview")}</p>
+                <p>{t("fromthem")}</p>
               </div>
             </div>
           </div>

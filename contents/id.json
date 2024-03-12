@@ -213,5 +213,41 @@
         "subtitle": "Situs web sanwooelectronics.com menampilkan produk cooler dan freezer beserta rincian yang akan memudahkan Sanwoo Electronics dalam mendapat pelanggan. Situs web ini juga berisi informasi kontak untuk Sanwoo Electronics yang dapat memudahkan pelanggan."
       }
     }
+  },
+  "AboutUs": {
+    "section1": {
+      "title": "Mendorong Pertumbuhan <br></br> Melalui <span>Teknologi Tanpa Batas</span>",
+      "subtitle": "Kami berkomitmen untuk menyediakan layanan pelanggan yang sangat baik <br></br> karena kami fokus pada solusi teknologi informasi yang inovatif dan efektif.",
+      "countreview": "20+ Positif",
+      "fromthem": "Ulasan dari Mereka"
+    },
+    "section2": {
+      "title": "Kami Siap Memberikan <span>Layanan Terbaik</span>",
+      "subtitle": "Komitmen kami terhadap keunggulan dan kualitas terbaik mendorong kami untuk memberikan yang terbaik dan memastikan setiap interaksi dengan klien kami akan membawa kepada hasil yang maksimal.",
+      "talk": "Mari kita diskusikan",
+      "clients": "Klien",
+      "reviews": "Ulasan",
+      "exp": "Pengalaman bertahun-tahun"
+    },
+    "section3": {
+      "content": "Evetech Solution? Mari kita kembali ke tahun 2020 ketika Steven Sophian Putra (Pendiri dan Direktur Evetech Solution) memulai Evetech Solution untuk membantu banyak klien dan perusahaan dalam mencapai kesuksesan bisnis mereka. E-Commerce, ERP, Aplikasi Kesehatan, Aplikasi Keuangan/Asuransi, Website Profil Perusahaan adalah beberapa produk yang telah berhasil dikembangkan untuk memenuhi kebutuhan klien. <br></br> <br></br> Steven menyadari bahwa kemampuannya dalam memecahkan masalah dengan menghadirkan solusi yang inovatif dapat membantu banyak orang yang ingin mewujudkan mimpinya. Ia juga selalu menekankan bahwa Inovasi, kualitas, dan kepuasan klien adalah pilar kesuksesan Evetech Solution sehingga kualitas produk perangkat lunak yang dikembangkan oleh tim Evetech Solution haruslah yang terbaik."
+    },
+    "section4": {
+      "title": "Jadilah Bagian Dari <span>Sesuatu Yang BESAR.</span>",
+      "subtitle": "Anda punya ide, Kami punya solusi perangkat lunak. <br></br> Wujudkan mimpimu menjadi nyata!",
+      "talk": "Mari kita diskusikan",
+      "1": {
+        "title": "Atur Pertemuan",
+        "subtitle": "Bersama mengatur waktu antara pemilik bisnis dan tim kami untuk merumuskan masalah. Setelah itu, kami akan memberikan solusi termasuk dalam bentuk perangkat lunaknya."
+      },
+      "2": {
+        "title": "Buat rencana bersama",
+        "subtitle": "Jika anda setuju ataupun memiliki topik yang mau didiskusikan. Kita dapat mendiskusikannya bersama. Setelah menemukan titik temu, kita dapat membuat kesepakatan kerja sama."
+      },
+      "3": {
+        "title": "Dapatkan hasilnya",
+        "subtitle": "Kami akan mengirimkan hasil software kebutuhan Anda. Kami dapat juga membantu anda melakukan pemeliharaan software ataupun mengupdatenya tanpa kehilangan data yang sudah dimasukkan di kemudian hari."
+      }
+    }
   }
 }
