@@ -184,6 +184,30 @@
     "section8": {
       "title": "Rangkaian <span>teknologi</span> yang digunakan Evetech Solution",
       "subtitle": "Memanfaatkan spesialis yang sangat berpengalaman dalam pengembangan desktop, web, dan seluler. Pengembang kami menggunakan teknologi, kerangka kerja, dan komponen terbaru untuk menciptakan solusi yang menggabungkan back-end teknis yang kuat dengan desain modern yang mudah digunakan."
+    },
+    "section9": {
+      "title": "Lihat pengerjaan <br></br> <span>project terbaru</span> kami",
+      "subtitle": "Karya terbaru kami menampilkan desain terbaru dan solusi inovatif yang membuatnya unggul dari yang lain.",
+      "1": {
+        "title": "SQM Studio",
+        "subtitle": "sqmstudio.com adalah situs web halaman arahan studio online arsitektur & desain interior tropis. SQM Studio mengkhususkan diri pada proyek-proyek residensial & komersial."
+      },
+      "2": {
+        "title": "Downtown Diner",
+        "subtitle": "Downtowndinner.id adalah landing page mengenai informasi restoran, menu, kontak hingga pesanan online (delivery order) sehingga pelanggan yang ingin memesan makanan untuk dibawa pulang tidak perlu datang langsung ke restoran."
+      },
+      "3": {
+        "title": "Juragan Material",
+        "subtitle": "Website Juragan Material digunakan untuk mengintegrasikan seluruh sumber daya perusahaan, seperti data pelanggan, data sales order, manajemen purchase order, dan monitoring bisnis melalui dashboard."
+      },
+      "4": {
+        "title": "Pelangi Laundry",
+        "subtitle": "Pelangi Laundry menyediakan layanan laundry online, di mana pelanggan tidak perlu datang langsung ke gerai laundry. Pelanggan cukup mengakses website Pelangi Laundry untuk menggunakan jasa laundry, yang nantinya karyawan Pelangi Laundry akan mendatangi lokasi pelanggan sesuai dengan data lokasi yang telah diinput oleh pelanggan sebelumnya."
+      },
+      "5": {
+        "title": "Sanwoo Electronics",
+        "subtitle": "Situs web sanwooelectronics.com menampilkan produk cooler dan freezer beserta rincian yang akan memudahkan Sanwoo Electronics dalam mendapat pelanggan. Situs web ini juga berisi informasi kontak untuk Sanwoo Electronics yang dapat memudahkan pelanggan."
+      }
     }
   }
 }

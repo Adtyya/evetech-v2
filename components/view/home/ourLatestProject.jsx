@@ -5,12 +5,12 @@ import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { EffectCoverflow } from "swiper/modules";
-import Image from "next/image";
 import { OurLatestProject } from "./content";
 import autoAnimate from "@formkit/auto-animate";
-import { ButtonPrimary } from "@/components/button/button";
+import { useTranslations } from "next-intl";
 
 export default function OurLatestProjects() {
+  const t = useTranslations("HomePage.section9");
   const sliderRef = useRef(null);
   const [active, setActive] = useState(0);
 
@@ -18,12 +18,13 @@ export default function OurLatestProjects() {
     <Container id="latest-projects" className="py-5">
       <div className="flex-col lg:flex lg:flex-row items-center lg:justify-between">
         <Heading variant="h3" className="text-btn-primary font-bold capitalize">
-          Check out our <br />{" "}
-          <span className="text-btn-blue">latest projects</span>
+          {t.rich("title", {
+            span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+            br: () => <br></br>,
+          })}
         </Heading>
         <p className="text-eve-gray w-full max-w-sm mt-1.5 lg:mt-0">
-          From cutting-edge designs to groundbreaking solutions, our lastest
-          works showcase the forefront of innovations.
+          {t("subtitle")}
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-12 mt-10 mb-7 gap-8">
@@ -79,8 +80,8 @@ export default function OurLatestProjects() {
           {OurLatestProject.map((item, idx) => {
             return (
               <Card
-                title={item.name}
-                description={item.description}
+                title={t(`${idx + 1}.title`)}
+                description={t(`${idx + 1}.subtitle`)}
                 onClick={() => {
                   setActive(idx);
                   sliderRef.current?.slideTo(idx);

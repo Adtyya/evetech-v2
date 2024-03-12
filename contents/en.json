@@ -184,6 +184,30 @@
     "section8": {
       "title": "Evetech Set of <span>Technologies</span> for Software Development",
       "subtitle": "Utilize highly experienced specialists in desktop, web, and mobile development. Our developers employ the latest technologies, frameworks, and components to create solutions that combine a strong technical back-end with easy to use modern design."
+    },
+    "section9": {
+      "title": "Check Out Our <br></br> <span>Latest Projects</span>",
+      "subtitle": "Our latest work features the latest designs and innovative solutions that make it stand out from the crowd.",
+      "1": {
+        "title": "SQM Studio",
+        "subtitle": "sqmstudio.com is a tropical architecture & interior design online studio landing page website. SQM Studio specializes in residential & commercial projects."
+      },
+      "2": {
+        "title": "Downtown Diner",
+        "subtitle": "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant."
+      },
+      "3": {
+        "title": "Juragan Material",
+        "subtitle": "Juragan Material website is used to integrate all company resources, such as customer data, sales order data, purchase order management, and business monitoring through a dashboard."
+      },
+      "4": {
+        "title": "Pelangi Laundry",
+        "subtitle": "Pelangi Laundry provides online laundry services, where customers do not need to come to the laundry outlet in person. Customers only need to access the Pelangi Laundry website to use laundry services, which later Pelangi Laundry employees will go to the customer's location according to the location data that has been input by the customer before."
+      },
+      "5": {
+        "title": "Sanwoo Electronics",
+        "subtitle": "sanwooelectronics.com displays cooler and freezer products along with details that will make it easier for Sanwoo Electronics to reach its customers. This website also contains contact details for Sanwoo Electronics which can make it easier for customers."
+      }
     }
   }
 }
