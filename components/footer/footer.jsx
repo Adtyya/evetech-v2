@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const socialIcon = [
   {
@@ -132,18 +133,20 @@ export default function Footer() {
       );
   };
 
+  const t = useTranslations("SpecialOffer");
+
   return (
     <div>
       <div className="w-full h-full bg-btn-white py-8">
         <Container>
           <div className="space-y-5">
             <Heading variant="h3" className="font-bold text-btn-primary">
-              Let’s Create Together!
+              {t("title")}
             </Heading>
             <p className="text-eve-gray">
-              Ready to elevate your digital presence? Contact us to discuss how
-              Evetech <br /> Solution turn your ideas intro visual captivating
-              realities that drive results.
+              {t.rich("subtitle", {
+                br: () => <br />,
+              })}
             </p>
             <form ref={emailRef} onSubmit={handleSubmit}>
               <div className="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 items-center space-x-4 relative">
