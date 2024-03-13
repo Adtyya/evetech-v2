@@ -38,7 +38,7 @@ const navList = [
       },
       {
         name: "NewsDev",
-        path: "/service/news-web-development",
+        path: "/service/news-web-app-development",
       },
     ],
   },

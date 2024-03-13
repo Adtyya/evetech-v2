@@ -59,13 +59,18 @@ export default function FAQ() {
 
   const webapp = useTranslations("Faq.webapp");
   const mobileapp = useTranslations("Faq.mobileapp");
+  const newsweb = useTranslations("Faq.newsapp");
   const x = useTranslations("Faq");
 
   const t = useMemo(() => {
     return pathname.includes("/web-app-development") ||
       pathname.includes("web-development")
       ? webapp
-      : mobileapp;
+      : pathname.includes("/mobile-app-development")
+      ? mobileapp
+      : pathname.includes("/news-web-app-development")
+      ? newsweb
+      : webapp;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 

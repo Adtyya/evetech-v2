@@ -80,6 +80,36 @@
         "q": "Is the application development for android only?",
         "a": "No. We develop applications based on Android and IOS"
       }
+    },
+    "newsapp": {
+      "1": {
+        "q": "What is included in news website services?",
+        "a": "This service from Evetech Solution includes design, development, content migration, deployment, and maintenance. Other tasks like domain, hosting, image editing, and copywriting could be added depending on project needs."
+      },
+      "2": {
+        "q": "Does Evetech Solution provide a hosting service?",
+        "a": "We use a third party for hosting. But, you don’t need to worry because we have many connections to trusted hosting providers. We will give you a hosting recommendation depending on your needs."
+      },
+      "3": {
+        "q": "How much is the price for service on creating a news website in Evetech Solution?",
+        "a": "Prices will be different including the features requested. You could even discuss with us, the price you think is worth for the services. After that, we could have an agreement."
+      },
+      "4": {
+        "q": "How much time is needed to develop a news website with Evetech Solution?",
+        "a": "In general, we take 2-4 weeks. We could make it faster or slower depending on the project scale."
+      },
+      "5": {
+        "q": "Is there a guarantee from Evetech about a free bug website?",
+        "a": "We provide free bug-guaranteed."
+      },
+      "6": {
+        "q": "Can Evetech Solution help when a website encounters issues, needs maintenance and requires SEO optimization for a news website?",
+        "a": "Yes, we provide services for that."
+      },
+      "7": {
+        "q": "How is the payment for the website services?",
+        "a": "We are open to receiving an initial Down Payment (DP) and the full payment upon completion of the website and when it is accessible."
+      }
     }
   },
   "Form": {
@@ -423,6 +453,23 @@
         "title": "Credibility",
         "subtitle": "Increase your business credibility and help you build a professional image."
       }
+    },
+    "section3": {
+      "title": "Features We Provide",
+      "subtitle": "There are several reasons why you should use news portal website creation services from Evetech Solution. Among them:"
+    },
+    "section4": {
+      "title": "Our <span>Content Management System (CMS)</span>",
+      "subtitle": "Evetech Solution provides professional news website development services with the best CMS. We use a CMS that is easy to use and manage, so you can easily edit content and manage your website without technical assistance.",
+      "1": "Login Page",
+      "2": "Media Library",
+      "3": "Banner",
+      "4": "User Management",
+      "5": "News Categories",
+      "6": "Mobile Friendly",
+      "7": "Main Dashboard",
+      "8": "News Management",
+      "9": "Galery / Advertorial"
     }
   }
 }
