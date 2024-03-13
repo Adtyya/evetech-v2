@@ -394,6 +394,35 @@
       "title": "<span>News Website</span> <br></br> Development",
       "subtitle": "Professional and Trusted News Website Development Services<br></br>Make Your Website Attractive, Responsive, and Affordable Prices",
       "consultation": "Get Free consultation"
+    },
+    "section2": {
+      "title": "Why choose <br></br> <span>our services?</span>",
+      "subtitle": "There are several reasons why you should use news portal website creation services from Evetech Solution. Among them:",
+      "talk": "Let's talk",
+      "1": {
+        "title": "Good News Website Quality",
+        "subtitle": "Your news website has better quality in design, function, and user experience."
+      },
+      "2": {
+        "title": "Time and Efficiency",
+        "subtitle": "We help to develop your news website quickly. You could start your project immediately."
+      },
+      "3": {
+        "title": "More Better Seo",
+        "subtitle": "News settings on categories/rubric according to the needs of the latest online media and more optimized in Google."
+      },
+      "4": {
+        "title": "Following Industry Standards",
+        "subtitle": "Your News Website Meets Industry Standards And Required Security."
+      },
+      "5": {
+        "title": "Good Technical Support",
+        "subtitle": "We can help you with technical issues and maintenance of your new website."
+      },
+      "6": {
+        "title": "Credibility",
+        "subtitle": "Increase your business credibility and help you build a professional image."
+      }
     }
   }
 }

@@ -1,35 +1,41 @@
 export const WhyChooseUs = [
   {
+    id: 1,
     title: "Kualitas Website berita yang Baik",
     subtitle:
       "Website berita anda memiliki kualitas yang lebih baik dari segi desain, fungsi, dan pengalaman pengguna.",
     image: "/images/newsdevelopment/whyChoose/card-icon/quality.svg",
   },
   {
+    id: 2,
     title: "Waktu dan Efisiensi",
     subtitle:
       "Membantu anda dalam pembuatan website berita yang cepat sehingga dapat segera memulai project yang diinginkan.",
     image: "/images/newsdevelopment/whyChoose/card-icon/time.svg",
   },
   {
+    id: 3,
     title: "SEO yang lebih baik",
     subtitle:
       "Pengaturan kategori berita/rubrik sesuai kebutuhan media online terkini dan lebih mudah muncul dalam pencarian google.",
     image: "/images/newsdevelopment/whyChoose/card-icon/seo.svg",
   },
   {
+    id: 4,
     title: "Sesuai Standar Industri",
     subtitle:
       "Website berita anda memenuhi standar industri dan keamanan yang diperlukan.",
     image: "/images/newsdevelopment/whyChoose/card-icon/standart.svg",
   },
   {
+    id: 5,
     title: "Dukungan Teknis Baik",
     subtitle:
       "Dapat membantu anda dengan masalah teknis dan perawatan website berita anda.",
     image: "/images/newsdevelopment/whyChoose/card-icon/support.svg",
   },
   {
+    id: 6,
     title: "Kredibilitas",
     subtitle:
       "Meningkatkan kredibilitas bisnis anda dan membantu anda membangun citra profesional.",

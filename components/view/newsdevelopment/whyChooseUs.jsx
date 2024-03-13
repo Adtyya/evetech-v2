@@ -4,8 +4,11 @@ import ContentImage from "@/public/images/newsdevelopment/whyChoose/whychoose.pn
 import Heading from "@/components/text/heading";
 import { ButtonPrimary } from "@/components/button/button";
 import { WhyChooseUs as content } from "./content";
+import { useTranslations } from "next-intl";
 
 export default function WhyChooseUs() {
+  const t = useTranslations("NewsDev.section2");
+
   return (
     <Container className="py-12">
       <div className="w-full h-96 relative">
@@ -25,21 +28,22 @@ export default function WhyChooseUs() {
             variant="h2"
             className="capitalize text-btn-primary font-bold"
           >
-            Mengapa memilih <br />{" "}
-            <span className="text-btn-blue"> jasa kami</span>
+            {t.rich("title", {
+              br: () => <br />,
+              span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+            })}
           </Heading>
           <p className="my-3.5 text-eve-gray w-full max-w-sm">
-            Ada beberapa alasan mengapa menggunakan jasa pembuatan website
-            portal berita dari Evetech Solution. di antaranya:
+            {t("subtitle")}
           </p>
-          <ButtonPrimary className="px-7">{`Let's Talk`}</ButtonPrimary>
+          <ButtonPrimary className="px-7 capitalize">{t("talk")}</ButtonPrimary>
         </div>
         <div className="space-y-5 hidden lg:block">
           {content.slice(0, 2).map((itm, idx) => {
             return (
               <Card
-                title={itm.title}
-                subtitle={itm.subtitle}
+                title={t(`${itm.id}.title`)}
+                subtitle={t(`${itm.id}.subtitle`)}
                 image={itm.image}
                 key={idx}
               ></Card>
@@ -48,12 +52,12 @@ export default function WhyChooseUs() {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:hidden mt-5 gap-5">
-        {content.map((i, idx) => {
+        {content.map((itm, idx) => {
           return (
             <Card
-              title={i.title}
-              subtitle={i.subtitle}
-              image={i.image}
+              title={t(`${itm.id}.title`)}
+              subtitle={t(`${itm.id}.subtitle`)}
+              image={itm.image}
               key={idx}
             ></Card>
           );
