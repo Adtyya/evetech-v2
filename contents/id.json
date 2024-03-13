@@ -50,6 +50,36 @@
         "q": "Apakah Anda menawarkan layanan konsultasi pengembangan aplikasi?",
         "a": "Ya, kami menawarkan sesi konsultasi GRATIS. Kami juga menyadari bahwa klien yang menghubungi kami sebagian besar adalah individu non-teknis. Oleh karena itu, kami melakukan yang terbaik untuk menjaga sesi konsultasi agar tetap awam."
       }
+    },
+    "mobileapp": {
+      "1": {
+        "q": "Saya ingin merahasiakan ide aplikasi seluler saya. Apakah Anda akan menandatangani NDA dengan saya?",
+        "a": "Ya, kami menandatangani NDA (Perjanjian Kerahasiaan) ketika klien meminta kami untuk melakukannya, setelah tim hukum kami meninjau perjanjian tersebut."
+      },
+      "2": {
+        "q": "Apakah saya memiliki kepemilikan penuh atas produk yang telah saya selesaikan?",
+        "a": "Ya, Anda adalah pemilik hak Kekayaan Intelektual Anda setiap saat, termasuk kode sumber."
+      },
+      "3": {
+        "q": "Berapa lama waktu yang dibutuhkan untuk menyelesaikan produk saya?",
+        "a": "Itu sangat tergantung pada kompleksitas proyek. Proyek kecil akan memakan waktu 2-3 bulan sementara proyek skala besar bisa memakan waktu hingga 6 bulan."
+      },
+      "4": {
+        "q": "Apakah Anda akan membantu saya untuk mempublikasikan aplikasi saya di Google PlayStore, Apple App Store, dan Huawei App Gallery?",
+        "a": "Ya, ini akan menjadi bagian dari proses pengembangan aplikasi kami. Kami akan memberi Anda panduan tentang pengaturan toko seperti materi pemasaran dan konfigurasi lainnya."
+      },
+      "5": {
+        "q": "Apakah akan ada pemeliharaan setelah pengembangan selesai?",
+        "a": "Ya. Setelah kami menyelesaikan semua pengembangan dan UAT, kami mendukung Anda dalam proses deployment seperti deployment server dan mempublikasikan aplikasi Anda ke iOS App Store / Google Play Store. Kemudian, kami menawarkan layanan pemeliharaan aplikasi."
+      },
+      "6": {
+        "q": "Apakah Anda menawarkan layanan konsultasi pengembangan aplikasi?",
+        "a": "Ya, kami menawarkan sesi konsultasi GRATIS. Kami juga menyadari bahwa klien yang menghubungi kami sebagian besar adalah individu non-teknis. Oleh karena itu, kami melakukan yang terbaik untuk menjaga sesi konsultasi agar tetap awam."
+      },
+      "7": {
+        "q": "Apakah pengembangan aplikasi hanya untuk android?",
+        "a": "Kami mengembangkan aplikasi berbasis Android dan iOS."
+      }
     }
   },
   "Form": {

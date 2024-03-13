@@ -51,16 +51,21 @@ export default function FAQ() {
   const pathname = usePathname();
 
   const questionAnswer = useMemo(() => {
-    return pathname.includes("/web-app-development")
+    return pathname.includes("/web-app-development") ||
+      pathname.includes("web-development")
       ? Array.from({ length: 6 })
-      : Array.from({ length: 6 });
+      : Array.from({ length: 7 });
   }, [pathname]);
 
   const webapp = useTranslations("Faq.webapp");
+  const mobileapp = useTranslations("Faq.mobileapp");
   const x = useTranslations("Faq");
 
   const t = useMemo(() => {
-    return pathname.includes("/web-app-development") ? webapp : webapp;
+    return pathname.includes("/web-app-development") ||
+      pathname.includes("web-development")
+      ? webapp
+      : mobileapp;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
