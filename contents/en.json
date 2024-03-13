@@ -388,5 +388,12 @@
         "subtitle": "Our agile development methodology includes oversight of your product release and maintenance after the fact, too. Custom app development services with a reliable partner include this final maintenance as things come up when selling on a dynamic marketplace."
       }
     }
+  },
+  "NewsDev": {
+    "section1": {
+      "title": "<span>News Website</span> <br></br> Development",
+      "subtitle": "Professional and Trusted News Website Development Services<br></br>Make Your Website Attractive, Responsive, and Affordable Prices",
+      "consultation": "Get Free consultation"
+    }
   }
 }
