@@ -308,5 +308,16 @@
       "title": "Pengembangan Website Aplikasi",
       "subtitle": "Proyek Pengembangan Situs Web Aplikasi kami menampilkan desain terbaru dan solusi inovatif yang membuatnya lebih unggul dari yang lain."
     }
+  },
+  "WebDev": {
+    "section1": {
+      "title": "Pengembangan <span>Website</span>",
+      "subtitle": "Menghadirkan inovasi tanpa batas melalui pengembangan situs web yang responsif dan intuitif.",
+      "consultation": "Dapatkan konsultasi gratis"
+    },
+    "section2": {
+      "title": "Pengembangan Website",
+      "subtitle": "Proyek Pengembangan Website kami menampilkan desain terbaru dan solusi inovatif yang membuatnya lebih unggul dari yang lain."
+    }
   }
 }

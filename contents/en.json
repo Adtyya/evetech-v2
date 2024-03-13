@@ -308,5 +308,16 @@
       "title": "Web Application Development Projects",
       "subtitle": "Our App Website Development projects feature the latest designs and innovative solutions that make them stand out from the crowd."
     }
+  },
+  "WebDev": {
+    "section1": {
+      "title": "<span>Web</span> Development",
+      "subtitle": "Delivering limitless innovation through responsive and intuitive website development",
+      "consultation": "Get Free consultation"
+    },
+    "section2": {
+      "title": "Website Development Projects",
+      "subtitle": "Our Website Development projects feature the latest designs and innovative solutions that make them stand out from the crowd."
+    }
   }
 }
