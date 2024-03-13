@@ -61,7 +61,7 @@
       "company": "Nama perusahaan",
       "projectbudget": "Anggaran projek",
       "nominal": {
-        "<3": "< $3000",
+        "<3": "<br $3000",
         "3-7": "$3000 - $7000",
         "7-12": "$7000 - $12000",
         "12-20": "$12000 - $20000",
@@ -318,6 +318,45 @@
     "section2": {
       "title": "Pengembangan Website",
       "subtitle": "Proyek Pengembangan Website kami menampilkan desain terbaru dan solusi inovatif yang membuatnya lebih unggul dari yang lain."
+    }
+  },
+  "MobileAppDev": {
+    "section1": {
+      "title": "Pengembangan  <br></br> <span>Aplikasi Mobile</span>",
+      "subtitle": "Tingkatkan nilai bisnis Anda dengan pengembangan aplikasi seluler yang memukau dan intuitif. <br></br> Dapatkan solusi UI/UX terbaik untuk mendorong pertumbuhan startup atau bisnis Anda.",
+      "consultation": "Dapatkan konsultasi gratis"
+    },
+    "section2": {
+      "title": "Proyek Pengembangan Aplikasi Mobile",
+      "subtitle": "Proyek Pengembangan Aplikasi Mobile kami menampilkan desain terbaru dan solusi inovatif yang membuatnya menonjol dari yang lain."
+    },
+    "section3": {
+      "title": "Pengembangan Aplikasi Mobile Kami Didukung Oleh Pendekatan Agile yang Telah Terbukti",
+      "subtitle": "Kami memberikan pengalaman pengembangan aplikasi mobile yang kuat dengan pendekatan Agile yang telah terbukti. Temukan kemudahan dan fleksibilitas dalam setiap langkah proyek kami.",
+      "1": {
+        "title": "Diskusi Ide",
+        "subtitle": "Evetech masuk untuk menjadi mitra pengembangan Anda. Sesuai dengan permintaan khusus Anda, Projek manajer kami akan menerima ide Anda dan menilai kualitas produk dan konsep perangkat lunak inti. Kami meluangkan waktu untuk memahami tujuan apa yang akan dilayani oleh aplikasi Anda."
+      },
+      "2": {
+        "title": "Perencanaan",
+        "subtitle": "Langkah selanjutnya dalam layanan pengembangan aplikasi kami adalah peta jalan produk, mendefinisikan tumpukan teknologi, dan menyoroti praktik terbaik yang hemat biaya untuk memenangkan pasar yang kompetitif. Kami menggunakan praktik terbaik industri dan keahlian teknis di seluruh proses bisnis kami."
+      },
+      "3": {
+        "title": "Desain",
+        "subtitle": "Pengembangan aplikasi kami kemudian beralih ke gambar kerja pertama yang kaya visual. Kami menggunakan teknologi mutakhir untuk menentukan bagaimana aplikasi Anda akan terlihat, berfungsi, dan terasa. Kami memberikan pengalaman pengguna yang lebih baik mulai dari tahap manajemen proyek ini."
+      },
+      "4": {
+        "title": "Pengembangan dan Coding",
+        "subtitle": "Produk inovatif adalah spesialisasi kami, dan setelah kami masuk ke bagian pengkodean dalam proses pengembangan kami, Anda dapat duduk dan bersantai. Layanan pengembangan aplikasi kami menerapkan sumber daya terampil kami dalam alur kerja yang efisien untuk membangun produk yang kaya fitur."
+      },
+      "5": {
+        "title": "Pengujian",
+        "subtitle": "Bagian dari metodologi kami yang telah terbukti mencakup jaminan kualitas yang kuat. Agar pengguna tidak melihat bug dan menerapkan produk yang hemat biaya, layanan pengembangan aplikasi tidak berhenti ketika produk selesai dibuat. Tim khusus Anda akan melakukan pengujian sebagai bagian dari peta jalan produk Anda."
+      },
+      "6": {
+        "title": "Rilis dan Pemeliharaan",
+        "subtitle": "Metodologi pengembangan tangkas kami mencakup pengawasan rilis dan pemeliharaan produk Anda setelah fakta. Layanan pengembangan aplikasi khusus dengan mitra yang andal mencakup pemeliharaan akhir ini karena ada hal-hal yang muncul saat menjual di pasar yang dinamis."
+      }
     }
   }
 }

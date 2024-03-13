@@ -6,8 +6,11 @@ import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import Image from "next/image";
 import { OurAgile as content } from "./content";
+import { useTranslations } from "next-intl";
 
 export default function OurAgile() {
+  const t = useTranslations("MobileAppDev.section3");
+
   return (
     <div className="py-12">
       <Container>
@@ -15,14 +18,11 @@ export default function OurAgile() {
           variant="h2"
           className="text-btn-primary font-bold text-center"
         >
-          Our Agile Development
-          <span className="text-btn-blue">Tested 100s</span> Of Projects
+          {t("title")}
         </Heading>
         <div className="flex items-center justify-center">
           <p className="mt-1.5 text-eve-gray text-center w-full max-w-2xl">
-            Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
-            lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu
-            enim metus.
+            {t("subtitle")}
           </p>
         </div>
         <div className="columns-1 md:columns-2 lg:hidden pt-5">
@@ -30,8 +30,8 @@ export default function OurAgile() {
             return (
               <Card
                 key={i}
-                title={a.name}
-                description={a.description}
+                title={t(`${i + 1}.title`)}
+                description={t(`${i + 1}.subtitle`)}
                 image={a.image}
                 isEven={i % 2 === 0}
                 indexNumber={i + 1}
@@ -46,8 +46,8 @@ export default function OurAgile() {
             return (
               <Card
                 key={i}
-                title={a.name}
-                description={a.description}
+                title={t(`${i + 1}.title`)}
+                description={t(`${i + 1}.subtitle`)}
                 image={a.image}
                 isEven={i % 2 === 0}
                 indexNumber={i + 1}

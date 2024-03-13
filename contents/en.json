@@ -61,7 +61,7 @@
       "company": "Company Name",
       "projectbudget": "Your Budget",
       "nominal": {
-        "<3": "< $3000",
+        "<3": "<br $3000",
         "3-7": "$3000 - $7000",
         "7-12": "$7000 - $12000",
         "12-20": "$12000 - $20000",
@@ -318,6 +318,45 @@
     "section2": {
       "title": "Website Development Projects",
       "subtitle": "Our Website Development projects feature the latest designs and innovative solutions that make them stand out from the crowd."
+    }
+  },
+  "MobileAppDev": {
+    "section1": {
+      "title": "<span>Mobile App</span> <br></br> Development",
+      "subtitle": "Increase your business value with stunning and intuitive mobile app development. <br></br> Get the best UI/UX solutions to drive your startup or business growth.",
+      "consultation": "Get Free consultation"
+    },
+    "section2": {
+      "title": "Mobile App Development Projects",
+      "subtitle": "Our Mobile App Development projects feature the latest designs and innovative solutions that make them stand out from the crowd."
+    },
+    "section3": {
+      "title": "Our Mobile App Development Is Supported By A Proven Agile Approach",
+      "subtitle": "We deliver a powerful mobile app development experience with a proven Agile approach. Find ease and flexibility in every step of our projects.",
+      "1": {
+        "title": "Discussing The Idea",
+        "subtitle": "Evetech signs on to be your development partner. According to your custom demands, our project managers take your idea and assess product quality and the core software concept. We take time to understand what purpose your app will serve."
+      },
+      "2": {
+        "title": "Planning",
+        "subtitle": "The next step in our app development services is the product roadmap, defining the technology stack, and highlighting cost effective best practices to win competitive markets. We use industry best practices and technical expertise throughout our business processes."
+      },
+      "3": {
+        "title": "Design",
+        "subtitle": "Our app development then takes a turn for a visually-rich first wireframe. We use cutting edge technology to define how your app will look, function and feel. We deliver augmented user experiences starting in this stage of project management."
+      },
+      "4": {
+        "title": "Development and Coding",
+        "subtitle": "Innovative products are our specialty, and once we get to the coding part of our development process, you can sit back and relax. Our app development services apply our skilled resources in efficient workflows to build feature rich products."
+      },
+      "5": {
+        "title": "Testing",
+        "subtitle": "Part of our proven methodologies includes robust quality assurance. To keep users from seeing bugs and to deploy cost effective products, app development services don’t stop when a product is built. Your dedicated team employs testing as part of your product roadmap."
+      },
+      "6": {
+        "title": "Release And Maintenance",
+        "subtitle": "Our agile development methodology includes oversight of your product release and maintenance after the fact, too. Custom app development services with a reliable partner include this final maintenance as things come up when selling on a dynamic marketplace."
+      }
     }
   }
 }
