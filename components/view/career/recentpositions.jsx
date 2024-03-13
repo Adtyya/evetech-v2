@@ -2,8 +2,9 @@ import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import { LuMapPin, LuClock, LuBook } from "react-icons/lu";
 import Link from "next/link";
+import moment from "moment";
 
-export default function RecentPositions() {
+export default function RecentPositions({ listVacancies = [] }) {
   return (
     <Container className="py-12">
       <div>
@@ -15,13 +16,21 @@ export default function RecentPositions() {
         </p>
       </div>
       <div className="mt-8 space-y-5">
-        <CardPosition
-          title="UI Designer"
-          employementType="full time"
-          placementType="onsite"
-          placementLocation="surakarta"
-          experienceNeeded="1+ Years experience"
-        ></CardPosition>
+        {listVacancies.map((item, idx) => {
+          return (
+            <CardPosition
+              key={idx}
+              title={item?.attributes?.title}
+              employementType={item?.attributes?.workType}
+              placementType={item?.attributes?.onsite ? "Onsite" : "Remote"}
+              placementLocation={item?.attributes?.location}
+              experienceNeeded={`${item?.attributes?.experienceInYears} Years Experience`}
+              department={item?.attributes?.department}
+              createdAt={item?.attributes?.createdAt}
+              deadline={item?.attributes?.endDate}
+            ></CardPosition>
+          );
+        })}
       </div>
     </Container>
   );
@@ -35,7 +44,7 @@ export const GetBadgeEmployementType = ({ type }) => {
           ? "bg-eve-internship text-eve-internshipText"
           : type === "part time"
           ? "bg-eve-partTime text-eve-partTimeText"
-          : type === "full time"
+          : type === "fulltime"
           ? "bg-eve-fullTime text-eve-fullTimeText"
           : null
       } capitalize px-4 py-1.5 rounded-full`}
@@ -51,6 +60,9 @@ export function CardPosition({
   placementType,
   placementLocation,
   experienceNeeded,
+  department,
+  createdAt,
+  deadline,
 }) {
   return (
     <Link href="/">
@@ -75,7 +87,7 @@ export function CardPosition({
           </div>
           <div className="flex space-x-2 items-center text-eve-gray">
             <LuBook></LuBook>
-            <p>Department</p>
+            <p>{department || "Department"}</p>
           </div>
           <div className="flex space-x-2 items-center text-eve-gray">
             <LuClock></LuClock>
@@ -83,8 +95,12 @@ export function CardPosition({
           </div>
         </div>
         <div className="flex space-x-5">
-          <small className="text-eve-gray">Posted 1 day ago</small>
-          <small className="text-eve-gray">Deadline: 24 Desember 2023</small>
+          <small className="text-eve-gray">
+            Posted {deadline ? moment(createdAt).fromNow() : "1 day ago"}
+          </small>
+          <small className="text-eve-gray">
+            Deadline: {moment(deadline).format("LL")}
+          </small>
         </div>
       </div>
     </Link>
