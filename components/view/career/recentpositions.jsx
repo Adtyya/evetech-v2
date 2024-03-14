@@ -3,6 +3,7 @@ import Heading from "@/components/text/heading";
 import { LuMapPin, LuClock, LuBook } from "react-icons/lu";
 import Link from "next/link";
 import moment from "moment";
+import { useLocale } from "next-intl";
 
 export default function RecentPositions({ listVacancies = [] }) {
   return (
@@ -22,12 +23,13 @@ export default function RecentPositions({ listVacancies = [] }) {
               key={idx}
               title={item?.attributes?.title}
               employementType={item?.attributes?.workType}
-              placementType={item?.attributes?.onsite ? "Onsite" : "Remote"}
+              placementType={item?.attributes?.workModel}
               placementLocation={item?.attributes?.location}
               experienceNeeded={`${item?.attributes?.experienceInYears} Years Experience`}
               department={item?.attributes?.department}
               createdAt={item?.attributes?.createdAt}
               deadline={item?.attributes?.endDate}
+              slug={item?.attributes?.slug}
             ></CardPosition>
           );
         })}
@@ -63,9 +65,12 @@ export function CardPosition({
   department,
   createdAt,
   deadline,
+  slug,
 }) {
+  const locale = useLocale();
+
   return (
-    <Link href="/">
+    <Link href={`/career/vacancies/${slug}`} lang={locale}>
       <div className="bg-eve-white rounded-2xl p-5 md:p-7 drop-shadow-md">
         <div id="head" className="flex items-center justify-between">
           <Heading

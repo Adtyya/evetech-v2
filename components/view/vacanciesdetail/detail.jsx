@@ -11,6 +11,7 @@ import ModalBase from "@/components/modal";
 import { FiX } from "react-icons/fi";
 import { InputRounded } from "@/components/form/inputv2";
 import { useDropzone } from "react-dropzone";
+import Markdown from "react-markdown";
 
 function SideCardInfo({ title, subtitle }) {
   return (
@@ -139,18 +140,24 @@ function ApplyPosition({ open, close }) {
   );
 }
 
-export default function DetailVacanciesTop() {
+export default function DetailVacanciesTop({ content }) {
   const [open, setOpen] = useState(false);
 
   return (
     <Container className="py-12">
       <CardDetailVacancies
-        image={"/images/career/sample.jfif"}
-        jobTitle={"UI Designer"}
-        employementType={"internship"}
-        placementType={"onsite"}
-        placementLocation={"surakarta"}
-        experienceNeeded={"1+ years experience"}
+        image={
+          content?.attributes?.cover?.data?.attributes?.url ??
+          "/images/career/sample.jfif"
+        }
+        jobTitle={content?.attributes?.title}
+        employementType={content?.attributes?.workType}
+        placementType={content?.attributes?.workModel}
+        placementLocation={content?.attributes?.location}
+        experienceNeeded={content?.attributes?.experienceInYears}
+        department={content?.attributes?.department}
+        createdAt={content?.attributes?.createdAt}
+        deadline={content?.attributes?.endDate}
         action={() => setOpen(true)}
       />
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-5">
@@ -159,29 +166,29 @@ export default function DetailVacanciesTop() {
             <p className="font-bold text-btn-primary capitalize">
               Job Overview
             </p>
-            <p className="text-btn-primary">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non
-              dolor suscipit provident enim optio repellat accusamus voluptas
-              nihil. Eligendi asperiores ratione, iusto adipisci ducimus soluta
-              mollitia unde aliquid laudantium quibusdam accusamus reiciendis!
-              Hic illum unde, quibusdam atque ea sint natus reiciendis, tenetur
-              dolorum debitis fugit cupiditate odio nihil facilis
-              exercitationem. <br /> <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-              reprehenderit debitis consequuntur. Qui commodi, praesentium
-              voluptates quam similique cupiditate eius accusantium molestiae
-              est. Labore placeat aliquam, dolor sit error consectetur est
-              reprehenderit doloribus quisquam fuga tempora eum, optio qui
-              excepturi?
-            </p>
+            <Markdown className="prose lg:prose-lg prose-p:text-btn-primary prose-headings:text-btn-primary">
+              {content?.attributes?.description}
+            </Markdown>
           </div>
         </div>
         <div className="col-auto md:col-span-4">
           <div className="grid grid-cols-2 md:grid-cols-1 gap-5">
-            <SideCardInfo title="Work level" subtitle="Senior" />
-            <SideCardInfo title="Job-Type" subtitle="Full-Time" />
-            <SideCardInfo title="Work Model" subtitle="Work Model" />
-            <SideCardInfo title="Experience" subtitle="1+ Experience" />
+            <SideCardInfo
+              title="Work level"
+              subtitle={content?.attributes?.workLevel}
+            />
+            <SideCardInfo
+              title="Job-Type"
+              subtitle={content?.attributes?.workType}
+            />
+            <SideCardInfo
+              title="Work Model"
+              subtitle={content?.attributes?.workModel}
+            />
+            <SideCardInfo
+              title="Experience"
+              subtitle={`${content?.attributes?.experienceInYears} Years Experience`}
+            />
           </div>
           <div className="mt-8 space-y-2.5">
             <h2 className="font-bold text-btn-primary capitalize text-xl lg:text-2xl">

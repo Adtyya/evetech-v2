@@ -2,7 +2,7 @@ import { GetBadgeEmployementType } from "../../career/recentpositions";
 import { LuMapPin, LuClock, LuBook } from "react-icons/lu";
 import { ButtonLightBlue } from "@/components/button/button";
 import Image from "next/image";
-import Heading from "@/components/text/heading";
+import moment from "moment";
 
 export default function CardDetailVacancies({
   image,
@@ -12,6 +12,9 @@ export default function CardDetailVacancies({
   placementLocation,
   experienceNeeded,
   action,
+  department,
+  createdAt,
+  deadline,
 }) {
   return (
     <div className="w-full h-max bg-eve-white rounded-2xl overflow-hidden">
@@ -46,19 +49,23 @@ export default function CardDetailVacancies({
               </div>
               <div className="flex space-x-2 items-center text-eve-gray">
                 <LuBook></LuBook>
-                <p>Department</p>
+                <p>{department}</p>
               </div>
               <div className="flex space-x-2 items-center text-eve-gray">
                 <LuClock></LuClock>
-                <p className="capitalize">{experienceNeeded}</p>
+                <p className="capitalize">
+                  {experienceNeeded} Years Experience
+                </p>
               </div>
             </div>
           </div>
           <div className="w-full lg:w-1/4">
             <div className="flex flex-row lg:flex-col space-x-5 lg:space-x-0 lg:items-end">
-              <small className="text-eve-gray">Posted 1 day ago</small>
               <small className="text-eve-gray">
-                Deadline: 24 Desember 2023
+                Posted {deadline ? moment(createdAt).fromNow() : "1 day ago"}
+              </small>
+              <small className="text-eve-gray">
+                Deadline: {moment(deadline).format("LL")}
               </small>
             </div>
             <div className="mt-5 flex justify-center lg:justify-end">

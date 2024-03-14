@@ -3,6 +3,7 @@ import OurValues from "@/components/view/career/ourvalues";
 import RecentPositions from "@/components/view/career/recentpositions";
 import RecruitmentProcess from "@/components/view/career/recruitmentprocess";
 import api from "@/utils/axios";
+import { Suspense } from "react";
 
 async function getRecentVacancies() {
   const res = await api.get(
@@ -21,7 +22,9 @@ export default async function CareerPage() {
       <Hero></Hero>
       <OurValues></OurValues>
       <RecruitmentProcess></RecruitmentProcess>
-      <RecentPositions listVacancies={data ?? []}></RecentPositions>
+      <Suspense key={data} fallback={<div>Loading Recent Open Positions</div>}>
+        <RecentPositions listVacancies={data ?? []}></RecentPositions>
+      </Suspense>
     </>
   );
 }
