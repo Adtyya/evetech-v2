@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
+
 import Container from "@/components/box/container";
 import Image from "next/image";
 import Heading from "@/components/text/heading";
@@ -10,8 +12,29 @@ import {
   TbArrowNarrowRight,
 } from "react-icons/tb";
 import { ButtonLightBlue } from "@/components/button/button";
+import Link from "next/link";
+import { useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 export default function Hero() {
+  const searchParams = useSearchParams();
+  const locale = useLocale();
+  const router = useRouter();
+  const [position, setPosition] = useState(searchParams.get("position") ?? "");
+  const [location, setLocation] = useState(searchParams.get("location") ?? "");
+  const [workModel, setWorkModel] = useState(
+    searchParams.get("workModel") ?? ""
+  );
+
+  function handleSearch(event) {
+    event.preventDefault();
+    router.push(
+      `/career/list-vacancies?position=${position}&location=${location}&workModel=${workModel}`
+    );
+  }
+
   return (
     <div className="h-screen w-full relative">
       <Image
@@ -38,35 +61,63 @@ export default function Hero() {
               successful digital product. Together.
             </p>
             <div className="mt-8 w-full bg-eve-glass/20 backdrop-blur-sm p-5 border border-1 border-white/10 rounded-2xl">
-              <div className="flex flex-col md:flex-row w-full items-center gap-5">
+              <form
+                onSubmit={handleSearch}
+                className="flex flex-col md:flex-row w-full items-center gap-5"
+              >
                 <div className="w-3/6">
                   <InputWithIcon
                     icon={<TbSearch />}
                     placeholder="Type your profession"
-                  />
+                    onChange={(event) => setPosition(event.target.value)}
+                    defaultValue={position}
+                  >
+                    <option value="">All Department</option>
+                    <option value="IT Engineer">IT Engineer</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Designer">Designer</option>
+                  </InputWithIcon>
                 </div>
                 <div className="w-3/6">
                   <InputWithIcon
                     icon={<TbMapPinSearch />}
                     placeholder="Location"
-                  />
+                    onChange={(event) => setLocation(event.target.value)}
+                    defaultValue={location}
+                  >
+                    <option value="">All Location</option>
+                    <option value="Solo">Solo - Indonesia</option>
+                    <option value="Jakarta">Jakarta - Indonesia</option>
+                    <option value="Malaysia">Kuala Lumpur - Malaysia</option>
+                  </InputWithIcon>
                 </div>
                 <div className="w-3/6">
                   <InputWithIcon
                     icon={<TbDeviceImacSearch />}
                     placeholder="Type Job"
-                  />
+                    onChange={(event) => setWorkModel(event.target.value)}
+                    defaultValue={workModel}
+                  >
+                    <option value="">All Work Model</option>
+                    <option value="onsite">On site</option>
+                    <option value="hybrid">Hybdrid</option>
+                    <option value="remote">remote</option>
+                  </InputWithIcon>
                 </div>
                 <div className="w-full md:w-max flex items-center justify-center">
-                  <ButtonLightBlue className="w-full">Search</ButtonLightBlue>
+                  <ButtonLightBlue type="submit" className="w-full">
+                    Search
+                  </ButtonLightBlue>
                 </div>
-              </div>
-              <button className="text-white flex items-center justify-center space-x-3 mt-3.5">
-                <span>View all open roles</span>{" "}
-                <span>
-                  <TbArrowNarrowRight />
-                </span>
-              </button>
+              </form>
+              <Link href="/career/list-vacancies" lang={locale}>
+                <button className="text-white flex items-center justify-center space-x-3 mt-3.5">
+                  <span>View all open roles</span>{" "}
+                  <span>
+                    <TbArrowNarrowRight />
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

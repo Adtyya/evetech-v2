@@ -52,7 +52,7 @@ const navList = [
   },
   {
     name: "Career",
-    path: "#",
+    path: "/career",
   },
 ];
 

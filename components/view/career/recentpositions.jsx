@@ -19,18 +19,19 @@ export default function RecentPositions({ listVacancies = [] }) {
       <div className="mt-8 space-y-5">
         {listVacancies.map((item, idx) => {
           return (
-            <CardPosition
-              key={idx}
-              title={item?.attributes?.title}
-              employementType={item?.attributes?.workType}
-              placementType={item?.attributes?.workModel}
-              placementLocation={item?.attributes?.location}
-              experienceNeeded={`${item?.attributes?.experienceInYears} Years Experience`}
-              department={item?.attributes?.department}
-              createdAt={item?.attributes?.createdAt}
-              deadline={item?.attributes?.endDate}
-              slug={item?.attributes?.slug}
-            ></CardPosition>
+            <div key={idx}>
+              <CardPosition
+                title={item?.attributes?.title}
+                employementType={item?.attributes?.workType}
+                placementType={item?.attributes?.workModel}
+                placementLocation={item?.attributes?.location}
+                experienceNeeded={`${item?.attributes?.experienceInYears} Years Experience`}
+                department={item?.attributes?.department}
+                createdAt={item?.attributes?.createdAt}
+                deadline={item?.attributes?.endDate}
+                slug={item?.attributes?.slug}
+              ></CardPosition>
+            </div>
           );
         })}
       </div>

@@ -12,7 +12,7 @@ export const metadata = {
   description:
     "Evetech Software House Semarang & Jakarta provides Custom Software & ERP Development, Web Development, Mobile App Development & Web Design in Indonesia and Malaysia.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "./favicon.ico",
   },
   verification: {
     google: "YeDPr9Oy1PD6fLQS5vg18h2wJwUmYjKT9WINun619ag",

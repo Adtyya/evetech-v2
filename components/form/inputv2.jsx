@@ -50,14 +50,21 @@ function InputInvisibleLabel({ ...props }) {
   );
 }
 
-function InputWithIcon({ icon, ...props }) {
+function InputWithIcon({ icon, required, children, ...props }) {
   return (
-    <div className="flex bg-white py-2 px-4 space-x-3 items-center rounded-2xl focus-within:border focus-within:border-border-gray border border-transparent">
+    <div className="flex bg-white py-1.5 px-4 space-x-3 items-center rounded-2xl focus-within:border focus-within:border-border-gray border border-transparent">
       <span className="text-eve-input">{icon}</span>
-      <input
+      {/* <input
         className="w-full text-btn-primary placeholder:capitalize placeholder:text-eve-input focus:outline-none"
         {...props}
-      />
+      /> */}
+      <select
+        {...props}
+        required={required}
+        className="focus:outline-none py-0 px-3 rounded-xl border-2 border-transparent focus:border-border-transparent text-eve-gray capitalize"
+      >
+        {children}
+      </select>
     </div>
   );
 }
