@@ -13,6 +13,16 @@ export async function generateMetadata({ params }) {
   const detailVacancies = await getDetailVacancies(params.slug);
 
   return {
+    metadataBase: new URL("https://evetechsolution.com/"),
+    alternates: {
+      canonical: `/${params.locale ?? "en"}/career/vacancies/${
+        detailVacancies?.attributes?.slug
+      }`,
+      languages: {
+        en: "/en",
+        id: "/id",
+      },
+    },
     title: `Evetech Solution - ${detailVacancies?.attributes?.title}`,
     description: detailVacancies?.attributes?.metaDescription,
     openGraph: {

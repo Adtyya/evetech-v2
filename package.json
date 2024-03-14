@@ -21,6 +21,7 @@
     "next": "14.1.0",
     "next-intl": "^3.9.3",
     "nextjs-toploader": "^1.6.6",
+    "radash": "^12.1.0",
     "react": "^18",
     "react-countup": "^6.5.0",
     "react-dom": "^18",
