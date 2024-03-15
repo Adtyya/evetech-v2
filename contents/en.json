@@ -1,0 +1,475 @@
+{
+  "Index": {
+    "title": "Hello world!"
+  },
+  "Navbar": {
+    "Home": "Home",
+    "AboutUs": "About Us",
+    "Services": "Services",
+    "WebDev": "Web Development",
+    "WebAppDev": "Web App Development",
+    "MobileAppDev": "Mobile App Development",
+    "NewsDev": "News Development",
+    "Blog": "Blog",
+    "Portfolio": "portfolio",
+    "Career": "Career"
+  },
+  "OurClient": {
+    "title": "Our Client"
+  },
+  "SpecialOffer": {
+    "title": "Let's Create Together!",
+    "subtitle": "Ready to boost your digital presence? Contact us to discuss how <br></br> Evetech Solution turns your ideas into captivating visual realities that drive results."
+  },
+  "Faq": {
+    "title": "Answers to our most <span>Frequently Asked Questions</span>",
+    "subtitle": "Can't find what you're looking for?",
+    "button": "Ask Now",
+    "webapp": {
+      "1": {
+        "q": "I want to keep my mobile app idea confidential. Will you sign an NDA with me?",
+        "a": "Yes, we sign an NDA (Non-Disclosure Agreement) when a client needs us to, right after our legal team reviews the agreement."
+      },
+      "2": {
+        "q": "Do I have full ownership of my completed product?",
+        "a": "Yes, you are the owner of your Intellectual Property rights at all times, including the source codes."
+      },
+      "3": {
+        "q": "How long will it take to complete my product?",
+        "a": "That very much depends on the complexity of the project. Small projects would take 2-3 months while large scale projects could take up to 6 months."
+      },
+      "4": {
+        "q": "Will you assist me to publish my app on Google PlayStore, Apple App Store and Huawei App Gallery?",
+        "a": "Yes, this would be part of our app development process. We will provide you guidance on the store's setup such as marketing materials and other configurations."
+      },
+      "5": {
+        "q": "Will there be maintenance after development has been completed?",
+        "a": "Yes. Once we've completed all developments and UAT, we support you in the process of deployment such as server deployment and publishing your app to iOS App Store / Google Playstore. Then, we offer you app maintenance services."
+      },
+      "6": {
+        "q": "Do you offer app development consulting services?",
+        "a": "Yes, we do offer FREE consultation sessions. We are also aware that clients who approached us are mostly non-technical individuals. Hence, we do our best to keep the consultation session as layman as possible."
+      }
+    },
+    "mobileapp": {
+      "1": {
+        "q": "I want to keep my mobile app idea confidential. Will you sign an NDA with me?",
+        "a": "Yes, we sign an NDA (Non-Disclosure Agreement) when a client needs us to, right after our legal team reviews the agreement."
+      },
+      "2": {
+        "q": "Do I have full ownership of my completed product?",
+        "a": "Yes, you are the owner of your Intellectual Property rights at all times, including the source codes."
+      },
+      "3": {
+        "q": "How long will it take to complete my product?",
+        "a": "That very much depends on the complexity of the project. Small projects would take 2-3 months while large scale projects could take up to 6 months."
+      },
+      "4": {
+        "q": "Will you assist me to publish my app on Google PlayStore, Apple App Store and Huawei App Gallery?",
+        "a": "Yes, this would be part of our app development process. We will provide you guidance on the store's setup such as marketing materials and other configurations."
+      },
+      "5": {
+        "q": "Will there be maintenance after development has been completed?",
+        "a": "Yes. Once we've completed all developments and UAT, we support you in the process of deployment such as server deployment and publishing your app to iOS App Store / Google Play Store. Then, we offer you app maintenance services."
+      },
+      "6": {
+        "q": "Do you offer app development consulting services?",
+        "a": "Yes, we do offer FREE consultation sessions. We are also aware that clients who approached us are mostly non-technical individuals. Hence, we do our best to keep the consultation session as layman as possible."
+      },
+      "7": {
+        "q": "Is the application development for android only?",
+        "a": "No. We develop applications based on Android and IOS"
+      }
+    },
+    "newsapp": {
+      "1": {
+        "q": "What is included in news website services?",
+        "a": "This service from Evetech Solution includes design, development, content migration, deployment, and maintenance. Other tasks like domain, hosting, image editing, and copywriting could be added depending on project needs."
+      },
+      "2": {
+        "q": "Does Evetech Solution provide a hosting service?",
+        "a": "We use a third party for hosting. But, you don’t need to worry because we have many connections to trusted hosting providers. We will give you a hosting recommendation depending on your needs."
+      },
+      "3": {
+        "q": "How much is the price for service on creating a news website in Evetech Solution?",
+        "a": "Prices will be different including the features requested. You could even discuss with us, the price you think is worth for the services. After that, we could have an agreement."
+      },
+      "4": {
+        "q": "How much time is needed to develop a news website with Evetech Solution?",
+        "a": "In general, we take 2-4 weeks. We could make it faster or slower depending on the project scale."
+      },
+      "5": {
+        "q": "Is there a guarantee from Evetech about a free bug website?",
+        "a": "We provide free bug-guaranteed."
+      },
+      "6": {
+        "q": "Can Evetech Solution help when a website encounters issues, needs maintenance and requires SEO optimization for a news website?",
+        "a": "Yes, we provide services for that."
+      },
+      "7": {
+        "q": "How is the payment for the website services?",
+        "a": "We are open to receiving an initial Down Payment (DP) and the full payment upon completion of the website and when it is accessible."
+      }
+    }
+  },
+  "Form": {
+    "title": "Ready to meet and <br></br> discuss <span>your needs?</span>",
+    "input": {
+      "name": "Fullname",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company Name",
+      "projectbudget": "Your Budget",
+      "nominal": {
+        "<3": "<br $3000",
+        "3-7": "$3000 - $7000",
+        "7-12": "$7000 - $12000",
+        "12-20": "$12000 - $20000",
+        ">20": "> $20000"
+      }
+    }
+  },
+  "HomePage": {
+    "section1": {
+      "custom": "Custom",
+      "software": "Software",
+      "webapp": "Web App",
+      "mobileapp": "Mobile App",
+      "development": "Development",
+      "description": "Grow Your Business with Our IT Solutions <br></br>We Make Your Dream Become Reality.",
+      "talk": "Let’s Talk",
+      "portfolio": "View Portfolio",
+      "countreview": "20+ Positive",
+      "fromthem": "Review from Them"
+    },
+    "section2": {
+      "provide": "We Are Ready To Provide the Best <span>Service</span>",
+      "description": "Our commitment to excellence drives us to go above and beyond, ensuring every interaction with us is a seamless journey.",
+      "talk": "Let’s Talk",
+      "clients": "Clients",
+      "reviews": "Reviews",
+      "exp": "Years of experience"
+    },
+    "section3": {
+      "title": "It’s Time to Make a <br></br> <span>Change</span> for Your Business!",
+      "subtitle": "People are migrating towards mobile phones and computers. It's time to beat your competitors with our high technology online IT solutions."
+    },
+    "section4": {
+      "title": "Quality-Driven <span>Custom Software Development</span>",
+      "subtitle": "We have a quality-focused, tailor-made approach to help you achieve your business goals.",
+      "1": {
+        "title": "Discovery & Analysis",
+        "subtitle": "You can’t brainstorm, much less build, a great solution without first investing in discovery and analysis. Our team burrows into your existing infrastructure to uncover strengths and weaknesses so time isn’t wasted during the design and build phases."
+      },
+      "2": {
+        "title": "UI/UX Design",
+        "subtitle": "At its core, UX and UI design should be elegant, intuitive, and frictionless. With a diverse portfolio of successful design projects to our name, we know how to build solutions that are stylish and aesthetically pleasing — and that help you meet your business goals."
+      },
+      "3": {
+        "title": "Development",
+        "subtitle": "Speed + stability + scale. All three factors are at play with every development project we take on; we always incorporate the most appropriate and reliable technology."
+      },
+      "4": {
+        "title": "Feedback and Testing",
+        "subtitle": "At Evetech Solution, the feedback and testing process is transparent. With regular status meetings and routine check-ins by video, email, and chat, we take your ongoing feedback into account every step of the way."
+      },
+      "5": {
+        "title": "Release",
+        "subtitle": "Software release isn’t a single moment; it’s a process. As you roll out what we’ve built, we make sure that the solution works in sync with your existing systems and processes."
+      },
+      "6": {
+        "title": "Refinement",
+        "subtitle": "Many custom software developers take the “love ‘em and leave ‘em” approach to their work: They land the contract, do the work, and then move on. But with Evetech Solution, the developers who build your software stay on active standby after its release to optimize and iterate, so the solution grows with you."
+      }
+    },
+    "section5": {
+      "title": "Our <span>Product</span>",
+      "1": {
+        "title": "Custom ERP",
+        "subtitle": "Enterprise Resource Planning (ERP) system that is tailored to meet the unique needs of your business."
+      },
+      "2": {
+        "title": "E-Commerce",
+        "subtitle": "An online platform to sell your products and services to customers."
+      },
+      "3": {
+        "title": "Web Company Profile",
+        "subtitle": "A website that showcases your company's profile, including information about your products, services, and team."
+      },
+      "4": {
+        "title": "Web Game Education",
+        "subtitle": "Educational games that help students learn in a fun and interactive way."
+      },
+      "5": {
+        "title": "E-Commerce",
+        "subtitle": "An online platform to sell your products and services to customers."
+      },
+      "6": {
+        "title": "News Website",
+        "subtitle": "A website that presents news and latest information about a specific topic."
+      },
+      "7": {
+        "title": "POS Restaurant",
+        "subtitle": "Point of Sale (POS) software that helps you manage your restaurant operations."
+      },
+      "8": {
+        "title": "Educational Tech",
+        "subtitle": "Educational technology that helps students learn in a more effective and efficient way."
+      },
+      "9": {
+        "title": "Wordpress Website",
+        "subtitle": "A website built using the WordPress platform."
+      },
+      "10": {
+        "title": "E-Commerce",
+        "subtitle": "An online platform to sell your products and services to customers."
+      }
+    },
+    "section6": {
+      "title": "<span>Key Features</span> of Evetech Solutions",
+      "subtitle": "Our client send us bunch of smiles with our services and we love them",
+      "1": {
+        "title": "Web Application & Web Design",
+        "subtitle": "Ability to load within seconds even when you have more than 20k products."
+      },
+      "2": {
+        "title": "Mobile Applications",
+        "subtitle": "Designed with a pixel perfect designer who has good understanding of User Interface and User Experience."
+      },
+      "3": {
+        "title": "Software Development",
+        "subtitle": "Your inventory and warehouse data will be integrated and can be easily transfered through different cities or countries."
+      },
+      "4": {
+        "title": "Cloud Storage Database",
+        "subtitle": "All data will be safely stored in a secure Cloud Storage Database."
+      },
+      "5": {
+        "title": "E-Commerce & SASS applications",
+        "subtitle": "Your web application will look pretty whether being opened from mobile phones, tablets, laptops or PC computers."
+      },
+      "6": {
+        "title": "Reporting & Data Analysis",
+        "subtitle": "Support points collection and redemption to reward and retain your customers for a long haul."
+      },
+      "7": {
+        "title": "Barcode Scanner",
+        "subtitle": "Enhance customer’s offline shopping experience by scanning your in-store products for O2O."
+      },
+      "8": {
+        "title": "Customized",
+        "subtitle": "With 3 choices of Customized Layout, quickly and easily create an app look that captures your brand image."
+      },
+      "9": {
+        "title": "SEO",
+        "subtitle": "Get instant support when you have any error or troubles."
+      }
+    },
+    "section7": {
+      "title": "Software <br></br> <span>Development Industry</span>",
+      "subtitle": "We outshine at delivering the best software development services as per the customers requirements, be it small size companies in their beginning phase or mid-size businesses looking for growth or large organizations actively making efforts to expand.mid-size businesses looking for growth or large organizations actively making efforts to expand.",
+      "1": {
+        "title": "Logistics",
+        "subtitle": "You can improve supply chain efficiency and visibility with our advanced logistics solutions."
+      },
+      "2": {
+        "title": "Healthcare",
+        "subtitle": "You can improve service quality and patient safety with digital solutions for the healthcare industry."
+      },
+      "3": {
+        "title": "E-Commerce & Shopping",
+        "subtitle": "You can increase sales and conversions with an easy-to-use, conversion-optimized e-commerce platform."
+      },
+      "4": {
+        "title": "Saas",
+        "subtitle": "You can improve efficiency and security with secure and scalable cloud infrastructure solutions."
+      },
+      "5": {
+        "title": "Education Tech",
+        "subtitle": "You can improve access to quality education with engaging and interactive online learning platforms."
+      },
+      "6": {
+        "title": "Travel & Hospitality",
+        "subtitle": "You can improve operations and booking efficiency with digital solutions for the travel & hospitality industry."
+      }
+    },
+    "section8": {
+      "title": "Evetech Set of <span>Technologies</span> for Software Development",
+      "subtitle": "Utilize highly experienced specialists in desktop, web, and mobile development. Our developers employ the latest technologies, frameworks, and components to create solutions that combine a strong technical back-end with easy to use modern design."
+    },
+    "section9": {
+      "title": "Check Out Our <br></br> <span>Latest Projects</span>",
+      "subtitle": "Our latest work features the latest designs and innovative solutions that make it stand out from the crowd.",
+      "1": {
+        "title": "SQM Studio",
+        "subtitle": "sqmstudio.com is a tropical architecture & interior design online studio landing page website. SQM Studio specializes in residential & commercial projects."
+      },
+      "2": {
+        "title": "Downtown Diner",
+        "subtitle": "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant."
+      },
+      "3": {
+        "title": "Juragan Material",
+        "subtitle": "Juragan Material website is used to integrate all company resources, such as customer data, sales order data, purchase order management, and business monitoring through a dashboard."
+      },
+      "4": {
+        "title": "Pelangi Laundry",
+        "subtitle": "Pelangi Laundry provides online laundry services, where customers do not need to come to the laundry outlet in person. Customers only need to access the Pelangi Laundry website to use laundry services, which later Pelangi Laundry employees will go to the customer's location according to the location data that has been input by the customer before."
+      },
+      "5": {
+        "title": "Sanwoo Electronics",
+        "subtitle": "sanwooelectronics.com displays cooler and freezer products along with details that will make it easier for Sanwoo Electronics to reach its customers. This website also contains contact details for Sanwoo Electronics which can make it easier for customers."
+      }
+    }
+  },
+  "AboutUs": {
+    "section1": {
+      "title": "Fuelling Growth <br></br> Through <span>Seamless Technology</span>",
+      "subtitle": "We are committed to providing excellent customer service <br></br> as we focus on innovative and effective information technology solutions.",
+      "countreview": "20+ Positive",
+      "fromthem": "Review from Them"
+    },
+    "section2": {
+      "title": "We Are Ready To Provide the <span>Best Service</span>",
+      "subtitle": "Our commitment to excellence drives us to go above and beyond, ensuring every interaction with us is a seamless journey.",
+      "talk": "Let's talk",
+      "clients": "Clients",
+      "reviews": "Reviews",
+      "exp": "Years of experience"
+    },
+    "section3": {
+      "content": "Evetech Solution? Let's go back to 2020 when Steven Sophian Putra (Founder and Director of Evetech Solution) started Evetech Solution to help many clients and companies in achieving their business success. E-Commerce, ERP, Health Applications, Finance / Insurance Applications, Company Profile Websites are some of the products that have been successfully developed to meet client needs. <br></br> <br></br> Steven realizes that his ability to solve problems by presenting innovative solutions can help many people who want to realize their dreams. He also always emphasizes that Innovation, quality, and client satisfaction are the pillars of Evetech Solution's success so that the quality of software products developed by the Evetech Solution team must be the best."
+    },
+    "section4": {
+      "title": "Be A Part Of <span>Something Big</span>",
+      "subtitle": "You have the idea, we have the software solution. <br></br> Make your dreams come true!",
+      "talk": "Let’s Talk",
+      "1": {
+        "title": "Setup Requirements Meeting",
+        "subtitle": "Jointly arrange a time between the business owner and our team to formulate the problem. After that, we will provide a solution including the software."
+      },
+      "2": {
+        "title": "Create Plan Together",
+        "subtitle": "If you agree or have a topic to discuss. We can discuss it together. After finding common ground, we can make a cooperation agreement."
+      },
+      "3": {
+        "title": "Get Result",
+        "subtitle": "We will deliver the software you need. We can also help you maintain the software or update it without losing the data that has been entered in the future."
+      }
+    }
+  },
+  "WebAppDev": {
+    "section1": {
+      "title": "<span>Web Application</span> <br></br> Development",
+      "subtitle": "Boost your business innovation with our web application development. <br></br>  Leading digital solutions for your business transformation.",
+      "consultation": "Get Free consultation"
+    },
+    "section2": {
+      "title": "Web Application Development Projects",
+      "subtitle": "Our App Website Development projects feature the latest designs and innovative solutions that make them stand out from the crowd."
+    }
+  },
+  "WebDev": {
+    "section1": {
+      "title": "<span>Web</span> Development",
+      "subtitle": "Delivering limitless innovation through responsive and intuitive website development",
+      "consultation": "Get Free consultation"
+    },
+    "section2": {
+      "title": "Website Development Projects",
+      "subtitle": "Our Website Development projects feature the latest designs and innovative solutions that make them stand out from the crowd."
+    }
+  },
+  "MobileAppDev": {
+    "section1": {
+      "title": "<span>Mobile App</span> <br></br> Development",
+      "subtitle": "Increase your business value with stunning and intuitive mobile app development. <br></br> Get the best UI/UX solutions to drive your startup or business growth.",
+      "consultation": "Get Free consultation"
+    },
+    "section2": {
+      "title": "Mobile App Development Projects",
+      "subtitle": "Our Mobile App Development projects feature the latest designs and innovative solutions that make them stand out from the crowd."
+    },
+    "section3": {
+      "title": "Our Mobile App Development Is Supported By A Proven Agile Approach",
+      "subtitle": "We deliver a powerful mobile app development experience with a proven Agile approach. Find ease and flexibility in every step of our projects.",
+      "1": {
+        "title": "Discussing The Idea",
+        "subtitle": "Evetech signs on to be your development partner. According to your custom demands, our project managers take your idea and assess product quality and the core software concept. We take time to understand what purpose your app will serve."
+      },
+      "2": {
+        "title": "Planning",
+        "subtitle": "The next step in our app development services is the product roadmap, defining the technology stack, and highlighting cost effective best practices to win competitive markets. We use industry best practices and technical expertise throughout our business processes."
+      },
+      "3": {
+        "title": "Design",
+        "subtitle": "Our app development then takes a turn for a visually-rich first wireframe. We use cutting edge technology to define how your app will look, function and feel. We deliver augmented user experiences starting in this stage of project management."
+      },
+      "4": {
+        "title": "Development and Coding",
+        "subtitle": "Innovative products are our specialty, and once we get to the coding part of our development process, you can sit back and relax. Our app development services apply our skilled resources in efficient workflows to build feature rich products."
+      },
+      "5": {
+        "title": "Testing",
+        "subtitle": "Part of our proven methodologies includes robust quality assurance. To keep users from seeing bugs and to deploy cost effective products, app development services don’t stop when a product is built. Your dedicated team employs testing as part of your product roadmap."
+      },
+      "6": {
+        "title": "Release And Maintenance",
+        "subtitle": "Our agile development methodology includes oversight of your product release and maintenance after the fact, too. Custom app development services with a reliable partner include this final maintenance as things come up when selling on a dynamic marketplace."
+      }
+    }
+  },
+  "NewsDev": {
+    "section1": {
+      "title": "<span>News Website</span> <br></br> Development",
+      "subtitle": "Professional and Trusted News Website Development Services<br></br>Make Your Website Attractive, Responsive, and Affordable Prices",
+      "consultation": "Get Free consultation"
+    },
+    "section2": {
+      "title": "Why choose <br></br> <span>our services?</span>",
+      "subtitle": "There are several reasons why you should use news portal website creation services from Evetech Solution. Among them:",
+      "talk": "Let's talk",
+      "1": {
+        "title": "Good News Website Quality",
+        "subtitle": "Your news website has better quality in design, function, and user experience."
+      },
+      "2": {
+        "title": "Time and Efficiency",
+        "subtitle": "We help to develop your news website quickly. You could start your project immediately."
+      },
+      "3": {
+        "title": "More Better Seo",
+        "subtitle": "News settings on categories/rubric according to the needs of the latest online media and more optimized in Google."
+      },
+      "4": {
+        "title": "Following Industry Standards",
+        "subtitle": "Your News Website Meets Industry Standards And Required Security."
+      },
+      "5": {
+        "title": "Good Technical Support",
+        "subtitle": "We can help you with technical issues and maintenance of your new website."
+      },
+      "6": {
+        "title": "Credibility",
+        "subtitle": "Increase your business credibility and help you build a professional image."
+      }
+    },
+    "section3": {
+      "title": "Features We Provide",
+      "subtitle": "There are several reasons why you should use news portal website creation services from Evetech Solution. Among them:"
+    },
+    "section4": {
+      "title": "Our <span>Content Management System (CMS)</span>",
+      "subtitle": "Evetech Solution provides professional news website development services with the best CMS. We use a CMS that is easy to use and manage, so you can easily edit content and manage your website without technical assistance.",
+      "1": "Login Page",
+      "2": "Media Library",
+      "3": "Banner",
+      "4": "User Management",
+      "5": "News Categories",
+      "6": "Mobile Friendly",
+      "7": "Main Dashboard",
+      "8": "News Management",
+      "9": "Galery / Advertorial"
+    }
+  }
+}

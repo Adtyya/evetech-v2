@@ -1,0 +1,475 @@
+{
+  "Index": {
+    "title": "Hello world!"
+  },
+  "Navbar": {
+    "Home": "Beranda",
+    "AboutUs": "Tentang kami",
+    "Services": "Layanan",
+    "WebDev": "Web Development",
+    "WebAppDev": "Web App Development",
+    "MobileAppDev": "Mobile App Development",
+    "NewsDev": "News Development",
+    "Blog": "Blog",
+    "Portfolio": "portofolio",
+    "Career": "Karir"
+  },
+  "OurClient": {
+    "title": "Klien Kami"
+  },
+  "SpecialOffer": {
+    "title": "Mari Wujudkan Mimpi Anda!",
+    "subtitle": "Siap untuk meningkatkan kehadiran digital Anda? Hubungi kami <br></br> untuk mendiskusikan bagaimana Evetech Solution mengubah ide Anda menjadi realitas visual menawan yang mendorong hasil."
+  },
+  "Faq": {
+    "title": "Jawaban atas <span>Pertanyaan Umum</span> kami yang paling banyak",
+    "subtitle": "Tidak dapat menemukan apa yang Anda cari?",
+    "button": "Tanyakan Sekarang",
+    "webapp": {
+      "1": {
+        "q": "Saya ingin merahasiakan ide aplikasi seluler saya. Apakah Anda akan menandatangani NDA dengan saya?",
+        "a": "Ya, kami menandatangani NDA (Perjanjian Kerahasiaan) ketika klien meminta kami untuk melakukannya, setelah tim hukum kami meninjau perjanjian tersebut."
+      },
+      "2": {
+        "q": "Apakah saya memiliki kepemilikan penuh atas produk yang telah saya selesaikan?",
+        "a": "Ya, Anda adalah pemilik hak Kekayaan Intelektual Anda setiap saat, termasuk kode sumber."
+      },
+      "3": {
+        "q": "Berapa lama waktu yang dibutuhkan untuk menyelesaikan produk saya?",
+        "a": "Itu sangat tergantung pada kompleksitas proyek. Proyek kecil akan memakan waktu 2-3 bulan sementara proyek skala besar bisa memakan waktu hingga 6 bulan."
+      },
+      "4": {
+        "q": "Apakah Anda akan membantu saya untuk mempublikasikan aplikasi saya di Google PlayStore, Apple App Store, dan Huawei App Gallery?",
+        "a": "Ya, ini akan menjadi bagian dari proses pengembangan aplikasi kami. Kami akan memberi Anda panduan tentang pengaturan toko seperti materi pemasaran dan konfigurasi lainnya."
+      },
+      "5": {
+        "q": "Apakah akan ada pemeliharaan setelah pengembangan selesai?",
+        "a": "Ya. Setelah kami menyelesaikan semua pengembangan dan UAT, kami mendukung Anda dalam proses deployment seperti deployment server dan mempublikasikan aplikasi Anda ke iOS App Store / Google Play Store. Kemudian, kami menawarkan layanan pemeliharaan aplikasi."
+      },
+      "6": {
+        "q": "Apakah Anda menawarkan layanan konsultasi pengembangan aplikasi?",
+        "a": "Ya, kami menawarkan sesi konsultasi GRATIS. Kami juga menyadari bahwa klien yang menghubungi kami sebagian besar adalah individu non-teknis. Oleh karena itu, kami melakukan yang terbaik untuk menjaga sesi konsultasi agar tetap awam."
+      }
+    },
+    "mobileapp": {
+      "1": {
+        "q": "Saya ingin merahasiakan ide aplikasi seluler saya. Apakah Anda akan menandatangani NDA dengan saya?",
+        "a": "Ya, kami menandatangani NDA (Perjanjian Kerahasiaan) ketika klien meminta kami untuk melakukannya, setelah tim hukum kami meninjau perjanjian tersebut."
+      },
+      "2": {
+        "q": "Apakah saya memiliki kepemilikan penuh atas produk yang telah saya selesaikan?",
+        "a": "Ya, Anda adalah pemilik hak Kekayaan Intelektual Anda setiap saat, termasuk kode sumber."
+      },
+      "3": {
+        "q": "Berapa lama waktu yang dibutuhkan untuk menyelesaikan produk saya?",
+        "a": "Itu sangat tergantung pada kompleksitas proyek. Proyek kecil akan memakan waktu 2-3 bulan sementara proyek skala besar bisa memakan waktu hingga 6 bulan."
+      },
+      "4": {
+        "q": "Apakah Anda akan membantu saya untuk mempublikasikan aplikasi saya di Google PlayStore, Apple App Store, dan Huawei App Gallery?",
+        "a": "Ya, ini akan menjadi bagian dari proses pengembangan aplikasi kami. Kami akan memberi Anda panduan tentang pengaturan toko seperti materi pemasaran dan konfigurasi lainnya."
+      },
+      "5": {
+        "q": "Apakah akan ada pemeliharaan setelah pengembangan selesai?",
+        "a": "Ya. Setelah kami menyelesaikan semua pengembangan dan UAT, kami mendukung Anda dalam proses deployment seperti deployment server dan mempublikasikan aplikasi Anda ke iOS App Store / Google Play Store. Kemudian, kami menawarkan layanan pemeliharaan aplikasi."
+      },
+      "6": {
+        "q": "Apakah Anda menawarkan layanan konsultasi pengembangan aplikasi?",
+        "a": "Ya, kami menawarkan sesi konsultasi GRATIS. Kami juga menyadari bahwa klien yang menghubungi kami sebagian besar adalah individu non-teknis. Oleh karena itu, kami melakukan yang terbaik untuk menjaga sesi konsultasi agar tetap awam."
+      },
+      "7": {
+        "q": "Apakah pengembangan aplikasi hanya untuk android?",
+        "a": "Kami mengembangkan aplikasi berbasis Android dan iOS."
+      }
+    },
+    "newsapp": {
+      "1": {
+        "q": "Apa saja yang termasuk dalam layanan pembuatan website portal berita?",
+        "a": "Layanan pembuatan website dari Evetech Solution mencakup desain, development, content migration, deployment dan maintenance. Hal-hal lain seperti domain, hosting, image editing hingga copywriting akan ditambahkan terpisah sesuai dengan kebutuhan project."
+      },
+      "2": {
+        "q": "Apakah Evetech Solution menyediakan layanan hosting?",
+        "a": "Kami menggunakan pihak ketiga untuk layanan hosting. Tetapi anda tidak perlu khawatir, kami memiliki banyak rekanan hosting provider yang terpercaya. Kami akan memberikan rekomendasi hosting terbaik sesuai dengan kebutuhan anda."
+      },
+      "3": {
+        "q": "Berapa harga jasa pembuatan website portal berita di Evetech Solution?",
+        "a": "Mengenai harga pembuatan aplikasi dan website akan disesuaikan dengan proyek serta fitur-fitur pada website maupun aplikasi, oleh karena itu anda dapat mendiskusikan standar nominal biaya jasa pembuatan website dengan tim kami terlebih dahulu untuk mendapatkan kesepakatan yang tepat."
+      },
+      "4": {
+        "q": "Berapa lama waktu yang dibutuhkan dalam pembuatan website portal berita di Delapan Media Teknologi?",
+        "a": "Umumnya, waktu pembuatan website landing page berkisar mulai dari 2 minggu hingga 4 minggu. Dapat kurang ataupun lebih bergantung pada kebutuhan dan ruang lingkup project."
+      },
+      "5": {
+        "q": "Apakah ada garansi pada jasa pembuatan website berita bebas bug?",
+        "a": "Kami akan memberikan garansi bebas bug. Tim kami akan memperbaiki masalah jika dalam implementasinya website mengalami kendala bug atau teknis lainnya."
+      },
+      "6": {
+        "q": "Apakah Evetech Solution dapat membantu ketika website mengalami kendala, maintenance, dan optimasi SEO website berita?",
+        "a": "Ya, kami menyediakan layanan untuk itu."
+      },
+      "7": {
+        "q": "Bagaimana pembayaran untuk jasa websitenya?",
+        "a": "Kami terbuka untuk pembayaran Down Payment (DP) terlebih dahulu dan pembayaran full saat website sudah selesai dan bisa diakses."
+      }
+    }
+  },
+  "Form": {
+    "title": "Siap bertemu dan <br></br> diskusikan <span>kebutuhanmu?</span>",
+    "input": {
+      "name": "Nama Lengkap",
+      "email": "Alamat Email",
+      "phone": "No. Telpon",
+      "company": "Nama perusahaan",
+      "projectbudget": "Anggaran projek",
+      "nominal": {
+        "<3": "<br $3000",
+        "3-7": "$3000 - $7000",
+        "7-12": "$7000 - $12000",
+        "12-20": "$12000 - $20000",
+        ">20": "> $20000"
+      }
+    }
+  },
+  "HomePage": {
+    "section1": {
+      "custom": "Pengembangan Perangkat Lunak",
+      "software": "Kustom",
+      "webapp": "Aplikasi Web",
+      "mobileapp": "Aplikasi Mobile",
+      "development": "",
+      "description": "Kembangkan Bisnis Anda dengan Solusi IT Kami <br></br>Kami Akan Wujudkan Mimpi Anda Menjadi Kenyataan.",
+      "talk": "Konsultasikan sekarang",
+      "portfolio": "Lihat Portofolio",
+      "countreview": "20+ Positif",
+      "fromthem": "Ulasan dari Mereka"
+    },
+    "section2": {
+      "provide": "Kami Siap Memberikan <span>Layanan Terbaik</span>",
+      "description": "Komitmen kami terhadap keunggulan dan kualitas terbaik mendorong kami untuk memberikan yang terbaik dan memastikan setiap interaksi dengan klien kami akan membawa kepada hasil yang maksimal.",
+      "talk": "Mari kita diskusikan",
+      "clients": "Klien",
+      "reviews": "Ulasan",
+      "exp": "Pengalaman bertahun-tahun"
+    },
+    "section3": {
+      "title": "Saatnya Membuat <br></br> <span>Perubahan</span> untuk Bisnis Anda!",
+      "subtitle": "Tingkatkan daya saing dan lampaui ekspektasi pelanggan dengan solusi inovatif dan adaptif dari kami."
+    },
+    "section4": {
+      "title": "<span>Pengembangan Perangkat Lunak</span> Khusus Berbasis Kualitas",
+      "subtitle": "WKami memiliki pendekatan yang berfokus pada kualitas dan dibuat khusus untuk membantu Anda mencapai tujuan bisnis Anda.",
+      "1": {
+        "title": "Analisis Kebutuhan",
+        "subtitle": "Analisis Kebutuhan adalah proses untuk memahami apa yang Anda butuhkan secara lebih mendalam sebelum memulai brainstorming atau membangun solusi hebat."
+      },
+      "2": {
+        "title": "Desain UI/UX",
+        "subtitle": "Desain UI/UX adalah cara kita membuat tampilan dan pengalaman pengguna pada produk atau layanan agar terlihat bagus, mudah dipahami, dan nyaman digunakan. Kami telah berhasil menghasilkan berbagai desain yang elegan dan intuitif untuk klien kami. Dengan pengalaman kami, kami bisa membantu Anda menciptakan solusi yang tidak hanya keren secara visual, tapi juga membantu mencapai tujuan bisnis Anda."
+      },
+      "3": {
+        "title": "Pengembangan Sistem",
+        "subtitle": "Kami memastikan bahwa setiap proyek yang kami lakukan memperhatikan tiga faktor penting: kecepatan, stabilitas, dan kemampuan untuk berkembang seiring waktu. Kami selalu menggunakan teknologi terbaru yang dapat diandalkan untuk memastikan keberhasilan proyek Anda."
+      },
+      "4": {
+        "title": "Pengujian Sistem",
+        "subtitle": "Ketika kami meluncurkan produk yang telah kami buat, kami memastikan bahwa produk tersebut dapat berjalan dengan baik di dalam sistem dan proses yang Anda gunakan. Kami juga siap untuk terus memperbaikinya dan memberikan dukungan setelahnya."
+      },
+      "5": {
+        "title": "Peluncuran",
+        "subtitle": "Peluncuran perangkat tidak sekejap mata, hal ini merupakan proses. Kami memastikan peluncuran dapat terintegrasi dengan sistem yang anda buat ataupun miliki."
+      },
+      "6": {
+        "title": "Maintenance",
+        "subtitle": "Tahapan ini adalah untuk membuat suatu produk atau layanan menjadi lebih baik dari sebelumnya. Evetech Solution tidak hanya fokus pada mengerjakan pekerjaan dan beranjak pergi. Kami berkomitmen untuk terus meningkatkan produk atau layanan kami dengan terus melakukan perbaikan dan peningkatan berkelanjutan."
+      }
+    },
+    "section5": {
+      "title": "<span>Produk</span> Kami",
+      "1": {
+        "title": "Kustom ERP",
+        "subtitle": "Sistem Enterprise Resource Planning (ERP) yang disesuaikan untuk memenuhi kebutuhan unik bisnis Anda."
+      },
+      "2": {
+        "title": "E-Commerce",
+        "subtitle": "Platform online untuk menjual produk dan layanan Anda kepada pelanggan."
+      },
+      "3": {
+        "title": "Website Profil Perusahaan",
+        "subtitle": "Situs web yang menampilkan profil perusahaan Anda, termasuk informasi tentang produk, layanan, dan tim Anda."
+      },
+      "4": {
+        "title": "Website Game Edukasi",
+        "subtitle": "Game edukasi yang membantu siswa belajar dengan cara yang menyenangkan dan interaktif."
+      },
+      "5": {
+        "title": "E-Commerce",
+        "subtitle": "Platform online untuk menjual produk dan layanan Anda kepada pelanggan."
+      },
+      "6": {
+        "title": "Website Berita",
+        "subtitle": "Situs web yang menyajikan berita dan informasi terbaru tentang topik tertentu."
+      },
+      "7": {
+        "title": "POS Restoran",
+        "subtitle": "Perangkat lunak Point of Sale (POS) yang membantu Anda mengelola operasional restoran."
+      },
+      "8": {
+        "title": "Teknologi Pendidikan",
+        "subtitle": "Teknologi pendidikan yang membantu siswa belajar dengan cara yang lebih efektif dan efisien."
+      },
+      "9": {
+        "title": "Website  Wordpress",
+        "subtitle": "Situs web yang dibangun menggunakan platform WordPress."
+      },
+      "10": {
+        "title": "E-Commerce",
+        "subtitle": "Platform online untuk menjual produk dan layanan Anda kepada pelanggan."
+      }
+    },
+    "section6": {
+      "title": "<span>Fitur-fitur Utama</span> dari Solusi Evetech",
+      "subtitle": "Klien kami mengirimkan banyak senyuman kepada kami dengan layanan kami dan kami menyukainya",
+      "1": {
+        "title": "Aplikasi Web & Desain Web",
+        "subtitle": "Web aplikasi atau web development yang kami kembangkan mampu memuat dalam hitungan detik meskipun produk anda lebih dari 20 ribu produk."
+      },
+      "2": {
+        "title": "Aplikasi Mobile",
+        "subtitle": "Aplikasi seluler dirancang desainer UI/UX yang berpengalaman. Sehingga, tampilan layar serta pengalaman penggunaannya sangat baik."
+      },
+      "3": {
+        "title": "Pengembangan Perangkat Lunak",
+        "subtitle": "Data inventaris dan gudang Anda akan terintegrasi dan dapat dengan mudah ditransfer melalui kota atau negara yang berbeda."
+      },
+      "4": {
+        "title": "Database Cloud Storage",
+        "subtitle": "Tidak perlu khawatir kehilangan data, kami dapat membuat penyimpanan berbasis Cloud dan database anda akan aman serta lebih mudah dicari."
+      },
+      "5": {
+        "title": "Aplikasi E-Commerce & SASS",
+        "subtitle": "Ingin memiliki aplikasi menarik terkait E-commerce dan SaaS? Kami akan membantu anda dan membuatnya menarik baik dari ponsel, tablet, laptop, bahkan PC."
+      },
+      "6": {
+        "title": "Pelaporan & Analisis Data",
+        "subtitle": "Tidak sebatas laporan dan analisis data biasa. Kami dapat membuat sistem pengumpulan poin serta achievement yang membuat pelanggan setia anda terus berkunjung."
+      },
+      "7": {
+        "title": "Barcode Scanner",
+        "subtitle": "Ingin meningkatkan pengalaman belanja di toko anda? Kami dapat melakukannya dengan pemindaian produk dengan scan barcode sehingga pengunjung lebih kaya experience saat berkunjung."
+      },
+      "8": {
+        "title": "Kustomisasi",
+        "subtitle": "Membuat tampilan aplikasi akan sesuai dengan citra brand anda. Kami akan mendesain 3 tata letak terkostumisasi dan anda bisa memilihnya."
+      },
+      "9": {
+        "title": "SEO",
+        "subtitle": "Memiliki trouble atau masalah dalam website atau blog anda? Evetech dapat membantu anda menyelesaikannya."
+      }
+    },
+    "section7": {
+      "title": "<span>Sektor Industri</span> <br></br> yang Kami Layani",
+      "subtitle": "Kami adalah yang terbaik dalam membuat perangkat lunak yang sesuai dengan apa yang Anda butuhkan, apakah Anda memiliki bisnis kecil yang baru dimulai, bisnis menengah yang ingin tumbuh, atau perusahaan besar yang sedang berusaha berkembang, kami siap membantu Anda.",
+      "1": {
+        "title": "Logistik",
+        "subtitle": "Anda dapat meningkatkan efisiensi dan visibilitas rantai pasokan dengan solusi logistik canggih kami."
+      },
+      "2": {
+        "title": "Kesehatan",
+        "subtitle": "Anda dapat meningkatkan kualitas layanan dan keselamatan pasien dengan solusi digital untuk industri kesehatan."
+      },
+      "3": {
+        "title": "E-Commerce & Belanja",
+        "subtitle": "Anda dapat meningkatkan penjualan dan konversi dengan platform e-commerce yang mudah digunakan dan dioptimalkan untuk konversi."
+      },
+      "4": {
+        "title": "Saas",
+        "subtitle": "Anda dapat meningkatkan efisiensi dan keamanan dengan solusi infrastruktur cloud yang aman dan terukur."
+      },
+      "5": {
+        "title": "Teknologi Pendidikan",
+        "subtitle": "Anda dapat meningkatkan akses ke pendidikan berkualitas dengan platform pembelajaran online yang menarik dan interaktif."
+      },
+      "6": {
+        "title": "Perjalanan & Perhotelan",
+        "subtitle": "Anda dapat meningkatkan efisiensi operasional dan pemesanan dengan solusi digital untuk industri perjalanan & perhotelan."
+      }
+    },
+    "section8": {
+      "title": "Rangkaian <span>teknologi</span> yang digunakan Evetech Solution",
+      "subtitle": "Memanfaatkan spesialis yang sangat berpengalaman dalam pengembangan desktop, web, dan seluler. Pengembang kami menggunakan teknologi, kerangka kerja, dan komponen terbaru untuk menciptakan solusi yang menggabungkan back-end teknis yang kuat dengan desain modern yang mudah digunakan."
+    },
+    "section9": {
+      "title": "Lihat pengerjaan <br></br> <span>project terbaru</span> kami",
+      "subtitle": "Karya terbaru kami menampilkan desain terbaru dan solusi inovatif yang membuatnya unggul dari yang lain.",
+      "1": {
+        "title": "SQM Studio",
+        "subtitle": "sqmstudio.com adalah situs web halaman arahan studio online arsitektur & desain interior tropis. SQM Studio mengkhususkan diri pada proyek-proyek residensial & komersial."
+      },
+      "2": {
+        "title": "Downtown Diner",
+        "subtitle": "Downtowndinner.id adalah landing page mengenai informasi restoran, menu, kontak hingga pesanan online (delivery order) sehingga pelanggan yang ingin memesan makanan untuk dibawa pulang tidak perlu datang langsung ke restoran."
+      },
+      "3": {
+        "title": "Juragan Material",
+        "subtitle": "Website Juragan Material digunakan untuk mengintegrasikan seluruh sumber daya perusahaan, seperti data pelanggan, data sales order, manajemen purchase order, dan monitoring bisnis melalui dashboard."
+      },
+      "4": {
+        "title": "Pelangi Laundry",
+        "subtitle": "Pelangi Laundry menyediakan layanan laundry online, di mana pelanggan tidak perlu datang langsung ke gerai laundry. Pelanggan cukup mengakses website Pelangi Laundry untuk menggunakan jasa laundry, yang nantinya karyawan Pelangi Laundry akan mendatangi lokasi pelanggan sesuai dengan data lokasi yang telah diinput oleh pelanggan sebelumnya."
+      },
+      "5": {
+        "title": "Sanwoo Electronics",
+        "subtitle": "Situs web sanwooelectronics.com menampilkan produk cooler dan freezer beserta rincian yang akan memudahkan Sanwoo Electronics dalam mendapat pelanggan. Situs web ini juga berisi informasi kontak untuk Sanwoo Electronics yang dapat memudahkan pelanggan."
+      }
+    }
+  },
+  "AboutUs": {
+    "section1": {
+      "title": "Mendorong Pertumbuhan <br></br> Melalui <span>Teknologi Tanpa Batas</span>",
+      "subtitle": "Kami berkomitmen untuk menyediakan layanan pelanggan yang sangat baik <br></br> karena kami fokus pada solusi teknologi informasi yang inovatif dan efektif.",
+      "countreview": "20+ Positif",
+      "fromthem": "Ulasan dari Mereka"
+    },
+    "section2": {
+      "title": "Kami Siap Memberikan <span>Layanan Terbaik</span>",
+      "subtitle": "Komitmen kami terhadap keunggulan dan kualitas terbaik mendorong kami untuk memberikan yang terbaik dan memastikan setiap interaksi dengan klien kami akan membawa kepada hasil yang maksimal.",
+      "talk": "Mari kita diskusikan",
+      "clients": "Klien",
+      "reviews": "Ulasan",
+      "exp": "Pengalaman bertahun-tahun"
+    },
+    "section3": {
+      "content": "Evetech Solution? Mari kita kembali ke tahun 2020 ketika Steven Sophian Putra (Pendiri dan Direktur Evetech Solution) memulai Evetech Solution untuk membantu banyak klien dan perusahaan dalam mencapai kesuksesan bisnis mereka. E-Commerce, ERP, Aplikasi Kesehatan, Aplikasi Keuangan/Asuransi, Website Profil Perusahaan adalah beberapa produk yang telah berhasil dikembangkan untuk memenuhi kebutuhan klien. <br></br> <br></br> Steven menyadari bahwa kemampuannya dalam memecahkan masalah dengan menghadirkan solusi yang inovatif dapat membantu banyak orang yang ingin mewujudkan mimpinya. Ia juga selalu menekankan bahwa Inovasi, kualitas, dan kepuasan klien adalah pilar kesuksesan Evetech Solution sehingga kualitas produk perangkat lunak yang dikembangkan oleh tim Evetech Solution haruslah yang terbaik."
+    },
+    "section4": {
+      "title": "Jadilah Bagian Dari <span>Sesuatu Yang BESAR.</span>",
+      "subtitle": "Anda punya ide, Kami punya solusi perangkat lunak. <br></br> Wujudkan mimpimu menjadi nyata!",
+      "talk": "Mari kita diskusikan",
+      "1": {
+        "title": "Atur Pertemuan",
+        "subtitle": "Bersama mengatur waktu antara pemilik bisnis dan tim kami untuk merumuskan masalah. Setelah itu, kami akan memberikan solusi termasuk dalam bentuk perangkat lunaknya."
+      },
+      "2": {
+        "title": "Buat rencana bersama",
+        "subtitle": "Jika anda setuju ataupun memiliki topik yang mau didiskusikan. Kita dapat mendiskusikannya bersama. Setelah menemukan titik temu, kita dapat membuat kesepakatan kerja sama."
+      },
+      "3": {
+        "title": "Dapatkan hasilnya",
+        "subtitle": "Kami akan mengirimkan hasil software kebutuhan Anda. Kami dapat juga membantu anda melakukan pemeliharaan software ataupun mengupdatenya tanpa kehilangan data yang sudah dimasukkan di kemudian hari."
+      }
+    }
+  },
+  "WebAppDev": {
+    "section1": {
+      "title": "Pengembangan <br></br> <span>Website Aplikasi</span>",
+      "subtitle": "Tingkatkan inovasi bisnis Anda dengan pengembangan web aplikasi kami.<br></br>  Solusi digital terdepan untuk transformasi bisnis Anda.",
+      "consultation": "Dapatkan konsultasi gratis"
+    },
+    "section2": {
+      "title": "Pengembangan Website Aplikasi",
+      "subtitle": "Proyek Pengembangan Situs Web Aplikasi kami menampilkan desain terbaru dan solusi inovatif yang membuatnya lebih unggul dari yang lain."
+    }
+  },
+  "WebDev": {
+    "section1": {
+      "title": "Pengembangan <span>Website</span>",
+      "subtitle": "Menghadirkan inovasi tanpa batas melalui pengembangan situs web yang responsif dan intuitif.",
+      "consultation": "Dapatkan konsultasi gratis"
+    },
+    "section2": {
+      "title": "Pengembangan Website",
+      "subtitle": "Proyek Pengembangan Website kami menampilkan desain terbaru dan solusi inovatif yang membuatnya lebih unggul dari yang lain."
+    }
+  },
+  "MobileAppDev": {
+    "section1": {
+      "title": "Pengembangan  <br></br> <span>Aplikasi Mobile</span>",
+      "subtitle": "Tingkatkan nilai bisnis Anda dengan pengembangan aplikasi seluler yang memukau dan intuitif. <br></br> Dapatkan solusi UI/UX terbaik untuk mendorong pertumbuhan startup atau bisnis Anda.",
+      "consultation": "Dapatkan konsultasi gratis"
+    },
+    "section2": {
+      "title": "Proyek Pengembangan Aplikasi Mobile",
+      "subtitle": "Proyek Pengembangan Aplikasi Mobile kami menampilkan desain terbaru dan solusi inovatif yang membuatnya menonjol dari yang lain."
+    },
+    "section3": {
+      "title": "Pengembangan Aplikasi Mobile Kami Didukung Oleh Pendekatan Agile yang Telah Terbukti",
+      "subtitle": "Kami memberikan pengalaman pengembangan aplikasi mobile yang kuat dengan pendekatan Agile yang telah terbukti. Temukan kemudahan dan fleksibilitas dalam setiap langkah proyek kami.",
+      "1": {
+        "title": "Diskusi Ide",
+        "subtitle": "Evetech masuk untuk menjadi mitra pengembangan Anda. Sesuai dengan permintaan khusus Anda, Projek manajer kami akan menerima ide Anda dan menilai kualitas produk dan konsep perangkat lunak inti. Kami meluangkan waktu untuk memahami tujuan apa yang akan dilayani oleh aplikasi Anda."
+      },
+      "2": {
+        "title": "Perencanaan",
+        "subtitle": "Langkah selanjutnya dalam layanan pengembangan aplikasi kami adalah peta jalan produk, mendefinisikan tumpukan teknologi, dan menyoroti praktik terbaik yang hemat biaya untuk memenangkan pasar yang kompetitif. Kami menggunakan praktik terbaik industri dan keahlian teknis di seluruh proses bisnis kami."
+      },
+      "3": {
+        "title": "Desain",
+        "subtitle": "Pengembangan aplikasi kami kemudian beralih ke gambar kerja pertama yang kaya visual. Kami menggunakan teknologi mutakhir untuk menentukan bagaimana aplikasi Anda akan terlihat, berfungsi, dan terasa. Kami memberikan pengalaman pengguna yang lebih baik mulai dari tahap manajemen proyek ini."
+      },
+      "4": {
+        "title": "Pengembangan dan Coding",
+        "subtitle": "Produk inovatif adalah spesialisasi kami, dan setelah kami masuk ke bagian pengkodean dalam proses pengembangan kami, Anda dapat duduk dan bersantai. Layanan pengembangan aplikasi kami menerapkan sumber daya terampil kami dalam alur kerja yang efisien untuk membangun produk yang kaya fitur."
+      },
+      "5": {
+        "title": "Pengujian",
+        "subtitle": "Bagian dari metodologi kami yang telah terbukti mencakup jaminan kualitas yang kuat. Agar pengguna tidak melihat bug dan menerapkan produk yang hemat biaya, layanan pengembangan aplikasi tidak berhenti ketika produk selesai dibuat. Tim khusus Anda akan melakukan pengujian sebagai bagian dari peta jalan produk Anda."
+      },
+      "6": {
+        "title": "Rilis dan Pemeliharaan",
+        "subtitle": "Metodologi pengembangan tangkas kami mencakup pengawasan rilis dan pemeliharaan produk Anda setelah fakta. Layanan pengembangan aplikasi khusus dengan mitra yang andal mencakup pemeliharaan akhir ini karena ada hal-hal yang muncul saat menjual di pasar yang dinamis."
+      }
+    }
+  },
+  "NewsDev": {
+    "section1": {
+      "title": "Jasa pembuatan <br></br> <span>Website Berita</span>",
+      "subtitle": "Jasa Pembuatan Website Berita Profesional dan Terpercaya <br></br> Membuat Website Berita Menarik, Fitur Lengkap, dan Harga<br></br>Terjangkau",
+      "consultation": "Konsultasi Gratis Sekarang"
+    },
+    "section2": {
+      "title": "Mengapa memilih <br></br> <span>jasa kami?</span>",
+      "subtitle": "Ada Beberapa Alasan Mengapa Menggunakan Jasa Pembuatan Website Portal Berita Dari <bold>Evetech Solution</bold>. Di Antaranya:",
+      "talk": "Mari kita diskusikan",
+      "1": {
+        "title": "Kualitas Website berita yang Baik",
+        "subtitle": "Website berita anda memiliki kualitas yang lebih baik dari segi desain, fungsi, dan pengalaman pengguna."
+      },
+      "2": {
+        "title": "Waktu dan Efisiensi",
+        "subtitle": "Membantu anda dalam pembuatan website berita yang cepat sehingga dapat segera memulai project yang diinginkan."
+      },
+      "3": {
+        "title": "SEO yang lebih baik",
+        "subtitle": "Pengaturan kategori berita/rubrik sesuai kebutuhan media online terkini dan lebih mudah muncul dalam pencarian google."
+      },
+      "4": {
+        "title": "Sesuai Standar Industri",
+        "subtitle": "Website berita anda memenuhi standar industri dan keamanan yang diperlukan."
+      },
+      "5": {
+        "title": "Dukungan Teknis Baik",
+        "subtitle": "Dapat membantu anda dengan masalah teknis dan perawatan website berita anda."
+      },
+      "6": {
+        "title": "Kredibilitas",
+        "subtitle": "Meningkatkan kredibilitas bisnis anda dan membantu anda membangun citra profesional."
+      }
+    },
+    "section3": {
+      "title": "Fitur Yang Kami Tawarkan",
+      "subtitle": "Ada Beberapa Alasan Mengapa Menggunakan Jasa Pembuatan Website Portal Berita Dari Evetech Solution. Di Antaranya:"
+    },
+    "section4": {
+      "title": "Fitur <span>Content Management System (CMS)</span> Kami",
+      "subtitle": "Evetech Solution menyediakan jasa pembuatan website berita profesional dengan CMS terbaik. Kami menggunakan CMS yang mudah digunakan dan dikelola, sehingga Anda dapat dengan mudah mengedit konten dan mengelola website Anda tanpa bantuan teknisi.",
+      "1": "Halaman Login",
+      "2": "Media Library",
+      "3": "Banner",
+      "4": "Manajemen Pengguna",
+      "5": "Kategori Berita",
+      "6": "Mobile Friendly",
+      "7": "Dashboard Utama",
+      "8": "Manajemen Berita",
+      "9": "Galery / Advertorial"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+}
+
+.swiper-3d .swiper-slide-shadow-left {
+  border-radius: 20px;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1)
+  ) !important;
+  /* background-color: #DADEE3 !important; */
+}
+
+.swiper-3d .swiper-slide-shadow-right {
+  border-radius: 20px;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1)
+  ) !important;
+  /* background-color: #DADEE3 !important; */
+}
+
+select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  width: 100%;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAC6SURBVHgB7ZKxDoIwFEVfTePsp/gL7i5NnFy0X4YOuEjSAXd/wT+RAResefYRY5RQ3mMk6VmakHvvoQSARGKaZM4tYCSxzqz7IC9KN/f6fiouOxBCWerk5/LKCgChfRNEPEgklKHsp1uxgkZ7E46bRPI3HjrNw9tuRvUV6XuGK9N1l21Iqf12sz4Ojtd+Za2pRAJOIh0fFMQkdErHWUGf5Ad2XCSISETjYsFX8tIZht/4WXsjGU8kJsIbFvyFjZdZnGMAAAAASUVORK5CYII=");
+  background-position: 95%;
+  background-repeat: no-repeat;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.bounce-effect {
+  animation: bounce 1s ease forwards;
+}
