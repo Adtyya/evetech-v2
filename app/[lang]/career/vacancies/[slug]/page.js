@@ -8,6 +8,13 @@ async function getDetailVacancies(slug) {
   return res.data?.data[0] || null;
 }
 
+async function getOtherVacancies(slug) {
+  const res = await api.get(
+    `/careers?populate=*&filters[slug][$ne]=${slug}&sort=createdAt:asc&pagination[page]=1&pagination[pageSize]=3`
+  );
+  return res.data?.data || null;
+}
+
 export const dynamic = "force-dynamic";
 export const revalidate = 360000;
 
@@ -45,13 +52,14 @@ export async function generateMetadata({ params }) {
 
 export default async function DetailVacancies({ params }) {
   const detailVacancies = await getDetailVacancies(params.slug);
+  const othervacancies = await getOtherVacancies(params.slug);
   unstable_setRequestLocale(params.lang || null);
 
   return (
     <>
       <div className="h-32"></div>
       <DetailVacanciesTop content={detailVacancies}></DetailVacanciesTop>
-      <OtherVacancies></OtherVacancies>
+      <OtherVacancies listOther={othervacancies ?? []}></OtherVacancies>
     </>
   );
 }

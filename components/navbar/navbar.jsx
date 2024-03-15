@@ -219,7 +219,9 @@ export default function NavbarEvetech() {
                       href={`${item.path}`}
                       onClick={() => setIsToggleOpen(false)}
                     >
-                      <span className="capitalize">{t(item.name)}</span>
+                      <span className="capitalize hover-underline-animation">
+                        {t(item.name)}
+                      </span>
                     </Link>
                   </li>
                 ) : (
@@ -240,7 +242,9 @@ export default function NavbarEvetech() {
                               key={b}
                               onClick={() => setIsToggleOpen(false)}
                             >
-                              {t(a.name)}
+                              <span className="hover-underline-animation">
+                                {t(a.name)}
+                              </span>
                             </Link>
                           );
                         })}
@@ -253,7 +257,9 @@ export default function NavbarEvetech() {
                         {item.subPath.map((a, b) => {
                           return (
                             <Link href={a.path} key={b}>
-                              {t(a.name)}
+                              <span className="hover-underline-animation">
+                                {t(a.name)}
+                              </span>
                             </Link>
                           );
                         })}
