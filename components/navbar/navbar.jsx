@@ -169,7 +169,9 @@ export default function NavbarEvetech() {
             </Link>
             {/*      <!-- Mobile trigger --> */}
             <button
-              className={`relative order-10 block h-10 w-10 self-center lg:hidden
+              className={`relative order-10 block h-10 w-10 self-center duration-300 lg:hidden ${
+                isScrolled ? "bg-transparent" : "bg-white rounded-lg"
+              }
                 ${
                   isToggleOpen
                     ? "visible opacity-100 [&_span:nth-child(1)]:w-6 [&_span:nth-child(1)]:translate-y-0 [&_span:nth-child(1)]:rotate-45 [&_span:nth-child(3)]:w-0 [&_span:nth-child(2)]:-rotate-45 "
@@ -233,7 +235,9 @@ export default function NavbarEvetech() {
                         isScrolled ? "text-eve-gray" : "text-white"
                       } duration-300 group relative flex-col lg:flex-row items-start`}
                     >
-                      <span>{t(item.name)}</span>
+                      <span className="hover-underline-animation">
+                        {t(item.name)}
+                      </span>
                       <div className="pl-2 grid lg:hidden grid-cols-1 gap-y-4">
                         {item.subPath.map((a, b) => {
                           return (
