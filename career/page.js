@@ -3,7 +3,6 @@ import OurValues from "@/components/view/career/ourvalues";
 import RecentPositions from "@/components/view/career/recentpositions";
 import RecruitmentProcess from "@/components/view/career/recruitmentprocess";
 import api from "@/utils/axios";
-import { unstable_setRequestLocale } from "next-intl/server";
 import { Suspense } from "react";
 
 async function getRecentVacancies() {
@@ -13,12 +12,10 @@ async function getRecentVacancies() {
   return res.data;
 }
 
-export const dynamic = "force-dynamic";
 export const revalidate = 3600;
 
-export default async function CareerPage({ params: { lang } }) {
+export default async function CareerPage() {
   const { data } = await getRecentVacancies();
-  unstable_setRequestLocale(lang);
 
   return (
     <>

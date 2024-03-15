@@ -4,8 +4,10 @@ import Hero from "@/components/view/aboutus/hero";
 // import OurTeam from "@/components/view/aboutus/ourteam";
 import ProvideService from "@/components/view/aboutus/provideservice";
 import OurClient from "@/components/view/home/ourClient";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function AboutUsPage() {
+export default function AboutUsPage({ params: { lang } }) {
+  unstable_setRequestLocale(lang);
   return (
     <>
       <Hero></Hero>

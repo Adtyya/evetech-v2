@@ -1,7 +1,6 @@
 import Hero from "@/components/view/career/hero";
 import RecentOpenPosition from "@/components/view/listvacancies/recentopen";
 import api from "@/utils/axios";
-import { unstable_setRequestLocale } from "next-intl/server";
 
 async function getAllVacancies(position, location, workModel, page) {
   const queryParams = [
@@ -26,21 +25,15 @@ async function getAllVacancies(position, location, workModel, page) {
   return res.data;
 }
 
-export const dynamic = "force-dynamic";
 export const revalidate = 3600;
 
-export default async function ListVacanciesPage({
-  params: { lang },
-  searchParams,
-}) {
+export default async function ListVacanciesPage({ _, searchParams }) {
   const list = await getAllVacancies(
     searchParams?.position ?? "",
     searchParams?.location ?? "",
     searchParams?.workModel ?? "",
     searchParams.page ?? 1
   );
-
-  unstable_setRequestLocale(lang);
 
   return (
     <>

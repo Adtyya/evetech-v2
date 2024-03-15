@@ -19,14 +19,20 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children, params: { locale } }) {
+const locales = ["en", "id"];
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ lang: locale }));
+}
+
+export default function RootLayout({ children, params: { lang } }) {
   const messages = useMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={lang}>
       <body className={inter.className}>
         <NextTopLoader color="#3A85FF" zIndex={2000} />
-        <NextIntlClientProvider messages={messages} locale={locale}>
+        <NextIntlClientProvider messages={messages} locale={lang}>
           <NavbarEvetech></NavbarEvetech>
           {children}
           <Footer></Footer>

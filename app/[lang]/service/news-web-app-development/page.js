@@ -6,8 +6,10 @@ import Hero from "@/components/view/newsdevelopment/hero";
 // import OurLatestProjects from "@/components/view/newsdevelopment/ourLatestProject";
 import OurLatestProjects from "@/components/view/home/ourLatestProject";
 import WhyChooseUs from "@/components/view/newsdevelopment/whyChooseUs";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function NewsPage() {
+export default function NewsPage({ params: { lang } }) {
+  unstable_setRequestLocale(lang);
   return (
     <>
       <Hero></Hero>
