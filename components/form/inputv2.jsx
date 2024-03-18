@@ -1,3 +1,5 @@
+import React from "react";
+
 function InputWithLabel({ label = "", required = false, ...props }) {
   return (
     <div className="flex flex-col space-y-2.5">
@@ -69,7 +71,7 @@ function InputWithIcon({ icon, required, children, ...props }) {
   );
 }
 
-function InputRounded({ label, required, ...props }) {
+const InputRounded = React.forwardRef(({ label, required, ...props }, ref) => {
   return (
     <div className="flex flex-col space-y-2.5">
       <label className="text-btn-primary capitalize">
@@ -77,13 +79,16 @@ function InputRounded({ label, required, ...props }) {
         {required ? <span className="text-red-500">*</span> : null}
       </label>
       <input
+        ref={ref}
         className="focus:outline-none py-2.5 px-3 rounded-full border-2 focus:border-btn-primary/40 border-border-gray"
         required={required}
         {...props}
       ></input>
     </div>
   );
-}
+});
+
+InputRounded.displayName = "RoundedInput";
 
 export {
   InputWithLabel,

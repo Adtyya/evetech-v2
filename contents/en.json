@@ -121,7 +121,7 @@
       "company": "Company Name",
       "projectbudget": "Your Budget",
       "nominal": {
-        "<3": "<br $3000",
+        "<3": "< $3000",
         "3-7": "$3000 - $7000",
         "7-12": "$7000 - $12000",
         "12-20": "$12000 - $20000",
@@ -136,7 +136,7 @@
       "webapp": "Web App",
       "mobileapp": "Mobile App",
       "development": "Development",
-      "description": "Grow Your Business with Our IT Solutions <br></br>We Make Your Dream Become Reality.",
+      "description": "Grow Your Business with Our IT Solutions <br></>We Make Your Dream Become Reality.",
       "talk": "Let’s Talk",
       "portfolio": "View Portfolio",
       "countreview": "20+ Positive",
@@ -470,6 +470,29 @@
       "7": "Main Dashboard",
       "8": "News Management",
       "9": "Galery / Advertorial"
+    }
+  },
+  "ContactUs": {
+    "title": "Get a Free Consultation with Our <br></br> <span>IT Consultant</span>",
+    "subtitle": "Have questions about pricing, packages, or growth? Fill out the form and we'll contact you directly.",
+    "rtm": "Ready to meet and <span>discuss your need ?</span>",
+    "form": {
+      "title": "Let Us Know You First",
+      "subtitle": "Fill out the form and we’ll be in touch shortly.",
+      "input": {
+        "name": "Fullname",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "company": "Company Name",
+        "projectbudget": "Your Budget",
+        "nominal": {
+          "<3": "< $3000",
+          "3-7": "$3000 - $7000",
+          "7-12": "$7000 - $12000",
+          "12-20": "$12000 - $20000",
+          ">20": "> $20000"
+        }
+      }
     }
   }
 }

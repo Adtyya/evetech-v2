@@ -12,9 +12,11 @@ import { ButtonLightBlue, ButtonWhatsApp } from "@/components/button/button";
 import { officeLocation } from "@/components/footer/footer";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
+import { useTranslations } from "next-intl";
 
 export default function ContactUsForm() {
   const emailRef = useRef(null);
+  const t = useTranslations("ContactUs");
 
   const [countryCode, setCountryCode] = useState("62");
   const [userNumber, setUserNumber] = useState("");
@@ -49,13 +51,12 @@ export default function ContactUsForm() {
             variant="h2"
             className="text-btn-primary font-bold capitalize"
           >
-            Talk <br></br>
-            <span className="text-btn-blue">product analytics expert</span>
+            {t.rich("title", {
+              br: () => <br></br>,
+              span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+            })}
           </Heading>
-          <p className="text-eve-gray mt-1.5">
-            Have questions about pricing, plans, or growthly? Fill out form and
-            our product analytics expert will be in touch directly.
-          </p>
+          <p className="text-eve-gray mt-1.5">{t("subtitle")}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 my-14 gap-5">
           <FormLeftSide></FormLeftSide>
@@ -67,28 +68,28 @@ export default function ContactUsForm() {
             >
               <div className="py-5 text-center">
                 <Heading variant="h3" className="text-btn-primary font-bold">
-                  Let Us Know You First
+                  {t("form.title")}
                 </Heading>
-                <p className="mt-1.5 text-eve-gray">{`Fill out the form and we’ll be in touch shortly.`}</p>
+                <p className="mt-1.5 text-eve-gray">{t("form.subtitle")}</p>
               </div>
               <InputWithLabel
                 name="name"
                 required={true}
                 placeholder="Your fullname"
-                label="Fullname"
+                label={t("form.input.name")}
                 type="text"
               ></InputWithLabel>
               <InputWithLabel
                 name="email"
                 required={true}
                 placeholder="Email address"
-                label="email address"
+                label={t("form.input.email")}
                 type="email"
               ></InputWithLabel>
               <div className="flex space-x-5">
                 <div className="w-1/4">
                   <InputSelect
-                    label="Nomor telpon"
+                    label={t("form.input.phone")}
                     onChange={(even) => setCountryCode(even.target.value)}
                     required={false}
                   >
@@ -108,18 +109,31 @@ export default function ContactUsForm() {
                 name="bussiness_name"
                 required={true}
                 placeholder="Your company name"
-                label="nama perusahaan"
+                label={t("form.input.company")}
                 type="text"
               ></InputWithLabel>
-              <InputSelect label="Anggaran Proyek" name="plan_budget">
+              <InputSelect
+                label={t("form.input.projectbudget")}
+                name="plan_budget"
+              >
                 <option value="" defaultValue>
                   Select Your Budget
                 </option>
-                <option value="< $ 3000">{`< $ 3000`}</option>
-                <option value="$ 3000 - $ 7000">{`$ 3000 - $ 7000`}</option>
-                <option value="$ 7000 - $ 12000">{`$ 7000 - $ 12000`}</option>
-                <option value="$ 12000 - $ 20000">{`$ 12000 - $ 20000`}</option>
-                <option value="> $ 20000">{`> $ 20000`}</option>
+                <option value={t("form.input.nominal.<3")}>
+                  {t("form.input.nominal.<3")}
+                </option>
+                <option value={t("form.input.nominal.3-7")}>
+                  {t("form.input.nominal.3-7")}
+                </option>
+                <option value={t("form.input.nominal.7-12")}>
+                  {t("form.input.nominal.7-12")}
+                </option>
+                <option value={t("form.input.nominal.12-20")}>
+                  {t("form.input.nominal.12-20")}
+                </option>
+                <option value={t("form.input.nominal.>20")}>
+                  {t("form.input.nominal.>20")}
+                </option>
               </InputSelect>
               <div className="absolute -z-10">
                 <InputInvisibleLabel
@@ -142,6 +156,8 @@ export default function ContactUsForm() {
 }
 
 function FormLeftSide() {
+  const t = useTranslations("ContactUs");
+
   return (
     <div className="w-full">
       <div className="w-full grid grid-cols-1 gap-5">
@@ -195,13 +211,14 @@ function FormLeftSide() {
             variant="h3"
             className="text-btn-primary font-bold capitalize"
           >
-            Siap bertemu{" "}
-            <span className="text-btn-blue">dan diskusikan kebutuhanmu?</span>
+            {t.rich("rtm", {
+              span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+            })}
           </Heading>
-          <p className="text-eve-gray">
+          {/* <p className="text-eve-gray">
             Have questions about pricing, plans, or growthly? Fill out form and
             our product analytics expert will be in touch directly.
-          </p>
+          </p> */}
           <ButtonWhatsApp></ButtonWhatsApp>
         </div>
       </div>

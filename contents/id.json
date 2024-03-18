@@ -121,11 +121,11 @@
       "company": "Nama perusahaan",
       "projectbudget": "Anggaran projek",
       "nominal": {
-        "<3": "<br $3000",
-        "3-7": "$3000 - $7000",
-        "7-12": "$7000 - $12000",
-        "12-20": "$12000 - $20000",
-        ">20": "> $20000"
+        "<3": "< 15.000.000 IDR",
+        "3-7": "15.000.000 IDR - 50.000.000 IDR",
+        "7-12": "50.000.000 IDR - 100.000.000 IDR",
+        "12-20": "100.000.000 IDR - 250.000.000 IDR",
+        ">20": "> 250.000.000 IDR"
       }
     }
   },
@@ -136,7 +136,7 @@
       "webapp": "Aplikasi Web",
       "mobileapp": "Aplikasi Mobile",
       "development": "",
-      "description": "Kembangkan Bisnis Anda dengan Solusi IT Kami <br></br>Kami Akan Wujudkan Mimpi Anda Menjadi Kenyataan.",
+      "description": "Kembangkan Bisnis Anda dengan Solusi IT Kami <br></>Kami Akan Wujudkan Mimpi Anda Menjadi Kenyataan.",
       "talk": "Konsultasikan sekarang",
       "portfolio": "Lihat Portofolio",
       "countreview": "20+ Positif",
@@ -470,6 +470,29 @@
       "7": "Dashboard Utama",
       "8": "Manajemen Berita",
       "9": "Galery / Advertorial"
+    }
+  },
+  "ContactUs": {
+    "title": "Dapatkan Konsultasi Gratis dengan <br></br> <span>Konsultan IT Kami!</span>",
+    "subtitle": "Punya pertanyaan tentang harga, paket, atau layanan? Isi formulir dan kami akan menghubungi Anda secara langsung",
+    "rtm": "Siap Bertemu Dan <span>Diskusikan Kebutuhanmu ?</span>",
+    "form": {
+      "title": "Beri tahu kami tentang Anda",
+      "subtitle": "Isi formulir dan kami akan segera menghubungi Anda.",
+      "input": {
+        "name": "Nama Lengkap",
+        "email": "Alamat Email",
+        "phone": "No. Telpon",
+        "company": "Nama perusahaan",
+        "projectbudget": "Anggaran projek",
+        "nominal": {
+          "<3": "< 15.000.000 IDR",
+          "3-7": "15.000.000 IDR - 50.000.000 IDR",
+          "7-12": "50.000.000 IDR - 100.000.000 IDR",
+          "12-20": "100.000.000 IDR - 250.000.000 IDR",
+          ">20": "> 250.000.000 IDR"
+        }
+      }
     }
   }
 }
