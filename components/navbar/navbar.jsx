@@ -44,7 +44,7 @@ const navList = [
   },
   {
     name: "Portfolio",
-    path: "#",
+    path: "/portfolio",
   },
   {
     name: "Blog",
@@ -169,7 +169,7 @@ export default function NavbarEvetech() {
             </Link>
             {/*      <!-- Mobile trigger --> */}
             <button
-              className={`relative order-10 block h-10 w-10 self-center duration-300 lg:hidden ${
+              className={`relative order-10 block h-8 w-8 sm:h-10 sm:w-10 self-center duration-300 lg:hidden ${
                 isScrolled ? "bg-transparent" : "bg-white rounded-lg"
               }
                 ${

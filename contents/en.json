@@ -121,7 +121,7 @@
       "company": "Company Name",
       "projectbudget": "Your Budget",
       "nominal": {
-        "<3": "< $3000",
+        "<3": "<br $3000",
         "3-7": "$3000 - $7000",
         "7-12": "$7000 - $12000",
         "12-20": "$12000 - $20000",
@@ -136,7 +136,7 @@
       "webapp": "Web App",
       "mobileapp": "Mobile App",
       "development": "Development",
-      "description": "Grow Your Business with Our IT Solutions <br></>We Make Your Dream Become Reality.",
+      "description": "Grow Your Business with Our IT Solutions <br></br>We Make Your Dream Become Reality.",
       "talk": "Let’s Talk",
       "portfolio": "View Portfolio",
       "countreview": "20+ Positive",
