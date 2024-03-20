@@ -34,13 +34,15 @@ export default function BePartOfSomethingBig() {
         </div>
         <div className="space-y-5">
           {content.map((item, idx) => {
+            const id = idx + 1;
             return (
               <CardQualityDriven
                 key={idx}
                 title={t(`${idx + 1}.title`)}
                 content={t(`${idx + 1}.subtitle`)}
-                isEven={item.id % 2 !== 0}
+                isEven={id % 2 !== 0}
                 icon={item.icon}
+                index={idx + 1}
               ></CardQualityDriven>
             );
           })}
@@ -50,12 +52,13 @@ export default function BePartOfSomethingBig() {
   );
 }
 
-function CardQualityDriven({ title, content, icon, isEven }) {
+function CardQualityDriven({ title, content, icon, isEven, index }) {
   return (
     <div
       className={`grid grid-cols-12 gap-3 ${
         isEven ? "bg-eve-white" : "bg-btn-white"
-      } py-5 pr-5 rounded-2xl lg:sticky lg:top-[12rem] w-full h-max`}
+      } py-5 pr-5 rounded-2xl lg:sticky w-full h-max`}
+      style={{ top: `${11 + index}rem` }}
     >
       <div className="col-span-2 flex justify-center items-start">
         <Image src={icon} alt={title} width={40} height={40} />

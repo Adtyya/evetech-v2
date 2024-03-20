@@ -1,3 +1,4 @@
+"use client";
 import Container from "@/components/box/container";
 
 const listDummy = [
@@ -10,36 +11,40 @@ const listDummy = [
     tag: [{ name: "Development web" }, { name: "Mobile App" }],
     rtl: true,
     twoColumns: true,
+    thumbnail: "/images/videofallback/d.png",
   },
   {
-    videoPath: "/videos/projects/Downton.webm",
-    title: "Downtown Dinner",
+    videoPath: "/videos/projects/Pelangi.webm",
+    title: "Pelangi Laundry",
     category: "Category",
     subtitle:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae omnis, dolorum debitis ratione voluptatibus voluptate veniam dicta aut error commodi?",
     tag: [{ name: "Development web" }, { name: "Mobile App" }],
     rtl: true,
     twoColumns: false,
+    thumbnail: "/images/videofallback/p.png",
   },
   {
-    videoPath: "/videos/projects/Downton.webm",
-    title: "Downtown Dinner",
+    videoPath: "/videos/projects/Sanwoo.webm",
+    title: "Sanwoo",
     category: "Category",
     subtitle:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae omnis, dolorum debitis ratione voluptatibus voluptate veniam dicta aut error commodi?",
     tag: [{ name: "Development web" }, { name: "Mobile App" }],
     rtl: true,
     twoColumns: false,
+    thumbnail: "/images/videofallback/s.png",
   },
   {
-    videoPath: "/videos/projects/Downton.webm",
-    title: "Downtown Dinner",
+    videoPath: "/videos/projects/Juragan.webm",
+    title: "Juragan Material",
     category: "Category",
     subtitle:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae omnis, dolorum debitis ratione voluptatibus voluptate veniam dicta aut error commodi?",
     tag: [{ name: "Development web" }, { name: "Mobile App" }],
     rtl: false,
     twoColumns: true,
+    thumbnail: "/images/videofallback/j.png",
   },
 ];
 
@@ -59,6 +64,7 @@ export default function ListProjects() {
                 tag={item.tag}
                 rtl={item.rtl}
                 twoColumns={item.twoColumns}
+                thumbnail={item.thumbnail}
               ></Card>
             </div>
           );
@@ -84,6 +90,7 @@ function Card({
   tag = [],
   rtl = true,
   twoColumns = true,
+  thumbnail = "",
 }) {
   return (
     <div
@@ -94,16 +101,18 @@ function Card({
       <div
         className={`col-auto ${
           twoColumns ? "md:col-span-8" : ""
-        } bg-eve-white p-5 h-64 md:h-80`}
+        } bg-eve-white h-64 md:h-80`}
       >
         <video
           className="w-full h-full"
           controls={false}
           preload="meta"
-          autoPlay
+          autoPlay={false}
           muted
           loop
           controlsList="nofullscreen nodownload noremoteplayback"
+          poster={thumbnail}
+          onClick={(event) => event.target.play()}
         >
           <source src={videoPath} type="video/webm"></source>
         </video>
