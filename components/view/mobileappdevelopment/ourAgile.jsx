@@ -14,16 +14,18 @@ export default function OurAgile() {
   return (
     <div className="py-12">
       <Container>
-        <Heading
-          variant="h2"
-          className="text-btn-primary font-bold text-center"
-        >
-          {t("title")}
-        </Heading>
-        <div className="flex items-center justify-center">
-          <p className="mt-1.5 text-eve-gray text-center w-full max-w-2xl">
-            {t("subtitle")}
-          </p>
+        <div className="sticky top-[10rem]">
+          <Heading
+            variant="h2"
+            className="text-btn-primary font-bold text-center"
+          >
+            {t("title")}
+          </Heading>
+          <div className="flex items-center justify-center">
+            <p className="mt-1.5 text-eve-gray text-center w-full max-w-2xl">
+              {t("subtitle")}
+            </p>
+          </div>
         </div>
         <div className="columns-1 md:columns-2 lg:hidden pt-5">
           {content.map((a, i) => {
@@ -39,23 +41,24 @@ export default function OurAgile() {
             );
           })}
         </div>
+
+        <div className="w-full h-full hidden lg:block">
+          <HorizontalScroll>
+            {content.map((a, i) => {
+              return (
+                <Card
+                  key={i}
+                  title={t(`${i + 1}.title`)}
+                  description={t(`${i + 1}.subtitle`)}
+                  image={a.image}
+                  isEven={i % 2 === 0}
+                  indexNumber={i + 1}
+                ></Card>
+              );
+            })}
+          </HorizontalScroll>
+        </div>
       </Container>
-      <div className="w-full h-full hidden lg:block">
-        <HorizontalScroll>
-          {content.map((a, i) => {
-            return (
-              <Card
-                key={i}
-                title={t(`${i + 1}.title`)}
-                description={t(`${i + 1}.subtitle`)}
-                image={a.image}
-                isEven={i % 2 === 0}
-                indexNumber={i + 1}
-              ></Card>
-            );
-          })}
-        </HorizontalScroll>
-      </div>
     </div>
   );
 }
@@ -89,15 +92,12 @@ function HorizontalScroll({ children }) {
     target: container,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-99%"]);
 
   return (
-    <div ref={container} className="relative h-[160vh]">
-      <div className="sticky top-0 flex h-[78vh] overflow-hidden pt-20">
-        <motion.div
-          style={{ x }}
-          className="flex gap-7 w-full h-full items-center"
-        >
+    <div ref={container} className="relative h-[150vh]">
+      <div className="sticky top-[15rem] flex h-[78vh] overflow-hidden pt-20">
+        <motion.div style={{ x }} className="flex gap-7 h-full items-center">
           {children}
         </motion.div>
       </div>

@@ -162,7 +162,6 @@ function FormLeftSide() {
     <div className="w-full">
       <div className="w-full grid grid-cols-1 gap-5">
         <div className="order-last lg:order-first space-y-5">
-          <p className="text-eve-key-features font-bold text-xl">Our Office</p>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.762135792769!2d110.79308907574776!3d-7.6008453751225495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15ea9357f0ff%3A0x3f19000078705279!2sEvetech%20Solution!5e0!3m2!1sid!2sid!4v1709105712667!5m2!1sid!2sid"
             style={{ border: 0 }}
@@ -171,6 +170,7 @@ function FormLeftSide() {
             className="rounded-2xl w-full h-96"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
+          <p className="text-eve-key-features font-bold text-xl">Our Office</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {officeLocation.map((item, idx) => {
               return (

@@ -5,10 +5,10 @@ const listDummy = [
   {
     videoPath: "/videos/projects/Downton.webm",
     title: "Downtown Dinner",
-    category: "Category",
+    category: "POS Restaurant",
     subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae omnis, dolorum debitis ratione voluptatibus voluptate veniam dicta aut error commodi?",
-    tag: [{ name: "Development web" }, { name: "Mobile App" }],
+      "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant.",
+    tag: [{ name: "Web Development" }, { name: "Web Application" }],
     rtl: true,
     twoColumns: true,
     thumbnail: "/images/videofallback/d.png",
@@ -16,10 +16,10 @@ const listDummy = [
   {
     videoPath: "/videos/projects/Pelangi.webm",
     title: "Pelangi Laundry",
-    category: "Category",
+    category: "Laundry Pick-Up Delivery",
     subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae omnis, dolorum debitis ratione voluptatibus voluptate veniam dicta aut error commodi?",
-    tag: [{ name: "Development web" }, { name: "Mobile App" }],
+      "Pelangi Laundry provides online laundry services, where customers do not need to come to the laundry outlet in person. Customers only need to access the Pelangi Laundry website to use laundry services, which later Pelangi Laundry employees will go to the customer's location according to the location data that has been input by the customer before.",
+    tag: [{ name: "Web Development" }, { name: "Web Application" }],
     rtl: true,
     twoColumns: false,
     thumbnail: "/images/videofallback/p.png",
@@ -27,10 +27,10 @@ const listDummy = [
   {
     videoPath: "/videos/projects/Sanwoo.webm",
     title: "Sanwoo",
-    category: "Category",
+    category: "Web Company Profile",
     subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae omnis, dolorum debitis ratione voluptatibus voluptate veniam dicta aut error commodi?",
-    tag: [{ name: "Development web" }, { name: "Mobile App" }],
+      "sanwooelectronics.com displays cooler and freezer products along with details that will make it easier for Sanwoo Electronics to reach its customers. This website also contains contact details for Sanwoo Electronics which can make it easier for customers.",
+    tag: [{ name: "Web Development" }],
     rtl: true,
     twoColumns: false,
     thumbnail: "/images/videofallback/s.png",
@@ -38,10 +38,10 @@ const listDummy = [
   {
     videoPath: "/videos/projects/Juragan.webm",
     title: "Juragan Material",
-    category: "Category",
+    category: "E-Commerce",
     subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae omnis, dolorum debitis ratione voluptatibus voluptate veniam dicta aut error commodi?",
-    tag: [{ name: "Development web" }, { name: "Mobile App" }],
+      "Juragan Material website is used to integrate all company resources, such as customer data, sales order data, purchase order management, and business monitoring through a dashboard.",
+    tag: [{ name: "Web Development" }, { name: "Web Application" }],
     rtl: false,
     twoColumns: true,
     thumbnail: "/images/videofallback/j.png",
@@ -104,7 +104,7 @@ function Card({
         } bg-eve-white h-64 md:h-80`}
       >
         <video
-          className="w-full h-full"
+          className="w-full h-full cursor-pointer"
           controls={false}
           preload="meta"
           autoPlay={false}

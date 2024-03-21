@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <div className="h-screen w-full relative">
       <Image
-        src="/images/mobiledevelopment/hero-mobiledev.jfif"
+        src="/images/portofolio/hero-portofolio.png"
         alt="hero"
         fill
         // sizes="(max-width: 768px) 100vw, 1000px"

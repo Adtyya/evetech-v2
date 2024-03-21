@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect, forwardRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,6 +8,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { OurLatestProject } from "./content";
 import autoAnimate from "@formkit/auto-animate";
 import { useTranslations } from "next-intl";
+import { ButtonPrimary } from "@/components/button/button";
+import Link from "next/link";
 
 export default function OurLatestProjects() {
   const t = useTranslations("HomePage.section9");
@@ -93,9 +95,11 @@ export default function OurLatestProjects() {
           })}
         </div>
       </div>
-      {/* <div className="flex items-center justify-center">
-        <ButtonPrimary className="px-8">View More</ButtonPrimary>
-      </div> */}
+      <div className="flex items-center justify-center">
+        <Link href="/portfolio">
+          <ButtonPrimary className="px-8">View More</ButtonPrimary>
+        </Link>
+      </div>
     </Container>
   );
 }

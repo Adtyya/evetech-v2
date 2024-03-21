@@ -76,14 +76,13 @@ export const officeLocation = [
     country: "Indonesia",
     location: [
       {
-        city: "Solo City",
+        city: "Solo",
         address:
           "Royal Regency, Dusun 1, Gedangan, Solo Baru, Kota Surakarta, Jawa Tengah 57552",
       },
       {
         city: "Jakarta",
-        address:
-          "Jalan Agung Utara III, Sunter Agung, Tanjung Priok, Jakarta Utara, DKI Jakarta 14350",
+        address: "Soon",
       },
     ],
   },
@@ -91,7 +90,7 @@ export const officeLocation = [
     country: "Malaysia",
     location: [
       {
-        city: "Kuala Lumpur City",
+        city: "Kuala Lumpur",
         address:
           "BO1-A-9, Menara 2, KL Eco City, 3, Jln Bangsar, 59200 Kuala Lumpur WP",
       },
@@ -289,7 +288,7 @@ export default function Footer() {
                 </div>
                 <div className="space-y-2.5 col-span-2 lg:col-span-9">
                   <p className="font-semibold text-eve-p-latest-project">
-                    Our Office
+                    Our Offices
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {officeLocation.map((item, idx) => {
