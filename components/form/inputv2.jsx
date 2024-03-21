@@ -1,4 +1,5 @@
 import React from "react";
+import { TbSearch } from "react-icons/tb";
 
 function InputWithLabel({ label = "", required = false, ...props }) {
   return (
@@ -88,6 +89,26 @@ const InputRounded = React.forwardRef(({ label, required, ...props }, ref) => {
   );
 });
 
+function InputSearch({ onSubmit, onChange, ...props }) {
+  return (
+    <form
+      onSubmit={onSubmit}
+      className="px-5 w-full rounded-lg bg-eve-white flex items-center space-x-3 text-eve-searchInput"
+    >
+      <button type="submit">
+        <TbSearch />
+      </button>
+      <input
+        type="text"
+        placeholder="Search..."
+        onChange={onChange}
+        {...props}
+        className="bg-transparent placeholder:text-eve-searchInput focus:outline-none py-2 text-sm"
+      />
+    </form>
+  );
+}
+
 InputRounded.displayName = "RoundedInput";
 
 export {
@@ -95,5 +116,6 @@ export {
   InputInvisibleLabel,
   InputSelect,
   InputWithIcon,
+  InputSearch,
   InputRounded,
 };

@@ -25,9 +25,9 @@ export default function Hero() {
           >
             <Heading
               variant="h1"
-              className="font-bold text-white max-w-2xl w-full !leading-snug"
+              className="font-bold text-white max-w-4xl w-full !leading-snug"
             >
-              Membantu Klien <br /> Mewujudkan <br /> Inovasi Menjadi Nyata
+              Membantu Klien Mewujudkan Inovasi Menjadi Nyata
               {/* {t.rich("title", {
                 span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
                 br: () => <br />,

@@ -74,7 +74,7 @@ export default function ListProjects() {
   );
 }
 
-function Tag({ children }) {
+export function Tag({ children }) {
   return (
     <button className="bg-eve-white px-5 py-2 rounded-full w-max">
       <p className="text-sm text-btn-primary capitalize">{children}</p>
