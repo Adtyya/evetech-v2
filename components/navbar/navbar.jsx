@@ -48,7 +48,7 @@ const navList = [
   },
   {
     name: "Blog",
-    path: "#",
+    path: "/blog",
   },
   {
     name: "Career",

@@ -134,7 +134,7 @@ function SimpleCard({ image = " ", title = " ", subtitle = "" }) {
   );
 }
 
-function HighlightedCard({
+export function HighlightedCard({
   image = "",
   tag = [],
   title = "",

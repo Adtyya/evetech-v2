@@ -55,6 +55,9 @@ module.exports = {
           gray: "#DADEE3",
         },
       },
+      boxShadow: {
+        blog: "0px 4px 10px 0px #00000026",
+      },
       height: {
         masonryFull: "35rem",
       },
