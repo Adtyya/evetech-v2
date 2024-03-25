@@ -13,7 +13,7 @@ import moment from "moment";
 import { slugify } from "@/utils/slugify";
 
 export default function Read({ detailPost, otherPosts }) {
-  console.log(otherPosts);
+  console.log(detailPost);
 
   return (
     <Container className="py-12">
@@ -38,18 +38,29 @@ export default function Read({ detailPost, otherPosts }) {
             alt="sample"
             src={detailPost?.attributes?.cover?.data?.attributes?.url}
             fill
-            className="object-cover"
+            data-loaded="false"
+            onLoad={(event) => {
+              event.currentTarget.setAttribute("data-loaded", "true");
+            }}
+            className="object-cover data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100"
           />
         </div>
       </div>
       <div className="mb-7 grid grid-cols-1 md:grid-cols-4 gap-5">
         <div className="col-auto md:col-span-1">
-          <Heading variant="h4" className="text-btn-primary font-bold">
-            Chapters
-          </Heading>
-          <div className="my-3.5 space-y-3.5">
-            <ChapterButton>One</ChapterButton>
-          </div>
+          {detailPost?.attributes?.chapters?.length >= 1 ? (
+            <>
+              <Heading variant="h4" className="text-btn-primary font-bold">
+                Chapters
+              </Heading>
+              <div className="my-3.5 space-y-3.5">
+                {detailPost?.attributes?.chapters?.map((item, id) => {
+                  return <ChapterButton key={id}>{item.name}</ChapterButton>;
+                })}
+              </div>
+            </>
+          ) : null}
+
           <div className="border-t border-t-eve-white">
             <small className="text-eve-key-features font-bold">
               Share Article
@@ -137,12 +148,15 @@ export default function Read({ detailPost, otherPosts }) {
 
 function ChapterButton({ children }) {
   return (
-    <button className="flex items-center space-x-2">
+    <Link
+      className="flex items-center space-x-2"
+      href={`#${slugify(children)}`}
+    >
       <div className="h-16 !w-0.5 bg-btn-blue"></div>
-      <p className="text-btn-primary font-bold line-clamp-2 w-full md:w-3/4">
+      <p className="text-btn-primary text-start font-bold line-clamp-2 w-full">
         {children}
       </p>
-    </button>
+    </Link>
   );
 }
 
