@@ -9,6 +9,7 @@ import { Tag } from "../portfolio/listProjects";
 import moment from "moment";
 import { useRouter, useSearchParams } from "next/navigation";
 import api from "@/utils/axios";
+import Link from "next/link";
 
 export default function BlogList({
   latestPosts = [],
@@ -70,12 +71,18 @@ export default function BlogList({
           </div>
         </div>
       </div>
-      {isPending || loading ? (
-        <div className="space-y-5">
-          <div className="w-full h-80 bg-gray-300 animate-pulse mt-5"></div>
-          <div className="h-5 w-2/4 bg-gray-300 animate-pulse"></div>
-          <div className="h-5 w-full bg-gray-300 animate-pulse"></div>
-          <div className="h-5 w-full bg-gray-300 animate-pulse"></div>
+      {loading || isPending ? (
+        <div>
+          {Array.from({ length: 3 }).map((_, i) => {
+            return (
+              <div className="space-y-5 mb-16" key={i}>
+                <div className="w-full h-80 bg-gray-300 animate-pulse mt-5"></div>
+                <div className="h-5 w-2/4 bg-gray-300 animate-pulse"></div>
+                <div className="h-5 w-full bg-gray-300 animate-pulse"></div>
+                <div className="h-5 w-full bg-gray-300 animate-pulse"></div>
+              </div>
+            );
+          })}
         </div>
       ) : null}
       {params && !loading && !isPending ? (
@@ -90,25 +97,28 @@ export default function BlogList({
           <div className="grid grid-cols-1 py-7 gap-5">
             {searchResult.map((item, idx) => {
               return (
-                <HighlightedCard
-                  key={idx}
-                  image={item?.attributes?.cover?.data?.attributes?.url}
-                  title={item?.attributes?.title}
-                  subtitle={item?.attributes?.description}
-                  tag={item?.attributes?.tags?.data?.map((item) => {
-                    return {
-                      name: item?.attributes?.name || "",
-                    };
-                  })}
-                  createdAt={item?.attributes?.createdAt}
-                  twoColumns
-                ></HighlightedCard>
+                <div key={idx}>
+                  <Link href={`/blog/read/${item?.attributes?.slug}`}>
+                    <HighlightedCard
+                      image={item?.attributes?.cover?.data?.attributes?.url}
+                      title={item?.attributes?.title}
+                      subtitle={item?.attributes?.description}
+                      tag={item?.attributes?.tags?.data?.map((item) => {
+                        return {
+                          name: item?.attributes?.name || "",
+                        };
+                      })}
+                      createdAt={item?.attributes?.createdAt}
+                      twoColumns
+                    ></HighlightedCard>
+                  </Link>
+                </div>
               );
             })}
           </div>
         </div>
       ) : null}
-      {!params && !isPending && !loading ? (
+      {!params && !loading && !isPending ? (
         <>
           <div className="mt-7 border-b-2 border-b-eve-white">
             <Heading variant="h3" className="text-btn-primary font-bold">
@@ -118,48 +128,59 @@ export default function BlogList({
               <div className="hidden md:block md:col-span-8">
                 {featuresPosts.slice(0, 1).map((item, idx) => {
                   return (
-                    <HighlightedCard
-                      key={idx}
-                      image={item?.attributes?.cover?.data?.attributes?.url}
-                      title={item?.attributes?.title}
-                      subtitle={item?.attributes?.description}
-                      tag={item?.attributes?.tags?.data?.map((item) => {
-                        return {
-                          name: item?.attributes?.name || "",
-                        };
-                      })}
-                      createdAt={item?.attributes?.createdAt}
-                    ></HighlightedCard>
+                    <div key={idx}>
+                      <Link href={`/blog/read/${item?.attributes?.slug}`}>
+                        <HighlightedCard
+                          image={item?.attributes?.cover?.data?.attributes?.url}
+                          title={item?.attributes?.title}
+                          subtitle={item?.attributes?.description}
+                          tag={item?.attributes?.tags?.data?.map((item) => {
+                            return {
+                              name: item?.attributes?.name || "",
+                            };
+                          })}
+                          createdAt={item?.attributes?.createdAt}
+                        ></HighlightedCard>
+                      </Link>
+                    </div>
                   );
                 })}
               </div>
               <div className="hidden md:col-span-4 gap-5 md:grid grid-cols-1 w-full h-max">
                 {featuresPosts.slice(1).map((item, idx) => {
                   return (
-                    <SimpleCard
-                      key={idx}
-                      image={item?.attributes?.cover?.data?.attributes?.url}
-                      title={item?.attributes?.title}
-                      subtitle={item?.attributes?.description}
-                    />
+                    <div key={idx}>
+                      <Link href={`/blog/read/${item?.attributes?.slug}`}>
+                        <SimpleCard
+                          key={idx}
+                          image={item?.attributes?.cover?.data?.attributes?.url}
+                          title={item?.attributes?.title}
+                          subtitle={item?.attributes?.description}
+                        />
+                      </Link>
+                    </div>
                   );
                 })}
               </div>
               <div className="grid grid-cols-1 gap-5 md:hidden">
                 {featuresPosts.map((item, idx) => {
                   return (
-                    <HighlightedCard
-                      key={idx}
-                      image={item?.attributes?.cover?.data?.attributes?.url}
-                      title={item?.attributes?.title}
-                      subtitle={item?.attributes?.description}
-                      tag={item?.attributes?.tags?.data?.map((item) => {
-                        return {
-                          name: item?.attributes?.name || "",
-                        };
-                      })}
-                      createdAt={item?.attributes?.createdAt}
-                    ></HighlightedCard>
+                    <div key={idx}>
+                      <Link href={`/blog/read/${item?.attributes?.slug}`}>
+                        <HighlightedCard
+                          key={idx}
+                          image={item?.attributes?.cover?.data?.attributes?.url}
+                          title={item?.attributes?.title}
+                          subtitle={item?.attributes?.description}
+                          tag={item?.attributes?.tags?.data?.map((item) => {
+                            return {
+                              name: item?.attributes?.name || "",
+                            };
+                          })}
+                          createdAt={item?.attributes?.createdAt}
+                        ></HighlightedCard>
+                      </Link>
+                    </div>
                   );
                 })}
               </div>
@@ -172,18 +193,22 @@ export default function BlogList({
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-7 gap-5">
               {topPosts.map((item, idx) => {
                 return (
-                  <HighlightedCard
-                    key={idx}
-                    image={item?.attributes?.cover?.data?.attributes?.url}
-                    title={item?.attributes?.title}
-                    subtitle={item?.attributes?.description}
-                    tag={item?.attributes?.tags?.data?.map((item) => {
-                      return {
-                        name: item?.attributes?.name || "",
-                      };
-                    })}
-                    createdAt={item?.attributes?.createdAt}
-                  ></HighlightedCard>
+                  <div key={idx}>
+                    <Link href={`/blog/read/${item?.attributes?.slug}`}>
+                      <HighlightedCard
+                        key={idx}
+                        image={item?.attributes?.cover?.data?.attributes?.url}
+                        title={item?.attributes?.title}
+                        subtitle={item?.attributes?.description}
+                        tag={item?.attributes?.tags?.data?.map((item) => {
+                          return {
+                            name: item?.attributes?.name || "",
+                          };
+                        })}
+                        createdAt={item?.attributes?.createdAt}
+                      ></HighlightedCard>
+                    </Link>
+                  </div>
                 );
               })}
             </div>
@@ -195,19 +220,23 @@ export default function BlogList({
             <div className="grid grid-cols-1 py-7 gap-5">
               {latestPosts.map((item, idx) => {
                 return (
-                  <HighlightedCard
-                    key={idx}
-                    image={item?.attributes?.cover?.data?.attributes?.url}
-                    title={item?.attributes?.title}
-                    subtitle={item?.attributes?.description}
-                    tag={item?.attributes?.tags?.data?.map((item) => {
-                      return {
-                        name: item?.attributes?.name || "",
-                      };
-                    })}
-                    createdAt={item?.attributes?.createdAt}
-                    twoColumns
-                  ></HighlightedCard>
+                  <div key={idx}>
+                    <Link href={`/blog/read/${item?.attributes?.slug}`}>
+                      <HighlightedCard
+                        key={idx}
+                        image={item?.attributes?.cover?.data?.attributes?.url}
+                        title={item?.attributes?.title}
+                        subtitle={item?.attributes?.description}
+                        tag={item?.attributes?.tags?.data?.map((item) => {
+                          return {
+                            name: item?.attributes?.name || "",
+                          };
+                        })}
+                        createdAt={item?.attributes?.createdAt}
+                        twoColumns
+                      ></HighlightedCard>
+                    </Link>
+                  </div>
                 );
               })}
             </div>

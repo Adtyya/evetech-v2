@@ -35,7 +35,7 @@ function SideCardInfo({ title, subtitle }) {
   );
 }
 
-function SocialButton({ path, alt }) {
+export function SocialButton({ path, alt }) {
   return (
     <button className="h-9 w-9 bg-eve-social rounded-full relative flex items-center justify-center">
       <Image src={path} alt={alt} width={24} height={24} />

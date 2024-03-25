@@ -1,6 +1,9 @@
 import BlogList from "@/components/view/blog/BlogList";
 import { unstable_setRequestLocale } from "next-intl/server";
 import api from "@/utils/axios";
+import { Suspense } from "react";
+
+export const revalidate = 84000;
 
 async function getLatestsAndFeatures() {
   const res = await api.get(
@@ -24,12 +27,14 @@ export default async function BlogPage({ params: { lang } }) {
 
   return (
     <>
-      <BlogList
-        latestPosts={featuresAndLatest.data?.slice(5) || []}
-        metaInfoLatestPosts={featuresAndLatest.meta || null}
-        featuresPosts={featuresAndLatest.data?.slice(0, 5) || []}
-        topPosts={topPosts?.data || []}
-      ></BlogList>
+      <Suspense fallback={<></>}>
+        <BlogList
+          latestPosts={featuresAndLatest.data?.slice(5) || []}
+          metaInfoLatestPosts={featuresAndLatest.meta || null}
+          featuresPosts={featuresAndLatest.data?.slice(0, 5) || []}
+          topPosts={topPosts?.data || []}
+        ></BlogList>
+      </Suspense>
     </>
   );
 }

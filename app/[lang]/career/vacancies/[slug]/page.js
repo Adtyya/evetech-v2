@@ -16,7 +16,7 @@ async function getOtherVacancies(slug) {
 }
 
 export const dynamic = "force-dynamic";
-export const revalidate = 360000;
+export const revalidate = 840000;
 
 export async function generateStaticParams() {
   const vacancies = await api.get("/careers");
