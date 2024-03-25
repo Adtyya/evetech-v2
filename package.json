@@ -34,6 +34,7 @@
     "react-text-transition": "^3.1.0",
     "sharp": "^0.33.2",
     "swiper": "^11.0.6",
+    "tailwind-scrollbar": "^3.1.0",
     "yup": "^1.4.0"
   },
   "devDependencies": {

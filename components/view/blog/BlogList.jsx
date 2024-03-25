@@ -12,7 +12,7 @@ export default function BlogList({
   featuresPosts = [],
   topPosts = [],
 }) {
-  console.log(featuresPosts.slice(1));
+  console.log(latestPosts);
 
   return (
     <Container className="py-12">
@@ -91,14 +91,19 @@ export default function BlogList({
           Top Blog
         </Heading>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-7 gap-5">
-          {Array.from({ length: 3 }).map((_, i) => {
+          {topPosts.map((item, idx) => {
             return (
               <HighlightedCard
-                key={i}
-                image="/images/portofolio/hero-portofolio.png"
-                title="Lorem ipsum dolor sit amet."
-                subtitle="Lorem ipsum dolor sit, amet consectetur adipisicing elit. At harum et veritatis sapiente facilis modi dicta earum. Exercitationem excepturi similique repudiandae recusandae totam explicabo maxime dolorum eos odio, assumenda, nostrum debitis iste consequuntur quidem mollitia corporis at ipsum omnis porro."
-                tag={[{ name: "Test" }, { name: "testtt" }]}
+                key={idx}
+                image={item?.attributes?.cover?.data?.attributes?.url}
+                title={item?.attributes?.title}
+                subtitle={item?.attributes?.description}
+                tag={item?.attributes?.tags?.data?.map((item) => {
+                  return {
+                    name: item?.attributes?.name || "",
+                  };
+                })}
+                createdAt={item?.attributes?.createdAt}
               ></HighlightedCard>
             );
           })}
@@ -109,14 +114,19 @@ export default function BlogList({
           Latest Post
         </Heading>
         <div className="grid grid-cols-1 py-7 gap-5">
-          {Array.from({ length: 3 }).map((_, i) => {
+          {latestPosts.map((item, idx) => {
             return (
               <HighlightedCard
-                key={i}
-                image="/images/portofolio/hero-portofolio.png"
-                title="Lorem ipsum dolor sit amet."
-                subtitle="Lorem ipsum dolor sit, amet consectetur adipisicing elit. At harum et veritatis sapiente facilis modi dicta earum. Exercitationem excepturi similique repudiandae recusandae totam explicabo maxime dolorum eos odio, assumenda, nostrum debitis iste consequuntur quidem mollitia corporis at ipsum omnis porro."
-                tag={[{ name: "Test" }, { name: "testtt" }]}
+                key={idx}
+                image={item?.attributes?.cover?.data?.attributes?.url}
+                title={item?.attributes?.title}
+                subtitle={item?.attributes?.description}
+                tag={item?.attributes?.tags?.data?.map((item) => {
+                  return {
+                    name: item?.attributes?.name || "",
+                  };
+                })}
+                createdAt={item?.attributes?.createdAt}
                 twoColumns
               ></HighlightedCard>
             );
@@ -192,13 +202,17 @@ export function HighlightedCard({
         <div
           className={`${twoColumns ? "md:col-span-8" : ""} col-auto space-y-3`}
         >
-          <div className="flex space-x-3.5 flex-wrap">
+          <div className="flex max-h-14 h-full overflow-auto scrollbar-thin scrollbar-thumb-btn-primary">
             {tag.map((item, indx) => {
-              return <Tag key={indx}>{item.name}</Tag>;
+              return (
+                <div key={indx} className="pr-3 mb-2">
+                  <Tag>{item.name}</Tag>
+                </div>
+              );
             })}
           </div>
           <div className="space-y-2.5">
-            <h2 className="text-btn-primary text-2xl md:text-3xl font-bold relative">
+            <h2 className="text-btn-primary text-2xl md:text-3xl font-bold relative line-clamp-2">
               {title}
               {/* <span className="relative z-10">{title}</span> */}
               {/* <span className="absolute w-0 group-hover:w-full duration-500 h-1 bg-btn-primary left-0 bottom-0"></span> */}

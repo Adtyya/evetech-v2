@@ -25,8 +25,9 @@ export default async function BlogPage({ params: { lang } }) {
   return (
     <>
       <BlogList
-        latestPosts={featuresAndLatest}
-        featuresPosts={featuresAndLatest.data?.slice(1, 5) || []}
+        latestPosts={featuresAndLatest.data?.slice(5) || []}
+        metaInfoLatestPosts={featuresAndLatest.meta || null}
+        featuresPosts={featuresAndLatest.data?.slice(0, 5) || []}
         topPosts={topPosts?.data || []}
       ></BlogList>
     </>
