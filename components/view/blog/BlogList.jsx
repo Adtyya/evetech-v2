@@ -5,8 +5,15 @@ import { InputSearch } from "@/components/form/inputv2";
 import Heading from "@/components/text/heading";
 import Image from "next/image";
 import { Tag } from "../portfolio/listProjects";
+import moment from "moment";
 
-export default function BlogList() {
+export default function BlogList({
+  latestPosts = [],
+  featuresPosts = [],
+  topPosts = [],
+}) {
+  console.log(featuresPosts.slice(1));
+
   return (
     <Container className="py-12">
       <div className="h-32"></div>
@@ -30,38 +37,52 @@ export default function BlogList() {
         </Heading>
         <div className="grid grid-cols-1 md:grid-cols-12 md:gap-5 py-7">
           <div className="hidden md:block md:col-span-8">
-            <HighlightedCard
-              image="/images/portofolio/hero-portofolio.png"
-              title="Lorem ipsum dolor sit amet."
-              subtitle="Lorem ipsum dolor sit, amet consectetur adipisicing elit. At harum et veritatis sapiente facilis modi dicta earum. Exercitationem excepturi similique repudiandae recusandae totam explicabo maxime dolorum eos odio, assumenda, nostrum debitis iste consequuntur quidem mollitia corporis at ipsum omnis porro."
-              tag={[{ name: "Test" }, { name: "testtt" }]}
-            ></HighlightedCard>
+            {featuresPosts.slice(0, 1).map((item, idx) => {
+              return (
+                <HighlightedCard
+                  key={idx}
+                  image={item?.attributes?.cover?.data?.attributes?.url}
+                  title={item?.attributes?.title}
+                  subtitle={item?.attributes?.description}
+                  tag={item?.attributes?.tags?.data?.map((item) => {
+                    return {
+                      name: item?.attributes?.name || "",
+                    };
+                  })}
+                  createdAt={item?.attributes?.createdAt}
+                ></HighlightedCard>
+              );
+            })}
           </div>
           <div className="hidden md:col-span-4 gap-5 md:grid grid-cols-1 w-full h-max">
-            <SimpleCard
-              image="/images/portofolio/hero-portofolio.png"
-              title="Lorem ipsum dolor sit amet."
-              subtitle="Lorem ipsum dolor sit, amet consectetur adipisicing elit. At harum et veritatis sapiente facilis modi dicta earum. Exercitationem excepturi similique repudiandae recusandae totam explicabo maxime dolorum eos odio, assumenda, nostrum debitis iste consequuntur quidem mollitia corporis at ipsum omnis porro."
-            />
-            <SimpleCard
-              image="/images/portofolio/hero-portofolio.png"
-              title="Lorem ipsum dolor sit amet."
-              subtitle="Lorem ipsum dolor sit, amet consectetur adipisicing elit. At harum et veritatis sapiente facilis modi dicta earum. Exercitationem excepturi similique repudiandae recusandae totam explicabo maxime dolorum eos odio, assumenda, nostrum debitis iste consequuntur quidem mollitia corporis at ipsum omnis porro."
-            />
-            <SimpleCard
-              image="/images/portofolio/hero-portofolio.png"
-              title="Lorem ipsum dolor sit amet."
-              subtitle="Lorem ipsum dolor sit, amet consectetur adipisicing elit. At harum et veritatis sapiente facilis modi dicta earum. Exercitationem excepturi similique repudiandae recusandae totam explicabo maxime dolorum eos odio, assumenda, nostrum debitis iste consequuntur quidem mollitia corporis at ipsum omnis porro."
-            />
+            {featuresPosts.slice(1).map((item, idx) => {
+              return (
+                <SimpleCard
+                  key={idx}
+                  image={item?.attributes?.cover?.data?.attributes?.url}
+                  title={item?.attributes?.title}
+                  subtitle={item?.attributes?.description}
+                />
+              );
+            })}
           </div>
           <div className="grid grid-cols-1 gap-5 md:hidden">
-            <HighlightedCard
-              image="/images/portofolio/hero-portofolio.png"
-              title="Lorem ipsum dolor sit amet."
-              subtitle="Lorem ipsum dolor sit, amet consectetur adipisicing elit. At harum et veritatis sapiente facilis modi dicta earum. Exercitationem excepturi similique repudiandae recusandae totam explicabo maxime dolorum eos odio, assumenda, nostrum debitis iste consequuntur quidem mollitia corporis at ipsum omnis porro."
-              tag={[{ name: "Test" }, { name: "testtt" }]}
-              twoColumns
-            ></HighlightedCard>
+            {featuresPosts.map((item, idx) => {
+              return (
+                <HighlightedCard
+                  key={idx}
+                  image={item?.attributes?.cover?.data?.attributes?.url}
+                  title={item?.attributes?.title}
+                  subtitle={item?.attributes?.description}
+                  tag={item?.attributes?.tags?.data?.map((item) => {
+                    return {
+                      name: item?.attributes?.name || "",
+                    };
+                  })}
+                  createdAt={item?.attributes?.createdAt}
+                ></HighlightedCard>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -108,7 +129,7 @@ export default function BlogList() {
 
 function SimpleCard({ image = " ", title = " ", subtitle = "" }) {
   return (
-    <div className="grid grid-cols-12 gap-5">
+    <div className="grid grid-cols-12 gap-5 cursor-pointer">
       <div className="col-span-5">
         <div className="h-32 w-full relative rounded-2xl overflow-hidden">
           <Image
@@ -140,6 +161,7 @@ export function HighlightedCard({
   title = "",
   subtitle = "",
   twoColumns = false,
+  createdAt = "",
 }) {
   return (
     <div className="w-full h-full group cursor-pointer">
@@ -184,7 +206,9 @@ export function HighlightedCard({
             <p className="line-clamp-4 text-btn-primary group-hover:font-semibold duration-300">
               {subtitle}
             </p>
-            <p className="text-btn-primary text-sm">24 Desember 2025</p>
+            <p className="text-btn-primary text-sm">
+              {moment(createdAt).format("LL")}
+            </p>
           </div>
         </div>
       </div>
