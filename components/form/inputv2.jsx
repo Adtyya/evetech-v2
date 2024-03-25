@@ -103,7 +103,7 @@ function InputSearch({ onSubmit, onChange, ...props }) {
         placeholder="Search..."
         onChange={onChange}
         {...props}
-        className="bg-transparent placeholder:text-eve-searchInput focus:outline-none py-2 text-sm"
+        className="bg-transparent placeholder:text-eve-searchInput w-full focus:outline-none py-2 text-sm"
       />
     </form>
   );

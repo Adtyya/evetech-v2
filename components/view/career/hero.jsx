@@ -65,7 +65,7 @@ export default function Hero() {
                 onSubmit={handleSearch}
                 className="flex flex-col md:flex-row w-full items-center gap-5"
               >
-                <div className="w-3/6">
+                <div className="w-full md:w-3/6">
                   <InputWithIcon
                     icon={<TbSearch />}
                     placeholder="Type your profession"
@@ -78,7 +78,7 @@ export default function Hero() {
                     <option value="Designer">Designer</option>
                   </InputWithIcon>
                 </div>
-                <div className="w-3/6">
+                <div className="w-full md:w-3/6">
                   <InputWithIcon
                     icon={<TbMapPinSearch />}
                     placeholder="Location"
@@ -91,7 +91,7 @@ export default function Hero() {
                     <option value="Malaysia">Kuala Lumpur - Malaysia</option>
                   </InputWithIcon>
                 </div>
-                <div className="w-3/6">
+                <div className="w-full md:w-3/6">
                   <InputWithIcon
                     icon={<TbDeviceImacSearch />}
                     placeholder="Type Job"
