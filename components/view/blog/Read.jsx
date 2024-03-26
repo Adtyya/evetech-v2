@@ -11,6 +11,13 @@ import Markdown from "react-markdown";
 import { SocialButton } from "../vacanciesdetail/detail";
 import moment from "moment";
 import { slugify } from "@/utils/slugify";
+import {
+  FacebookShareButton,
+  InstapaperShareButton,
+  TwitterShareButton,
+} from "react-share";
+
+export const BASE_URL = "https://evetechsolution.com/";
 
 export default function Read({ detailPost, otherPosts }) {
   return (
@@ -68,22 +75,34 @@ export default function Read({ detailPost, otherPosts }) {
               Share Article
             </small>
             <div className="flex items-start justify-start space-x-2.5 mt-1.5">
-              <SocialButton
-                path="/images/career/social/Instagram.svg"
-                alt="instagram"
-              />
-              <SocialButton
-                path="/images/career/social/Facebook.svg"
-                alt="Facebook"
-              />
-              <SocialButton
-                path="/images/career/social/Twitter.svg"
-                alt="Twitter"
-              />
-              <SocialButton
+              <FacebookShareButton
+                title={detailPost?.attributes?.title}
+                description={detailPost?.attributes?.description}
+                url={`${BASE_URL}/blog/read/${detailPost?.attributes?.slug}`}
+              >
+                {/* <SocialButton
+                  path="/images/career/social/Instagram.svg"
+                  alt="instagram"
+                /> */}
+                <SocialButton
+                  path="/images/career/social/Facebook.svg"
+                  alt="Facebook"
+                />
+              </FacebookShareButton>
+              <TwitterShareButton
+                title={detailPost?.attributes?.title}
+                description={detailPost?.attributes?.description}
+                url={`${BASE_URL}/blog/read/${detailPost?.attributes?.slug}`}
+              >
+                <SocialButton
+                  path="/images/career/social/Twitter.svg"
+                  alt="Twitter"
+                />
+              </TwitterShareButton>
+              {/* <SocialButton
                 path="/images/career/social/Github.svg"
                 alt="Github"
-              />
+              /> */}
             </div>
           </div>
         </div>
