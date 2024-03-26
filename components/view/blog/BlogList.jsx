@@ -89,7 +89,7 @@ export default function BlogList({
           {Array.from({ length: 3 }).map((_, i) => {
             return (
               <div className="space-y-5 mb-16" key={i}>
-                <div className="w-full h-80 bg-gray-300 animate-pulse mt-5"></div>
+                <div className="w-full h-48 md:h-64 lg:h-80 bg-gray-300 animate-pulse mt-5"></div>
                 <div className="h-5 w-2/4 bg-gray-300 animate-pulse"></div>
                 <div className="h-5 w-full bg-gray-300 animate-pulse"></div>
                 <div className="h-5 w-full bg-gray-300 animate-pulse"></div>
