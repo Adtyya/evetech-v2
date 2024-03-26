@@ -40,9 +40,22 @@ export default function BlogList({
     params ? getPostByQuery() : setSearchResult([]);
   }, [params]);
 
+  function incrementView(id, currentView) {
+    const view = Number(currentView);
+    try {
+      api.put(`/posts/${id}`, {
+        data: {
+          views: view + 1,
+        },
+      });
+    } catch (error) {
+      throw new Error("An error occured while update view");
+    }
+  }
+
   return (
     <Container className="py-12">
-      <div className="h-32"></div>
+      <div className="h-16 lg:h-32"></div>
       <div>
         <Heading variant="h2" className="text-btn-primary font-bold capitalize">
           <span className="text-btn-blue">Explore</span> <br /> our latest
@@ -97,7 +110,12 @@ export default function BlogList({
           <div className="grid grid-cols-1 py-7 gap-5">
             {searchResult.map((item, idx) => {
               return (
-                <div key={idx}>
+                <div
+                  key={idx}
+                  onClick={() =>
+                    incrementView(item?.id, item?.attributes?.views)
+                  }
+                >
                   <Link href={`/blog/read/${item?.attributes?.slug}`}>
                     <HighlightedCard
                       image={item?.attributes?.cover?.data?.attributes?.url}
@@ -128,7 +146,12 @@ export default function BlogList({
               <div className="hidden md:block md:col-span-8">
                 {featuresPosts.slice(0, 1).map((item, idx) => {
                   return (
-                    <div key={idx}>
+                    <div
+                      key={idx}
+                      onClick={() =>
+                        incrementView(item?.id, item?.attributes?.views)
+                      }
+                    >
                       <Link href={`/blog/read/${item?.attributes?.slug}`}>
                         <HighlightedCard
                           image={item?.attributes?.cover?.data?.attributes?.url}
@@ -149,7 +172,12 @@ export default function BlogList({
               <div className="hidden md:col-span-4 gap-5 md:grid grid-cols-1 w-full h-max">
                 {featuresPosts.slice(1).map((item, idx) => {
                   return (
-                    <div key={idx}>
+                    <div
+                      key={idx}
+                      onClick={() =>
+                        incrementView(item?.id, item?.attributes?.views)
+                      }
+                    >
                       <Link href={`/blog/read/${item?.attributes?.slug}`}>
                         <SimpleCard
                           key={idx}
@@ -165,7 +193,12 @@ export default function BlogList({
               <div className="grid grid-cols-1 gap-5 md:hidden">
                 {featuresPosts.map((item, idx) => {
                   return (
-                    <div key={idx}>
+                    <div
+                      key={idx}
+                      onClick={() =>
+                        incrementView(item?.id, item?.attributes?.views)
+                      }
+                    >
                       <Link href={`/blog/read/${item?.attributes?.slug}`}>
                         <HighlightedCard
                           key={idx}
@@ -193,7 +226,12 @@ export default function BlogList({
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-7 gap-5">
               {topPosts.map((item, idx) => {
                 return (
-                  <div key={idx}>
+                  <div
+                    key={idx}
+                    onClick={() =>
+                      incrementView(item?.id, item?.attributes?.views)
+                    }
+                  >
                     <Link href={`/blog/read/${item?.attributes?.slug}`}>
                       <HighlightedCard
                         key={idx}
@@ -220,7 +258,12 @@ export default function BlogList({
             <div className="grid grid-cols-1 py-7 gap-5">
               {latestPosts.map((item, idx) => {
                 return (
-                  <div key={idx}>
+                  <div
+                    key={idx}
+                    onClick={() =>
+                      incrementView(item?.id, item?.attributes?.views)
+                    }
+                  >
                     <Link href={`/blog/read/${item?.attributes?.slug}`}>
                       <HighlightedCard
                         key={idx}

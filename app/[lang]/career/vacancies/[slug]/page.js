@@ -57,7 +57,7 @@ export default async function DetailVacancies({ params }) {
 
   return (
     <>
-      <div className="h-32"></div>
+      <div className="h-16 lg:h-32"></div>
       <DetailVacanciesTop content={detailVacancies}></DetailVacanciesTop>
       <OtherVacancies listOther={othervacancies ?? []}></OtherVacancies>
     </>

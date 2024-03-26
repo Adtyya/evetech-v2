@@ -13,18 +13,20 @@ import moment from "moment";
 import { slugify } from "@/utils/slugify";
 
 export default function Read({ detailPost, otherPosts }) {
-  console.log(detailPost);
-
   return (
     <Container className="py-12">
-      <div className="h-32"></div>
+      <div className="h-16 lg:h-32"></div>
       <Link href="/blog">
         <ButtonWhite>Back</ButtonWhite>
       </Link>
       <div className="my-7 flex items-center justify-center flex-col space-y-7">
-        <div className="flex space-x-3 flex-wrap">
+        <div className="flex flex-wrap items-center justify-center">
           {detailPost?.attributes?.tags?.data?.map((item, i) => {
-            return <Tag key={i}>{item?.attributes?.name}</Tag>;
+            return (
+              <div key={i} className="mr-2 mb-2">
+                <Tag>{item?.attributes?.name}</Tag>
+              </div>
+            );
           })}
         </div>
         <h1 className="text-btn-primary font-bold text-center text-3xl md:text-4xl lg:text-5xl max-w-4xl">
