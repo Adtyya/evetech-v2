@@ -46,6 +46,28 @@ const listDummy = [
     twoColumns: true,
     thumbnail: "/images/videofallback/j.png",
   },
+  {
+    videoPath: "/videos/projects/Everest.webm",
+    title: "Everest",
+    category: "POS Restaurant",
+    subtitle:
+      "Juragan Material website is used to integrate all company resources, such as customer data, sales order data, purchase order management, and business monitoring through a dashboard.",
+    tag: [{ name: "Web Development" }, { name: "Web Application" }],
+    rtl: false,
+    twoColumns: false,
+    thumbnail: "/images/videofallback/e.svg",
+  },
+  {
+    videoPath: "/videos/projects/Educare.webm",
+    title: "Educare",
+    category: "Mobile App",
+    subtitle:
+      "Juragan Material website is used to integrate all company resources, such as customer data, sales order data, purchase order management, and business monitoring through a dashboard.",
+    tag: [{ name: "Mobile App" }],
+    rtl: false,
+    twoColumns: false,
+    thumbnail: "/images/videofallback/Educare.svg",
+  },
 ];
 
 export default function ListProjects() {

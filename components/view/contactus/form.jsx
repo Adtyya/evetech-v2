@@ -170,7 +170,7 @@ function FormLeftSide() {
             className="rounded-2xl w-full h-96"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-          <p className="text-eve-key-features font-bold text-xl">Our Office</p>
+          <p className="text-eve-key-features font-bold text-xl">Our Offices</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {officeLocation.map((item, idx) => {
               return (
