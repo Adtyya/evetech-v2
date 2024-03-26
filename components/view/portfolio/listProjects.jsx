@@ -1,5 +1,6 @@
 "use client";
 import Container from "@/components/box/container";
+import { useTranslations } from "next-intl";
 
 const listDummy = [
   {
@@ -93,6 +94,8 @@ const listDummy = [
 ];
 
 export default function ListProjects() {
+  const t = useTranslations("Portfolio");
+
   return (
     <Container className="py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -104,7 +107,7 @@ export default function ListProjects() {
                 videoPath={item.videoPath}
                 title={item.title}
                 category={item.category}
-                subtitle={item.subtitle}
+                subtitle={t(`${index + 1}.subtitle`)}
                 tag={item.tag}
                 rtl={item.rtl}
                 twoColumns={item.twoColumns}

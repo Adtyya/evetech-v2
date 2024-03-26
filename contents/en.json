@@ -494,5 +494,35 @@
         }
       }
     }
+  },
+  "Portfolio": {
+    "title": "Helping Clients Make Innovation Real",
+    "subtitle": "We are committed to providing the best customer service as we focus on innovative and effective information technology solutions",
+    "countreview": "20+ Positive",
+    "fromthem": "Review from Them",
+    "1": {
+      "subtitle": "Downtowndinner.id is a landing page regarding restaurant information, menus, contacts to online orders (delivery orders) so that customers who want to order food for take away do not need to come directly to the restaurant."
+    },
+    "2": {
+      "subtitle": "Pelangi Laundry provides online laundry services, where customers do not need to come to the laundry outlet in person. Customers only need to access the Pelangi Laundry website to use laundry services, which later Pelangi Laundry employees will go to the customer's location according to the location data that has been input by the customer before."
+    },
+    "3": {
+      "subtitle": "sanwooelectronics.com displays cooler and freezer products along with details that will make it easier for Sanwoo Electronics to reach its customers. This website also contains contact details for Sanwoo Electronics which can make it easier for customers."
+    },
+    "4": {
+      "subtitle": "Juragan Material website is used to integrate all company resources, such as customer data, sales order data, purchase order management, and business monitoring through a dashboard."
+    },
+    "5": {
+      "subtitle": "Application for restaurant cashiers, which includes cms to manage what products are sold as well as incoming order data from customers, if an order is entered the order data will also be entered into the kitchen or bar module so that the kitchen section only needs to see the monitor screen in the module kitchen section. contains any menu information that must be made."
+    },
+    "6": {
+      "subtitle": "Educare is an application developed specifically to simplify student attendance review, course bill payments, and teacher activity monitoring."
+    },
+    "7": {
+      "subtitle": "This is an ERP system, which is an integrated system used by companies to integrate all company resources, such as data on sales orders, purchase orders, inventory and history of incoming and outgoing stock."
+    },
+    "8": {
+      "subtitle": "Glamori is an app that facilitates shopping convenience with well-planned beauty treatments. It can make you feel and look more beautiful without any trouble."
+    }
   }
 }

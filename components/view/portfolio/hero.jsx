@@ -6,7 +6,7 @@ import { HiOutlineChevronDown } from "react-icons/hi";
 import { useTranslations } from "next-intl";
 
 export default function Hero() {
-  const t = useTranslations("MobileAppDev.section1");
+  const t = useTranslations("Portfolio");
 
   return (
     <div className="h-screen w-full relative">
@@ -27,20 +27,17 @@ export default function Hero() {
               variant="h1"
               className="font-bold text-white max-w-4xl w-full !leading-snug"
             >
-              Membantu Klien Mewujudkan Inovasi Menjadi Nyata
+              {t("title")}
               {/* {t.rich("title", {
                 span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
                 br: () => <br />,
               })} */}
             </Heading>
-            <p className="text-lg text-white mt-8">
+            <p className="text-lg text-white mt-8 max-w-xl">
               {/* {t.rich("subtitle", {
                 br: () => <br />,
               })} */}
-              Kami berkomitmen untuk memberikan layanan pelanggan yang terbaik{" "}
-              <br />
-              karena kami berfokus pada solusi teknologi informasi yang inovatif
-              dan efektif
+              {t("subtitle")}
             </p>
           </div>
           <div
@@ -52,10 +49,8 @@ export default function Hero() {
               <img src="/images/home/testimony.png" alt="testimony" />
             </div>
             <div className="text-white bg-cyan flex flex-col justify-center">
-              <p>20+ Positive</p>
-              <p>Review From them</p>
-              {/* <p>{t("countreview")}</p>
-              <p>{t("fromthem")}</p> */}
+              <p>{t("countreview")}</p>
+              <p>{t("fromthem")}</p>
             </div>
           </div>
           <div className="absolute bottom-20 w-full h-max block mx-auto lg:hidden">
@@ -68,10 +63,8 @@ export default function Hero() {
                 <img src="/images/home/testimony.png" alt="testimony" />
               </div>
               <div className="text-white">
-                <p>20+ Positive</p>
-                <p>Review From them</p>
-                {/* <p>{t("countreview")}</p>
-                <p>{t("fromthem")}</p> */}
+                <p>{t("countreview")}</p>
+                <p>{t("fromthem")}</p>
               </div>
             </div>
           </div>

@@ -494,5 +494,35 @@
         }
       }
     }
+  },
+  "Portfolio": {
+    "title": "Membantu Klien Mewujudkan Inovasi Menjadi Nyata",
+    "subtitle": "Kami berkomitmen untuk memberikan layanan pelanggan yang terbaik karena kami berfokus pada solusi teknologi informasi yang inovatif dan efektif",
+    "countreview": "20+ Positif",
+    "fromthem": "Ulasan dari Mereka",
+    "1": {
+      "subtitle": "Downtowndinner.id merupakan landing page mengenai informasi restoran, menu, kontak hingga pemesanan online (delivery order) sehingga pelanggan yang ingin memesan makanan untuk dibawa pulang tidak perlu datang langsung ke restoran."
+    },
+    "2": {
+      "subtitle": "Pelangi Laundry menyediakan layanan laundry online, dimana pelanggan tidak perlu datang langsung ke outlet laundry. Pelanggan hanya perlu mengakses website Pelangi Laundry untuk menggunakan layanan laundry yang nantinya karyawan Pelangi Laundry akan menuju lokasi pelanggan sesuai dengan data lokasi yang telah diinput oleh pelanggan sebelumnya."
+    },
+    "3": {
+      "subtitle": "sanwooelectronics.com menampilkan produk pendingin dan freezer beserta detailnya yang akan memudahkan Sanwoo Electronics menjangkau pelanggannya. Website ini juga memuat detail kontak Sanwoo Electronics yang dapat memudahkan pelanggan."
+    },
+    "4": {
+      "subtitle": "Website Juragan Material digunakan untuk mengintegrasikan seluruh sumber daya perusahaan, seperti data pelanggan, data pesanan penjualan, pengelolaan pesanan pembelian, dan pemantauan bisnis melalui dashboard."
+    },
+    "5": {
+      "subtitle": "Aplikasi untuk kasir restoran, yang didalamnya terdapat cms untuk mengelola produk apa saja yang dijual serta data pesanan yang masuk dari pelanggan, jika ada pesanan yang masuk maka data pesanan tersebut juga akan masuk ke dalam modul kitchen atau bar sehingga bagian kitchen hanya perlu melihat layar monitor yang ada di dalam modul bagian kitchen yang berisikan informasi menu apa saja yang harus di buat."
+    },
+    "6": {
+      "subtitle": "Educare adalah aplikasi yang dikembangkan secara khusus untuk menyederhanakan peninjauan kehadiran siswa, pembayaran tagihan kursus, dan pemantauan aktivitas guru."
+    },
+    "7": {
+      "subtitle": "Ini adalah sistem ERP, yang merupakan sistem terintegrasi yang digunakan oleh perusahaan untuk mengintegrasikan semua sumber daya perusahaan, seperti data pesanan penjualan, pesanan pembelian, inventaris, dan riwayat stok yang masuk dan keluar."
+    },
+    "8": {
+      "subtitle": "Glamori merupakan aplikasi yang memfasilitasi kenyamanan berbelanja dengan perawatan kecantikan yang terencana dengan baik. Hal ini dapat membuat Anda merasa dan terlihat lebih cantik tanpa masalah."
+    }
   }
 }
