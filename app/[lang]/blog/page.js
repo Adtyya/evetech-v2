@@ -7,7 +7,7 @@ export const revalidate = 84000;
 
 async function getLatestsAndFeatures() {
   const res = await api.get(
-    "/posts?populate=*&sort=createdAt:desc&pagination[page]=1&pagination[pageSize]=30"
+    "/posts?populate=*&sort=createdAt:desc&pagination[page]=1&pagination[pageSize]=45"
   );
   return res.data;
 }
