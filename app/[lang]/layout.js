@@ -7,17 +7,14 @@ import { NextIntlClientProvider, useMessages } from "next-intl";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Evetech: Software House Semarang & Jakarta",
-  description:
-    "Evetech Software House Semarang & Jakarta provides Custom Software & ERP Development, Web Development, Mobile App Development & Web Design in Indonesia and Malaysia.",
-  // icons: {
-  //   icon: "./favicon.ico",
-  // },
-  verification: {
-    google: "YeDPr9Oy1PD6fLQS5vg18h2wJwUmYjKT9WINun619ag",
-  },
-};
+// export const metadata = {
+//   title: "Evetech: Software House Semarang & Jakarta",
+//   description:
+//     "Evetech Software House Semarang & Jakarta provides Custom Software & ERP Development, Web Development, Mobile App Development & Web Design in Indonesia and Malaysia.",
+//   verification: {
+//     google: "YeDPr9Oy1PD6fLQS5vg18h2wJwUmYjKT9WINun619ag",
+//   },
+// };
 
 const locales = ["en", "id"];
 
@@ -37,6 +34,23 @@ export default function RootLayout({ children, params: { lang } }) {
           {children}
           <Footer></Footer>
         </NextIntlClientProvider>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="./apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="./favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="./favicon-16x16.png"
+        />
       </body>
       <GoogleAnalytics gaId="G-RFJ981P2V2" />
       <GoogleTagManager gtmId="GTM-WKQW34PH" />
