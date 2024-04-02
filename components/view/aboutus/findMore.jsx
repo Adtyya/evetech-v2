@@ -17,7 +17,14 @@ export default function FindMore() {
           membedakan kami. Bersiaplah untuk mengungkap semua yang perlu Anda
           ketahui untuk meningkatkan pengalaman Anda dengan Evetech.
         </p>
-        <ButtonPrimary className="px-5">Unduh Evetech Compro</ButtonPrimary>
+        <div>
+          <a
+            href="https://drive.usercontent.google.com/u/0/uc?id=1KAzenbj-bzLHsLBmyHWLjgrZaYIodM5r&export=download"
+            target="_blank"
+          >
+            <ButtonPrimary className="px-5">Unduh Evetech Compro</ButtonPrimary>
+          </a>
+        </div>
       </div>
     </Container>
   );
