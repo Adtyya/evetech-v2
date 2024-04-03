@@ -42,7 +42,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ReadBlog({ params: { lang, slug } }) {
-  unstable_setRequestLocale(lang);
+  unstable_setRequestLocale(lang || null);
 
   const detailPost = await getDetailPost(slug);
   const otherPosts = await getOtherPost(slug);
