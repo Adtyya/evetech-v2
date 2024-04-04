@@ -3,6 +3,7 @@ module.exports = {
   generateRobotsTxt: true,
   changefreq: "weekly",
   priority: 1,
+  exclude: ["/"],
   // alternateRefs: [
   //   {
   //     href: "https://evetechsolution.com/en",
