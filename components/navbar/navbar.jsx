@@ -92,14 +92,18 @@ export default function NavbarEvetech() {
   useEffect(() => {
     pathname.includes("/contact-us") ||
     pathname.includes("/career/vacancies") ||
-    pathname.includes("/blog")
+    pathname.includes("/blog") ||
+    pathname.includes("/tnc") ||
+    pathname.includes("/privacy")
       ? setIsScrolled(true)
       : setIsScrolled(false);
     const handleScroll = () => {
       if (
         pathname.includes("/contact-us") ||
         pathname.includes("/career/vacancies") ||
-        pathname.includes("/blog")
+        pathname.includes("/blog") ||
+        pathname.includes("/tnc") ||
+        pathname.includes("/privacy")
       ) {
         setIsScrolled(true);
       } else {
