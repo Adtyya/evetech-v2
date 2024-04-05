@@ -334,9 +334,13 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between text-white">
             <p>&copy; 2023 Evetech Solution. All right reserved</p>
             <div className="flex flex-wrap items-center justify-center mt-3 md:mt-0">
-              <button className="mr-5">Term of Service</button>
-              <button className="mr-5">Policy Service</button>
-              <button className="mr-5">Cookie Police</button>
+              <Link href="/tnc">
+                <button className="mr-5">Term of Service</button>
+              </Link>
+              <Link href="/privacy">
+                <button className="mr-5">Policy Service</button>
+              </Link>
+              {/* <button className="mr-5">Cookie Police</button> */}
             </div>
           </div>
         </Container>
