@@ -4,7 +4,6 @@ import Footer from "@/components/footer/footer";
 import NextTopLoader from "nextjs-toploader";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { NextIntlClientProvider, useMessages } from "next-intl";
-import Aggrements from "@/components/aggrements";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,7 +32,6 @@ export default function RootLayout({ children, params: { lang } }) {
         <NextIntlClientProvider messages={messages} locale={lang}>
           <NavbarEvetech></NavbarEvetech>
           {children}
-          <Aggrements></Aggrements>
           <Footer></Footer>
         </NextIntlClientProvider>
         <link

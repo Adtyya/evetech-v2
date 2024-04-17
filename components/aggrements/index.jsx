@@ -1,14 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 
 export default function Aggrements() {
   const t = useTranslations("Agreements");
-  const [isAggree, setIsAggree] = useState(
-    localStorage.getItem("userAggree") || null
-  );
+  const [isAggree, setIsAggree] = useState(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const key = localStorage.getItem("userAggree") || null;
+    setIsAggree(key);
+    setMounted(true);
+  }, []);
 
   function handleAggre() {
     localStorage.setItem("userAggree", 1);
@@ -17,7 +22,7 @@ export default function Aggrements() {
 
   return (
     <>
-      {isAggree !== 1 ? (
+      {mounted && Number(isAggree) !== 1 ? (
         <div class="fixed bottom-5 z-20 left-1/2 -translate-x-1/2 w-max bg-white border-eve-gray border rounded-xl p-2.5">
           <div className="w-full max-w-3xl text-sm">
             <p className="font-semibold pb-1">{t("title")}</p>

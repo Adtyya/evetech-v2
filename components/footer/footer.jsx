@@ -10,6 +10,7 @@ import Link from "next/link";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import Aggrements from "../aggrements";
 
 const socialIcon = [
   {
@@ -136,6 +137,7 @@ export default function Footer() {
 
   return (
     <div>
+      <Aggrements></Aggrements>
       <div className="w-full h-full bg-btn-white py-8">
         <Container>
           <div className="space-y-5">
