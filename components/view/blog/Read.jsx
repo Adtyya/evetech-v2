@@ -11,11 +11,7 @@ import Markdown from "react-markdown";
 import { SocialButton } from "../vacanciesdetail/detail";
 import moment from "moment";
 import { slugify } from "@/utils/slugify";
-import {
-  FacebookShareButton,
-  InstapaperShareButton,
-  TwitterShareButton,
-} from "react-share";
+import { FacebookShareButton, TwitterShareButton } from "react-share";
 
 export const BASE_URL = "https://evetechsolution.com/";
 

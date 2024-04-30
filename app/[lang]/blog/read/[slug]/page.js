@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
   return {
     metadataBase: new URL("https://evetechsolution.com/"),
     alternates: {
-      canonical: `/${params.lang ?? "en"}/career/vacancies/${
+      canonical: `/${params.lang ?? "en"}/blog/read/${
         detailPost?.attributes?.slug
       }`,
       languages: {
