@@ -84,7 +84,7 @@ export default function Hero() {
             <div
               data-aos="fade-up"
               data-aos-delay="150"
-              className=" lg:mt-20 mx-auto lg:mx-0 bg-eve-low-gray rounded-full backdrop-blur-sm w-max px-7 py-3 grid grid-cols-2"
+              className=" lg:mt-20 mx-auto lg:mx-0 bg-eve-low-gray rounded-full backdrop-blur-sm w-max px-5 py-3 grid grid-cols-2"
             >
               <div>
                 <img src="/images/home/testimony.png" alt="testimony" />

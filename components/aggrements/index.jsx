@@ -23,7 +23,7 @@ export default function Aggrements() {
   return (
     <>
       {mounted && Number(isAggree) !== 1 ? (
-        <div class="fixed bottom-1.5 lg:left-1.5 z-20 flex items-center justify-start w-full">
+        <div className="fixed bottom-1.5 lg:left-1.5 z-20 flex items-center justify-start w-full">
           <div className="w-full max-w-2xl bg-white border-eve-gray border rounded-xl p-2.5">
             <p className="font-semibold pb-1">{t("title")}</p>
             <p>
