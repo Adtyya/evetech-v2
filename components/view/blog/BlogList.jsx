@@ -28,7 +28,7 @@ export default function BlogList({
       try {
         setLoading(true);
         const res = await api.get(
-          `/posts?populate=*&filters[title][$contains]=${params}`
+          `/posts?populate=*&filters[title][$containsi]=${params}`
         );
         setSearchResult(res.data?.data);
       } catch (error) {

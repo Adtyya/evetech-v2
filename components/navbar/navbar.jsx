@@ -26,19 +26,19 @@ const navList = [
     subPath: [
       {
         name: "WebAppDev",
-        path: "/service/web-app-development",
+        path: "/services/web-app-development",
       },
       {
         name: "WebDev",
-        path: "/service/web-development",
+        path: "/services/web-development",
       },
       {
         name: "MobileAppDev",
-        path: "/service/mobile-app-development",
+        path: "/services/mobile-app-development",
       },
       {
         name: "NewsDev",
-        path: "/service/news-web-app-development",
+        path: "/services/news-web-app-development",
       },
     ],
   },

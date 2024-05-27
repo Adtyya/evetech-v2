@@ -54,19 +54,19 @@ const menu = [
     path: [
       {
         name: "web app development",
-        path: "/service/web-app-development",
+        path: "/services/web-app-development",
       },
       {
         name: "mobile app development",
-        path: "/service/mobile-app-development",
+        path: "/services/mobile-app-development",
       },
       {
         name: "web development",
-        path: "/service/web-development",
+        path: "/services/web-development",
       },
       {
         name: "news web development",
-        path: "/service/news-web-development",
+        path: "/services/news-web-development",
       },
     ],
   },
