@@ -538,5 +538,19 @@
     "content": "We use cookies and other tracking technologies to improve user experience and provide personalized services. By continuing to use this website, you consent to the use of cookies in accordance with our Cookie Policy. For details, please read our <a>Privacy Policy.</a>",
     "button": "Agree and continue",
     "navigation": "Privacy Policy"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Software House in Semarang - Evetech Solution",
+      "desc": "Discover innovative software solutions with Evetech Solution, the premier software house in Semarang. Your partner in digital transformation."
+    },
+    "portfolio": {
+      "title": "Portfolio - Evetech Solution",
+      "desc": "Explore our portfolio to see the innovative solutions we've developed. Discover why Evetech Solution is a trusted partner in software development."
+    },
+    "about": {
+      "title": "About Evetech Solution",
+      "desc": "Learn more about Evetech Solution, the leading software house in Semarang. Discover our mission, values, and team dedicated to your success."
+    }
   }
 }

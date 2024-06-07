@@ -538,5 +538,19 @@
     "content": "Kami menggunakan cookie dan teknologi pelacakan lainnya untuk meningkatkan pengalaman pengguna dan menyediakan layanan yang terpersonalisasi. Dengan melanjutkan penggunaan website ini, Anda menyetujui penggunaan cookie sesuai dengan Kebijakan Cookie kami. Selengkapnya, silakan baca <a>Kebijakan Privasi kami.</a>",
     "button": "setuju dan lanjutkan",
     "navigation": "kebijakan privasi"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Software House Semarang & Jakarta - Evetech Solution",
+      "desc": "Solusi untuk bisnis digital Anda dengan Evetech Solution, software house terbaik di Semarang. Optimalkan bisnis Anda dengan layanan kami yaitu aplikasi web & mobile hingga solusi enterprise."
+    },
+    "portfolio": {
+      "title": "Portofolio Kami - Evetech Solution",
+      "desc": "Jelajahi portofolio kami untuk melihat solusi inovatif yang telah kami kembangkan. Temukan mengapa Evetech Solution adalah mitra terpercaya dalam pengembangan software."
+    },
+    "about": {
+      "title": "Tentang Evetech Solution",
+      "desc": "Ketahui lebih banyak tentang Evetech Solution,  software house terbaik di Semarang."
+    }
   }
 }

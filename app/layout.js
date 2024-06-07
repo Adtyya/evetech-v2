@@ -4,9 +4,9 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 
 export const metadata = {
-  title: "Evetech: Software House Semarang & Jakarta",
+  title: "Software House in Semarang - Evetech Solution",
   description:
-    "Evetech Software House Semarang & Jakarta provides Custom Software & ERP Development, Web Development, Mobile App Development & Web Design in Indonesia and Malaysia.",
+    "Discover innovative software solutions with Evetech Solution, the premier software house in Semarang. Your partner in digital transformation.",
   // icons: {
   //   icon: "/favicon.ico",
   // },

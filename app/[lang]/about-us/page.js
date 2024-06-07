@@ -5,7 +5,16 @@ import Hero from "@/components/view/aboutus/hero";
 // import OurTeam from "@/components/view/aboutus/ourteam";
 import ProvideService from "@/components/view/aboutus/provideservice";
 import OurClient from "@/components/view/home/ourClient";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { unstable_setRequestLocale, getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params: { locale } }) {
+  const t = await getTranslations({ locale, namespace: "Metadata.about" });
+
+  return {
+    title: t("title"),
+    description: t("desc"),
+  };
+}
 
 export default function AboutUsPage({ params: { lang } }) {
   unstable_setRequestLocale(lang);
