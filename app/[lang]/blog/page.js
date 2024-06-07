@@ -3,7 +3,7 @@ import { unstable_setRequestLocale, getTranslations } from "next-intl/server";
 import api from "@/utils/axios";
 import { Suspense } from "react";
 
-export const revalidate = 84000;
+export const revalidate = 120;
 
 async function getLatestsAndFeatures() {
   const res = await api.get(
