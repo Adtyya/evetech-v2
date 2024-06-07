@@ -1,7 +1,16 @@
 import Container from "@/components/box/container";
 import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { unstable_setRequestLocale, getTranslations } from "next-intl/server";
 import Markdown from "react-markdown";
+
+export async function generateMetadata({ params: { locale } }) {
+  const t = await getTranslations({ locale, namespace: "Metadata.privacy" });
+
+  return {
+    title: t("title"),
+    description: t("desc"),
+  };
+}
 
 export default function PrivacyAndPolicy({ params: { lang } }) {
   unstable_setRequestLocale(lang);

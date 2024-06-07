@@ -1,5 +1,5 @@
 import BlogList from "@/components/view/blog/BlogList";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { unstable_setRequestLocale, getTranslations } from "next-intl/server";
 import api from "@/utils/axios";
 import { Suspense } from "react";
 
@@ -17,6 +17,15 @@ async function getTops() {
     "/posts?populate=*&sort=views:desc&pagination[page]=1&pagination[pageSize]=3"
   );
   return res.data;
+}
+
+export async function generateMetadata({ params: { locale } }) {
+  const t = await getTranslations({ locale, namespace: "Metadata.blog" });
+
+  return {
+    title: t("title"),
+    description: t("desc"),
+  };
 }
 
 export default async function BlogPage({ params: { lang } }) {

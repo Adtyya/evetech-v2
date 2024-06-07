@@ -6,7 +6,16 @@ import Hero from "@/components/view/newsdevelopment/hero";
 // import OurLatestProjects from "@/components/view/newsdevelopment/ourLatestProject";
 import OurLatestProjects from "@/components/view/home/ourLatestProject";
 import WhyChooseUs from "@/components/view/newsdevelopment/whyChooseUs";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { unstable_setRequestLocale, getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params: { locale } }) {
+  const t = await getTranslations({ locale, namespace: "Metadata.news" });
+
+  return {
+    title: t("title"),
+    description: t("desc"),
+  };
+}
 
 export default function NewsPage({ params: { lang } }) {
   unstable_setRequestLocale(lang);

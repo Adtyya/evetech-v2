@@ -551,6 +551,38 @@
     "about": {
       "title": "About Evetech Solution",
       "desc": "Learn more about Evetech Solution, the leading software house in Semarang. Discover our mission, values, and team dedicated to your success."
+    },
+    "contact": {
+      "title": "Contact Evetech Solution",
+      "desc": "Get in touch with Evetech Solution for your software needs. Contact us today to discuss your project and see how we can help."
+    },
+    "privacy": {
+      "title": "Privacy Policy Evetech Solution",
+      "desc": "Evetech Solution's privacy policy to understand how we handle your data. Your privacy and security are our top priorities."
+    },
+    "tnc": {
+      "title": "Term and Conditions - Evetech Solution",
+      "desc": "Read the terms and conditions of Evetech Solution before using our services. We provide the best software solutions to support your business success."
+    },
+    "webdev": {
+      "title": "Web Development Services - Evetech Solution",
+      "desc": "Transform your online presence with professional web development services from Evetech Solution. We create websites that drive results."
+    },
+    "webapp": {
+      "title": "Web App Development Services - Evetech Solution",
+      "desc": "Enhance your business with custom web app development from Evetech Solution. We build responsive, high-performance web applications."
+    },
+    "news": {
+      "title": "News Web App Development - Evetech Solution",
+      "desc": "Develop engaging news web apps with Evetech Solution. Our expertise ensures a seamless user experience and powerful functionality."
+    },
+    "mobile": {
+      "title": "Mobile App Development - Evetech Solution",
+      "desc": "Turn your ideas into reality with Evetech Solution’s expert mobile app development services. Create powerful and user-friendly mobile applications."
+    },
+    "blog": {
+      "title": "Evetech Solution Blog",
+      "desc": "Get the latest tech news, tips, and insights from the experts at Evetech Solution. Visit our blog for in-depth articles and updates."
     }
   }
 }
