@@ -3,7 +3,7 @@ import OurValues from "@/components/view/career/ourvalues";
 import RecentPositions from "@/components/view/career/recentpositions";
 import RecruitmentProcess from "@/components/view/career/recruitmentprocess";
 import api from "@/utils/axios";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { unstable_setRequestLocale, getTranslations } from "next-intl/server";
 import { Suspense } from "react";
 
 async function getRecentVacancies() {
@@ -14,7 +14,16 @@ async function getRecentVacancies() {
 }
 
 export const dynamic = "force-dynamic";
-export const revalidate = 3600;
+export const revalidate = 60;
+
+export async function generateMetadata({ params: { locale } }) {
+  const t = await getTranslations({ locale, namespace: "Metadata.career" });
+
+  return {
+    title: t("title"),
+    description: t("desc"),
+  };
+}
 
 export default async function CareerPage({ params: { lang } }) {
   const { data } = await getRecentVacancies();

@@ -1,7 +1,7 @@
 import Hero from "@/components/view/career/hero";
 import RecentOpenPosition from "@/components/view/listvacancies/recentopen";
 import api from "@/utils/axios";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { unstable_setRequestLocale, getTranslations } from "next-intl/server";
 
 async function getAllVacancies(position, location, workModel, page) {
   const queryParams = [
@@ -27,7 +27,19 @@ async function getAllVacancies(position, location, workModel, page) {
 }
 
 export const dynamic = "force-dynamic";
-export const revalidate = 3600;
+export const revalidate = 60;
+
+export async function generateMetadata({ params: { locale } }) {
+  const t = await getTranslations({
+    locale,
+    namespace: "Metadata.listvacancies",
+  });
+
+  return {
+    title: t("title"),
+    description: t("desc"),
+  };
+}
 
 export default async function ListVacanciesPage({
   params: { lang },

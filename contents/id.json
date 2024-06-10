@@ -583,6 +583,14 @@
     "blog": {
       "title": "Evetech Solution Blog",
       "desc": "Get the latest tech news, tips, and insights from the experts at Evetech Solution. Visit our blog for in-depth articles and updates."
+    },
+    "listvacancies": {
+      "title": "Lowongan Kerja di Evetech Solution",
+      "desc": "Lihat daftar lowongan kerja terbaru di Evetech Solution. Temukan posisi yang sesuai dengan keahlian Anda dan bergabunglah dengan tim kami."
+    },
+    "career": {
+      "title": "Karir di Evetech Solution",
+      "desc": "Jelajahi peluang karir di Evetech Solution. Bergabunglah dengan tim kami dan kembangkan karir Anda di perusahaan teknologi terbaik di Semarang."
     }
   }
 }
