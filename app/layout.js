@@ -32,6 +32,7 @@ export const metadata = {
   verification: {
     google: "YeDPr9Oy1PD6fLQS5vg18h2wJwUmYjKT9WINun619ag",
   },
+  robots: "index,follow",
 };
 
 export default function RootLayout({ children }) {
