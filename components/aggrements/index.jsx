@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
+import { ButtonLightBlue, ButtonPrimary } from "../button/button";
 
 export default function Aggrements() {
   const t = useTranslations("Agreements");
@@ -35,13 +36,18 @@ export default function Aggrements() {
                 ),
               })}
             </p>
-            <div className="flex pt-1.5 space-x-3.5">
-              <button className="hover:underline" onClick={handleAggre}>
+            <div className="flex items-center pt-2.5 space-x-3.5">
+              <ButtonLightBlue
+                className="capitalize !font-normal"
+                onClick={handleAggre}
+              >
                 {t("button")}
-              </button>
-              <Link href="/privacy" className="hover:underline">
-                {t("navigation")}
-              </Link>
+              </ButtonLightBlue>
+              <ButtonPrimary>
+                <Link href="/privacy" className="!font-normal capitalize">
+                  {t("navigation")}
+                </Link>
+              </ButtonPrimary>
             </div>
           </div>
         </div>
