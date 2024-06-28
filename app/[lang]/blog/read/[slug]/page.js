@@ -32,7 +32,7 @@ export async function generateMetadata({ params }) {
       },
     },
     title: `${detailPost?.attributes?.title} - Evetech Solution`,
-    description: detailPost?.attributes?.metaDescription,
+    description: detailPost?.attributes?.description ,
     openGraph: {
       images:
         detailPost?.attributes?.cover?.data?.attributes?.url ??
