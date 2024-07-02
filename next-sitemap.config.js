@@ -7,52 +7,33 @@ module.exports = {
   exclude: ["/", "/server-sitemap.xml"],
   robotsTxtOptions: {
     additionalSitemaps: [
-      `https://${
-        process.env.NEXT_APP_URL || "evetechsolution.com"
+      `https://${process.env.NEXT_APP_URL || "evetechsolution.com"
       }/server-sitemap.xml`,
     ],
   },
-  // Opsi untuk mengatur locale paths
-  // alternateRefs: [
-  //   {
-  //     hrefLang: "en",
-  //     href: "https://evetechsolution.com/en",
-  //   },
-  //   {
-  //     hrefLang: "id",
-  //     href: "https://evetechsolution.com/id",
-  //   },
-  // ],
-  // transform: async (config, path) => {
-  //   const paths = [];
+  // Define custom routes with different priorities
+  transform: async (config, path) => {
+    if (path === '/') {
+      return {
+        loc: path,
+        changefreq: 'daily',
+        priority: 1.0,
+      }
+    }
 
-  //   const locales = ["en", "id"]; // Ganti dengan daftar locales Anda
-  //   locales.forEach((locale) => {
-  //     if (locale === config.defaultLocale) {
-  //       paths.push({
-  //         loc: path,
-  //         changefreq: config.changefreq,
-  //         priority: config.priority,
-  //         lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
-  //         alternateRefs: config.alternateRefs.map((ref) => ({
-  //           ...ref,
-  //           href: ref.href.replace("/" + locale, ""),
-  //         })),
-  //       });
-  //     } else {
-  //       paths.push({
-  //         loc: `/${locale}${path}`,
-  //         changefreq: config.changefreq,
-  //         priority: config.priority,
-  //         lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
-  //         alternateRefs: config.alternateRefs.map((ref) => ({
-  //           ...ref,
-  //           href: `/${locale}${ref.href}`,
-  //         })),
-  //       });
-  //     }
-  //   });
+    if (path.startsWith('/blog')) {
+      return {
+        loc: path,
+        changefreq: 'daily',
+        priority: 0.6,
+      }
+    }
 
-  //   return paths;
-  // },
+    // Default transformation
+    return {
+      loc: path,
+      changefreq: config.changefreq,
+      priority: config.priority,
+    }
+  }
 };
