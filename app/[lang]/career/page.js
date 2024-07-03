@@ -22,6 +22,9 @@ export async function generateMetadata({ params: { locale } }) {
   return {
     title: t("title"),
     description: t("desc"),
+    alternates: {
+      canonical: "https://evetechsolution.com/career",
+    },
   };
 }
 

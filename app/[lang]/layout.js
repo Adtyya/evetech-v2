@@ -16,6 +16,12 @@ const inter = Inter({ subsets: ["latin"] });
 //   },
 // };
 
+export const metadata = {
+  alternates: {
+    canonical: "https://evetechsolution.com",
+  },
+};
+
 const locales = ["en", "id"];
 
 export function generateStaticParams() {
