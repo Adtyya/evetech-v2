@@ -14,7 +14,20 @@ export default function OurAgile() {
   return (
     <div className="py-12">
       <Container>
-        <div className="sticky top-[10rem]">
+        <div className="sticky hidden lg:block top-[10rem]">
+          <Heading
+            variant="h2"
+            className="text-btn-primary font-bold text-center"
+          >
+            {t("title")}
+          </Heading>
+          <div className="flex items-center justify-center">
+            <p className="mt-1.5 text-eve-gray text-center w-full max-w-2xl">
+              {t("subtitle")}
+            </p>
+          </div>
+        </div>
+        <div className="lg:hidden block">
           <Heading
             variant="h2"
             className="text-btn-primary font-bold text-center"
