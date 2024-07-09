@@ -30,9 +30,9 @@ export default function WrapWithAOS() {
       <OurProducts></OurProducts>
       <KeyFeatures></KeyFeatures>
       <SoftwareDevelopmentIndustry></SoftwareDevelopmentIndustry>
+      <OurLatestProjects></OurLatestProjects>
       <OurClient></OurClient>
       <TechnologySet></TechnologySet>
-      <OurLatestProjects></OurLatestProjects>
       {/* <Blog></Blog> */}
     </>
   );
