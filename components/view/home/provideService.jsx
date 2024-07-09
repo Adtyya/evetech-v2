@@ -19,7 +19,7 @@ const stat = [
     sub: "reviews",
   },
   {
-    number: "2",
+    number: "4",
     sub: "exp",
   },
 ];

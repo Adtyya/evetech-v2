@@ -11,6 +11,7 @@ import Heading from "@/components/text/heading";
 import { ButtonLightBlue } from "@/components/button/button";
 import emailjs from "@emailjs/browser";
 import { useTranslations } from "next-intl";
+import { countryCodes } from "../contactus/country";
 
 export default function ReadyToMeet() {
   const t = useTranslations("Form");
@@ -75,15 +76,19 @@ export default function ReadyToMeet() {
               type="email"
             ></InputWithLabel>
             <div className="flex space-x-5">
-              <div className="w-1/4">
+              <div className="w-2/4">
                 <InputSelect
                   label={t("input.phone")}
                   onChange={(even) => setCountryCode(even.target.value)}
                   required={false}
                 >
-                  <option value="62">+62</option>
-                  <option value="60">+60</option>
-                  <option value="65">+65</option>
+                  {countryCodes.map((item, index) => {
+                    return (
+                      <option key={index} value={item.code}>
+                        +{item.code} - {item.name}
+                      </option>
+                    );
+                  })}
                 </InputSelect>
               </div>
               <div className="w-3/4">

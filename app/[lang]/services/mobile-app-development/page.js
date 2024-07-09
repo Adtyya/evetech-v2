@@ -24,7 +24,7 @@ export default function MobileAppDevelopment({ params: { lang } }) {
     <>
       <Hero></Hero>
       <Portofolio></Portofolio>
-      <OurAgile></OurAgile>
+      {/* <OurAgile></OurAgile> */}
       <SoftwareDevelopmentIndustry></SoftwareDevelopmentIndustry>
       <ReadyToMeet></ReadyToMeet>
       <FAQ></FAQ>

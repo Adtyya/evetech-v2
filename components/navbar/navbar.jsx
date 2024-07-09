@@ -312,7 +312,7 @@ export default function NavbarEvetech() {
 
               <Link href="/contact-us">
                 <ButtonPrimary className="whitespace-nowrap">
-                  Get Started!
+                  Get Free Consultation
                 </ButtonPrimary>
               </Link>
             </div>

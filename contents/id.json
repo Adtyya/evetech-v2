@@ -131,8 +131,8 @@
   },
   "HomePage": {
     "section1": {
-      "custom": "Pengembangan Perangkat Lunak",
-      "software": "Kustom",
+      "custom": "Pengembangan Software",
+      "software": "Custom",
       "webapp": "Aplikasi Web",
       "mobileapp": "Aplikasi Mobile",
       "development": "",
@@ -475,7 +475,7 @@
   "ContactUs": {
     "title": "Dapatkan Konsultasi Gratis dengan <br></br> <span>Konsultan IT Kami!</span>",
     "subtitle": "Punya pertanyaan tentang harga, paket, atau layanan? Isi formulir dan kami akan menghubungi Anda secara langsung",
-    "rtm": "Siap Bertemu Dan <span>Diskusikan Kebutuhanmu ?</span>",
+    "rtm": "Atau bisa juga menghubungi kami untuk <span>mendiskusikan kebutuhanmu melalui whatsapp</span>",
     "form": {
       "title": "Beri tahu kami tentang Anda",
       "subtitle": "Isi formulir dan kami akan segera menghubungi Anda.",

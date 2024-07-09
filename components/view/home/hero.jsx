@@ -42,7 +42,7 @@ export default function Hero() {
             </Heading>
             <Heading variant="h5" className="font-bold text-white">
               <span>
-                {t("custom")}{" "}
+                {t("custom")} <br />
                 <TextTransition
                   className="text-btn-blue"
                   inline

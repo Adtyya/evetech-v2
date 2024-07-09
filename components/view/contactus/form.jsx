@@ -226,7 +226,7 @@ function FormLeftSide() {
         </div>
         <div className="bg-eve-white rounded-2xl p-5 space-y-3.5">
           <Heading
-            variant="h3"
+            variant="h4"
             className="text-btn-primary font-bold capitalize"
           >
             {t.rich("rtm", {

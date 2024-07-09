@@ -22,7 +22,7 @@ export default function TimeToMakeChange() {
             </Heading>
           </div>
           <div className="flex justify-normal lg:justify-end">
-            <p data-aos="fade-up" className="text-white max-w-xs">
+            <p data-aos="fade-up" className="text-xl text-white max-w-xs">
               {t("subtitle")}
             </p>
           </div>
