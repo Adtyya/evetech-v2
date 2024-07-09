@@ -6,7 +6,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import Logo from "./logo";
 import Link from "next/link";
 import { FiX } from "react-icons/fi";
-import { ButtonPrimary, ButtonWhite } from "../button/button";
+import { ButtonLightBlue, ButtonPrimary, ButtonWhite } from "../button/button";
 import { useTranslations, useLocale } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { useTransition } from "react";
@@ -311,9 +311,9 @@ export default function NavbarEvetech() {
               </div>
 
               <Link href="/contact-us">
-                <ButtonPrimary className="whitespace-nowrap">
+                <ButtonLightBlue className="whitespace-nowrap">
                   Get Free Consultation
-                </ButtonPrimary>
+                </ButtonLightBlue>
               </Link>
             </div>
           </nav>

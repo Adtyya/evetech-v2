@@ -78,7 +78,7 @@ export default function ReadyToMeet() {
             <div className="flex flex-col lg:flex-row lg:space-x-5">
               <div className="w-full lg:w-2/4">
                 <InputSelect
-                  label={t("form.input.phone")}
+                  label={t("input.phone")}
                   onChange={(even) => setCountryCode(even.target.value)}
                   required={false}
                 >
