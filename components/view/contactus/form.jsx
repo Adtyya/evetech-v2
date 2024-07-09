@@ -13,6 +13,7 @@ import { officeLocation } from "@/components/footer/footer";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import { useTranslations } from "next-intl";
+import { countryCodes } from "./country";
 
 export default function ContactUsForm() {
   const emailRef = useRef(null);
@@ -87,18 +88,22 @@ export default function ContactUsForm() {
                 type="email"
               ></InputWithLabel>
               <div className="flex space-x-5">
-                <div className="w-1/4">
+                <div className="w-2/4">
                   <InputSelect
                     label={t("form.input.phone")}
                     onChange={(even) => setCountryCode(even.target.value)}
                     required={false}
                   >
-                    <option value="62">+62</option>
-                    <option value="60">+60</option>
-                    <option value="65">+65</option>
+                    {countryCodes.map((item, index) => {
+                      return (
+                        <option key={index} value={item.code}>
+                          +{item.code} - {item.name}
+                        </option>
+                      );
+                    })}
                   </InputSelect>
                 </div>
-                <div className="w-3/4">
+                <div className="w-2/4">
                   <InputInvisibleLabel
                     placeholder="xxxxxxxx"
                     onChange={(event) => setUserNumber(event.target.value)}
@@ -161,7 +166,7 @@ function FormLeftSide() {
   return (
     <div className="w-full">
       <div className="w-full grid grid-cols-1 gap-5">
-        <div className="order-last lg:order-first space-y-5">
+        {/* <div className="order-last lg:order-first space-y-5">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.762135792769!2d110.79308907574776!3d-7.6008453751225495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15ea9357f0ff%3A0x3f19000078705279!2sEvetech%20Solution!5e0!3m2!1sid!2sid!4v1709105712667!5m2!1sid!2sid"
             style={{ border: 0 }}
@@ -205,6 +210,19 @@ function FormLeftSide() {
               );
             })}
           </div>
+        </div> */}
+        <div>
+          <Heading
+            variant="h3"
+            className="font-bold capitalize text-btn-primary"
+          >
+            Talk to our <br />
+            <span className="text-btn-blue">Product Analytics Expert</span>
+          </Heading>
+          <p className="text-eve-gray">
+            Have questions about pricing, plans, or growthly? Fill out form and
+            our product analytics expert will be in touch directly.
+          </p>
         </div>
         <div className="bg-eve-white rounded-2xl p-5 space-y-3.5">
           <Heading
