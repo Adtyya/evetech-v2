@@ -87,8 +87,8 @@ export default function ContactUsForm() {
                 label={t("form.input.email")}
                 type="email"
               ></InputWithLabel>
-              <div className="flex space-x-5">
-                <div className="w-2/4">
+              <div className="flex flex-col lg:flex-row lg:space-x-5">
+                <div className="w-full lg:w-2/4">
                   <InputSelect
                     label={t("form.input.phone")}
                     onChange={(even) => setCountryCode(even.target.value)}
@@ -103,7 +103,7 @@ export default function ContactUsForm() {
                     })}
                   </InputSelect>
                 </div>
-                <div className="w-2/4">
+                <div className="w-full lg:w-2/4">
                   <InputInvisibleLabel
                     placeholder="xxxxxxxx"
                     onChange={(event) => setUserNumber(event.target.value)}

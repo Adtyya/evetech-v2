@@ -44,7 +44,8 @@ function InputSelect({
 function InputInvisibleLabel({ ...props }) {
   return (
     <div className="flex flex-col space-y-2.5">
-      <label className="text-transparent">iam supposed to be transparent</label>
+      {/* <label className="text-transparent">iam supposed to be transparent</label> */}
+      <div className="h-1"></div>
       <input
         className="focus:outline-none py-2.5 px-3 rounded-xl border-2 border-transparent focus:border-border-gray"
         {...props}

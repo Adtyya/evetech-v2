@@ -75,10 +75,10 @@ export default function ReadyToMeet() {
               label={t("input.email")}
               type="email"
             ></InputWithLabel>
-            <div className="flex space-x-5">
-              <div className="w-2/4">
+            <div className="flex flex-col lg:flex-row lg:space-x-5">
+              <div className="w-full lg:w-2/4">
                 <InputSelect
-                  label={t("input.phone")}
+                  label={t("form.input.phone")}
                   onChange={(even) => setCountryCode(even.target.value)}
                   required={false}
                 >
@@ -91,7 +91,7 @@ export default function ReadyToMeet() {
                   })}
                 </InputSelect>
               </div>
-              <div className="w-3/4">
+              <div className="w-full lg:w-2/4">
                 <InputInvisibleLabel
                   placeholder="xxxxxxxx"
                   onChange={(event) => setUserNumber(event.target.value)}

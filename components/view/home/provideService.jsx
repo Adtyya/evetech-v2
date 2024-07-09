@@ -8,24 +8,24 @@ import { ButtonPrimary } from "@/components/button/button";
 import CountUp from "react-countup";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-
-const stat = [
-  {
-    number: "106",
-    sub: "clients",
-  },
-  {
-    number: "102",
-    sub: "reviews",
-  },
-  {
-    number: "4",
-    sub: "exp",
-  },
-];
+import { useEffect, useState } from "react";
 
 export default function ProvideService() {
   const t = useTranslations("HomePage.section2");
+  const [stat, _] = useState([
+    {
+      number: "106",
+      sub: "clients",
+    },
+    {
+      number: "102",
+      sub: "reviews",
+    },
+    {
+      number: new Date().getFullYear() - 2020,
+      sub: "exp",
+    },
+  ]);
 
   return (
     <Container className="my-14">
