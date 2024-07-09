@@ -4,9 +4,9 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 
 export const metadata = {
-  title: "Software House in Semarang - Evetech Solution",
+  title: "Custom Software Development | Mobile App and Web Development",
   description:
-    "Discover innovative software solutions with Evetech Solution, the premier software house in Semarang. Your partner in digital transformation.",
+    "Tailored custom software solution that aligns seamlessly with your unique operational needs. Evetech Solution your partner in digital transformation.",
   // icons: {
   //   icon: "/favicon.ico",
   // },
@@ -32,7 +32,10 @@ export const metadata = {
   verification: {
     google: "YeDPr9Oy1PD6fLQS5vg18h2wJwUmYjKT9WINun619ag",
   },
-  robots: "index,follow",
+  robots: {
+    index: true,
+    follow: true
+  }
 };
 
 export default function RootLayout({ children }) {
