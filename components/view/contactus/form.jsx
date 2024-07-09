@@ -59,7 +59,7 @@ export default function ContactUsForm() {
           </Heading>
           <p className="text-eve-gray mt-1.5">{t("subtitle")}</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 my-14 gap-5">
+        <div className="grid grid-cols-1 items-center md:grid-cols-2 my-14 gap-5">
           <FormLeftSide></FormLeftSide>
           <div className="order-first lg:order-last">
             <form
