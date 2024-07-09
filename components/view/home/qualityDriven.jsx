@@ -39,12 +39,12 @@ export default function QualityDriven() {
   );
 }
 
-function CardQualityDriven({ title, content, icon, isEven, index }) {
+export function CardQualityDriven({ title, content, icon, isEven, index }) {
   return (
     <div
       className={`grid grid-cols-12 gap-3 ${
         isEven ? "bg-eve-white" : "bg-btn-white"
-      } py-5 pr-5 rounded-2xl lg:sticky w-full h-max`}
+      } py-5 pr-5 rounded-2xl lg:sticky w-full h-max border border-[#DADEE3]`}
       style={{ top: `${11 + index}rem` }}
     >
       <div className="col-span-2 flex justify-center items-start">

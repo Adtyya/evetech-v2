@@ -5,6 +5,7 @@ import { ButtonPrimary } from "@/components/button/button";
 import Link from "next/link";
 import { content } from "./content";
 import { useTranslations } from "next-intl";
+import { CardQualityDriven } from "../home/qualityDriven";
 
 export default function BePartOfSomethingBig() {
   const t = useTranslations("AboutUs.section4");
@@ -48,27 +49,6 @@ export default function BePartOfSomethingBig() {
           })}
         </div>
       </Container>
-    </div>
-  );
-}
-
-function CardQualityDriven({ title, content, icon, isEven, index }) {
-  return (
-    <div
-      className={`grid grid-cols-12 gap-3 ${
-        isEven ? "bg-eve-white" : "bg-btn-white"
-      } py-5 pr-5 rounded-2xl lg:sticky w-full h-max`}
-      style={{ top: `${11 + index}rem` }}
-    >
-      <div className="col-span-2 flex justify-center items-start">
-        <Image src={icon} alt={title} width={40} height={40} />
-      </div>
-      <div className="col-span-10">
-        <h3 className="text-btn-primary font-semibold text-xl lg:text-2xl">
-          {title}
-        </h3>
-        <p className="mt-1.5 text-eve-gray">{content}</p>
-      </div>
     </div>
   );
 }
