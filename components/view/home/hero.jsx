@@ -60,7 +60,7 @@ export default function Hero() {
             </p>
             <div className="mt-8 flex space-x-5">
               <Link href="/contact-us">
-                <ButtonLightBlue>{t("talk")}</ButtonLightBlue>
+                <ButtonWhite>{t("talk")}</ButtonWhite>
               </Link>
               <Link href="#latest-projects">
                 <ButtonWhite>{t("portfolio")}</ButtonWhite>
