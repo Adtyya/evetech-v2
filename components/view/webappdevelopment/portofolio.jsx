@@ -19,7 +19,7 @@ export default function Portofolio() {
         </p>
       </Container>
       <Marquee direction="right" speed={50}>
-        {PorfotolioList.slice(0, 5).map((item, index) => {
+        {PorfotolioList.map((item, index) => {
           return (
             <CardProduct
               key={index}
@@ -32,7 +32,7 @@ export default function Portofolio() {
       </Marquee>
       <div className="py-10"></div>
       <Marquee direction="left" speed={50}>
-        {PorfotolioList.slice(6).map((item, index) => {
+        {PorfotolioList.map((item, index) => {
           return (
             <CardProduct
               key={index}
