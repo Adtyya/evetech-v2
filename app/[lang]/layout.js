@@ -8,9 +8,9 @@ import { NextIntlClientProvider, useMessages } from "next-intl";
 const inter = Inter({ subsets: ["latin"] });
 
 // export const metadata = {
-//   title: "Evetech: Software House Semarang & Jakarta",
+//   title: "Evetech: Software House Solo & Jakarta",
 //   description:
-//     "Evetech Software House Semarang & Jakarta provides Custom Software & ERP Development, Web Development, Mobile App Development & Web Design in Indonesia and Malaysia.",
+//     "Evetech Software House Solo & Jakarta provides Custom Software & ERP Development, Web Development, Mobile App Development & Web Design in Indonesia and Malaysia.",
 //   verification: {
 //     google: "YeDPr9Oy1PD6fLQS5vg18h2wJwUmYjKT9WINun619ag",
 //   },
