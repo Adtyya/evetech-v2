@@ -19,33 +19,29 @@ export default function Portofolio() {
         </p>
       </Container>
       <Marquee direction="right" speed={50}>
-        {PorfotolioList.slice(0, 5)
-          .filter((val) => val.category === "Mobile Apps")
-          .map((item, index) => {
-            return (
-              <CardProduct
-                key={index}
-                title={item.title}
-                image={item.image}
-                category={item.category}
-              ></CardProduct>
-            );
-          })}
+        {PorfotolioList.map((item, index) => {
+          return (
+            <CardProduct
+              key={index}
+              title={item.title}
+              image={item.image}
+              category={item.category}
+            ></CardProduct>
+          );
+        })}
       </Marquee>
       <div className="py-10"></div>
       <Marquee direction="left" speed={50}>
-        {PorfotolioList.slice(6)
-          .filter((val) => val.category === "Mobile Apps")
-          .map((item, index) => {
-            return (
-              <CardProduct
-                key={index}
-                title={item.title}
-                image={item.image}
-                category={item.category}
-              ></CardProduct>
-            );
-          })}
+        {PorfotolioList.map((item, index) => {
+          return (
+            <CardProduct
+              key={index}
+              title={item.title}
+              image={item.image}
+              category={item.category}
+            ></CardProduct>
+          );
+        })}
       </Marquee>
     </div>
   );

@@ -1,57 +1,37 @@
 export const PorfotolioList = [
   {
-    title: "Candi Elektronik",
-    category: "Mobile Apps",
-    image: "/images/webdevelopment/portofolio/top/Candi.png",
-  },
-  {
-    title: "Pelangi Laundry",
-    category: "Website & Mobile Apps",
-    image: "/images/webdevelopment/portofolio/top/Pelangi.png",
+    title: "Downtown Dinner",
+    category: "Website & Mobile Responsive",
+    image: "/images/portfolio/webdev/downtown.png",
   },
   {
     title: "Sanwoo Electronics",
     category: "Website",
-    image: "/images/webdevelopment/portofolio/top/Sanwoo.png",
-  },
-  {
-    title: "Glamori",
-    category: "POS System & Mobile Apps",
-    image: "/images/webdevelopment/portofolio/top/Glamory.png",
-  },
-  {
-    title: "Jempol",
-    category: "UI/UX",
-    image: "/images/webdevelopment/portofolio/top/Jempol.png",
-  },
-  {
-    title: "Downtown Dinner",
-    category: "Website & Mobile Responsive",
-    image: "/images/webdevelopment/portofolio/bottom/Downtown.png",
-  },
-  {
-    title: "SQM Studio",
-    category: "Website",
-    image: "/images/webdevelopment/portofolio/bottom/SQM.png",
-  },
-  {
-    title: "Educare",
-    category: "Mobile Apps",
-    image: "/images/webdevelopment/portofolio/bottom/Edu.png",
-  },
-  {
-    title: "Everest",
-    category: "POS System & Mobile Apps",
-    image: "/images/webdevelopment/portofolio/bottom/Everest.png",
+    image: "/images/portfolio/webdev/sanwoo.png",
   },
   {
     title: "Homeez",
     category: "Website",
-    image: "/images/webdevelopment/portofolio/bottom/Homez.png",
+    image: "/images/portfolio/webdev/homeez.png",
   },
   {
-    title: "Kanzee",
+    title: "SQM Studio",
     category: "Website",
-    image: "/images/webdevelopment/portofolio/bottom/Kanzee.png",
+    image: "/images/portfolio/webdev/sqm.png",
+  },
+  {
+    title: "Kansee",
+    category: "Website & Mobile Responsive",
+    image: "/images/portfolio/webdev/kansee.png",
+  },
+  {
+    title: "Juragan Material",
+    category: "Website App Development",
+    image: "/images/portfolio/webdev/juraganweb.png",
+  },
+  {
+    title: "Tumurun",
+    category: "ERP System",
+    image: "/images/portfolio/webdev/tumurun.png",
   },
 ];
