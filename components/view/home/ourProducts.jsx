@@ -4,6 +4,7 @@ import Marquee from "react-fast-marquee";
 import { ProductList } from "./content";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const imagePath = [
   "/images/home/products/1.svg",
@@ -29,7 +30,7 @@ export default function OurProducts() {
           strategist, and more.
         </p> */}
       </Container>
-      <Marquee direction="right" speed={50}>
+      <Marquee direction="right" speed={50} className="py-5">
         {ProductList.slice(0, 5).map((item, index) => {
           return (
             <CardProduct
@@ -42,7 +43,7 @@ export default function OurProducts() {
         })}
       </Marquee>
       <div className="py-10"></div>
-      <Marquee direction="left" speed={50}>
+      <Marquee direction="left" speed={50} className="py-5">
         {ProductList.slice(5).map((item, index) => {
           return (
             <CardProduct
@@ -60,33 +61,37 @@ export default function OurProducts() {
 
 function CardProduct({ title, subtitle, image }) {
   return (
-    <div className="bg-eve-white rounded-3xl w-full max-w-96 mx-8 overflow-hidden">
-      <div className="space-y-4 p-5">
-        <Heading variant="h4" className="font-bold text-btn-primary">
-          {title}
-        </Heading>
-        <p className="text-eve-gray line-clamp-2">{subtitle}</p>
-        <div className="flex space-x-3.5">
-          {imagePath.map((i, idx) => {
-            return (
-              <Image src={i} width={28} height={28} alt="icon" key={idx} />
-            );
-          })}
-        </div>
-      </div>
-      <div className="h-48">
-        <div className="h-96 w-full px-3 relative">
-          <Image
-            fill
-            className="object-contain px-3 -mt-12"
-            src={image}
-            alt={title}
-            loading="lazy"
-          />
-        </div>
-      </div>
-      {/* <div className="absolute bottom-0 w-full h-full">
+    <div className="hover:scale-105 hover:rotate-2 duration-200">
+      <Link href="/portfolio">
+        <div className="bg-eve-white rounded-3xl w-full max-w-96 mx-8 overflow-hidden">
+          <div className="space-y-4 p-5">
+            <Heading variant="h4" className="font-bold text-btn-primary">
+              {title}
+            </Heading>
+            <p className="text-eve-gray line-clamp-3">{subtitle}</p>
+            <div className="flex space-x-3.5">
+              {imagePath.map((i, idx) => {
+                return (
+                  <Image src={i} width={28} height={28} alt="icon" key={idx} />
+                );
+              })}
+            </div>
+          </div>
+          <div className="h-48">
+            <div className="h-96 w-full px-3 relative">
+              <Image
+                fill
+                className="object-contain px-3 -mt-12"
+                src={image}
+                alt={title}
+                loading="lazy"
+              />
+            </div>
+          </div>
+          {/* <div className="absolute bottom-0 w-full h-full">
       </div> */}
+        </div>
+      </Link>
     </div>
   );
 }
