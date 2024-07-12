@@ -45,7 +45,10 @@ export function CardQualityDriven({ title, content, icon, isEven, index }) {
       className={`grid grid-cols-12 gap-3 ${
         isEven ? "bg-eve-white" : "bg-btn-white"
       } py-5 pr-5 rounded-2xl lg:sticky w-full h-max border border-[#DADEE3]`}
-      style={{ top: `${11 + index}rem` }}
+      style={{
+        top: `${11 + index}rem`,
+        boxShadow: "0px 8px 8px 0px #0000000A",
+      }}
     >
       <div className="col-span-2 flex justify-center items-start">
         <Image src={icon} alt={title} width={40} height={40} />

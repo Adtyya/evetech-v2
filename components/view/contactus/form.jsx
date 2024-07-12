@@ -47,7 +47,7 @@ export default function ContactUsForm() {
     <>
       <div className="h-16 lg:h-32"></div>
       <Container>
-        <div>
+        {/* <div>
           <Heading
             variant="h2"
             className="text-btn-primary font-bold capitalize"
@@ -58,8 +58,8 @@ export default function ContactUsForm() {
             })}
           </Heading>
           <p className="text-eve-gray mt-1.5">{t("subtitle")}</p>
-        </div>
-        <div className="grid grid-cols-1 items-center md:grid-cols-2 my-14 gap-5">
+        </div> */}
+        <div className="grid grid-cols-1 items-center md:grid-cols-2 my-14 gap-7">
           <FormLeftSide></FormLeftSide>
           <div className="order-first lg:order-last">
             <form
@@ -213,16 +213,15 @@ function FormLeftSide() {
         </div> */}
         <div>
           <Heading
-            variant="h3"
-            className="font-bold capitalize text-btn-primary"
+            variant="h2"
+            className="text-btn-primary font-bold capitalize"
           >
-            Talk to our <br />
-            <span className="text-btn-blue">Product Analytics Expert</span>
+            {t.rich("title", {
+              br: () => <br></br>,
+              span: (chunk) => <span className="text-btn-blue">{chunk}</span>,
+            })}
           </Heading>
-          <p className="text-eve-gray">
-            Have questions about pricing, plans, or growthly? Fill out form and
-            our product analytics expert will be in touch directly.
-          </p>
+          <p className="text-eve-gray mt-1.5">{t("subtitle")}</p>
         </div>
         <div className="bg-eve-white rounded-2xl p-5 space-y-3.5">
           <Heading
