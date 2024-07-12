@@ -45,6 +45,7 @@ module.exports = {
           strip: "#EEF0F2",
           social: "#BEC0C2",
           searchInput: "#C7D9F4",
+          dark: "#2C323E",
         },
         btn: {
           primary: "#2B3A4B",

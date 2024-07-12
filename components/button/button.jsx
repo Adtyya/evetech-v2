@@ -11,6 +11,17 @@ function ButtonPrimary({ children, className = "", ...props }) {
   );
 }
 
+function ButtonDark({ children, className = "", ...props }) {
+  return (
+    <button
+      className={`${className} bg-eve-dark text-eve-white font-semibold px-4 py-1.5 rounded-full disabled:cursor-not-allowed`}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+}
+
 function ButtonWhite({ children, className = "", ...props }) {
   return (
     <button
@@ -47,4 +58,10 @@ function ButtonWhatsApp({ ...props }) {
   );
 }
 
-export { ButtonPrimary, ButtonWhite, ButtonLightBlue, ButtonWhatsApp };
+export {
+  ButtonPrimary,
+  ButtonWhite,
+  ButtonLightBlue,
+  ButtonWhatsApp,
+  ButtonDark,
+};

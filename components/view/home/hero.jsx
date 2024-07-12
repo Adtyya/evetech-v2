@@ -7,7 +7,7 @@ import Image from "next/image";
 import HeroImage from "@/public/images/home/hero-home.jpg";
 import Heading from "@/components/text/heading";
 import TextTransition, { presets } from "react-text-transition";
-import { ButtonLightBlue, ButtonWhite } from "@/components/button/button";
+import { ButtonDark, ButtonLightBlue } from "@/components/button/button";
 import { HiOutlineChevronDown } from "react-icons/hi";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -60,10 +60,10 @@ export default function Hero() {
             </p>
             <div className="mt-8 flex space-x-5">
               <Link href="/contact-us">
-                <ButtonWhite>{t("talk")}</ButtonWhite>
+                <ButtonLightBlue>{t("talk")}</ButtonLightBlue>
               </Link>
               <Link href="#latest-projects">
-                <ButtonWhite>{t("portfolio")}</ButtonWhite>
+                <ButtonDark>{t("portfolio")}</ButtonDark>
               </Link>
             </div>
           </div>
