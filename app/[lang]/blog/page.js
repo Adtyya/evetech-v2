@@ -3,7 +3,9 @@ import { unstable_setRequestLocale, getTranslations } from "next-intl/server";
 import api from "@/utils/axios";
 import { Suspense } from "react";
 
-export const revalidate = 120;
+export const revalidate = 0;
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 
 async function getLatestsAndFeatures() {
   const res = await api.get(

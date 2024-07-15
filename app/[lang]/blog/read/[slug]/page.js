@@ -1,10 +1,11 @@
 import Read from "@/components/view/blog/Read";
 import { unstable_setRequestLocale } from "next-intl/server";
 import api from "@/utils/axios";
+import { notFound } from "next/navigation";
 
 async function getDetailPost(slug) {
   const res = await api.get(`/posts?populate=*&filters[slug][$eq]=${slug}`);
-  return res.data?.data[0] || null;
+  return res.data?.data[0] || notFound();
 }
 
 async function getOtherPost(slug) {
@@ -14,8 +15,9 @@ async function getOtherPost(slug) {
   return res.data?.data || null;
 }
 
+export const revalidate = 0;
 export const dynamic = "force-dynamic";
-export const revalidate = 840000;
+export const fetchCache = "force-no-store";
 
 export async function generateMetadata({ params }) {
   const detailPost = await getDetailPost(params.slug);
@@ -32,7 +34,7 @@ export async function generateMetadata({ params }) {
       },
     },
     title: `${detailPost?.attributes?.title} - Evetech Solution`,
-    description: detailPost?.attributes?.description ,
+    description: detailPost?.attributes?.description,
     openGraph: {
       images:
         detailPost?.attributes?.cover?.data?.attributes?.url ??
