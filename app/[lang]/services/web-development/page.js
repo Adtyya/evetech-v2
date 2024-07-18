@@ -1,5 +1,6 @@
 import FAQ from "@/components/view/global/FAQ";
 import SoftwareDevelopmentIndustry from "@/components/view/home/softwareDevelopmentIndustry";
+import Booster from "@/components/view/webappdevelopment/booster";
 import Hero from "@/components/view/webdevelopment/hero";
 import Portofolio from "@/components/view/webdevelopment/portofolio";
 import ReadyToMeet from "@/components/view/webdevelopment/readyToMeet";
@@ -26,6 +27,7 @@ export default function WebDevelopment({ params: { lang } }) {
       <SoftwareDevelopmentIndustry></SoftwareDevelopmentIndustry>
       <ReadyToMeet></ReadyToMeet>
       <FAQ></FAQ>
+      <Booster></Booster>
     </>
   );
 }

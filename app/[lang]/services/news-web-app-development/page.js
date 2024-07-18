@@ -7,6 +7,7 @@ import Hero from "@/components/view/newsdevelopment/hero";
 import OurLatestProjects from "@/components/view/home/ourLatestProject";
 import WhyChooseUs from "@/components/view/newsdevelopment/whyChooseUs";
 import { unstable_setRequestLocale, getTranslations } from "next-intl/server";
+import Booster from "@/components/view/webappdevelopment/booster";
 
 export async function generateMetadata({ params: { locale } }) {
   const t = await getTranslations({ locale, namespace: "Metadata.news" });
@@ -32,6 +33,7 @@ export default function NewsPage({ params: { lang } }) {
       <CMSFeatures></CMSFeatures>
       <OurClient></OurClient>
       <FAQ></FAQ>
+      <Booster></Booster>
     </>
   );
 }
