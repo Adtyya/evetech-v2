@@ -40,7 +40,8 @@ export const SEOBoosterEN = `
 ## Software and Web App Development
 
 Software and web app development services are a means of supporting businesses in the digital era. Making software and applications is tailored to the needs of your business. Our team is very experienced in the field of making software and web-based applications.
-
+`;
+export const SEOBoosterENM = `
 ## Why it's Worth Ordering Software and Web App Development Services
 
 Using the services of evetech can help you provide the right technology solutions to grow your business. Moreover, your company can also save time and money, and you will be able to ensure the safety and security of the applications that have been developed. In addition, using professional development services will increase branding and public awareness of your business.
@@ -67,14 +68,14 @@ Increase brand awareness and customer engagement.
 
 Ensure apps are built with the latest and best technology.
 
-Want to web app develop, evetech is the best solution. You can see our offer by clicking [here](#).
-`;
+Want to web app develop, evetech is the best solution. You can see our offer by clicking [here](#).`;
 
 export const SEOBoosterID = `
 ## Pengembangan Perangkat Lunak dan Aplikasi Web
 
 Layanan pengembangan perangkat lunak dan aplikasi web adalah sarana untuk mendukung bisnis di era digital. Pembuatan perangkat lunak dan aplikasi disesuaikan dengan kebutuhan bisnis Anda. Tim kami sangat berpengalaman di bidang pembuatan perangkat lunak dan aplikasi berbasis web.
-
+`;
+export const SEOBoosterIDM = `
 ## Mengapa Layak Memesan Layanan Pengembangan Perangkat Lunak dan Aplikasi Web
 
 Menggunakan layanan evetech dapat membantu Anda menyediakan solusi teknologi yang tepat untuk mengembangkan bisnis Anda. Selain itu, perusahaan Anda juga dapat menghemat waktu dan uang, serta Anda akan dapat memastikan keamanan dan keselamatan aplikasi yang telah dikembangkan. Selain itu, menggunakan layanan pengembangan profesional akan meningkatkan branding dan kesadaran publik terhadap bisnis Anda.
@@ -101,5 +102,4 @@ Meningkatkan kesadaran merek dan keterlibatan pelanggan.
 
 Memastikan aplikasi dibangun dengan teknologi terbaru dan terbaik.
 
-Ingin mengembangkan aplikasi web? Evetech adalah solusi terbaik. Anda dapat melihat penawaran kami dengan mengklik [di sini](#).
-`;
+Ingin mengembangkan aplikasi web? Evetech adalah solusi terbaik. Anda dapat melihat penawaran kami dengan mengklik [di sini](#).`;
