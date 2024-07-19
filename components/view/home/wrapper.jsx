@@ -27,11 +27,13 @@ export default function WrapWithAOS() {
       <ProvideService></ProvideService>
       <TimeToMakeChange></TimeToMakeChange>
       <QualityDriven></QualityDriven>
-      <OurProducts></OurProducts>
+      <OurLatestProjects></OurLatestProjects>
+
       <KeyFeatures></KeyFeatures>
       <SoftwareDevelopmentIndustry></SoftwareDevelopmentIndustry>
-      <OurLatestProjects></OurLatestProjects>
       <OurClient></OurClient>
+      <OurProducts></OurProducts>
+
       <TechnologySet></TechnologySet>
       {/* <Blog></Blog> */}
     </>
