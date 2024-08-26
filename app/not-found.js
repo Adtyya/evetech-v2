@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import NavbarEvetech from "@/components/navbar/navbarNotFound";
 import Footer from "@/components/footer/footer";
 import NextTopLoader from "nextjs-toploader";
-import { unstable_setRequestLocale } from "next-intl/server";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import Image from "next/image";
 import Container from "@/components/box/container";
@@ -19,10 +18,7 @@ export const metadata = {
 const locales = ["en", "id"];
 
 export function generateStaticParams() {
-  return locales.map((locale) => {
-    unstable_setRequestLocale(locale);
-    return { lang: locale };
-  });
+  return locales.map((locale) => ({ lang: locale }));
 }
 
 export default function RootLayout() {
