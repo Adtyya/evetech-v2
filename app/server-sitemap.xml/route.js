@@ -15,7 +15,7 @@ export async function GET(req) {
       }
     });
 
-    const data = response.data?.data;
+    const data = response?.data?.docs;
     allPosts.push(...data);
 
     // Check if there are more pages
