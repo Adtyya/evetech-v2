@@ -66,7 +66,7 @@ const menu = [
       },
       {
         name: "news web development",
-        path: "/services/news-web-development",
+        path: "/services/news-web-app-development",
       },
     ],
   },
