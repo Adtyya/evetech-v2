@@ -4,15 +4,15 @@ import api from "@/utils/axios";
 import { notFound } from "next/navigation";
 
 async function getDetailPost(slug) {
-  const res = await api.get(`/posts?populate=*&filters[slug][$eq]=${slug}`);
-  return res.data?.data[0] || notFound();
+  const res = await api.get(`/blog/read/${slug}`);
+  return res?.data || notFound();
 }
 
 async function getOtherPost(slug) {
   const res = await api.get(
-    `/posts?populate=*&filters[slug][$ne]=${slug}&sort=createdAt:asc&pagination[page]=1&pagination[pageSize]=3`
+    `/blog/available?exclude=${slug}&page=1&perPage=3`
   );
-  return res.data?.data || null;
+  return res?.data || null;
 }
 
 export const revalidate = 0;
@@ -26,18 +26,18 @@ export async function generateMetadata({ params }) {
     metadataBase: new URL("https://evetechsolution.com/"),
     alternates: {
       canonical: `/${params.lang ?? "en"}/blog/read/${
-        detailPost?.attributes?.slug
+        detailPost?.slug
       }`,
       languages: {
         en: "/en",
         id: "/id",
       },
     },
-    title: `${detailPost?.attributes?.title} - Evetech Solution`,
-    description: detailPost?.attributes?.description,
+    title: `${detailPost?.title} - Evetech Solution`,
+    description: detailPost?.spoiler,
     openGraph: {
       images:
-        detailPost?.attributes?.cover?.data?.attributes?.url ??
+        detailPost?.image ??
         "/images/career/sample.jfif",
     },
   };
@@ -49,5 +49,5 @@ export default async function ReadBlog({ params: { lang, slug } }) {
   const detailPost = await getDetailPost(slug);
   const otherPosts = await getOtherPost(slug);
 
-  return <Read detailPost={detailPost} otherPosts={otherPosts} />;
+  return <Read detailPost={detailPost} otherPosts={otherPosts?.docs} />;
 }

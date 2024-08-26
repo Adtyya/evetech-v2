@@ -28,9 +28,9 @@ export default function BlogList({
       try {
         setLoading(true);
         const res = await api.get(
-          `/posts?populate=*&filters[title][$containsi]=${params}`
+          `/blog/available?search=${params}`
         );
-        setSearchResult(res.data?.data);
+        setSearchResult(res.data);
       } catch (error) {
         throw new Error("Error while search data");
       } finally {
@@ -40,14 +40,9 @@ export default function BlogList({
     params ? getPostByQuery() : setSearchResult([]);
   }, [params]);
 
-  function incrementView(id, currentView) {
-    const view = Number(currentView);
+  function incrementView(id) {
     try {
-      api.put(`/posts/${id}`, {
-        data: {
-          views: view + 1,
-        },
-      });
+      api.patch(`/blog/inc-view/${id}`);
     } catch (error) {
       throw new Error("An error occured while update view");
     }
@@ -108,27 +103,27 @@ export default function BlogList({
             {searchResult.length} posts
           </Heading>
           <div className="grid grid-cols-1 py-7 gap-5">
-            {searchResult.map((item, idx) => {
+            {searchResult?.docs?.map((item, idx) => {
               return (
                 <div
                   key={idx}
                   onClick={() =>
-                    incrementView(item?.id, item?.attributes?.views)
+                    incrementView(item?._id)
                   }
                 >
-                  <Link href={`/blog/read/${item?.attributes?.slug}`}>
+                  <Link href={`/blog/read/${item?.slug}`}>
                     <HighlightedCard
-                      image={item?.attributes?.cover?.data?.attributes?.url}
-                      title={item?.attributes?.title}
-                      subtitle={item?.attributes?.description}
-                      tag={item?.attributes?.tags?.data?.map((item) => {
+                      image={item?.image}
+                      title={item?.title}
+                      subtitle={item?.spoiler}
+                      tag={item?.category?.map((field) => {
                         return {
-                          name: item?.attributes?.name || "",
+                          name: field || "",
                         };
                       })}
-                      createdAt={item?.attributes?.createdAt}
+                      createdAt={item?.date}
                       twoColumns
-                    ></HighlightedCard>
+                    />
                   </Link>
                 </div>
               );
@@ -149,21 +144,21 @@ export default function BlogList({
                     <div
                       key={idx}
                       onClick={() =>
-                        incrementView(item?.id, item?.attributes?.views)
+                        incrementView(item?._id)
                       }
                     >
-                      <Link href={`/blog/read/${item?.attributes?.slug}`}>
+                      <Link href={`/blog/read/${item?.slug}`}>
                         <HighlightedCard
-                          image={item?.attributes?.cover?.data?.attributes?.url}
-                          title={item?.attributes?.title}
-                          subtitle={item?.attributes?.description}
-                          tag={item?.attributes?.tags?.data?.map((item) => {
+                          image={item?.image}
+                          title={item?.title}
+                          subtitle={item?.spoiler}
+                          tag={item?.category?.map((field) => {
                             return {
-                              name: item?.attributes?.name || "",
+                              name: field || "",
                             };
                           })}
-                          createdAt={item?.attributes?.createdAt}
-                        ></HighlightedCard>
+                          createdAt={item?.date}
+                        />
                       </Link>
                     </div>
                   );
@@ -175,15 +170,15 @@ export default function BlogList({
                     <div
                       key={idx}
                       onClick={() =>
-                        incrementView(item?.id, item?.attributes?.views)
+                        incrementView(item?._id)
                       }
                     >
-                      <Link href={`/blog/read/${item?.attributes?.slug}`}>
+                      <Link href={`/blog/read/${item?.slug}`}>
                         <SimpleCard
                           key={idx}
-                          image={item?.attributes?.cover?.data?.attributes?.url}
-                          title={item?.attributes?.title}
-                          subtitle={item?.attributes?.description}
+                          image={item?.image}
+                          title={item?.title}
+                          subtitle={item?.spoiler}
                         />
                       </Link>
                     </div>
@@ -196,22 +191,22 @@ export default function BlogList({
                     <div
                       key={idx}
                       onClick={() =>
-                        incrementView(item?.id, item?.attributes?.views)
+                        incrementView(item?._id)
                       }
                     >
-                      <Link href={`/blog/read/${item?.attributes?.slug}`}>
+                      <Link href={`/blog/read/${item?.slug}`}>
                         <HighlightedCard
                           key={idx}
-                          image={item?.attributes?.cover?.data?.attributes?.url}
-                          title={item?.attributes?.title}
-                          subtitle={item?.attributes?.description}
-                          tag={item?.attributes?.tags?.data?.map((item) => {
+                          image={item?.image}
+                          title={item?.title}
+                          subtitle={item?.spoiler}
+                          tag={item?.category?.map((field) => {
                             return {
-                              name: item?.attributes?.name || "",
+                              name: field || "",
                             };
                           })}
-                          createdAt={item?.attributes?.createdAt}
-                        ></HighlightedCard>
+                          createdAt={item?.date}
+                        />
                       </Link>
                     </div>
                   );
@@ -229,22 +224,22 @@ export default function BlogList({
                   <div
                     key={idx}
                     onClick={() =>
-                      incrementView(item?.id, item?.attributes?.views)
+                      incrementView(item?._id)
                     }
                   >
-                    <Link href={`/blog/read/${item?.attributes?.slug}`}>
+                    <Link href={`/blog/read/${item?.slug}`}>
                       <HighlightedCard
                         key={idx}
-                        image={item?.attributes?.cover?.data?.attributes?.url}
-                        title={item?.attributes?.title}
-                        subtitle={item?.attributes?.description}
-                        tag={item?.attributes?.tags?.data?.map((item) => {
+                        image={item?.image}
+                        title={item?.title}
+                        subtitle={item?.spoiler}
+                        tag={item?.category?.map((field) => {
                           return {
-                            name: item?.attributes?.name || "",
+                            name: field || "",
                           };
                         })}
-                        createdAt={item?.attributes?.createdAt}
-                      ></HighlightedCard>
+                        createdAt={item?.date}
+                      />
                     </Link>
                   </div>
                 );
@@ -261,23 +256,23 @@ export default function BlogList({
                   <div
                     key={idx}
                     onClick={() =>
-                      incrementView(item?.id, item?.attributes?.views)
+                      incrementView(item?._id)
                     }
                   >
-                    <Link href={`/blog/read/${item?.attributes?.slug}`}>
+                    <Link href={`/blog/read/${item?.slug}`}>
                       <HighlightedCard
                         key={idx}
-                        image={item?.attributes?.cover?.data?.attributes?.url}
-                        title={item?.attributes?.title}
-                        subtitle={item?.attributes?.description}
-                        tag={item?.attributes?.tags?.data?.map((item) => {
+                        image={item?.image}
+                        title={item?.title}
+                        subtitle={item?.spoiler}
+                        tag={item?.category?.map((field) => {
                           return {
-                            name: item?.attributes?.name || "",
+                            name: field || "",
                           };
                         })}
-                        createdAt={item?.attributes?.createdAt}
+                        createdAt={item?.date}
                         twoColumns
-                      ></HighlightedCard>
+                      />
                     </Link>
                   </div>
                 );
@@ -329,16 +324,13 @@ export function HighlightedCard({
   return (
     <div className="w-full h-full group cursor-pointer">
       <div
-        className={`grid grid-cols-1 ${
-          twoColumns ? "md:grid-cols-12" : "md:grid-cols-1"
-        } gap-5 items-center`}
+        className={`grid grid-cols-1 ${twoColumns ? "md:grid-cols-12" : "md:grid-cols-1"
+          } gap-5 items-center`}
       >
         <div
-          className={`${
-            twoColumns ? "md:col-span-4" : ""
-          } col-auto w-full h-52 ${
-            twoColumns ? "md:h-64" : "md:h-80"
-          } relative rounded-2xl overflow-hidden`}
+          className={`${twoColumns ? "md:col-span-4" : ""
+            } col-auto w-full h-52 ${twoColumns ? "md:h-64" : "md:h-80"
+            } relative rounded-2xl overflow-hidden`}
         >
           <Image
             alt="sample"
@@ -370,7 +362,7 @@ export function HighlightedCard({
               {/* <span className="relative z-10">{title}</span> */}
               {/* <span className="absolute w-0 group-hover:w-full duration-500 h-1 bg-btn-primary left-0 bottom-0"></span> */}
             </h2>
-            <p className="line-clamp-4 text-btn-primary group-hover:font-semibold duration-300">
+            <p className="line-clamp-4 text-btn-primary group-hover:font-semibold duration-300 text-justify">
               {subtitle}
             </p>
             <p className="text-btn-primary text-sm">

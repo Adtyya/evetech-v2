@@ -6,13 +6,13 @@ import { unstable_setRequestLocale, getTranslations } from "next-intl/server";
 async function getAllVacancies(position, location, workModel, page) {
   const queryParams = [
     position !== ""
-      ? `filters[department][$eq]=${encodeURIComponent(position)}`
+      ? `department=${encodeURIComponent(position)}`
       : null,
     location !== ""
-      ? `filters[location][$eq]=${encodeURIComponent(location)}`
+      ? `location=${encodeURIComponent(location)}`
       : null,
     workModel !== ""
-      ? `filters[workModel][$eq]=${encodeURIComponent(workModel)}`
+      ? `workModel=${encodeURIComponent(workModel)}`
       : null,
   ]
     .filter(Boolean)
@@ -21,7 +21,7 @@ async function getAllVacancies(position, location, workModel, page) {
   const searchQuery = queryParams ? `&${queryParams}` : "";
 
   const res = await api.get(
-    `/careers?${searchQuery}&populate=*&sort=createdAt:asc&pagination[page]=${page}&pagination[pageSize]=25`
+    `/career/available?${searchQuery}&page=${page}&perPage=25`
   );
   return res.data;
 }
@@ -59,11 +59,15 @@ export default async function ListVacanciesPage({
 
   return (
     <>
-      <Hero></Hero>
+      <Hero />
       <RecentOpenPosition
-        listVacancies={list?.data ?? []}
-        paginationInfo={list?.meta?.pagination}
-      ></RecentOpenPosition>
+        listVacancies={list?.docs ?? []}
+        paginationInfo={{
+          totalDocs: list?.totalDocs || 0,
+          page: list?.page || 1,
+          pageCount: list?.totalPages || 0,
+        }}
+      />
     </>
   );
 }

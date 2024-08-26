@@ -8,7 +8,7 @@ import { Suspense } from "react";
 
 async function getRecentVacancies() {
   const res = await api.get(
-    "/careers?populate=*&sort=createdAt:asc&pagination[page]=1&pagination[pageSize]=3"
+    "/career/available?page=1&perPage=3"
   );
   return res.data;
 }
@@ -29,16 +29,16 @@ export async function generateMetadata({ params: { locale } }) {
 }
 
 export default async function CareerPage({ params: { lang } }) {
-  const { data } = await getRecentVacancies();
+  const recent = await getRecentVacancies();
   unstable_setRequestLocale(lang);
 
   return (
     <>
-      <Hero></Hero>
-      <OurValues></OurValues>
-      <RecruitmentProcess></RecruitmentProcess>
-      <Suspense key={data} fallback={<div>Loading Recent Open Positions</div>}>
-        <RecentPositions listVacancies={data ?? []}></RecentPositions>
+      <Hero />
+      <OurValues />
+      <RecruitmentProcess />
+      <Suspense key={recent.docs} fallback={<div>Loading Recent Open Positions</div>}>
+        <RecentPositions listVacancies={recent.docs ?? []} />
       </Suspense>
     </>
   );

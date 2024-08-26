@@ -4,25 +4,25 @@ import api from "@/utils/axios";
 import { unstable_setRequestLocale } from "next-intl/server";
 
 async function getDetailVacancies(slug) {
-  const res = await api.get(`/careers?populate=*&filters[slug][$eq]=${slug}`);
-  return res.data?.data[0] || null;
+  const res = await api.get(`/career/read/${slug}`);
+  return res?.data || null;
 }
 
 async function getOtherVacancies(slug) {
   const res = await api.get(
-    `/careers?populate=*&filters[slug][$ne]=${slug}&sort=createdAt:asc&pagination[page]=1&pagination[pageSize]=3`
+    `/career/available?exclude=${slug}&page=1&perPage=3`
   );
-  return res.data?.data || null;
+  return res?.data || null;
 }
 
 export const dynamic = "force-dynamic";
 export const revalidate = 840000;
 
 export async function generateStaticParams() {
-  const vacancies = await api.get("/careers");
+  const vacancies = await api.get("/career/available");
 
-  return vacancies.data?.data?.map((a) => ({
-    slug: a.attributes.slug,
+  return vacancies.data?.docs?.map((a) => ({
+    slug: a.slug,
   }));
 }
 
@@ -32,19 +32,17 @@ export async function generateMetadata({ params }) {
   return {
     metadataBase: new URL("https://evetechsolution.com/"),
     alternates: {
-      canonical: `/${params.lang ?? "en"}/career/vacancies/${
-        detailVacancies?.attributes?.slug
-      }`,
+      canonical: `/${params.lang ?? "en"}/career/vacancies/${detailVacancies?.slug}`,
       languages: {
         en: "/en",
         id: "/id",
       },
     },
-    title: `Evetech Solution - ${detailVacancies?.attributes?.title}`,
-    description: detailVacancies?.attributes?.metaDescription,
+    title: `Evetech Solution - ${detailVacancies?.title}`,
+    description: detailVacancies?.metaDescription,
     openGraph: {
       images:
-        detailVacancies?.attributes?.cover?.data?.attributes?.url ??
+        detailVacancies?.image ??
         "/images/career/sample.jfif",
     },
   };
@@ -58,8 +56,8 @@ export default async function DetailVacancies({ params }) {
   return (
     <>
       <div className="h-16 lg:h-32"></div>
-      <DetailVacanciesTop content={detailVacancies}></DetailVacanciesTop>
-      <OtherVacancies listOther={othervacancies ?? []}></OtherVacancies>
+      <DetailVacanciesTop content={detailVacancies} />
+      <OtherVacancies listOther={othervacancies?.docs || []} />
     </>
   );
 }

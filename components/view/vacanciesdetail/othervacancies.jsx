@@ -13,16 +13,16 @@ export default function OtherVacancies({ listOther }) {
           return (
             <div key={idx}>
               <CardPosition
-                title={item?.attributes?.title}
-                employementType={item?.attributes?.workType}
-                placementType={item?.attributes?.workModel}
-                placementLocation={item?.attributes?.location}
-                experienceNeeded={`${item?.attributes?.experienceInYears} Years Experience`}
-                department={item?.attributes?.department}
-                createdAt={item?.attributes?.createdAt}
-                deadline={item?.attributes?.endDate}
-                slug={item?.attributes?.slug}
-              ></CardPosition>
+                title={item?.title}
+                employementType={item?.workType}
+                placementType={item?.workModel}
+                placementLocation={item?.location}
+                experienceNeeded={`${item?.experienceInYears} Years Experience`}
+                department={item?.department}
+                createdAt={item?.date}
+                deadline={item?.endDate}
+                slug={item?.slug}
+              />
             </div>
           );
         })}

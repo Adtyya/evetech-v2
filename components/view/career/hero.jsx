@@ -99,9 +99,9 @@ export default function Hero() {
                     defaultValue={workModel}
                   >
                     <option value="">All Work Model</option>
-                    <option value="onsite">On site</option>
+                    <option value="onsite">Onsite</option>
                     <option value="hybrid">Hybdrid</option>
-                    <option value="remote">remote</option>
+                    <option value="remote">Remote</option>
                   </InputWithIcon>
                 </div>
                 <div className="w-full md:w-max flex items-center justify-center">

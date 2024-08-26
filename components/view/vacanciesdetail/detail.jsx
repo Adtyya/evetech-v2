@@ -46,7 +46,7 @@ export function SocialButton({ path, alt }) {
   );
 }
 
-function ApplyPosition({ open, close }) {
+function ApplyPosition({ vacanciesName, open, close }) {
   const [success, setSuccess] = useState(false);
 
   // const {
@@ -70,7 +70,7 @@ function ApplyPosition({ open, close }) {
 
   async function handleSubmitJob(data) {
     try {
-      await api.post("/aplicant-lists", { data: data });
+      await api.post("/applicant", data);
       setSuccess(true);
     } catch (error) {
       console.warn("An error occured");
@@ -108,13 +108,13 @@ function ApplyPosition({ open, close }) {
             <InputRounded
               type="hidden"
               label=""
-              {...register("vacanciesName", { value: "asd" })}
-            ></InputRounded>
+              {...register("vacanciesName", { value: vacanciesName })}
+            />
           </div>
           <InputRounded
-            label="Fullname"
+            label="Full Name"
             type="text"
-            placeholder="Your Fullname"
+            placeholder="Your Full Name"
             {...register("fullname")}
             required
           />
@@ -224,17 +224,17 @@ export default function DetailVacanciesTop({ content }) {
     <Container className="py-12">
       <CardDetailVacancies
         image={
-          content?.attributes?.cover?.data?.attributes?.url ??
+          content?.image ??
           "/images/career/sample.jfif"
         }
-        jobTitle={content?.attributes?.title}
-        employementType={content?.attributes?.workType}
-        placementType={content?.attributes?.workModel}
-        placementLocation={content?.attributes?.location}
-        experienceNeeded={content?.attributes?.experienceInYears}
-        department={content?.attributes?.department}
-        createdAt={content?.attributes?.createdAt}
-        deadline={content?.attributes?.endDate}
+        jobTitle={content?.title}
+        employementType={content?.workType}
+        placementType={content?.workModel}
+        placementLocation={content?.location}
+        experienceNeeded={content?.experienceInYears}
+        department={content?.department}
+        createdAt={content?.date}
+        deadline={content?.endDate}
         action={() => setOpen(true)}
       />
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-5">
@@ -244,7 +244,7 @@ export default function DetailVacanciesTop({ content }) {
               Job Overview
             </p>
             <Markdown className="prose lg:prose-lg prose-p:text-btn-primary prose-headings:text-btn-primary">
-              {content?.attributes?.description}
+              {content?.description}
             </Markdown>
           </div>
         </div>
@@ -252,19 +252,19 @@ export default function DetailVacanciesTop({ content }) {
           <div className="grid grid-cols-2 md:grid-cols-1 gap-5">
             <SideCardInfo
               title="Work level"
-              subtitle={content?.attributes?.workLevel}
+              subtitle={content?.workLevel}
             />
             <SideCardInfo
               title="Job-Type"
-              subtitle={content?.attributes?.workType}
+              subtitle={content?.workType}
             />
             <SideCardInfo
               title="Work Model"
-              subtitle={content?.attributes?.workModel}
+              subtitle={content?.workModel}
             />
             <SideCardInfo
               title="Experience"
-              subtitle={`${content?.attributes?.experienceInYears} Years Experience`}
+              subtitle={`${content?.experienceInYears} Years Experience`}
             />
           </div>
           <div className="mt-8 space-y-2.5">
@@ -288,9 +288,9 @@ export default function DetailVacanciesTop({ content }) {
             <div className="flex mt-2.5 items-center space-x-5">
               <p className="text-btn-primary">Share this job : </p>
               <FacebookShareButton
-                title={content?.attributes?.title}
-                description={content?.attributes?.description}
-                url={`${BASE_URL}/career/vacancies/${content?.attributes?.slug}`}
+                title={content?.title}
+                description={content?.description}
+                url={`${BASE_URL}/career/vacancies/${content?.slug}`}
               >
                 {/* <SocialButton
                   path="/images/career/social/Instagram.svg"
@@ -302,9 +302,9 @@ export default function DetailVacanciesTop({ content }) {
                 />
               </FacebookShareButton>
               <TwitterShareButton
-                title={content?.attributes?.title}
-                description={content?.attributes?.description}
-                url={`${BASE_URL}/career/vacancies/${content?.attributes?.slug}`}
+                title={content?.title}
+                description={content?.description}
+                url={`${BASE_URL}/career/vacancies/${content?.slug}`}
               >
                 <SocialButton
                   path="/images/career/social/Twitter.svg"
@@ -319,7 +319,7 @@ export default function DetailVacanciesTop({ content }) {
           </div>
         </div>
       </div>
-      <ApplyPosition open={open} close={() => setOpen(false)}></ApplyPosition>
+      <ApplyPosition open={open} vacanciesName={content?.title} close={() => setOpen(false)} />
     </Container>
   );
 }

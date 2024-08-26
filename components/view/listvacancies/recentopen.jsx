@@ -17,7 +17,7 @@ export default function RecentOpenPosition({
 
   const groupedVacanciesByDepartment = group(
     listVacancies,
-    (a) => a?.attributes?.department
+    (a) => a?.department
   );
 
   function handleChangePage(page) {
@@ -45,7 +45,7 @@ export default function RecentOpenPosition({
           </div>
         ) : null}
         {groupedVacanciesByDepartment.hasOwnProperty("IT Engineer") &&
-        groupedVacanciesByDepartment["IT Engineer"]?.length !== 0 ? (
+          groupedVacanciesByDepartment["IT Engineer"]?.length !== 0 ? (
           <div className="mb-5">
             <Heading variant="h3" className="font-bold text-eve-gray">
               IT Engineer
@@ -56,15 +56,15 @@ export default function RecentOpenPosition({
                 return (
                   <div key={idx}>
                     <CardPosition
-                      title={item?.attributes?.title}
-                      employementType={item?.attributes?.workType}
-                      placementType={item?.attributes?.workModel}
-                      placementLocation={item?.attributes?.location}
-                      experienceNeeded={`${item?.attributes?.experienceInYears} Years Experience`}
-                      department={item?.attributes?.department}
-                      createdAt={item?.attributes?.createdAt}
-                      deadline={item?.attributes?.endDate}
-                      slug={item?.attributes?.slug}
+                      title={item?.title}
+                      employementType={item?.workType}
+                      placementType={item?.workModel}
+                      placementLocation={item?.location}
+                      experienceNeeded={`${item?.experienceInYears} Years Experience`}
+                      department={item?.department}
+                      createdAt={item?.date}
+                      deadline={item?.endDate}
+                      slug={item?.slug}
                     ></CardPosition>
                   </div>
                 );
@@ -73,7 +73,7 @@ export default function RecentOpenPosition({
           </div>
         ) : null}
         {groupedVacanciesByDepartment.hasOwnProperty("Designer") &&
-        groupedVacanciesByDepartment["Designer"]?.length !== 0 ? (
+          groupedVacanciesByDepartment["Designer"]?.length !== 0 ? (
           <div className="mb-5">
             <Heading variant="h3" className="font-bold text-eve-gray">
               Designer
@@ -84,15 +84,15 @@ export default function RecentOpenPosition({
                 return (
                   <div key={idx}>
                     <CardPosition
-                      title={item?.attributes?.title}
-                      employementType={item?.attributes?.workType}
-                      placementType={item?.attributes?.workModel}
-                      placementLocation={item?.attributes?.location}
-                      experienceNeeded={`${item?.attributes?.experienceInYears} Years Experience`}
-                      department={item?.attributes?.department}
-                      createdAt={item?.attributes?.createdAt}
-                      deadline={item?.attributes?.endDate}
-                      slug={item?.attributes?.slug}
+                      title={item?.title}
+                      employementType={item?.workType}
+                      placementType={item?.workModel}
+                      placementLocation={item?.location}
+                      experienceNeeded={`${item?.experienceInYears} Years Experience`}
+                      department={item?.department}
+                      createdAt={item?.date}
+                      deadline={item?.endDate}
+                      slug={item?.slug}
                     ></CardPosition>
                   </div>
                 );
@@ -101,7 +101,7 @@ export default function RecentOpenPosition({
           </div>
         ) : null}
         {groupedVacanciesByDepartment.hasOwnProperty("Marketing") &&
-        groupedVacanciesByDepartment["Marketing"]?.length !== 0 ? (
+          groupedVacanciesByDepartment["Marketing"]?.length !== 0 ? (
           <div className="mb-5">
             <Heading variant="h3" className="font-bold text-eve-gray">
               Marketing
@@ -112,15 +112,15 @@ export default function RecentOpenPosition({
                 return (
                   <div key={idx}>
                     <CardPosition
-                      title={item?.attributes?.title}
-                      employementType={item?.attributes?.workType}
-                      placementType={item?.attributes?.workModel}
-                      placementLocation={item?.attributes?.location}
-                      experienceNeeded={`${item?.attributes?.experienceInYears} Years Experience`}
-                      department={item?.attributes?.department}
-                      createdAt={item?.attributes?.createdAt}
-                      deadline={item?.attributes?.endDate}
-                      slug={item?.attributes?.slug}
+                      title={item?.title}
+                      employementType={item?.workType}
+                      placementType={item?.workModel}
+                      placementLocation={item?.location}
+                      experienceNeeded={`${item?.experienceInYears} Years Experience`}
+                      department={item?.department}
+                      createdAt={item?.date}
+                      deadline={item?.endDate}
+                      slug={item?.slug}
                     ></CardPosition>
                   </div>
                 );

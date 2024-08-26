@@ -21,16 +21,16 @@ export default function RecentPositions({ listVacancies = [] }) {
           return (
             <div key={idx}>
               <CardPosition
-                title={item?.attributes?.title}
-                employementType={item?.attributes?.workType}
-                placementType={item?.attributes?.workModel}
-                placementLocation={item?.attributes?.location}
-                experienceNeeded={`${item?.attributes?.experienceInYears} Years Experience`}
-                department={item?.attributes?.department}
-                createdAt={item?.attributes?.createdAt}
-                deadline={item?.attributes?.endDate}
-                slug={item?.attributes?.slug}
-              ></CardPosition>
+                title={item?.title}
+                employementType={item?.workType}
+                placementType={item?.workModel}
+                placementLocation={item?.location}
+                experienceNeeded={`${item?.experienceInYears} Years Experience`}
+                department={item?.department}
+                createdAt={item?.createdAt}
+                deadline={item?.endDate}
+                slug={item?.slug}
+              />
             </div>
           );
         })}
@@ -42,15 +42,14 @@ export default function RecentPositions({ listVacancies = [] }) {
 export const GetBadgeEmployementType = ({ type }) => {
   return (
     <div
-      className={`${
-        type === "internship"
+      className={`${type === "internship"
           ? "bg-eve-internship text-eve-internshipText"
           : type === "part time"
-          ? "bg-eve-partTime text-eve-partTimeText"
-          : type === "fulltime"
-          ? "bg-eve-fullTime text-eve-fullTimeText"
-          : null
-      } capitalize px-4 py-1.5 rounded-full`}
+            ? "bg-eve-partTime text-eve-partTimeText"
+            : type === "fulltime"
+              ? "bg-eve-fullTime text-eve-fullTimeText"
+              : null
+        } capitalize px-4 py-1.5 rounded-full`}
     >
       {type}
     </div>

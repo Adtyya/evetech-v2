@@ -9,14 +9,14 @@ export const fetchCache = "force-no-store";
 
 async function getLatestsAndFeatures() {
   const res = await api.get(
-    "/posts?populate=*&sort=createdAt:desc&pagination[page]=1&pagination[pageSize]=45"
+    "/blog/available?page=1&perPage=45"
   );
   return res.data;
 }
 
 async function getTops() {
   const res = await api.get(
-    "/posts?populate=*&sort=views:desc&pagination[page]=1&pagination[pageSize]=3"
+    "/blog/available-top?page=1&perPage=3"
   );
   return res.data;
 }
@@ -43,11 +43,11 @@ export default async function BlogPage({ params: { lang } }) {
     <>
       <Suspense fallback={<></>}>
         <BlogList
-          latestPosts={featuresAndLatest.data?.slice(5) || []}
+          latestPosts={featuresAndLatest.docs?.slice(5) || []}
           metaInfoLatestPosts={featuresAndLatest.meta || null}
-          featuresPosts={featuresAndLatest.data?.slice(0, 5) || []}
-          topPosts={topPosts?.data || []}
-        ></BlogList>
+          featuresPosts={featuresAndLatest.docs?.slice(0, 5) || []}
+          topPosts={topPosts?.docs || []}
+        />
       </Suspense>
     </>
   );

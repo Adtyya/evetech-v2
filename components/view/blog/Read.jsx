@@ -24,24 +24,24 @@ export default function Read({ detailPost, otherPosts }) {
       </Link>
       <div className="my-7 flex items-center justify-center flex-col space-y-7">
         <div className="flex flex-wrap items-center justify-center">
-          {detailPost?.attributes?.tags?.data?.map((item, i) => {
+          {detailPost?.category?.map((field, i) => {
             return (
               <div key={i} className="mr-2 mb-2">
-                <Tag>{item?.attributes?.name}</Tag>
+                <Tag>{field}</Tag>
               </div>
             );
           })}
         </div>
         <h1 className="text-btn-primary font-bold text-center text-3xl md:text-4xl lg:text-5xl max-w-4xl">
-          {detailPost?.attributes?.title}
+          {detailPost?.title}
         </h1>
         <p className="text-eve-gray">
-          {moment(detailPost?.attributes?.createdAt).format("LL")}
+          {moment(detailPost?.date).format("LL")}
         </p>
         <div className="w-full h-60 md:h-96 relative rounded-2xl overflow-hidden shadow-blog">
           <Image
             alt="sample"
-            src={detailPost?.attributes?.cover?.data?.attributes?.url}
+            src={detailPost?.image}
             fill
             data-loaded="false"
             onLoad={(event) => {
@@ -53,14 +53,14 @@ export default function Read({ detailPost, otherPosts }) {
       </div>
       <div className="mb-7 grid grid-cols-1 md:grid-cols-4 gap-5">
         <div className="col-auto md:col-span-1">
-          {detailPost?.attributes?.chapters?.length >= 1 ? (
+          {detailPost?.chapters?.length >= 1 ? (
             <>
               <Heading variant="h4" className="text-btn-primary font-bold">
                 Chapters
               </Heading>
               <div className="my-3.5 space-y-3.5">
-                {detailPost?.attributes?.chapters?.map((item, id) => {
-                  return <ChapterButton key={id}>{item.name}</ChapterButton>;
+                {detailPost?.chapters?.map((chap, id) => {
+                  return <ChapterButton key={id}>{chap.name}</ChapterButton>;
                 })}
               </div>
             </>
@@ -72,9 +72,9 @@ export default function Read({ detailPost, otherPosts }) {
             </small>
             <div className="flex items-start justify-start space-x-2.5 mt-1.5">
               <FacebookShareButton
-                title={detailPost?.attributes?.title}
-                description={detailPost?.attributes?.description}
-                url={`${BASE_URL}/blog/read/${detailPost?.attributes?.slug}`}
+                title={detailPost?.title}
+                description={detailPost?.spoiler}
+                url={`${BASE_URL}/blog/read/${detailPost?.slug}`}
               >
                 {/* <SocialButton
                   path="/images/career/social/Instagram.svg"
@@ -86,9 +86,9 @@ export default function Read({ detailPost, otherPosts }) {
                 />
               </FacebookShareButton>
               <TwitterShareButton
-                title={detailPost?.attributes?.title}
-                description={detailPost?.attributes?.description}
-                url={`${BASE_URL}/blog/read/${detailPost?.attributes?.slug}`}
+                title={detailPost?.title}
+                description={detailPost?.spoiler}
+                url={`${BASE_URL}/blog/read/${detailPost?.slug}`}
               >
                 <SocialButton
                   path="/images/career/social/Twitter.svg"
@@ -102,7 +102,7 @@ export default function Read({ detailPost, otherPosts }) {
             </div>
           </div>
         </div>
-        <div className="col-auto md:col-span-3">
+        <div className="col-auto md:col-span-3 text-justify">
           <Markdown
             components={{
               h1: ({ children }) => (
@@ -124,7 +124,7 @@ export default function Read({ detailPost, otherPosts }) {
             }}
             className="prose lg:prose-lg prose-a:text-btn-blue"
           >
-            {detailPost?.attributes?.content}
+            {detailPost?.content}
           </Markdown>
         </div>
       </div>
@@ -136,18 +136,18 @@ export default function Read({ detailPost, otherPosts }) {
           {otherPosts.map((item, idx) => {
             return (
               <div key={idx}>
-                <Link href={`/blog/read/${item?.attributes?.slug}`}>
+                <Link href={`/blog/read/${item?.slug}`}>
                   <HighlightedCard
-                    image={item?.attributes?.cover?.data?.attributes?.url}
-                    title={item?.attributes?.title}
-                    subtitle={item?.attributes?.description}
-                    tag={item?.attributes?.tags?.data?.map((item) => {
+                    image={item?.image}
+                    title={item?.title}
+                    subtitle={item?.spoiler}
+                    tag={item?.category?.map((field) => {
                       return {
-                        name: item?.attributes?.name || "",
+                        name: field || "",
                       };
                     })}
-                    createdAt={item?.attributes?.createdAt}
-                  ></HighlightedCard>
+                    createdAt={item?.date}
+                  />
                 </Link>
               </div>
             );
