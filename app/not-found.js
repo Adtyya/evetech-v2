@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import NavbarEvetech from "@/components/navbar/navbarNotFound";
 import Footer from "@/components/footer/footer";
 import NextTopLoader from "nextjs-toploader";
-import { unstable_setRequestLocale } from "next-intl/server";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import Image from "next/image";
 import Container from "@/components/box/container";
@@ -19,13 +18,10 @@ export const metadata = {
 const locales = ["en", "id"];
 
 export function generateStaticParams() {
-  return locales.map((locale) => {
-    unstable_setRequestLocale(locale);
-    return { lang: locale };
-  });
+  return locales.map((locale) => ({ lang: locale }));
 }
 
-export default function RootLayout() {
+export default function NotFound() {
   const messages = useMessages();
 
   return (
@@ -33,7 +29,7 @@ export default function RootLayout() {
       <body className={inter.className}>
         <NextTopLoader color="#3A85FF" zIndex={2000} />
         <NextIntlClientProvider messages={messages} locale={"en"}>
-          <NavbarEvetech></NavbarEvetech>
+          <NavbarEvetech />
           <Container>
             <div className="flex flex-col w-full h-[85vh] items-center justify-center">
               <div className="w-3/5 h-80 relative">
@@ -49,7 +45,7 @@ export default function RootLayout() {
               </Heading>
             </div>
           </Container>
-          <Footer></Footer>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
