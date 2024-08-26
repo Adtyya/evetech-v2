@@ -50,7 +50,7 @@ export default function OurAgile() {
                 image={a.image}
                 isEven={i % 2 === 0}
                 indexNumber={i + 1}
-              ></Card>
+              />
             );
           })}
         </div>
@@ -66,7 +66,7 @@ export default function OurAgile() {
                   image={a.image}
                   isEven={i % 2 === 0}
                   indexNumber={i + 1}
-                ></Card>
+                />
               );
             })}
           </HorizontalScroll>
@@ -79,9 +79,8 @@ export default function OurAgile() {
 function Card({ title, image, description, isEven, indexNumber }) {
   return (
     <div
-      className={`h-max lg:h-4/5 my-4 lg:my-0 w-full lg:w-80 ${
-        isEven ? "bg-eve-white" : "bg-btn-white"
-      } rounded-2xl flex-shrink-0`}
+      className={`h-max lg:h-4/5 my-4 lg:my-0 w-full lg:w-80 ${isEven ? "bg-eve-white" : "bg-btn-white"
+        } rounded-2xl flex-shrink-0`}
     >
       <div className="grid grid-cols-1 p-3">
         <div className="w-full h-20 relative">
