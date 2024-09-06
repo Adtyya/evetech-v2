@@ -8,6 +8,7 @@ import Heading from "@/components/text/heading";
 import { HighlightedCard } from "./BlogList";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 import { SocialButton } from "../vacanciesdetail/detail";
 import moment from "moment";
 import { slugify } from "@/utils/slugify";
@@ -122,6 +123,7 @@ export default function Read({ detailPost, otherPosts }) {
               ),
               img: ConvertToNextImage,
             }}
+            rehypePlugins={[rehypeRaw]}
             className="prose lg:prose-lg prose-a:text-btn-blue"
           >
             {detailPost?.content}
