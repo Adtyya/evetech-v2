@@ -6,6 +6,7 @@ import { NextIntlClientProvider, useMessages, useLocale } from "next-intl";
 import Image from "next/image";
 import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
+  unstable_setRequestLocale(params.lang); // Atur lokalitas di server
   return {
     title: "Page Not Found",
     description: "The page you're looking for does not exist.",
