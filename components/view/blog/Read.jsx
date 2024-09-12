@@ -17,6 +17,7 @@ import { FacebookShareButton, TwitterShareButton } from "react-share";
 export const BASE_URL = "https://evetechsolution.com/";
 
 export default function Read({ detailPost, otherPosts }) {
+
   return (
     <Container className="py-12">
       <div className="h-16 lg:h-32"></div>
@@ -121,6 +122,7 @@ export default function Read({ detailPost, otherPosts }) {
               h5: ({ children }) => (
                 <HeadingId level="h5">{children}</HeadingId>
               ),
+              a: MarkDownLink,
               img: ConvertToNextImage,
             }}
             rehypePlugins={[rehypeRaw]}
@@ -183,6 +185,18 @@ function HeadingId({ level, children }) {
   const Tag = level || "h1";
   return <Tag id={slugify(children)}>{children}</Tag>;
 }
+
+function MarkDownLink({ href, children, ...props }) {
+  return (
+    <a
+      href={href}
+      target={props?.target || "_self"}
+      rel={props?.rel || "nofollow"}
+    >
+      {children}
+    </a>
+  );
+};
 
 function ConvertToNextImage(props) {
   return (
