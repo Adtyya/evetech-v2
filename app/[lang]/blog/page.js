@@ -7,9 +7,16 @@ export const revalidate = 0;
 export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
 
-async function getLatestsAndFeatures() {
+async function getFeatures() {
   const res = await api.get(
-    "/blog/available?page=1&perPage=45"
+    "/blog/available?page=1&perPage=5"
+  );
+  return res.data;
+}
+
+async function getLatests() {
+  const res = await api.get(
+    "/blog/available?page=2&perPage=5"
   );
   return res.data;
 }
@@ -36,16 +43,17 @@ export async function generateMetadata({ params: { locale } }) {
 export default async function BlogPage({ params: { lang } }) {
   unstable_setRequestLocale(lang);
 
-  const featuresAndLatest = await getLatestsAndFeatures();
+  const features = await getFeatures();
   const topPosts = await getTops();
+  const latestPosts = await getLatests();
 
   return (
     <>
       <Suspense fallback={<></>}>
         <BlogList
-          latestPosts={featuresAndLatest.docs?.slice(5) || []}
-          metaInfoLatestPosts={featuresAndLatest.meta || null}
-          featuresPosts={featuresAndLatest.docs?.slice(0, 5) || []}
+          latestPosts={latestPosts?.docs || []}
+          metaInfoLatestPosts={features?.meta || null}
+          featuresPosts={features?.docs || []}
           topPosts={topPosts?.docs || []}
         />
       </Suspense>
