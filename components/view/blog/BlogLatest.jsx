@@ -32,6 +32,7 @@ export default function BlogLatest({
             ? "bg-blue-500 text-white rounded-lg"
             : "bg-gray-300 text-black hover:bg-gray-400 rounded-lg"
             }`}
+          disabled={pageNum === currentPage}
         >
           {pageNum}
         </button>
