@@ -1,5 +1,5 @@
-import Page from "@/components/view/blog/Page";
-import { unstable_setRequestLocale } from "next-intl/server";
+// import { unstable_setRequestLocale } from "next-intl/server";
+import BlogLatest from "@/components/view/blog/BlogLatest";
 import api from "@/utils/axios";
 import { notFound } from "next/navigation";
 
@@ -36,12 +36,12 @@ export default async function BlogPage({ params: { page } }) {
   }
 
   return (
-    <Page 
-    latestPosts={postsData.docs}
-    totalPages={postsData.totalPages}
-    currentPage={postsData.page}
-    hasPrevPage={postsData.hasPrevPage}
-    hasNextPage={postsData.hasNextPage}
+    <BlogLatest
+      latestPosts={postsData.docs}
+      totalPages={postsData.totalPages}
+      currentPage={postsData.page}
+      hasPrevPage={postsData.hasPrevPage}
+      hasNextPage={postsData.hasNextPage}
     />
   );
 }

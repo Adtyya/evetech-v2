@@ -1,15 +1,15 @@
 "use client";
 
 import { useEffect, useState, useTransition } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+import moment from "moment";
+import api from "@/utils/axios";
 import Container from "@/components/box/container";
 import { InputSearch } from "@/components/form/inputv2";
 import Heading from "@/components/text/heading";
-import Image from "next/image";
 import { Tag } from "../portfolio/listProjects";
-import moment from "moment";
-import { useRouter, useSearchParams } from "next/navigation";
-import api from "@/utils/axios";
-import Link from "next/link";
 import { ButtonPrimary } from "@/components/button/button";
 
 export default function BlogList({
@@ -248,13 +248,11 @@ export default function BlogList({
               })}
             </div>
             <div className="flex justify-center mb-3">
-              <ButtonPrimary
-                onClick={() => {
-                  router.push("/blog/page/1");
-                }}
-              >
-                View More
-              </ButtonPrimary>
+              <Link href="/blog/page/1">
+                <ButtonPrimary>
+                  View More
+                </ButtonPrimary>
+              </Link>
             </div>
           </div>
         </>
@@ -302,16 +300,13 @@ export function HighlightedCard({
   return (
     <div className="w-full h-full group cursor-pointer">
       <div
-        className={`grid grid-cols-1 ${
-          twoColumns ? "md:grid-cols-12" : "md:grid-cols-1"
-        } gap-5 items-center`}
+        className={`grid grid-cols-1 ${twoColumns ? "md:grid-cols-12" : "md:grid-cols-1"
+          } gap-5 items-center`}
       >
         <div
-          className={`${
-            twoColumns ? "md:col-span-4" : ""
-          } col-auto w-full h-52 ${
-            twoColumns ? "md:h-64" : "md:h-80"
-          } relative rounded-2xl overflow-hidden`}
+          className={`${twoColumns ? "md:col-span-4" : ""
+            } col-auto w-full h-52 ${twoColumns ? "md:h-64" : "md:h-80"
+            } relative rounded-2xl overflow-hidden`}
         >
           <Image
             alt="sample"

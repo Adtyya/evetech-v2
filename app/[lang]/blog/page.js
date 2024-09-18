@@ -9,14 +9,14 @@ export const fetchCache = "force-no-store";
 
 async function getFeatures() {
   const res = await api.get(
-    "/blog/available?page=1&perPage=5"
+    "/blog/available?page=2&perPage=5"
   );
   return res.data;
 }
 
 async function getLatests() {
   const res = await api.get(
-    "/blog/available?page=2&perPage=5"
+    "/blog/available?page=1&perPage=5"
   );
   return res.data;
 }
