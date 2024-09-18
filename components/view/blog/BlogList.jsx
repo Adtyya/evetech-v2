@@ -250,7 +250,7 @@ export default function BlogList({
             <div className="flex justify-center mb-3">
               <ButtonPrimary
                 onClick={() => {
-                  router.push("/blog/id/page/1");
+                  router.push("/blog/page/1");
                 }}
               >
                 View More
