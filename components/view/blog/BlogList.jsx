@@ -1,15 +1,16 @@
 "use client";
 
 import { useEffect, useState, useTransition } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+import moment from "moment";
+import api from "@/utils/axios";
 import Container from "@/components/box/container";
 import { InputSearch } from "@/components/form/inputv2";
 import Heading from "@/components/text/heading";
-import Image from "next/image";
 import { Tag } from "../portfolio/listProjects";
-import moment from "moment";
-import { useRouter, useSearchParams } from "next/navigation";
-import api from "@/utils/axios";
-import Link from "next/link";
+import { ButtonPrimary } from "@/components/button/button";
 
 export default function BlogList({
   latestPosts = [],
@@ -27,9 +28,7 @@ export default function BlogList({
     async function getPostByQuery() {
       try {
         setLoading(true);
-        const res = await api.get(
-          `/blog/available?search=${params}`
-        );
+        const res = await api.get(`/blog/available?search=${params}`);
         setSearchResult(res.data);
       } catch (error) {
         throw new Error("Error while search data");
@@ -105,12 +104,7 @@ export default function BlogList({
           <div className="grid grid-cols-1 py-7 gap-5">
             {searchResult?.docs?.map((item, idx) => {
               return (
-                <div
-                  key={idx}
-                  onClick={() =>
-                    incrementView(item?._id)
-                  }
-                >
+                <div key={idx} onClick={() => incrementView(item?._id)}>
                   <Link href={`/blog/read/${item?.slug}`}>
                     <HighlightedCard
                       image={item?.image}
@@ -141,12 +135,7 @@ export default function BlogList({
               <div className="hidden md:block md:col-span-8">
                 {featuresPosts.slice(0, 1).map((item, idx) => {
                   return (
-                    <div
-                      key={idx}
-                      onClick={() =>
-                        incrementView(item?._id)
-                      }
-                    >
+                    <div key={idx} onClick={() => incrementView(item?._id)}>
                       <Link href={`/blog/read/${item?.slug}`}>
                         <HighlightedCard
                           image={item?.image}
@@ -167,12 +156,7 @@ export default function BlogList({
               <div className="hidden md:col-span-4 gap-5 md:grid grid-cols-1 w-full h-max">
                 {featuresPosts.slice(1).map((item, idx) => {
                   return (
-                    <div
-                      key={idx}
-                      onClick={() =>
-                        incrementView(item?._id)
-                      }
-                    >
+                    <div key={idx} onClick={() => incrementView(item?._id)}>
                       <Link href={`/blog/read/${item?.slug}`}>
                         <SimpleCard
                           key={idx}
@@ -188,12 +172,7 @@ export default function BlogList({
               <div className="grid grid-cols-1 gap-5 md:hidden">
                 {featuresPosts.map((item, idx) => {
                   return (
-                    <div
-                      key={idx}
-                      onClick={() =>
-                        incrementView(item?._id)
-                      }
-                    >
+                    <div key={idx} onClick={() => incrementView(item?._id)}>
                       <Link href={`/blog/read/${item?.slug}`}>
                         <HighlightedCard
                           key={idx}
@@ -221,12 +200,7 @@ export default function BlogList({
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-7 gap-5">
               {topPosts.map((item, idx) => {
                 return (
-                  <div
-                    key={idx}
-                    onClick={() =>
-                      incrementView(item?._id)
-                    }
-                  >
+                  <div key={idx} onClick={() => incrementView(item?._id)}>
                     <Link href={`/blog/read/${item?.slug}`}>
                       <HighlightedCard
                         key={idx}
@@ -253,12 +227,7 @@ export default function BlogList({
             <div className="grid grid-cols-1 py-7 gap-5">
               {latestPosts.map((item, idx) => {
                 return (
-                  <div
-                    key={idx}
-                    onClick={() =>
-                      incrementView(item?._id)
-                    }
-                  >
+                  <div key={idx} onClick={() => incrementView(item?._id)}>
                     <Link href={`/blog/read/${item?.slug}`}>
                       <HighlightedCard
                         key={idx}
@@ -277,6 +246,13 @@ export default function BlogList({
                   </div>
                 );
               })}
+            </div>
+            <div className="flex justify-center mb-3">
+              <Link href="/blog/page/1">
+                <ButtonPrimary>
+                  View More
+                </ButtonPrimary>
+              </Link>
             </div>
           </div>
         </>

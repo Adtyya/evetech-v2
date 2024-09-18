@@ -158,7 +158,7 @@ export default function Read({ detailPost, otherPosts }) {
           })}
         </div>
         <div className="w-full mt-10 flex justify-center">
-          <Link href="/blog">
+          <Link href="/blog/page/1">
             <ButtonLightBlue>View More</ButtonLightBlue>
           </Link>
         </div>
