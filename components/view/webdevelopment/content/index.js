@@ -27,7 +27,7 @@ export const PorfotolioList = [
   {
     title: "Juragan Material",
     category: "Website App Development",
-    image: "/images/portfolio/webdev/juraganweb.png",
+    image: "/images/portfolio/webdev/juragan.png",
   },
   {
     title: "Tumurun",
