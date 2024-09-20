@@ -20,7 +20,7 @@ export default function Blog() {
                 vero perferendis. Illum quaerat quasi saepe nam, eum asperiores,
                 vero nulla ratione recusandae animi quo."
             date="12 October 2023"
-            image="/images/home/blog/blog.jfif"
+            image="/images/home/blog/blog.jpg"
           ></BlogCardHighlighted>
           <div className="grid grid-cols-1 lg:grid-grid-cols-2 gap-5 items-start">
             <BlogCardList
@@ -32,7 +32,7 @@ export default function Blog() {
                 vero perferendis. Illum quaerat quasi saepe nam, eum asperiores,
                 vero nulla ratione recusandae animi quo."
               date="12 October 2023"
-              image="/images/home/blog/blog.jfif"
+              image="/images/home/blog/blog.jpg"
             ></BlogCardList>
             <BlogCardList
               title="Educational Tech"
@@ -43,7 +43,7 @@ export default function Blog() {
                 vero perferendis. Illum quaerat quasi saepe nam, eum asperiores,
                 vero nulla ratione recusandae animi quo."
               date="12 October 2023"
-              image="/images/home/blog/blog.jfif"
+              image="/images/home/blog/blog.jpg"
             ></BlogCardList>
           </div>
         </div>

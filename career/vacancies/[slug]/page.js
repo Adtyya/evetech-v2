@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       images:
         detailVacancies?.attributes?.cover?.data?.attributes?.url ??
-        "/images/career/sample.jfif",
+        "/images/career/sample.jpg",
     },
   };
 }

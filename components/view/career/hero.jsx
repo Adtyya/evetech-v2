@@ -38,7 +38,7 @@ export default function Hero() {
   return (
     <div className="h-screen w-full relative">
       <Image
-        src="/images/career/hero-career.jfif"
+        src="/images/career/hero-career.jpg"
         alt="hero"
         fill
         priority

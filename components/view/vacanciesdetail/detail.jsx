@@ -225,7 +225,7 @@ export default function DetailVacanciesTop({ content }) {
       <CardDetailVacancies
         image={
           content?.image ??
-          "/images/career/sample.jfif"
+          "/images/career/sample.jpg"
         }
         jobTitle={content?.title}
         employementType={content?.workType}

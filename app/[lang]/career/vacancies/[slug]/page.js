@@ -43,7 +43,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       images:
         detailVacancies?.image ??
-        "/images/career/sample.jfif",
+        "/images/career/sample.jpg",
     },
   };
 }

@@ -177,7 +177,7 @@ export const SoftwareDev = [
     name: "Logistics",
     description:
       "You can’t brainstorm, much less build, a great solution without first investing in discovery and analysis.",
-    image: "/images/home/software-dev-industry/1.jfif",
+    image: "/images/home/software-dev-industry/1.jpg",
     heigh: "full",
   },
   {

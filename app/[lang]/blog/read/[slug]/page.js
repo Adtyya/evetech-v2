@@ -38,7 +38,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       images:
         detailPost?.image ??
-        "/images/career/sample.jfif",
+        "/images/career/sample.jpg",
     },
   };
 }

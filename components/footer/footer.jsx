@@ -190,7 +190,7 @@ export default function Footer() {
       <footer className="w-full h-full relative">
         <div className="bg-gradient-footer absolute z-10 w-full h-full"></div>
         <Image
-          src="/images/footer/footer.jfif"
+          src="/images/footer/footer.jpg"
           fill
           className="object-cover"
           alt="footer-bg"

@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <div className="h-screen w-full relative">
       <Image
-        src="/images/webappdevelopment/hero-webapp.jfif"
+        src="/images/webappdevelopment/hero-webapp.jpg"
         alt="hero"
         fill
         // sizes="(max-width: 768px) 100vw, 1000px"
