@@ -7,6 +7,7 @@ import api from "@/utils/axios";
 import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
 import { Tag } from "../portfolio/listProjects";
+import { useLocale } from "next-intl";
 
 export default function BlogLatest({
   latestPosts = [],
@@ -15,6 +16,7 @@ export default function BlogLatest({
   hasPrevPage = false,
   hasNextPage = true,
 }) {
+  const locale = useLocale();
 
   // Create pagination buttons with dots
   const generatePaginationButtons = () => {
@@ -92,7 +94,13 @@ export default function BlogLatest({
                     key={idx}
                     image={item?.image}
                     title={item?.title}
-                    subtitle={item?.spoiler}
+                    subtitle={
+                      locale === "en" &&
+                      item?.spoilerEN &&
+                      item?.spoilerEN !== ""
+                        ? item?.spoilerEN
+                        : item?.spoiler
+                    }
                     tag={item?.category?.map((field) => {
                       return {
                         name: field || "",

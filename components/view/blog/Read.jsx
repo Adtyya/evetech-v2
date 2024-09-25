@@ -13,10 +13,12 @@ import { SocialButton } from "../vacanciesdetail/detail";
 import moment from "moment";
 import { slugify } from "@/utils/slugify";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
+import { useLocale } from "next-intl";
 
 export const BASE_URL = "https://evetechsolution.com/";
 
 export default function Read({ detailPost, otherPosts }) {
+  const locale = useLocale();
 
   return (
     <Container className="py-12">
@@ -37,9 +39,7 @@ export default function Read({ detailPost, otherPosts }) {
         <h1 className="text-btn-primary font-bold text-center text-3xl md:text-4xl lg:text-5xl max-w-4xl">
           {detailPost?.title}
         </h1>
-        <p className="text-eve-gray">
-          {moment(detailPost?.date).format("LL")}
-        </p>
+        <p className="text-eve-gray">{moment(detailPost?.date).format("LL")}</p>
         <div className="w-full h-60 md:h-96 relative rounded-2xl overflow-hidden shadow-blog">
           <Image
             alt="sample"
@@ -75,7 +75,13 @@ export default function Read({ detailPost, otherPosts }) {
             <div className="flex items-start justify-start space-x-2.5 mt-1.5">
               <FacebookShareButton
                 title={detailPost?.title}
-                description={detailPost?.spoiler}
+                description={
+                  locale === "en" &&
+                  detailPost?.spoilerEN &&
+                  detailPost?.spoilerEN !== ""
+                    ? detailPost?.spoilerEN
+                    : detailPost?.spoiler
+                }
                 url={`${BASE_URL}/blog/read/${detailPost?.slug}`}
               >
                 {/* <SocialButton
@@ -89,7 +95,13 @@ export default function Read({ detailPost, otherPosts }) {
               </FacebookShareButton>
               <TwitterShareButton
                 title={detailPost?.title}
-                description={detailPost?.spoiler}
+                description={
+                  locale === "en" &&
+                  detailPost?.spoilerEN &&
+                  detailPost?.spoilerEN !== ""
+                    ? detailPost?.spoilerEN
+                    : detailPost?.spoiler
+                }
                 url={`${BASE_URL}/blog/read/${detailPost?.slug}`}
               >
                 <SocialButton
@@ -128,7 +140,11 @@ export default function Read({ detailPost, otherPosts }) {
             rehypePlugins={[rehypeRaw]}
             className="prose lg:prose-lg prose-a:text-btn-blue"
           >
-            {detailPost?.content}
+            {locale === "en" &&
+            detailPost?.contentEN &&
+            detailPost?.contentEN !== ""
+              ? detailPost?.contentEN
+              : detailPost?.content}
           </Markdown>
         </div>
       </div>
@@ -144,7 +160,13 @@ export default function Read({ detailPost, otherPosts }) {
                   <HighlightedCard
                     image={item?.image}
                     title={item?.title}
-                    subtitle={item?.spoiler}
+                    subtitle={
+                      locale === "en" &&
+                      item?.spoilerEN &&
+                      item?.spoilerEN !== ""
+                        ? item?.spoilerEN
+                        : item?.spoiler
+                    }
                     tag={item?.category?.map((field) => {
                       return {
                         name: field || "",
@@ -196,7 +218,7 @@ function MarkDownLink({ href, children, ...props }) {
       {children}
     </a>
   );
-};
+}
 
 function ConvertToNextImage(props) {
   return (
