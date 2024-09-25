@@ -11,6 +11,7 @@ import { InputSearch } from "@/components/form/inputv2";
 import Heading from "@/components/text/heading";
 import { Tag } from "../portfolio/listProjects";
 import { ButtonPrimary } from "@/components/button/button";
+import { useLocale } from "next-intl";
 
 export default function BlogList({
   latestPosts = [],
@@ -23,6 +24,7 @@ export default function BlogList({
   const [query, setQuery] = useState("");
   const [searchResult, setSearchResult] = useState([]);
   const [loading, setLoading] = useState(false);
+  const locale = useLocale();
 
   useEffect(() => {
     async function getPostByQuery() {
@@ -109,7 +111,13 @@ export default function BlogList({
                     <HighlightedCard
                       image={item?.image}
                       title={item?.title}
-                      subtitle={item?.spoiler}
+                      subtitle={
+                        locale === "en" &&
+                        item?.spoilerEN &&
+                        item?.spoilerEN !== ""
+                          ? item?.spoilerEN
+                          : item?.spoiler
+                      }
                       tag={item?.category?.map((field) => {
                         return {
                           name: field || "",
@@ -140,7 +148,11 @@ export default function BlogList({
                         <HighlightedCard
                           image={item?.image}
                           title={item?.title}
-                          subtitle={item?.spoiler}
+                          subtitle={
+                            locale === "en" && item?.spoilerEN !== ""
+                              ? item?.spoilerEN
+                              : item?.spoiler
+                          }
                           tag={item?.category?.map((field) => {
                             return {
                               name: field || "",
@@ -162,7 +174,11 @@ export default function BlogList({
                           key={idx}
                           image={item?.image}
                           title={item?.title}
-                          subtitle={item?.spoiler}
+                          subtitle={
+                            locale === "en" && item?.spoilerEN !== ""
+                              ? item?.spoilerEN
+                              : item?.spoiler
+                          }
                         />
                       </Link>
                     </div>
@@ -178,7 +194,11 @@ export default function BlogList({
                           key={idx}
                           image={item?.image}
                           title={item?.title}
-                          subtitle={item?.spoiler}
+                          subtitle={
+                            locale === "en" && item?.spoilerEN !== ""
+                              ? item?.spoilerEN
+                              : item?.spoiler
+                          }
                           tag={item?.category?.map((field) => {
                             return {
                               name: field || "",
@@ -206,7 +226,13 @@ export default function BlogList({
                         key={idx}
                         image={item?.image}
                         title={item?.title}
-                        subtitle={item?.spoiler}
+                        subtitle={
+                          locale === "en" &&
+                          item?.spoilerEN &&
+                          item?.spoilerEN !== ""
+                            ? item?.spoilerEN
+                            : item?.spoiler
+                        }
                         tag={item?.category?.map((field) => {
                           return {
                             name: field || "",
@@ -233,7 +259,13 @@ export default function BlogList({
                         key={idx}
                         image={item?.image}
                         title={item?.title}
-                        subtitle={item?.spoiler}
+                        subtitle={
+                          locale === "en" &&
+                          item?.spoilerEN &&
+                          item?.spoilerEN !== ""
+                            ? item?.spoilerEN
+                            : item?.spoiler
+                        }
                         tag={item?.category?.map((field) => {
                           return {
                             name: field || "",
@@ -249,9 +281,7 @@ export default function BlogList({
             </div>
             <div className="flex justify-center mb-3">
               <Link href="/blog/page/1">
-                <ButtonPrimary>
-                  View More
-                </ButtonPrimary>
+                <ButtonPrimary>View More</ButtonPrimary>
               </Link>
             </div>
           </div>
@@ -300,13 +330,16 @@ export function HighlightedCard({
   return (
     <div className="w-full h-full group cursor-pointer">
       <div
-        className={`grid grid-cols-1 ${twoColumns ? "md:grid-cols-12" : "md:grid-cols-1"
-          } gap-5 items-center`}
+        className={`grid grid-cols-1 ${
+          twoColumns ? "md:grid-cols-12" : "md:grid-cols-1"
+        } gap-5 items-center`}
       >
         <div
-          className={`${twoColumns ? "md:col-span-4" : ""
-            } col-auto w-full h-52 ${twoColumns ? "md:h-64" : "md:h-80"
-            } relative rounded-2xl overflow-hidden`}
+          className={`${
+            twoColumns ? "md:col-span-4" : ""
+          } col-auto w-full h-52 ${
+            twoColumns ? "md:h-64" : "md:h-80"
+          } relative rounded-2xl overflow-hidden`}
         >
           <Image
             alt="sample"
