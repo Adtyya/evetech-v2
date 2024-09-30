@@ -7,23 +7,23 @@ export const revalidate = 0;
 export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
 
-async function getFeatures() {
+async function getFeatures(lang) {
   const res = await api.get(
-    "/blog/available?page=2&perPage=5"
+    `/blog/available?page=2&perPage=5${lang === 'en' ? '&lang=en' : ''}`
   );
   return res.data;
 }
 
-async function getLatests() {
+async function getLatests(lang) {
   const res = await api.get(
-    "/blog/available?page=1&perPage=5"
+    `/blog/available?page=1&perPage=5${lang === 'en' ? '&lang=en' : ''}`
   );
   return res.data;
 }
 
-async function getTops() {
+async function getTops(lang) {
   const res = await api.get(
-    "/blog/available-top?page=1&perPage=3"
+    `/blog/available-top?page=1&perPage=3${lang === 'en' ? '&lang=en' : ''}`
   );
   return res.data;
 }
@@ -43,9 +43,9 @@ export async function generateMetadata({ params: { locale } }) {
 export default async function BlogPage({ params: { lang } }) {
   unstable_setRequestLocale(lang);
 
-  const features = await getFeatures();
-  const topPosts = await getTops();
-  const latestPosts = await getLatests();
+  const features = await getFeatures(lang);
+  const topPosts = await getTops(lang);
+  const latestPosts = await getLatests(lang);
 
   return (
     <>
