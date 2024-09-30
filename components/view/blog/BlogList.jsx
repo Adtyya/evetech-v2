@@ -107,10 +107,10 @@ export default function BlogList({
             {searchResult?.docs?.map((item, idx) => {
               return (
                 <div key={idx} onClick={() => incrementView(item?._id)}>
-                  <Link href={`/blog/read/${locale === 'en' ? item?.slugEN : item?.slug}`}>
+                  <Link href={`/blog/read/${locale === "en" && item?.slugEN ? item?.slugEN : item?.slug}`}>
                     <HighlightedCard
                       image={item?.image}
-                      title={locale === 'en' ? item?.titleEN : item?.title}
+                      title={locale === "en" && item?.titleEN ? item?.titleEN : item?.title}
                       subtitle={
                         locale === "en" &&
                         item?.spoilerEN &&
