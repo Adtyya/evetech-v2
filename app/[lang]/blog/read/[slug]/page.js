@@ -8,9 +8,9 @@ async function getDetailPost(slug) {
   return res?.data || notFound();
 }
 
-async function getOtherPost(slug) {
+async function getOtherPost(slug, lang) {
   const res = await api.get(
-    `/blog/available?exclude=${slug}&page=1&perPage=3`
+    `/blog/available?exclude=${slug}&page=1&perPage=3${lang === "en" ? "&lang=en" : ""}`
   );
   return res?.data || null;
 }
@@ -47,7 +47,7 @@ export default async function ReadBlog({ params: { lang, slug } }) {
   unstable_setRequestLocale(lang || null);
 
   const detailPost = await getDetailPost(slug);
-  const otherPosts = await getOtherPost(slug);
+  const otherPosts = await getOtherPost(slug, lang);
 
   return <Read detailPost={detailPost} otherPosts={otherPosts?.docs} />;
 }

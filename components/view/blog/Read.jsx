@@ -37,7 +37,9 @@ export default function Read({ detailPost, otherPosts }) {
           })}
         </div>
         <h1 className="text-btn-primary font-bold text-center text-3xl md:text-4xl lg:text-5xl max-w-4xl">
-          {detailPost?.title}
+          {locale === "en" && detailPost?.titleEN
+            ? detailPost?.titleEN
+            : detailPost?.title}
         </h1>
         <p className="text-eve-gray">{moment(detailPost?.date).format("LL")}</p>
         <div className="w-full h-60 md:h-96 relative rounded-2xl overflow-hidden shadow-blog">
@@ -74,7 +76,7 @@ export default function Read({ detailPost, otherPosts }) {
             </small>
             <div className="flex items-start justify-start space-x-2.5 mt-1.5">
               <FacebookShareButton
-                title={detailPost?.title}
+                title={ locale === "en" && detailPost?.titleEN ? detailPost?.titleEN : detailPost?.title}
                 description={
                   locale === "en" &&
                   detailPost?.spoilerEN &&
@@ -156,10 +158,14 @@ export default function Read({ detailPost, otherPosts }) {
           {otherPosts.map((item, idx) => {
             return (
               <div key={idx}>
-                <Link href={`/blog/read/${item?.slug}`}>
+                <Link
+                  href={`/blog/read/${
+                    locale === "en" ? item?.slugEN : item?.slug
+                  }`}
+                >
                   <HighlightedCard
                     image={item?.image}
-                    title={item?.title}
+                    title={locale === "en" ? item?.titleEN : item?.title}
                     subtitle={
                       locale === "en" &&
                       item?.spoilerEN &&
