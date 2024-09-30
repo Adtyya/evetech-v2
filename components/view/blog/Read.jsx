@@ -76,7 +76,7 @@ export default function Read({ detailPost, otherPosts }) {
             </small>
             <div className="flex items-start justify-start space-x-2.5 mt-1.5">
               <FacebookShareButton
-                title={detailPost?.title}
+                title={ locale === "en" && detailPost?.titleEN ? detailPost?.titleEN : detailPost?.title}
                 description={
                   locale === "en" &&
                   detailPost?.spoilerEN &&
