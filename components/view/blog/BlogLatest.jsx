@@ -89,11 +89,11 @@ export default function BlogLatest({
           {latestPosts.map((item, idx) => {
             return (
               <div key={idx} onClick={() => incrementView(item?._id)}>
-                <Link href={`/blog/read/${item?.slug}`}>
+                <Link href={`/blog/read/${locale === "en" && item?.slugEN ? item?.slugEN : item?.slug}`}>
                   <HighlightedCard
                     key={idx}
                     image={item?.image}
-                    title={item?.title}
+                    title={locale === "en" && item?.titleEN ? item?.titleEN : item?.title}
                     subtitle={
                       locale === "en" &&
                       item?.spoilerEN &&
