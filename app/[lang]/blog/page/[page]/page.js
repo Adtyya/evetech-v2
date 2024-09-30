@@ -1,10 +1,10 @@
-// import { unstable_setRequestLocale } from "next-intl/server";
+import { unstable_setRequestLocale } from "next-intl/server";
 import BlogLatest from "@/components/view/blog/BlogLatest";
 import api from "@/utils/axios";
 import { notFound } from "next/navigation";
 
-async function getPosts(page) {
-  const res = await api.get(`/blog/available?page=${page}&perPage=10`);
+async function getPosts(page, lang) {
+  const res = await api.get(`/blog/available?page=${page}&perPage=10${lang === "en" ? "&lang=en" : ""}`);
   return res?.data || notFound();
 }
 
@@ -27,10 +27,11 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function BlogPage({ params: { page } }) {
+export default async function BlogPage({ params: { lang, page } }) {
+  unstable_setRequestLocale(lang || null);
   const currentPage = page ? parseInt(page, 10) : 1;
 
-  const postsData = await getPosts(currentPage);
+  const postsData = await getPosts(currentPage, lang);
   if (!postsData || postsData.docs.length === 0) {
     return notFound();
   }
