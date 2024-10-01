@@ -20,28 +20,26 @@ export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
 
 export async function generateMetadata({ params }) {
-  const detailPost = await getDetailPost(params.slug);
+  const detailPost = await getDetailPost(params.slug, params.lang);
+  const isEnglish = params.lang === 'en';
 
   return {
     metadataBase: new URL("https://evetechsolution.com/"),
     alternates: {
-      canonical: `/${params.lang ?? "en"}/blog/read/${
-        detailPost?.slug
-      }`,
+      canonical: `/${params.lang}/blog/read/${isEnglish ? detailPost?.slugEN || detailPost?.slug : detailPost?.slug}`,
       languages: {
-        en: "/en",
-        id: "/id",
+        en: `/en`,
+        id: `/id`,
       },
     },
-    title: `${detailPost?.title} - Evetech Solution`,
-    description: detailPost?.spoiler,
+    title: `${isEnglish ? detailPost?.titleEN : detailPost?.title}`,
+    description: isEnglish ? detailPost?.spoilerEN : detailPost?.spoiler,
     openGraph: {
-      images:
-        detailPost?.image ??
-        "/images/career/sample.jpg",
+      images: detailPost?.image ?? "/images/career/sample.jpg",
     },
   };
 }
+
 
 export default async function ReadBlog({ params: { lang, slug } }) {
   unstable_setRequestLocale(lang || null);
