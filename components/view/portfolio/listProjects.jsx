@@ -73,8 +73,7 @@ const listDummy = [
     // videoPath: "/videos/projects/Serafix.webm",
     // title: "Serafix",
     // category: "POS System",
-    // subtitle:
-      "Juragan Material website is used to integrate all company resources, such as customer data, sales order data, purchase order management, and business monitoring through a dashboard.",
+    // subtitle: "Juragan Material website is used to integrate all company resources, such as customer data, sales order data, purchase order management, and business monitoring through a dashboard.",
     // tag: [{ name: "Web Development" }, { name: "Web Application" }],
     // rtl: true,
     // twoColumns: true,
