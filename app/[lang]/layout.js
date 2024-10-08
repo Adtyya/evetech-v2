@@ -59,7 +59,8 @@ export default function RootLayout({ children, params: { lang } }) {
         />
       </body>
       <GoogleAnalytics gaId="G-RFJ981P2V2" />
-      <GoogleTagManager gtmId="GTM-WKQW34PH" />
+      {/* <GoogleTagManager gtmId="GTM-WKQW34PH" /> */}
+      <GoogleTagManager gtmId="GTM-903G43D26M" />
     </html>
   );
 }
