@@ -44,7 +44,9 @@ export default function Read({ detailPost, otherPosts }) {
         <p className="text-eve-gray">{moment(detailPost?.date).format("LL")}</p>
         <div className="w-full h-60 md:h-96 relative rounded-2xl overflow-hidden shadow-blog">
           <Image
-            alt="sample"
+            alt={locale === "en" && detailPost?.titleEN
+              ? detailPost?.titleEN
+              : detailPost?.title}
             src={detailPost?.image}
             fill
             data-loaded="false"
@@ -76,11 +78,11 @@ export default function Read({ detailPost, otherPosts }) {
             </small>
             <div className="flex items-start justify-start space-x-2.5 mt-1.5">
               <FacebookShareButton
-                title={ locale === "en" && detailPost?.titleEN ? detailPost?.titleEN : detailPost?.title}
+                title={locale === "en" && detailPost?.titleEN ? detailPost?.titleEN : detailPost?.title}
                 description={
                   locale === "en" &&
-                  detailPost?.spoilerEN &&
-                  detailPost?.spoilerEN !== ""
+                    detailPost?.spoilerEN &&
+                    detailPost?.spoilerEN !== ""
                     ? detailPost?.spoilerEN
                     : detailPost?.spoiler
                 }
@@ -99,8 +101,8 @@ export default function Read({ detailPost, otherPosts }) {
                 title={detailPost?.title}
                 description={
                   locale === "en" &&
-                  detailPost?.spoilerEN &&
-                  detailPost?.spoilerEN !== ""
+                    detailPost?.spoilerEN &&
+                    detailPost?.spoilerEN !== ""
                     ? detailPost?.spoilerEN
                     : detailPost?.spoiler
                 }
@@ -143,8 +145,8 @@ export default function Read({ detailPost, otherPosts }) {
             className="prose lg:prose-lg prose-a:text-btn-blue"
           >
             {locale === "en" &&
-            detailPost?.contentEN &&
-            detailPost?.contentEN !== ""
+              detailPost?.contentEN &&
+              detailPost?.contentEN !== ""
               ? detailPost?.contentEN
               : detailPost?.content}
           </Markdown>
@@ -159,17 +161,16 @@ export default function Read({ detailPost, otherPosts }) {
             return (
               <div key={idx}>
                 <Link
-                  href={`/blog/read/${
-                    locale === "en" ? item?.slugEN : item?.slug
-                  }`}
+                  href={`/blog/read/${locale === "en" ? item?.slugEN : item?.slug
+                    }`}
                 >
                   <HighlightedCard
                     image={item?.image}
                     title={locale === "en" ? item?.titleEN : item?.title}
                     subtitle={
                       locale === "en" &&
-                      item?.spoilerEN &&
-                      item?.spoilerEN !== ""
+                        item?.spoilerEN &&
+                        item?.spoilerEN !== ""
                         ? item?.spoilerEN
                         : item?.spoiler
                     }

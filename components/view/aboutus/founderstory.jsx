@@ -17,6 +17,7 @@ export default function FounderStory() {
           <p className="text-eve-gray">
             {t.rich("content", {
               br: () => <br />,
+              b: (val) => <b>{val}</b>,
             })}
           </p>
         </div>

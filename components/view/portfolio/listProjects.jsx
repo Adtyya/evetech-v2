@@ -69,17 +69,16 @@ const listDummy = [
   //   twoColumns: false,
   //   thumbnail: "/images/videofallback/Educare.svg",
   // },
-  {
-    videoPath: "/videos/projects/Serafix.webm",
-    title: "Serafix",
-    category: "POS System",
-    subtitle:
-      "Juragan Material website is used to integrate all company resources, such as customer data, sales order data, purchase order management, and business monitoring through a dashboard.",
-    tag: [{ name: "Web Development" }, { name: "Web Application" }],
-    rtl: true,
-    twoColumns: true,
-    thumbnail: "/images/videofallback/serafix.png",
-  },
+  // {
+  //   videoPath: "/videos/projects/Serafix.webm",
+  //   title: "Serafix",
+  //   category: "POS System",
+  //   subtitle: "Juragan Material website is used to integrate all company resources, such as customer data, sales order data, purchase order management, and business monitoring through a dashboard.",
+  //   tag: [{ name: "Web Development" }, { name: "Web Application" }],
+  //   rtl: true,
+  //   twoColumns: true,
+  //   thumbnail: "/images/videofallback/serafix.png",
+  // },
   // {
   //   videoPath: "/videos/projects/Glamori.webm",
   //   title: "Glamori",
@@ -141,14 +140,12 @@ function Card({
 }) {
   return (
     <div
-      className={`grid grid-cols-1 ${
-        twoColumns ? "md:grid-cols-12" : ""
-      } gap-7 items-center`}
+      className={`grid grid-cols-1 ${twoColumns ? "md:grid-cols-12" : ""
+        } gap-7 items-center`}
     >
       <div
-        className={`col-auto ${
-          twoColumns ? "md:col-span-8" : ""
-        } bg-eve-white h-64 md:h-80`}
+        className={`col-auto ${twoColumns ? "md:col-span-8" : ""
+          } bg-eve-white h-64 md:h-80`}
       >
         <video
           className="w-full h-full cursor-pointer"
@@ -165,9 +162,8 @@ function Card({
         </video>
       </div>
       <div
-        className={`col-auto ${twoColumns ? "md:col-span-4" : ""} space-y-1.5 ${
-          rtl ? "md:order-last" : "md:order-first"
-        }`}
+        className={`col-auto ${twoColumns ? "md:col-span-4" : ""} space-y-1.5 ${rtl ? "md:order-last" : "md:order-first"
+          }`}
       >
         <h3 className="text-2xl lg:text-3xl text-btn-primary font-semibold capitalize">
           {title}

@@ -113,8 +113,8 @@ export default function BlogList({
                       title={locale === "en" && item?.titleEN ? item?.titleEN : item?.title}
                       subtitle={
                         locale === "en" &&
-                        item?.spoilerEN &&
-                        item?.spoilerEN !== ""
+                          item?.spoilerEN &&
+                          item?.spoilerEN !== ""
                           ? item?.spoilerEN
                           : item?.spoiler
                       }
@@ -228,8 +228,8 @@ export default function BlogList({
                         title={locale === 'en' ? item?.titleEN : item?.title}
                         subtitle={
                           locale === "en" &&
-                          item?.spoilerEN &&
-                          item?.spoilerEN !== ""
+                            item?.spoilerEN &&
+                            item?.spoilerEN !== ""
                             ? item?.spoilerEN
                             : item?.spoiler
                         }
@@ -261,8 +261,8 @@ export default function BlogList({
                         title={locale === 'en' ? item?.titleEN : item?.title}
                         subtitle={
                           locale === "en" &&
-                          item?.spoilerEN &&
-                          item?.spoilerEN !== ""
+                            item?.spoilerEN &&
+                            item?.spoilerEN !== ""
                             ? item?.spoilerEN
                             : item?.spoiler
                         }
@@ -297,7 +297,7 @@ function SimpleCard({ image = " ", title = " ", subtitle = "" }) {
       <div className="col-span-5">
         <div className="h-32 w-full relative rounded-2xl overflow-hidden">
           <Image
-            alt="sample"
+            alt={title || "sample"}
             src={image}
             fill
             className="object-cover data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100 group-hover:scale-105 duration-300"
@@ -330,19 +330,16 @@ export function HighlightedCard({
   return (
     <div className="w-full h-full group cursor-pointer">
       <div
-        className={`grid grid-cols-1 ${
-          twoColumns ? "md:grid-cols-12" : "md:grid-cols-1"
-        } gap-5 items-center`}
+        className={`grid grid-cols-1 ${twoColumns ? "md:grid-cols-12" : "md:grid-cols-1"
+          } gap-5 items-center`}
       >
         <div
-          className={`${
-            twoColumns ? "md:col-span-4" : ""
-          } col-auto w-full h-52 ${
-            twoColumns ? "md:h-64" : "md:h-80"
-          } relative rounded-2xl overflow-hidden`}
+          className={`${twoColumns ? "md:col-span-4" : ""
+            } col-auto w-full h-52 ${twoColumns ? "md:h-64" : "md:h-80"
+            } relative rounded-2xl overflow-hidden`}
         >
           <Image
-            alt="sample"
+            alt={title || "sample"}
             src={image}
             fill
             className="object-cover data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100 group-hover:scale-105 duration-300"
