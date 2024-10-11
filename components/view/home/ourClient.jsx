@@ -14,7 +14,7 @@ export default function OurClient() {
         </Heading>
       </div>
       <Marquee direction="left">
-        {Array.from({ length: 14 }).map((_, idx) => {
+        {Array.from({ length: 15 }).map((_, idx) => {
           return (
             <div key={idx} className="w-52 h-28 relative">
               <Image
