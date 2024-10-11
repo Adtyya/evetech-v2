@@ -21,7 +21,7 @@ export default function OurClient() {
                 src={`/images/home/client/${idx + 1}.png`}
                 alt="test"
                 fill
-                className="object-contain"
+                className="object-contain px-5"
                 quality={100}
                 fetchPriority="low"
               />
