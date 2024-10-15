@@ -14,14 +14,14 @@ export default function OurClient() {
         </Heading>
       </div>
       <Marquee direction="left">
-        {Array.from({ length: 14 }).map((_, idx) => {
+        {Array.from({ length: 15 }).map((_, idx) => {
           return (
             <div key={idx} className="w-52 h-28 relative">
               <Image
                 src={`/images/home/client/${idx + 1}.png`}
                 alt="test"
                 fill
-                className="object-contain"
+                className="object-contain px-5"
                 quality={100}
                 fetchPriority="low"
               />
