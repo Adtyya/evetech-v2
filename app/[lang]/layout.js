@@ -58,8 +58,6 @@ export default function RootLayout({ children, params: { lang } }) {
           href="./favicon-16x16.png"
         />
       </body>
-      {/* <GoogleAnalytics gaId="G-RFJ981P2V2" /> */}
-      {/* <GoogleTagManager gtmId="GTM-WKQW34PH" /> */}
       <GoogleAnalytics gaId="G-903G43D26M" />
       <GoogleTagManager gtmId="GTM-903G43D26M" />
     </html>
