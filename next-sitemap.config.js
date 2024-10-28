@@ -7,26 +7,35 @@ module.exports = {
   exclude: ["/", "/server-sitemap.xml"],
   robotsTxtOptions: {
     additionalSitemaps: [
-      `https://${process.env.NEXT_APP_URL || "evetechsolution.com"
+      `https://${
+        process.env.NEXT_APP_URL || "evetechsolution.com"
       }/server-sitemap.xml`,
     ],
+    transformRobotsTxt: async (_, robotsTxt) => {
+      const withoutHost = robotsTxt.replace(
+        `# Host\nHost: https://evetechsolution.com\n\n`,
+        ""
+      );
+
+      return withoutHost;
+    },
   },
   // Define custom routes with different priorities
   transform: async (config, path) => {
-    if (path === '/') {
+    if (path === "/") {
       return {
         loc: path,
-        changefreq: 'daily',
+        changefreq: "daily",
         priority: 1.0,
-      }
+      };
     }
 
-    if (path.startsWith('/blog')) {
+    if (path.startsWith("/blog")) {
       return {
         loc: path,
-        changefreq: 'daily',
+        changefreq: "daily",
         priority: 0.6,
-      }
+      };
     }
 
     // Default transformation
@@ -34,6 +43,6 @@ module.exports = {
       loc: path,
       changefreq: config.changefreq,
       priority: config.priority,
-    }
-  }
+    };
+  },
 };
