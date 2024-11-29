@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import { NextIntlClientProvider, useMessages, useLocale } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+// import { unstable_setRequestLocale } from "next-intl/server";
 import NextTopLoader from "nextjs-toploader";
 import Image from "next/image";
 import NavbarEvetech from "@/components/navbar/navbarNotFound";
@@ -11,6 +11,8 @@ import Heading from "@/components/text/heading";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  title: "Page Not Found",
+  description: "The page you're looking for does not exist.",
   alternates: {
     canonical: "https://evetechsolution.com",
   },
@@ -22,13 +24,15 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ lang: locale }));
 }
 
-export async function generateMetadata({ params }) {
-  unstable_setRequestLocale(params.lang); // Atur lokalitas di server
-  return {
-    title: "Page Not Found",
-    description: "The page you're looking for does not exist.",
-  };
-}
+// export async function generateMetadata({ params }) {
+//   // unstable_setRequestLocale(params.lang); // Atur lokalitas di server
+//   return {
+//     title: params.lang === "en" ? "Page Not Found" : "Halaman Tidak Ditemukan",
+//     description: params.lang === "en"
+//       ? "The page you're looking for does not exist."
+//       : "Halaman yang Anda cari tidak ada.",
+//   };
+// }
 
 export default function NotFound({ params }) {
   const messages = useMessages();
