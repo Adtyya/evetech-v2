@@ -1,12 +1,12 @@
 import { Inter } from "next/font/google";
+import { NextIntlClientProvider, useMessages, useLocale } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
+import NextTopLoader from "nextjs-toploader";
+import Image from "next/image";
 import NavbarEvetech from "@/components/navbar/navbarNotFound";
 import Footer from "@/components/footer/footer";
-import NextTopLoader from "nextjs-toploader";
-import { NextIntlClientProvider, useMessages, useLocale } from "next-intl";
-import Image from "next/image";
 import Container from "@/components/box/container";
 import Heading from "@/components/text/heading";
-import { unstable_setRequestLocale } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -54,7 +54,7 @@ export default function NotFound({ params }) {
                 />
               </div>
               <Heading variant="h2" className="text-btn-primary font-bold">
-                Page Not Found!
+                {lang === "en" ? "Page Not Found!" : "Halaman Tidak Ditemukan!"}
               </Heading>
             </div>
           </Container>
