@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
-import NavbarEvetech from "@/components/navbar/navbar";
-import Footer from "@/components/footer/footer";
 import NextTopLoader from "nextjs-toploader";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { NextIntlClientProvider, useMessages } from "next-intl";
+import NavbarEvetech from "@/components/navbar/navbar";
+import Footer from "@/components/footer/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
