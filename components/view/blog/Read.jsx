@@ -14,6 +14,7 @@ import moment from "moment";
 import { slugify } from "@/utils/slugify";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import { useLocale } from "next-intl";
+import Breadcrumb from "@/components/breadcrumbs/breadcrumb";
 
 export const BASE_URL = "https://evetechsolution.com/";
 
@@ -26,6 +27,18 @@ export default function Read({ detailPost, otherPosts }) {
       <Link href="/blog">
         <ButtonWhite>Back</ButtonWhite>
       </Link>
+      <div className="flex items-center justify-center">
+        <Breadcrumb
+          pathList={[
+            { pathName: "Blog", path: "/blog" },
+            { pathName: detailPost.category?.toString(), path: "/blog" },
+            {
+              pathName: detailPost?.title,
+              path: `/blog/read/${detailPost?.slug}`,
+            },
+          ]}
+        />
+      </div>
       <div className="my-7 flex items-center justify-center flex-col space-y-7">
         <div className="flex flex-wrap items-center justify-center">
           {detailPost?.category?.map((field, i) => {
@@ -44,9 +57,11 @@ export default function Read({ detailPost, otherPosts }) {
         <p className="text-eve-gray">{moment(detailPost?.date).format("LL")}</p>
         <div className="w-full h-60 md:h-96 relative rounded-2xl overflow-hidden shadow-blog">
           <Image
-            alt={locale === "en" && detailPost?.titleEN
-              ? detailPost?.titleEN
-              : detailPost?.title}
+            alt={
+              locale === "en" && detailPost?.titleEN
+                ? detailPost?.titleEN
+                : detailPost?.title
+            }
             src={detailPost?.image}
             fill
             data-loaded="false"
@@ -78,11 +93,15 @@ export default function Read({ detailPost, otherPosts }) {
             </small>
             <div className="flex items-start justify-start space-x-2.5 mt-1.5">
               <FacebookShareButton
-                title={locale === "en" && detailPost?.titleEN ? detailPost?.titleEN : detailPost?.title}
+                title={
+                  locale === "en" && detailPost?.titleEN
+                    ? detailPost?.titleEN
+                    : detailPost?.title
+                }
                 description={
                   locale === "en" &&
-                    detailPost?.spoilerEN &&
-                    detailPost?.spoilerEN !== ""
+                  detailPost?.spoilerEN &&
+                  detailPost?.spoilerEN !== ""
                     ? detailPost?.spoilerEN
                     : detailPost?.spoiler
                 }
@@ -101,8 +120,8 @@ export default function Read({ detailPost, otherPosts }) {
                 title={detailPost?.title}
                 description={
                   locale === "en" &&
-                    detailPost?.spoilerEN &&
-                    detailPost?.spoilerEN !== ""
+                  detailPost?.spoilerEN &&
+                  detailPost?.spoilerEN !== ""
                     ? detailPost?.spoilerEN
                     : detailPost?.spoiler
                 }
@@ -145,8 +164,8 @@ export default function Read({ detailPost, otherPosts }) {
             className="prose lg:prose-lg prose-a:text-btn-blue"
           >
             {locale === "en" &&
-              detailPost?.contentEN &&
-              detailPost?.contentEN !== ""
+            detailPost?.contentEN &&
+            detailPost?.contentEN !== ""
               ? detailPost?.contentEN
               : detailPost?.content}
           </Markdown>
@@ -161,16 +180,17 @@ export default function Read({ detailPost, otherPosts }) {
             return (
               <div key={idx}>
                 <Link
-                  href={`/blog/read/${locale === "en" ? item?.slugEN : item?.slug
-                    }`}
+                  href={`/blog/read/${
+                    locale === "en" ? item?.slugEN : item?.slug
+                  }`}
                 >
                   <HighlightedCard
                     image={item?.image}
                     title={locale === "en" ? item?.titleEN : item?.title}
                     subtitle={
                       locale === "en" &&
-                        item?.spoilerEN &&
-                        item?.spoilerEN !== ""
+                      item?.spoilerEN &&
+                      item?.spoilerEN !== ""
                         ? item?.spoilerEN
                         : item?.spoiler
                     }
