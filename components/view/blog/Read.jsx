@@ -207,6 +207,57 @@ export default function Read({ detailPost, otherPosts }) {
                 className="object-cover data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100"
               />
             </div>
+            <div className="border-t border-t-eve-white block md:hidden">
+              <small className="text-eve-key-features font-bold">
+                Share Article
+              </small>
+              <div className="flex items-start justify-start space-x-2.5 mt-1.5">
+                <FacebookShareButton
+                  title={
+                    locale === "en" && detailPost?.titleEN
+                      ? detailPost?.titleEN
+                      : detailPost?.title
+                  }
+                  description={
+                    locale === "en" &&
+                    detailPost?.spoilerEN &&
+                    detailPost?.spoilerEN !== ""
+                      ? detailPost?.spoilerEN
+                      : detailPost?.spoiler
+                  }
+                  url={`${BASE_URL}/blog/read/${detailPost?.slug}`}
+                >
+                  {/* <SocialButton
+                  path="/images/career/social/Instagram.svg"
+                  alt="instagram"
+                /> */}
+                  <SocialButton
+                    path="/images/career/social/Facebook.svg"
+                    alt="Facebook"
+                  />
+                </FacebookShareButton>
+                <TwitterShareButton
+                  title={detailPost?.title}
+                  description={
+                    locale === "en" &&
+                    detailPost?.spoilerEN &&
+                    detailPost?.spoilerEN !== ""
+                      ? detailPost?.spoilerEN
+                      : detailPost?.spoiler
+                  }
+                  url={`${BASE_URL}/blog/read/${detailPost?.slug}`}
+                >
+                  <SocialButton
+                    path="/images/career/social/Twitter.svg"
+                    alt="Twitter"
+                  />
+                </TwitterShareButton>
+                {/* <SocialButton
+                path="/images/career/social/Github.svg"
+                alt="Github"
+              /> */}
+              </div>
+            </div>
           </div>
           <div ref={contentRef}>
             <Markdown
