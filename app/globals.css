@@ -82,9 +82,39 @@ select {
 
 @media (max-width: 640px) {
   .truncate-mobile {
-    max-width: 10ch; 
+    max-width: 10ch;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  scroll-margin-top: 120px;
+}
+
+/* Gaya scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Lebar scrollbar */
+  height: 12px; /* Tinggi scrollbar (untuk horizontal) */
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f4f4; /* Warna latar belakang track */
+  border-radius: 6px; /* Membuat sudut melengkung */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b3a4b;
+  border-radius: 20px; /* Membuat bentuk pill */
+  border: 3px solid #f4f4f4; /* Memberi efek padding pada track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2b3a4b;
 }
