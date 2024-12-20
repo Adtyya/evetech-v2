@@ -107,6 +107,8 @@ export default function Read({ detailPost, otherPosts }) {
                           key={id}
                           href={chap.id}
                           active={activeHeadingId === chap.id}
+                          level={chap.level}
+                          onClick={() => setActiveHeadingId(chap.id)}
                         >
                           {chap.text}
                         </ChapterButton>
@@ -269,13 +271,18 @@ export default function Read({ detailPost, otherPosts }) {
   );
 }
 
-function ChapterButton({ href, active, children }) {
+function ChapterButton({ href, active, level, children }) {
   return (
     <Link className="flex items-center space-x-2" href={`#${href}`}>
       <div
-        className={`h-12 !w-0.5 ${active ? "bg-btn-blue" : "bg-btn-primary"}`}
+        className={`h-12 w-1 ${active ? "bg-btn-blue" : "bg-transparent"}`}
       ></div>
-      <p className="text-btn-primary text-start text-sm font-bold line-clamp-2 w-full">
+      <p
+        style={{ marginLeft: `${(level - 1) * 15}px` }}
+        className={`${
+          active ? "text-btn-blue" : "text-btn-primary"
+        } text-start text-sm font-bold line-clamp-2 w-full`}
+      >
         {children}
       </p>
     </Link>
