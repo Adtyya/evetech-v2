@@ -25,7 +25,7 @@ export default function BreadCrumbs({ pathList }) {
                     className={`${
                       index === pathList.length - 1
                         ? "pointer-events-none items-center gap-1 text-slate-500 font-medium truncate-mobile"
-                        : "flex items-center gap-1 text-slate-700 transition-colors hover:text-e-primary font-medium truncate-mobile"
+                        : "flex items-center gap-1 text-slate-700 transition-colors hover:text-e-primary font-medium"
                     }`}
                   >
                     {item.pathName}
