@@ -11,8 +11,8 @@ export async function GET(req) {
     const response = await api.get(`/blog/available`, {
       params: {
         page: page,
-        perPage: pageSize
-      }
+        perPage: pageSize,
+      },
     });
 
     const data = response?.data?.docs;
@@ -23,14 +23,20 @@ export async function GET(req) {
     page++;
   }
 
-  return getServerSideSitemap(
-    allPosts.map((item) => {
-      return {
-        loc: `https://evetechsolution.com/blog/read/${item?.slug}`,
-        lastmod: item?.date,
-        priority: 1,
-        changefreq: "daily",
-      };
-    })
+  // console.log("Has more:", hasMore);
+
+  const sitemap = getServerSideSitemap(
+    allPosts.map((item) => ({
+      loc: `https://evetechsolution.com/blog/read/${item?.slug}`,
+      lastmod: item?.date,
+      priority: 1,
+      changefreq: "daily",
+    }))
   );
+
+  sitemap.headers = {
+    "Cache-Control": "no-cache, no-store, must-revalidate",
+  };
+
+  return sitemap;
 }
