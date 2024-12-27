@@ -23,7 +23,7 @@ export async function GET(req) {
     page++;
   }
 
-  console.log("Has more:", hasMore);
+  // console.log("Has more:", hasMore);
 
   const sitemap = getServerSideSitemap(
     allPosts.map((item) => ({
