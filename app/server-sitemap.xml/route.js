@@ -4,7 +4,7 @@ import { getServerSideSitemap } from "next-sitemap";
 export async function GET(req) {
   const allPosts = [];
   let page = 1;
-  let pageSize = 100; // Adjust this based on your API's max page size
+  let pageSize = 100;
   let hasMore = true;
 
   while (hasMore) {
@@ -18,21 +18,26 @@ export async function GET(req) {
     const data = response?.data?.docs;
     allPosts.push(...data);
 
-    // Check if there are more pages
     hasMore = data.length === pageSize;
     page++;
   }
 
-  console.log("Has more:", hasMore);
-
-  const sitemap = getServerSideSitemap(
-    allPosts.map((item) => ({
-      loc: `https://evetechsolution.com/blog/read/${item?.slug}`,
+  const sitemapEntries = allPosts.flatMap((item) => [
+    {
+      loc: `https://evetechsolution.com/id/blog/read/${item?.slug}`,
       lastmod: item?.date,
       priority: 1,
       changefreq: "daily",
-    }))
-  );
+    },
+    {
+      loc: `https://evetechsolution.com/en/blog/read/${item?.slug}`,
+      lastmod: item?.date,
+      priority: 1,
+      changefreq: "daily",
+    },
+  ]);
+
+  const sitemap = getServerSideSitemap(sitemapEntries);
 
   sitemap.headers = {
     "Cache-Control": "no-cache, no-store, must-revalidate",
