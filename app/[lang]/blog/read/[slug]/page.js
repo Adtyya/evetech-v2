@@ -28,14 +28,20 @@ export async function generateMetadata({ params }) {
   return {
     metadataBase: new URL("https://evetechsolution.com/"),
     alternates: {
-      canonical: `/${params.lang}/blog/read/${detailPost?.slug}`,
+      canonical: `/${params.lang}/blog/read/${
+        isEnglish ? detailPost?.slugEN || detailPost?.slug : detailPost?.slug
+      }`,
       languages: {
         en: `/en`,
         id: `/id`,
       },
     },
-    title: detailPost?.title,
-    description: detailPost?.spoiler,
+    title: `${
+      isEnglish ? detailPost?.titleEN || detailPost.title : detailPost?.title
+    }`,
+    description: isEnglish
+      ? detailPost?.spoilerEN || detailPost.spoiler
+      : detailPost?.spoiler,
     openGraph: {
       images: detailPost?.image ?? "/images/career/sample.jpg",
     },

@@ -83,8 +83,15 @@ export default function Read({ detailPost, otherPosts }) {
               { pathName: "Blog", path: "/blog" },
               { pathName: detailPost.category?.toString(), path: "/blog" },
               {
-                pathName: detailPost?.title,
-                path: `/blog/read/${detailPost?.slug}`,
+                pathName:
+                  locale === "en"
+                    ? detailPost?.titleEN || detailPost?.title
+                    : detailPost?.title,
+                path: `/blog/read/${
+                  locale === "en"
+                    ? detailPost?.slugEN || detailPost?.slug
+                    : detailPost?.slug
+                }`,
               },
             ]}
           />
