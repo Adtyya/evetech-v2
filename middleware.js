@@ -14,27 +14,26 @@ export const config = {
   matcher: "/((?!api|static|.*\\..*|_next).*)",
 };
 
-// export async function middleware(req) {
-//   const url = req.nextUrl.clone();
+export async function middleware(req) {
+  const url = req.nextUrl.clone();
 
-//   const lang =
-//     req.cookies.get("NEXT_LOCALE")?.value ||
-//     req?.headers?.get("accept-language")?.split(",")[0].split("-")[0] ||
-//     "en";
-//   if (
-//     url.pathname.includes("en") ||
-//     url.pathname.includes("id") ||
-//     url.pathname === "/"
-//   ) {
-//     console.log("Kondisi 1");
+  const lang =
+    req.cookies.get("NEXT_LOCALE")?.value ||
+    req?.headers?.get("accept-language")?.split(",")[0].split("-")[0] ||
+    "en";
+  if (url.pathname.startsWith("/en") || url.pathname.startsWith("/id")) {
+    console.log("Kondisi 1");
+    return NextResponse.next();
+  }
 
-//     return NextResponse.next({ status: 301 });
-//   }
-
-//   if (!url.pathname.includes("en") || !url.pathname.includes("id")) {
-//     url.pathname = `/${lang}${req.nextUrl.pathname}`;
-//     console.log("Kondisi 2");
-//     return NextResponse.redirect(url, { status: 301 });
-//   }
-//   return NextResponse.next();
-// }
+  if (
+    !url.pathname.startsWith("/en") ||
+    !url.pathname.startsWith("/id") ||
+    url.pathname === "/"
+  ) {
+    url.pathname = `/${lang}${req.nextUrl.pathname}`;
+    console.log("Kondisi 2");
+    return NextResponse.redirect(url, 301);
+  }
+  // return NextResponse.next();
+}

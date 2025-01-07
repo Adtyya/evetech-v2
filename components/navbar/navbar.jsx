@@ -126,7 +126,9 @@ export default function NavbarEvetech() {
             .replace("/id", "")
             .replace("/en", "")
             .replace("/", "")}`;
+
     startTransition(() => {
+      document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000;`;
       router.replace(path);
     });
   }
