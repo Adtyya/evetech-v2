@@ -4,12 +4,15 @@ module.exports = {
   generateRobotsTxt: true,
   changefreq: "weekly",
   priority: 1,
-  exclude: ["/", "/server-sitemap.xml"],
+  exclude: ["/", "/server-sitemap.xml", "/server-sitemap-en.xml"],
   robotsTxtOptions: {
     additionalSitemaps: [
       `https://${
         process.env.NEXT_APP_URL || "evetechsolution.com"
       }/server-sitemap.xml`,
+      `https://${
+        process.env.NEXT_APP_URL || "evetechsolution.com"
+      }/server-sitemap-en.xml`,
     ],
     transformRobotsTxt: async (_, robotsTxt) => {
       const withoutHost = robotsTxt.replace(
