@@ -42,6 +42,7 @@ export async function GET(req) {
   ]);
 
   const sitemap = getServerSideSitemap(sitemapEntries);
+  //
 
   sitemap.headers = {
     "Cache-Control": "no-cache, no-store, must-revalidate",
